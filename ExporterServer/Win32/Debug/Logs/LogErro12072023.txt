@@ -1,0 +1,28 @@
+12/07/2023 - 14:24:39 - C:\&FarmaSoft\AppIHorse\Win32\Debug\ServerMatriz.exe - Erro ao validar filial :[FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 50
+FROM
+12/07/2023 - 14:26:01 - C:\&FarmaSoft\AppIHorse\Win32\Debug\ServerMatriz.exe - Erro ao validar filial na matriz :33355207000138-[FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 50
+FROM
+12/07/2023 - 14:27:04 - C:\&FarmaSoft\AppIHorse\Win32\Debug\ServerMatriz.exe - Erro ao validar filial na matriz :CNPJ [33355207000138 ][FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -206
+Column unknown
+CD_GRUPOFILIAL
+At line 1, column 21
+12/07/2023 - 14:27:18 - C:\&FarmaSoft\AppIHorse\Win32\Debug\ServerMatriz.exe - Erro ao validar filial na matriz :CNPJ [33355207000138 ][FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -206
+Column unknown
+CD_GRUPOFILIAL
+At line 1, column 21
+12/07/2023 - 14:29:02 - C:\&FarmaSoft\AppIHorse\Win32\Debug\ServerMatriz.exe - Erro ao validar filial na matriz :CNPJ [33355207000138 ][FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -206
+Column unknown
+CD_GRUPOFILIAL
+At line 1, column 21
+12/07/2023 - 16:19:01 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterServer\Win32\Debug\ServerMatriz.exe - Erro ao validar filial na matriz :CNPJ [processo ][FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -206
+Column unknown
+PROCESSO
+At line 1, column 67

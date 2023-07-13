@@ -1,0 +1,8 @@
+12/07/2023 - 17:48:00 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Query: Field 'cnpj' not found
+12/07/2023 - 17:48:45 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000//filial"
+12/07/2023 - 17:49:36 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000//filialTStringField"
+12/07/2023 - 17:50:08 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000//filialTStringField"
+12/07/2023 - 17:50:39 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000//filial33355207000219"
+12/07/2023 - 17:51:03 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000//filial/33355207000219"
+12/07/2023 - 17:52:26 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000/filial"
+12/07/2023 - 17:52:59 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000/filial"
