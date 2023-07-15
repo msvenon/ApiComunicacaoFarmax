@@ -12,6 +12,7 @@ type
     SpbStart: TSpeedButton;
     SpbStop: TSpeedButton;
     Label1: TLabel;
+    Memo1: TMemo;
     procedure SpbStartClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpbStopClick(Sender: TObject);

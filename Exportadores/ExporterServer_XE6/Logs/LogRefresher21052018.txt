@@ -1,0 +1,4 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 21052018 as 12:50:43 horas
+21/05/2018 12:50:43 - Erro de conexão com o banco de dados.
+21/05/2018 12:50:55 - Erro de conexão com o banco de dados.
+21/05/2018 12:51:07 - Erro de conexão com o banco de dados.

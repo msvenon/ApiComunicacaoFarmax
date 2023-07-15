@@ -1,0 +1,5 @@
+ - Iniciando o Dia 06/11/2020 as 10:58:09 horas
+10:58:09ParamStr : Consistencia
+ 
+10:58:37 - ======== Iniciando novo processo de exportacao do ClientQuick ========
+10:58:44 - Iniciando Envio de Caixa.

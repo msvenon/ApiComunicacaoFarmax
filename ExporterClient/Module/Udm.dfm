@@ -10,9 +10,8 @@ object DM: TDM
       'Port=3050'
       'Password=masterkey'
       'Server=localhost'
-      'Database=C:\FarmaxMatriz\MATRIZPOVO.FDB'
+      'Database=D:\FarmaxMatriz\MATRIZ.FDB'
       'DriverID=FB')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 8

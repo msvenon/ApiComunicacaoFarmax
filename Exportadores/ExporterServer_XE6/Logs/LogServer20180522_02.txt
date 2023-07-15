@@ -1,0 +1,1886 @@
+14:58:37 - 2 - Processo = 999 - Validacao de Conexao
+14:58:37 - 2 - Fim
+14:58:37 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+14:58:37 - 2 - Fim
+14:58:37 - 2 - Processo = 122 - Contas a Pagar
+14:58:37 - 2 - Fim
+14:58:37 - 2 - Processo = 145 - Lancamentos a Prazo
+14:58:38 - 2 - Processo = 105 - Compras
+14:58:38 - 2 - Fim
+14:58:38 - 2 - Processo = 106 - Itens Compras
+14:58:38 - 2 - Fim
+14:58:38 - 2 - Processo = 156 - Itens Compras Lote
+14:58:38 - 2 - Fim
+14:58:38 - 2 - Processo = 121 - Contas a Receber
+14:58:38 - 2 - Fim
+14:58:39 - 2 - Processo = 150 - Contas a Receber Deletados
+14:58:39 - 2 - Fim
+14:58:39 - 2 - Processo = 110 - Clientes
+14:58:39 - 2 - Fim
+14:58:39 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+14:58:39 - 2 - Fim
+14:58:39 - 2 - Processo = 120 - Classes
+14:58:39 - 2 - Processo = 120 - Enviando Classes: 1
+14:58:40 - 2 - Fim
+14:58:40 - 2 - Processo = 129 - Familias
+14:58:40 - 2 - Fim
+14:58:40 - 2 - Processo = 114 - Distribuidores
+14:58:40 - 2 - Processo = 130 - Grupos de Balanco
+14:58:40 - 2 - Fim
+14:58:40 - 2 - Processo = 131 - Grupos de Compras
+14:58:40 - 2 - Fim
+14:58:41 - 2 - Processo = 132 - Grupos Curvas
+14:58:41 - 2 - Fim
+14:58:41 - 2 - Processo = 100 - Grupos
+14:58:41 - 2 - Fim
+14:58:41 - 2 - Processo = 135 - SubGrupos
+14:58:41 - 2 - Fim
+14:58:41 - 2 - Processo = 101 - Laboratorios
+14:58:41 - 2 - Fim
+14:58:42 - 2 - Processo = 104 - Vendedores
+14:58:42 - 2 - Fim
+14:58:42 - 2 - Processo = 123 - Vendedores Classes
+14:58:42 - 2 - Fim
+14:58:42 - 2 - Processo = 124 - Convenios Classes
+14:58:42 - 2 - Fim
+14:58:42 - 2 - Processo = 109 - Plano Contas
+14:58:42 - 2 - Fim
+14:58:43 - 2 - Processo = 111 - Convenios
+14:58:43 - 2 - Fim
+14:58:43 - 2 - Processo = 112 - Transportadoras
+14:58:43 - 2 - Processo = 112 - Enviando Transportadoras: 2
+14:58:43 - 2 - Fim
+14:58:43 - 2 - Processo = 113 - Cartoes
+14:58:43 - 2 - Processo = 113 - Enviando Cartoes: 2
+14:58:43 - 2 - Fim
+14:58:43 - 2 - Processo = 115 - Filiais
+14:58:44 - 2 - Processo = 115 - Enviando Filiais: 3
+14:58:44 - 2 - Fim
+14:58:44 - 2 - Processo = 126 - Balancos
+14:58:44 - 2 - Fim
+14:58:44 - 2 - Processo = 127 - Metas da Filial
+14:58:44 - 2 - Fim
+14:58:44 - 2 - Processo = 128 - Metas dos Vendedores
+14:58:44 - 2 - Fim
+14:58:44 - 2 - Processo = 108 - Registros Deletados
+14:58:45 - 2 - Fim
+14:58:45 - 2 - Processo = 108 - Registros Deletados
+14:58:45 - 2 - Fim
+14:58:45 - 2 - Processo = 108 - Registros Deletados
+14:58:45 - 2 - Processo = 108 - Enviando Registros Deletados da Tabela 'CONTAS_PAGAR': 2
+14:58:45 - 2 - Fim
+14:58:45 - 2 - Processo = 108 - Registros Deletados
+14:58:45 - 2 - Fim
+14:58:46 - 2 - Processo = 108 - Registros Deletados
+14:58:46 - 2 - Fim
+14:58:46 - 2 - Processo = 108 - Registros Deletados
+14:58:46 - 2 - Fim
+14:58:46 - 2 - Processo = 108 - Registros Deletados
+14:58:46 - 2 - Fim
+14:58:46 - 2 - Processo = 108 - Registros Deletados
+14:58:46 - 2 - Fim
+14:58:47 - 2 - Processo = 108 - Registros Deletados
+14:58:47 - 2 - Fim
+14:58:47 - 2 - Processo = 108 - Registros Deletados
+14:58:47 - 2 - Fim
+14:58:47 - 2 - Processo = 108 - Registros Deletados
+14:58:47 - 2 - Fim
+14:58:47 - 2 - Processo = 108 - Registros Deletados
+14:58:47 - 2 - Fim
+14:58:48 - 2 - Processo = 108 - Registros Deletados
+14:58:48 - 2 - Fim
+14:58:48 - 2 - Processo = 108 - Registros Deletados
+14:58:48 - 2 - Fim
+14:58:48 - 2 - Processo = 108 - Registros Deletados
+14:58:48 - 2 - Fim
+14:58:48 - 2 - Processo = 108 - Registros Deletados
+14:58:48 - 2 - Fim
+14:58:49 - 2 - Processo = 108 - Registros Deletados
+14:58:49 - 2 - Fim
+14:58:49 - 2 - Processo = 108 - Registros Deletados
+14:58:49 - 2 - Fim
+14:58:49 - 2 - Processo = 108 - Registros Deletados
+14:58:49 - 2 - Fim
+14:58:49 - 2 - Processo = 108 - Registros Deletados
+14:58:49 - 2 - Processo = 108 - Enviando Registros Deletados da Tabela 'COMPRAS': 9
+14:58:49 - 2 - Fim
+14:58:50 - 2 - Processo = 108 - Registros Deletados
+14:58:50 - 2 - Processo = 108 - Enviando Registros Deletados da Tabela 'ITENS_COMPRA': 107
+14:58:50 - 2 - Fim
+14:58:51 - 2 - Processo = 108 - Registros Deletados
+14:58:51 - 2 - Fim
+14:58:51 - 2 - Processo = 108 - Registros Deletados
+14:58:51 - 2 - Fim
+14:58:51 - 2 - Processo = 142 - Usuarios
+14:58:51 - 2 - Fim
+14:58:51 - 2 - Processo = 108 - Registros Deletados
+14:58:52 - 2 - Fim
+14:58:52 - 2 - Processo = 143 - Permissoes
+14:58:52 - 2 - Fim
+14:58:52 - 2 - Processo = 144 - Permissoes Modulos
+14:58:52 - 2 - Fim
+14:58:52 - 2 - Processo = 146 - Encartes
+14:58:52 - 2 - Processo = 147 - Itens dos Encartes
+14:58:53 - 2 - Processo = 133 - Redes
+14:58:53 - 2 - Fim
+14:58:53 - 2 - Processo = 134 - Concorrentes
+14:58:53 - 2 - Fim
+14:58:53 - 2 - Processo = 152 - Projetos Pharmalink
+14:58:53 - 2 - Fim
+14:58:53 - 2 - Processo = 153 - Perfis de Clientes
+14:58:53 - 2 - Fim
+14:58:54 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+14:58:54 - 2 - Processo = 108 - Registros Deletados
+14:58:54 - 2 - Fim
+14:58:54 - 2 - Processo = 108 - Registros Deletados
+14:58:54 - 2 - Fim
+14:58:54 - 2 - Processo = 108 - Registros Deletados
+14:58:55 - 2 - Fim
+14:58:55 - 2 - Processo = 159 - Principio Ativo
+14:58:55 - 2 - Fim
+14:58:55 - 2 - Processo = 160 - Dicionario de Codigo
+14:58:55 - 2 - Fim
+14:58:55 - 2 - Processo = 148 - Precos dos Concorrentes
+14:58:55 - 2 - Processo = 53 - Compras Deletadas
+14:58:55 - 2 - Processo = 53 - Compras Deletadas Recebidas: 2
+14:58:55 - 2 - Fim
+14:58:56 - 2 - Processo = 61 - Contas a Pagar Deletadas
+14:58:56 - 2 - Processo = 61 - Contas a Pagar Deletadas Recebidas: 2
+14:58:56 - 2 - Fim
+14:58:56 - 2 - Processo = 102 - FiliaisGrupos
+14:58:56 - 2 - Fim
+14:58:56 - 2 - Processo = 108 - Registros Deletados
+14:58:56 - 2 - Fim
+14:59:17 - 2 - Processo = 999 - Validacao de Conexao
+14:59:17 - 2 - Fim
+14:59:17 - 2 - Processo = 3 - Contas a Receber
+14:59:17 - 2 - Processo = 3 - Contas a Receber Recebidos: 25
+14:59:17 - 2 - Fim
+14:59:18 - 2 - Processo = 117 - Transferencias
+14:59:18 - 2 - Fim
+14:59:18 - 2 - Processo = 118 - Itens Transferencias
+14:59:18 - 2 - Fim
+14:59:18 - 2 - Processo = 154 - Produtos Quantidade
+14:59:19 - 2 - Fim
+14:59:19 - 2 - Processo = 155 - Produtos Farmacia Popular
+14:59:19 - 2 - Fim
+14:59:19 - 2 - Processo = 158 - Produtos Fidelidade
+14:59:19 - 2 - Fim
+14:59:19 - 2 - Processo = 1 - Lancamentos
+14:59:19 - 2 - Processo = 1 - Lancamentos Recebidos: 121
+14:59:19 - 2 - Fim
+14:59:19 - 2 - Processo = 999 - Validacao de Conexao
+14:59:20 - 2 - Fim
+14:59:20 - 2 - Processo = 999 - Validacao de Conexao
+14:59:20 - 2 - Fim
+14:59:20 - 2 - Processo = 999 - Validacao de Conexao
+14:59:20 - 2 - Fim
+14:59:20 - 2 - Processo = 999 - Validacao de Conexao
+14:59:20 - 2 - Fim
+14:59:21 - 2 - Processo = 108 - Registros Deletados
+14:59:21 - 2 - Fim
+14:59:21 - 2 - Processo = 103 - Produtos Incluidos
+14:59:21 - 2 - Fim
+14:59:22 - 2 - Processo = 119 - Cadastro dos Produtos
+14:59:22 - 2 - Fim
+14:59:22 - 2 - Processo = 1191 - Estoque
+14:59:22 - 2 - Fim
+14:59:22 - 2 - Processo = 125 - Precos de Venda
+14:59:22 - 2 - Processo = 125 - Enviando Precos de Venda: 46
+14:59:22 - 2 - Fim
+14:59:25 - 2 - Processo = 125 - Precos de Venda
+14:59:25 - 2 - Fim
+14:59:25 - 2 - Processo = 66 - Produtos Lotas
+14:59:25 - 2 - Processo = 66 - Produtos Lotes Recebidos: 47
+14:59:25 - 2 - Fim
+14:59:25 - 2 - Processo = 999 - Validacao de Conexao
+14:59:25 - 2 - Fim
+14:59:26 - 2 - Processo = 7 - Estoque
+14:59:26 - 2 - Processo = 7 - Estoque de Produtos Recebidos: 47
+14:59:26 - 2 - Fim
+14:59:27 - 2 - Processo = 0 - LogInterligacao
+14:59:27 - 2 - Inicio de GeraLogInterligacao 
+14:59:27 - 2 - Final de GeraLogInterligacao 
+15:00:50 - 2 - Processo = 999 - Validacao de Conexao
+15:00:50 - 2 - Fim
+15:00:51 - 2 - Processo = 117 - Transferencias
+15:00:51 - 2 - Fim
+15:00:51 - 2 - Processo = 118 - Itens Transferencias
+15:00:51 - 2 - Fim
+15:00:51 - 2 - Processo = 154 - Produtos Quantidade
+15:00:51 - 2 - Fim
+15:00:51 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:00:51 - 2 - Fim
+15:00:52 - 2 - Processo = 158 - Produtos Fidelidade
+15:00:52 - 2 - Fim
+15:00:52 - 2 - Processo = 999 - Validacao de Conexao
+15:00:52 - 2 - Fim
+15:00:52 - 2 - Processo = 999 - Validacao de Conexao
+15:00:52 - 2 - Fim
+15:00:52 - 2 - Processo = 999 - Validacao de Conexao
+15:00:52 - 2 - Fim
+15:00:53 - 2 - Processo = 108 - Registros Deletados
+15:00:53 - 2 - Fim
+15:00:53 - 2 - Processo = 103 - Produtos Incluidos
+15:00:54 - 2 - Fim
+15:00:54 - 2 - Processo = 119 - Cadastro dos Produtos
+15:00:54 - 2 - Processo = 119 - Enviando Cadastro de Produtos: 10
+15:00:54 - 2 - Fim
+15:00:54 - 2 - Processo = 119 - Cadastro dos Produtos
+15:00:54 - 2 - Fim
+15:00:55 - 2 - Processo = 1191 - Estoque
+15:00:55 - 2 - Fim
+15:00:55 - 2 - Processo = 125 - Precos de Venda
+15:00:55 - 2 - Fim
+15:00:56 - 2 - Processo = 999 - Validacao de Conexao
+15:00:56 - 2 - Fim
+15:00:56 - 2 - Processo = 7 - Estoque
+15:00:56 - 2 - Processo = 7 - Estoque de Produtos Recebidos: 2
+15:00:56 - 2 - Fim
+15:00:57 - 2 - Processo = 0 - LogInterligacao
+15:00:57 - 2 - Inicio de GeraLogInterligacao 
+15:00:57 - 2 - Final de GeraLogInterligacao 
+15:01:09 - 2 - Processo = 999 - Validacao de Conexao
+15:01:09 - 2 - Fim
+15:01:09 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:01:09 - 2 - Fim
+15:01:10 - 2 - Processo = 122 - Contas a Pagar
+15:01:10 - 2 - Processo = 122 - Enviando Contas a Pagar: 3
+15:01:10 - 2 - Fim
+15:01:10 - 2 - Processo = 122 - Contas a Pagar
+15:01:10 - 2 - Fim
+15:01:10 - 2 - Processo = 145 - Lancamentos a Prazo
+15:01:10 - 2 - Processo = 105 - Compras
+15:01:10 - 2 - Processo = 105 - Enviando Compras: 1
+15:01:11 - 2 - Fim
+15:01:11 - 2 - Processo = 106 - Itens Compras
+15:01:11 - 2 - Processo = 106 - Enviando Itens Compra: 10
+15:01:11 - 2 - Fim
+15:01:11 - 2 - Processo = 156 - Itens Compras Lote
+15:01:11 - 2 - Fim
+15:01:11 - 2 - Processo = 121 - Contas a Receber
+15:01:11 - 2 - Fim
+15:01:12 - 2 - Processo = 150 - Contas a Receber Deletados
+15:01:12 - 2 - Fim
+15:01:12 - 2 - Processo = 110 - Clientes
+15:01:12 - 2 - Fim
+15:01:12 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:01:12 - 2 - Fim
+15:01:12 - 2 - Processo = 120 - Classes
+15:01:12 - 2 - Processo = 120 - Enviando Classes: 1
+15:01:12 - 2 - Fim
+15:01:13 - 2 - Processo = 129 - Familias
+15:01:13 - 2 - Fim
+15:01:13 - 2 - Processo = 114 - Distribuidores
+15:01:13 - 2 - Processo = 130 - Grupos de Balanco
+15:01:13 - 2 - Fim
+15:01:13 - 2 - Processo = 131 - Grupos de Compras
+15:01:13 - 2 - Fim
+15:01:14 - 2 - Processo = 132 - Grupos Curvas
+15:01:14 - 2 - Fim
+15:01:14 - 2 - Processo = 100 - Grupos
+15:01:14 - 2 - Fim
+15:01:14 - 2 - Processo = 135 - SubGrupos
+15:01:14 - 2 - Fim
+15:01:14 - 2 - Processo = 101 - Laboratorios
+15:01:14 - 2 - Fim
+15:01:15 - 2 - Processo = 104 - Vendedores
+15:01:15 - 2 - Fim
+15:01:15 - 2 - Processo = 123 - Vendedores Classes
+15:01:15 - 2 - Fim
+15:01:15 - 2 - Processo = 124 - Convenios Classes
+15:01:15 - 2 - Fim
+15:01:15 - 2 - Processo = 109 - Plano Contas
+15:01:15 - 2 - Fim
+15:01:16 - 2 - Processo = 111 - Convenios
+15:01:16 - 2 - Fim
+15:01:16 - 2 - Processo = 112 - Transportadoras
+15:01:16 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:01:16 - 2 - Fim
+15:01:16 - 2 - Processo = 113 - Cartoes
+15:01:16 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:01:16 - 2 - Fim
+15:01:16 - 2 - Processo = 115 - Filiais
+15:01:16 - 2 - Processo = 115 - Enviando Filiais: 3
+15:01:16 - 2 - Fim
+15:01:17 - 2 - Processo = 126 - Balancos
+15:01:17 - 2 - Fim
+15:01:17 - 2 - Processo = 127 - Metas da Filial
+15:01:17 - 2 - Fim
+15:01:17 - 2 - Processo = 128 - Metas dos Vendedores
+15:01:17 - 2 - Fim
+15:01:17 - 2 - Processo = 108 - Registros Deletados
+15:01:17 - 2 - Fim
+15:01:18 - 2 - Processo = 108 - Registros Deletados
+15:01:18 - 2 - Fim
+15:01:18 - 2 - Processo = 108 - Registros Deletados
+15:01:18 - 2 - Fim
+15:01:18 - 2 - Processo = 108 - Registros Deletados
+15:01:18 - 2 - Fim
+15:01:18 - 2 - Processo = 108 - Registros Deletados
+15:01:18 - 2 - Fim
+15:01:19 - 2 - Processo = 108 - Registros Deletados
+15:01:19 - 2 - Fim
+15:01:19 - 2 - Processo = 108 - Registros Deletados
+15:01:19 - 2 - Fim
+15:01:19 - 2 - Processo = 108 - Registros Deletados
+15:01:19 - 2 - Fim
+15:01:19 - 2 - Processo = 108 - Registros Deletados
+15:01:19 - 2 - Fim
+15:01:20 - 2 - Processo = 108 - Registros Deletados
+15:01:20 - 2 - Fim
+15:01:20 - 2 - Processo = 108 - Registros Deletados
+15:01:20 - 2 - Fim
+15:01:20 - 2 - Processo = 108 - Registros Deletados
+15:01:20 - 2 - Fim
+15:01:20 - 2 - Processo = 108 - Registros Deletados
+15:01:20 - 2 - Fim
+15:01:21 - 2 - Processo = 108 - Registros Deletados
+15:01:21 - 2 - Fim
+15:01:21 - 2 - Processo = 108 - Registros Deletados
+15:01:21 - 2 - Fim
+15:01:21 - 2 - Processo = 108 - Registros Deletados
+15:01:21 - 2 - Fim
+15:01:21 - 2 - Processo = 108 - Registros Deletados
+15:01:21 - 2 - Fim
+15:01:22 - 2 - Processo = 108 - Registros Deletados
+15:01:22 - 2 - Fim
+15:01:22 - 2 - Processo = 108 - Registros Deletados
+15:01:22 - 2 - Fim
+15:01:22 - 2 - Processo = 108 - Registros Deletados
+15:01:22 - 2 - Fim
+15:01:22 - 2 - Processo = 108 - Registros Deletados
+15:01:22 - 2 - Fim
+15:01:23 - 2 - Processo = 108 - Registros Deletados
+15:01:23 - 2 - Fim
+15:01:23 - 2 - Processo = 108 - Registros Deletados
+15:01:23 - 2 - Fim
+15:01:23 - 2 - Processo = 142 - Usuarios
+15:01:23 - 2 - Fim
+15:01:23 - 2 - Processo = 108 - Registros Deletados
+15:01:23 - 2 - Fim
+15:01:24 - 2 - Processo = 143 - Permissoes
+15:01:24 - 2 - Fim
+15:01:24 - 2 - Processo = 144 - Permissoes Modulos
+15:01:24 - 2 - Fim
+15:01:24 - 2 - Processo = 146 - Encartes
+15:01:24 - 2 - Processo = 147 - Itens dos Encartes
+15:01:25 - 2 - Processo = 133 - Redes
+15:01:25 - 2 - Fim
+15:01:25 - 2 - Processo = 134 - Concorrentes
+15:01:25 - 2 - Fim
+15:01:25 - 2 - Processo = 152 - Projetos Pharmalink
+15:01:25 - 2 - Fim
+15:01:25 - 2 - Processo = 153 - Perfis de Clientes
+15:01:25 - 2 - Fim
+15:01:26 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:01:26 - 2 - Processo = 108 - Registros Deletados
+15:01:26 - 2 - Fim
+15:01:26 - 2 - Processo = 108 - Registros Deletados
+15:01:26 - 2 - Fim
+15:01:26 - 2 - Processo = 108 - Registros Deletados
+15:01:26 - 2 - Fim
+15:01:27 - 2 - Processo = 159 - Principio Ativo
+15:01:27 - 2 - Fim
+15:01:27 - 2 - Processo = 160 - Dicionario de Codigo
+15:01:27 - 2 - Fim
+15:01:27 - 2 - Processo = 148 - Precos dos Concorrentes
+15:01:28 - 2 - Processo = 102 - FiliaisGrupos
+15:01:28 - 2 - Fim
+15:01:28 - 2 - Processo = 108 - Registros Deletados
+15:01:28 - 2 - Fim
+15:04:05 - 2 - Processo = 999 - Validacao de Conexao
+15:04:05 - 2 - Fim
+15:04:05 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:04:06 - 2 - Fim
+15:04:06 - 2 - Processo = 122 - Contas a Pagar
+15:04:06 - 2 - Fim
+15:04:06 - 2 - Processo = 145 - Lancamentos a Prazo
+15:04:06 - 2 - Processo = 105 - Compras
+15:04:06 - 2 - Fim
+15:04:06 - 2 - Processo = 106 - Itens Compras
+15:04:07 - 2 - Fim
+15:04:07 - 2 - Processo = 156 - Itens Compras Lote
+15:04:07 - 2 - Fim
+15:04:07 - 2 - Processo = 121 - Contas a Receber
+15:04:07 - 2 - Fim
+15:04:07 - 2 - Processo = 150 - Contas a Receber Deletados
+15:04:07 - 2 - Fim
+15:04:07 - 2 - Processo = 110 - Clientes
+15:04:08 - 2 - Fim
+15:04:08 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:04:08 - 2 - Fim
+15:04:08 - 2 - Processo = 120 - Classes
+15:04:08 - 2 - Processo = 120 - Enviando Classes: 1
+15:04:08 - 2 - Fim
+15:04:08 - 2 - Processo = 129 - Familias
+15:04:08 - 2 - Fim
+15:04:08 - 2 - Processo = 114 - Distribuidores
+15:04:09 - 2 - Processo = 130 - Grupos de Balanco
+15:04:09 - 2 - Fim
+15:04:09 - 2 - Processo = 131 - Grupos de Compras
+15:04:09 - 2 - Fim
+15:04:09 - 2 - Processo = 132 - Grupos Curvas
+15:04:09 - 2 - Fim
+15:04:09 - 2 - Processo = 100 - Grupos
+15:04:10 - 2 - Fim
+15:04:10 - 2 - Processo = 135 - SubGrupos
+15:04:10 - 2 - Fim
+15:04:10 - 2 - Processo = 101 - Laboratorios
+15:04:10 - 2 - Fim
+15:04:10 - 2 - Processo = 104 - Vendedores
+15:04:10 - 2 - Fim
+15:04:10 - 2 - Processo = 123 - Vendedores Classes
+15:04:10 - 2 - Fim
+15:04:11 - 2 - Processo = 124 - Convenios Classes
+15:04:11 - 2 - Fim
+15:04:11 - 2 - Processo = 109 - Plano Contas
+15:04:11 - 2 - Fim
+15:04:11 - 2 - Processo = 111 - Convenios
+15:04:11 - 2 - Fim
+15:04:11 - 2 - Processo = 112 - Transportadoras
+15:04:11 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:04:11 - 2 - Fim
+15:04:12 - 2 - Processo = 113 - Cartoes
+15:04:12 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:04:12 - 2 - Fim
+15:04:12 - 2 - Processo = 115 - Filiais
+15:04:12 - 2 - Processo = 115 - Enviando Filiais: 3
+15:04:12 - 2 - Fim
+15:04:12 - 2 - Processo = 126 - Balancos
+15:04:12 - 2 - Fim
+15:04:12 - 2 - Processo = 127 - Metas da Filial
+15:04:13 - 2 - Fim
+15:04:13 - 2 - Processo = 128 - Metas dos Vendedores
+15:04:13 - 2 - Fim
+15:04:13 - 2 - Processo = 108 - Registros Deletados
+15:04:13 - 2 - Fim
+15:04:13 - 2 - Processo = 108 - Registros Deletados
+15:04:13 - 2 - Fim
+15:04:13 - 2 - Processo = 108 - Registros Deletados
+15:04:13 - 2 - Fim
+15:04:14 - 2 - Processo = 108 - Registros Deletados
+15:04:14 - 2 - Fim
+15:04:14 - 2 - Processo = 108 - Registros Deletados
+15:04:14 - 2 - Fim
+15:04:14 - 2 - Processo = 108 - Registros Deletados
+15:04:14 - 2 - Fim
+15:04:14 - 2 - Processo = 108 - Registros Deletados
+15:04:14 - 2 - Fim
+15:04:15 - 2 - Processo = 108 - Registros Deletados
+15:04:15 - 2 - Fim
+15:04:15 - 2 - Processo = 108 - Registros Deletados
+15:04:15 - 2 - Fim
+15:04:15 - 2 - Processo = 108 - Registros Deletados
+15:04:15 - 2 - Fim
+15:04:15 - 2 - Processo = 108 - Registros Deletados
+15:04:15 - 2 - Fim
+15:04:16 - 2 - Processo = 108 - Registros Deletados
+15:04:16 - 2 - Fim
+15:04:16 - 2 - Processo = 108 - Registros Deletados
+15:04:16 - 2 - Fim
+15:04:16 - 2 - Processo = 108 - Registros Deletados
+15:04:16 - 2 - Fim
+15:04:16 - 2 - Processo = 108 - Registros Deletados
+15:04:16 - 2 - Fim
+15:04:17 - 2 - Processo = 108 - Registros Deletados
+15:04:17 - 2 - Fim
+15:04:17 - 2 - Processo = 108 - Registros Deletados
+15:04:17 - 2 - Fim
+15:04:17 - 2 - Processo = 108 - Registros Deletados
+15:04:17 - 2 - Fim
+15:04:17 - 2 - Processo = 108 - Registros Deletados
+15:04:17 - 2 - Fim
+15:04:18 - 2 - Processo = 108 - Registros Deletados
+15:04:18 - 2 - Fim
+15:04:18 - 2 - Processo = 108 - Registros Deletados
+15:04:18 - 2 - Fim
+15:04:18 - 2 - Processo = 108 - Registros Deletados
+15:04:18 - 2 - Fim
+15:04:18 - 2 - Processo = 108 - Registros Deletados
+15:04:18 - 2 - Fim
+15:04:19 - 2 - Processo = 142 - Usuarios
+15:04:19 - 2 - Fim
+15:04:19 - 2 - Processo = 108 - Registros Deletados
+15:04:19 - 2 - Fim
+15:04:19 - 2 - Processo = 143 - Permissoes
+15:04:19 - 2 - Fim
+15:04:19 - 2 - Processo = 144 - Permissoes Modulos
+15:04:19 - 2 - Fim
+15:04:20 - 2 - Processo = 146 - Encartes
+15:04:20 - 2 - Processo = 147 - Itens dos Encartes
+15:04:20 - 2 - Processo = 133 - Redes
+15:04:20 - 2 - Fim
+15:04:20 - 2 - Processo = 134 - Concorrentes
+15:04:20 - 2 - Fim
+15:04:21 - 2 - Processo = 152 - Projetos Pharmalink
+15:04:21 - 2 - Fim
+15:04:21 - 2 - Processo = 153 - Perfis de Clientes
+15:04:21 - 2 - Fim
+15:04:21 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:04:21 - 2 - Processo = 108 - Registros Deletados
+15:04:21 - 2 - Fim
+15:04:22 - 2 - Processo = 108 - Registros Deletados
+15:04:22 - 2 - Fim
+15:04:22 - 2 - Processo = 108 - Registros Deletados
+15:04:22 - 2 - Fim
+15:04:22 - 2 - Processo = 159 - Principio Ativo
+15:04:22 - 2 - Fim
+15:04:22 - 2 - Processo = 160 - Dicionario de Codigo
+15:04:22 - 2 - Fim
+15:04:23 - 2 - Processo = 148 - Precos dos Concorrentes
+15:04:23 - 2 - Processo = 102 - FiliaisGrupos
+15:04:23 - 2 - Fim
+15:04:23 - 2 - Processo = 108 - Registros Deletados
+15:04:23 - 2 - Fim
+15:04:32 - 2 - Processo = 999 - Validacao de Conexao
+15:04:32 - 2 - Fim
+15:04:32 - 2 - Processo = 117 - Transferencias
+15:04:32 - 2 - Fim
+15:04:33 - 2 - Processo = 118 - Itens Transferencias
+15:04:33 - 2 - Fim
+15:04:33 - 2 - Processo = 154 - Produtos Quantidade
+15:04:33 - 2 - Fim
+15:04:33 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:04:33 - 2 - Fim
+15:04:33 - 2 - Processo = 158 - Produtos Fidelidade
+15:04:33 - 2 - Fim
+15:04:34 - 2 - Processo = 1 - Lancamentos
+15:04:34 - 2 - Processo = 1 - Lancamentos Recebidos: 10
+15:04:34 - 2 - Fim
+15:04:34 - 2 - Processo = 999 - Validacao de Conexao
+15:04:34 - 2 - Fim
+15:04:34 - 2 - Processo = 999 - Validacao de Conexao
+15:04:34 - 2 - Fim
+15:04:34 - 2 - Processo = 999 - Validacao de Conexao
+15:04:34 - 2 - Fim
+15:04:35 - 2 - Processo = 999 - Validacao de Conexao
+15:04:35 - 2 - Fim
+15:04:35 - 2 - Processo = 999 - Validacao de Conexao
+15:04:35 - 2 - Fim
+15:04:35 - 2 - Processo = 0 - ItensCompra
+15:04:35 - 2 - Processo = 5 - Itens de Pedido de Compra Recebidos: 10
+15:04:35 - 2 - Fim
+15:04:36 - 2 - Processo = 999 - Validacao de Conexao
+15:04:36 - 2 - Fim
+15:04:36 - 2 - Processo = 4 - Compras
+15:04:36 - 2 - Processo = 4 - Pedidos de Compra Recebidos: 1
+15:04:36 - 2 - Fim
+15:04:36 - 2 - Processo = 108 - Registros Deletados
+15:04:36 - 2 - Fim
+15:04:36 - 2 - Processo = 103 - Produtos Incluidos
+15:04:37 - 2 - Fim
+15:04:37 - 2 - Processo = 119 - Cadastro dos Produtos
+15:04:37 - 2 - Fim
+15:04:37 - 2 - Processo = 1191 - Estoque
+15:04:37 - 2 - Fim
+15:04:37 - 2 - Processo = 125 - Precos de Venda
+15:04:37 - 2 - Fim
+15:04:38 - 2 - Processo = 66 - Produtos Lotas
+15:04:38 - 2 - Processo = 66 - Produtos Lotes Recebidos: 10
+15:04:38 - 2 - Fim
+15:04:38 - 2 - Processo = 999 - Validacao de Conexao
+15:04:38 - 2 - Fim
+15:04:38 - 2 - Processo = 7 - Estoque
+15:04:38 - 2 - Processo = 7 - Estoque de Produtos Recebidos: 10
+15:04:38 - 2 - Fim
+15:04:39 - 2 - Processo = 0 - LogInterligacao
+15:04:39 - 2 - Inicio de GeraLogInterligacao 
+15:04:39 - 2 - Final de GeraLogInterligacao 
+15:08:47 - 2 - Processo = 999 - Validacao de Conexao
+15:08:47 - 2 - Fim
+15:08:47 - 2 - Processo = 117 - Transferencias
+15:08:48 - 2 - Fim
+15:08:48 - 2 - Processo = 118 - Itens Transferencias
+15:08:48 - 2 - Fim
+15:08:48 - 2 - Processo = 154 - Produtos Quantidade
+15:08:48 - 2 - Fim
+15:08:48 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:08:48 - 2 - Fim
+15:08:48 - 2 - Processo = 158 - Produtos Fidelidade
+15:08:49 - 2 - Fim
+15:08:49 - 2 - Processo = 999 - Validacao de Conexao
+15:08:49 - 2 - Fim
+15:08:49 - 2 - Processo = 999 - Validacao de Conexao
+15:08:49 - 2 - Fim
+15:08:49 - 2 - Processo = 999 - Validacao de Conexao
+15:08:49 - 2 - Fim
+15:08:50 - 2 - Processo = 108 - Registros Deletados
+15:08:50 - 2 - Fim
+15:08:50 - 2 - Processo = 103 - Produtos Incluidos
+15:08:50 - 2 - Fim
+15:08:51 - 2 - Processo = 119 - Cadastro dos Produtos
+15:08:51 - 2 - Fim
+15:08:51 - 2 - Processo = 1191 - Estoque
+15:08:51 - 2 - Processo = 1191 - Enviando Estoque dos Produtos: 47
+15:08:51 - 2 - Fim
+15:08:52 - 2 - Processo = 1191 - Estoque
+15:08:52 - 2 - Fim
+15:08:52 - 2 - Processo = 125 - Precos de Venda
+15:08:52 - 2 - Fim
+15:08:53 - 2 - Processo = 999 - Validacao de Conexao
+15:08:53 - 2 - Fim
+15:08:53 - 2 - Processo = 7 - Estoque
+15:08:53 - 2 - Processo = 7 - Estoque de Produtos Recebidos: 2
+15:08:53 - 2 - Fim
+15:08:54 - 2 - Processo = 0 - LogInterligacao
+15:08:54 - 2 - Inicio de GeraLogInterligacao 
+15:08:54 - 2 - Final de GeraLogInterligacao 
+15:08:57 - 2 - Processo = 999 - Validacao de Conexao
+15:08:57 - 2 - Fim
+15:08:57 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:08:57 - 2 - Fim
+15:08:57 - 2 - Processo = 122 - Contas a Pagar
+15:08:57 - 2 - Processo = 122 - Enviando Contas a Pagar: 3
+15:08:57 - 2 - Fim
+15:08:58 - 2 - Processo = 122 - Contas a Pagar
+15:08:58 - 2 - Fim
+15:08:58 - 2 - Processo = 145 - Lancamentos a Prazo
+15:08:58 - 2 - Processo = 105 - Compras
+15:08:58 - 2 - Processo = 105 - Enviando Compras: 1
+15:08:58 - 2 - Fim
+15:08:58 - 2 - Processo = 106 - Itens Compras
+15:08:59 - 2 - Processo = 106 - Enviando Itens Compra: 3
+15:08:59 - 2 - Fim
+15:08:59 - 2 - Processo = 156 - Itens Compras Lote
+15:08:59 - 2 - Fim
+15:08:59 - 2 - Processo = 121 - Contas a Receber
+15:08:59 - 2 - Fim
+15:08:59 - 2 - Processo = 150 - Contas a Receber Deletados
+15:08:59 - 2 - Fim
+15:09:00 - 2 - Processo = 110 - Clientes
+15:09:00 - 2 - Fim
+15:09:00 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:09:00 - 2 - Fim
+15:09:00 - 2 - Processo = 120 - Classes
+15:09:00 - 2 - Processo = 120 - Enviando Classes: 1
+15:09:00 - 2 - Fim
+15:09:00 - 2 - Processo = 129 - Familias
+15:09:00 - 2 - Fim
+15:09:01 - 2 - Processo = 114 - Distribuidores
+15:09:01 - 2 - Processo = 114 - Enviando Distribuidores: 1
+15:09:01 - 2 - Fim
+15:09:01 - 2 - Processo = 130 - Grupos de Balanco
+15:09:01 - 2 - Fim
+15:09:01 - 2 - Processo = 131 - Grupos de Compras
+15:09:01 - 2 - Fim
+15:09:01 - 2 - Processo = 132 - Grupos Curvas
+15:09:01 - 2 - Fim
+15:09:02 - 2 - Processo = 100 - Grupos
+15:09:02 - 2 - Fim
+15:09:02 - 2 - Processo = 135 - SubGrupos
+15:09:02 - 2 - Fim
+15:09:02 - 2 - Processo = 101 - Laboratorios
+15:09:02 - 2 - Fim
+15:09:02 - 2 - Processo = 104 - Vendedores
+15:09:02 - 2 - Fim
+15:09:03 - 2 - Processo = 123 - Vendedores Classes
+15:09:03 - 2 - Fim
+15:09:03 - 2 - Processo = 124 - Convenios Classes
+15:09:03 - 2 - Fim
+15:09:03 - 2 - Processo = 109 - Plano Contas
+15:09:03 - 2 - Fim
+15:09:03 - 2 - Processo = 111 - Convenios
+15:09:03 - 2 - Fim
+15:09:04 - 2 - Processo = 112 - Transportadoras
+15:09:04 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:09:04 - 2 - Fim
+15:09:04 - 2 - Processo = 113 - Cartoes
+15:09:04 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:09:04 - 2 - Fim
+15:09:04 - 2 - Processo = 115 - Filiais
+15:09:04 - 2 - Processo = 115 - Enviando Filiais: 3
+15:09:04 - 2 - Fim
+15:09:04 - 2 - Processo = 126 - Balancos
+15:09:04 - 2 - Fim
+15:09:05 - 2 - Processo = 127 - Metas da Filial
+15:09:05 - 2 - Fim
+15:09:05 - 2 - Processo = 128 - Metas dos Vendedores
+15:09:05 - 2 - Fim
+15:09:05 - 2 - Processo = 108 - Registros Deletados
+15:09:05 - 2 - Fim
+15:09:05 - 2 - Processo = 108 - Registros Deletados
+15:09:05 - 2 - Fim
+15:09:06 - 2 - Processo = 108 - Registros Deletados
+15:09:06 - 2 - Fim
+15:09:06 - 2 - Processo = 108 - Registros Deletados
+15:09:06 - 2 - Fim
+15:09:06 - 2 - Processo = 108 - Registros Deletados
+15:09:06 - 2 - Fim
+15:09:06 - 2 - Processo = 108 - Registros Deletados
+15:09:06 - 2 - Fim
+15:09:07 - 2 - Processo = 108 - Registros Deletados
+15:09:07 - 2 - Fim
+15:09:07 - 2 - Processo = 108 - Registros Deletados
+15:09:07 - 2 - Fim
+15:09:07 - 2 - Processo = 108 - Registros Deletados
+15:09:07 - 2 - Fim
+15:09:07 - 2 - Processo = 108 - Registros Deletados
+15:09:07 - 2 - Fim
+15:09:08 - 2 - Processo = 108 - Registros Deletados
+15:09:08 - 2 - Fim
+15:09:08 - 2 - Processo = 108 - Registros Deletados
+15:09:08 - 2 - Fim
+15:09:08 - 2 - Processo = 108 - Registros Deletados
+15:09:08 - 2 - Fim
+15:09:08 - 2 - Processo = 108 - Registros Deletados
+15:09:08 - 2 - Fim
+15:09:08 - 2 - Processo = 108 - Registros Deletados
+15:09:09 - 2 - Fim
+15:09:09 - 2 - Processo = 108 - Registros Deletados
+15:09:09 - 2 - Fim
+15:09:09 - 2 - Processo = 108 - Registros Deletados
+15:09:09 - 2 - Fim
+15:09:09 - 2 - Processo = 108 - Registros Deletados
+15:09:09 - 2 - Fim
+15:09:09 - 2 - Processo = 108 - Registros Deletados
+15:09:10 - 2 - Fim
+15:09:10 - 2 - Processo = 108 - Registros Deletados
+15:09:10 - 2 - Fim
+15:09:10 - 2 - Processo = 108 - Registros Deletados
+15:09:10 - 2 - Fim
+15:09:10 - 2 - Processo = 108 - Registros Deletados
+15:09:10 - 2 - Fim
+15:09:10 - 2 - Processo = 108 - Registros Deletados
+15:09:11 - 2 - Fim
+15:09:11 - 2 - Processo = 142 - Usuarios
+15:09:11 - 2 - Fim
+15:09:11 - 2 - Processo = 108 - Registros Deletados
+15:09:11 - 2 - Fim
+15:09:11 - 2 - Processo = 143 - Permissoes
+15:09:11 - 2 - Fim
+15:09:11 - 2 - Processo = 144 - Permissoes Modulos
+15:09:12 - 2 - Fim
+15:09:12 - 2 - Processo = 146 - Encartes
+15:09:12 - 2 - Processo = 147 - Itens dos Encartes
+15:09:12 - 2 - Processo = 133 - Redes
+15:09:12 - 2 - Fim
+15:09:12 - 2 - Processo = 134 - Concorrentes
+15:09:13 - 2 - Fim
+15:09:13 - 2 - Processo = 152 - Projetos Pharmalink
+15:09:13 - 2 - Fim
+15:09:13 - 2 - Processo = 153 - Perfis de Clientes
+15:09:13 - 2 - Fim
+15:09:13 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:09:13 - 2 - Processo = 108 - Registros Deletados
+15:09:14 - 2 - Fim
+15:09:14 - 2 - Processo = 108 - Registros Deletados
+15:09:14 - 2 - Fim
+15:09:14 - 2 - Processo = 108 - Registros Deletados
+15:09:14 - 2 - Fim
+15:09:14 - 2 - Processo = 159 - Principio Ativo
+15:09:14 - 2 - Fim
+15:09:14 - 2 - Processo = 160 - Dicionario de Codigo
+15:09:15 - 2 - Fim
+15:09:15 - 2 - Processo = 148 - Precos dos Concorrentes
+15:09:15 - 2 - Processo = 102 - FiliaisGrupos
+15:09:15 - 2 - Fim
+15:09:15 - 2 - Processo = 108 - Registros Deletados
+15:09:16 - 2 - Fim
+15:10:20 - 2 - Processo = 999 - Validacao de Conexao
+15:10:20 - 2 - Fim
+15:10:20 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:10:20 - 2 - Fim
+15:10:20 - 2 - Processo = 122 - Contas a Pagar
+15:10:20 - 2 - Fim
+15:10:21 - 2 - Processo = 145 - Lancamentos a Prazo
+15:10:21 - 2 - Processo = 105 - Compras
+15:10:21 - 2 - Processo = 105 - Enviando Compras: 1
+15:10:21 - 2 - Fim
+15:10:21 - 2 - Processo = 106 - Itens Compras
+15:10:21 - 2 - Processo = 106 - Enviando Itens Compra: 3
+15:10:21 - 2 - Fim
+15:10:21 - 2 - Processo = 156 - Itens Compras Lote
+15:10:22 - 2 - Fim
+15:10:22 - 2 - Processo = 121 - Contas a Receber
+15:10:22 - 2 - Fim
+15:10:22 - 2 - Processo = 150 - Contas a Receber Deletados
+15:10:22 - 2 - Fim
+15:10:22 - 2 - Processo = 110 - Clientes
+15:10:22 - 2 - Fim
+15:10:22 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:10:23 - 2 - Fim
+15:10:23 - 2 - Processo = 120 - Classes
+15:10:23 - 2 - Processo = 120 - Enviando Classes: 1
+15:10:23 - 2 - Fim
+15:10:23 - 2 - Processo = 129 - Familias
+15:10:23 - 2 - Fim
+15:10:23 - 2 - Processo = 114 - Distribuidores
+15:10:24 - 2 - Processo = 130 - Grupos de Balanco
+15:10:24 - 2 - Fim
+15:10:24 - 2 - Processo = 131 - Grupos de Compras
+15:10:24 - 2 - Fim
+15:10:24 - 2 - Processo = 132 - Grupos Curvas
+15:10:24 - 2 - Fim
+15:10:24 - 2 - Processo = 100 - Grupos
+15:10:24 - 2 - Fim
+15:10:25 - 2 - Processo = 135 - SubGrupos
+15:10:25 - 2 - Fim
+15:10:25 - 2 - Processo = 101 - Laboratorios
+15:10:25 - 2 - Fim
+15:10:25 - 2 - Processo = 104 - Vendedores
+15:10:25 - 2 - Fim
+15:10:25 - 2 - Processo = 123 - Vendedores Classes
+15:10:25 - 2 - Fim
+15:10:26 - 2 - Processo = 124 - Convenios Classes
+15:10:26 - 2 - Fim
+15:10:26 - 2 - Processo = 109 - Plano Contas
+15:10:26 - 2 - Fim
+15:10:26 - 2 - Processo = 111 - Convenios
+15:10:26 - 2 - Fim
+15:10:26 - 2 - Processo = 112 - Transportadoras
+15:10:26 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:10:26 - 2 - Fim
+15:10:27 - 2 - Processo = 113 - Cartoes
+15:10:27 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:10:27 - 2 - Fim
+15:10:27 - 2 - Processo = 115 - Filiais
+15:10:27 - 2 - Processo = 115 - Enviando Filiais: 3
+15:10:27 - 2 - Fim
+15:10:27 - 2 - Processo = 126 - Balancos
+15:10:27 - 2 - Fim
+15:10:27 - 2 - Processo = 127 - Metas da Filial
+15:10:27 - 2 - Fim
+15:10:28 - 2 - Processo = 128 - Metas dos Vendedores
+15:10:28 - 2 - Fim
+15:10:28 - 2 - Processo = 108 - Registros Deletados
+15:10:28 - 2 - Fim
+15:10:28 - 2 - Processo = 108 - Registros Deletados
+15:10:28 - 2 - Fim
+15:10:28 - 2 - Processo = 108 - Registros Deletados
+15:10:28 - 2 - Fim
+15:10:29 - 2 - Processo = 108 - Registros Deletados
+15:10:29 - 2 - Fim
+15:10:29 - 2 - Processo = 108 - Registros Deletados
+15:10:29 - 2 - Fim
+15:10:29 - 2 - Processo = 108 - Registros Deletados
+15:10:29 - 2 - Fim
+15:10:29 - 2 - Processo = 108 - Registros Deletados
+15:10:29 - 2 - Fim
+15:10:30 - 2 - Processo = 108 - Registros Deletados
+15:10:30 - 2 - Fim
+15:10:30 - 2 - Processo = 108 - Registros Deletados
+15:10:30 - 2 - Fim
+15:10:30 - 2 - Processo = 108 - Registros Deletados
+15:10:30 - 2 - Fim
+15:10:30 - 2 - Processo = 108 - Registros Deletados
+15:10:30 - 2 - Fim
+15:10:30 - 2 - Processo = 108 - Registros Deletados
+15:10:31 - 2 - Fim
+15:10:31 - 2 - Processo = 108 - Registros Deletados
+15:10:31 - 2 - Fim
+15:10:31 - 2 - Processo = 108 - Registros Deletados
+15:10:31 - 2 - Fim
+15:10:31 - 2 - Processo = 108 - Registros Deletados
+15:10:31 - 2 - Fim
+15:10:31 - 2 - Processo = 108 - Registros Deletados
+15:10:32 - 2 - Fim
+15:10:32 - 2 - Processo = 108 - Registros Deletados
+15:10:32 - 2 - Fim
+15:10:32 - 2 - Processo = 108 - Registros Deletados
+15:10:32 - 2 - Fim
+15:10:32 - 2 - Processo = 108 - Registros Deletados
+15:10:32 - 2 - Fim
+15:10:32 - 2 - Processo = 108 - Registros Deletados
+15:10:33 - 2 - Fim
+15:10:33 - 2 - Processo = 108 - Registros Deletados
+15:10:33 - 2 - Fim
+15:10:33 - 2 - Processo = 108 - Registros Deletados
+15:10:33 - 2 - Fim
+15:10:33 - 2 - Processo = 108 - Registros Deletados
+15:10:33 - 2 - Fim
+15:10:34 - 2 - Processo = 142 - Usuarios
+15:10:34 - 2 - Fim
+15:10:34 - 2 - Processo = 108 - Registros Deletados
+15:10:34 - 2 - Fim
+15:10:34 - 2 - Processo = 143 - Permissoes
+15:10:34 - 2 - Fim
+15:10:34 - 2 - Processo = 144 - Permissoes Modulos
+15:10:34 - 2 - Fim
+15:10:35 - 2 - Processo = 146 - Encartes
+15:10:35 - 2 - Processo = 147 - Itens dos Encartes
+15:10:35 - 2 - Processo = 133 - Redes
+15:10:35 - 2 - Fim
+15:10:35 - 2 - Processo = 134 - Concorrentes
+15:10:35 - 2 - Fim
+15:10:36 - 2 - Processo = 152 - Projetos Pharmalink
+15:10:36 - 2 - Fim
+15:10:36 - 2 - Processo = 153 - Perfis de Clientes
+15:10:36 - 2 - Fim
+15:10:36 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:10:36 - 2 - Processo = 108 - Registros Deletados
+15:10:36 - 2 - Fim
+15:10:37 - 2 - Processo = 108 - Registros Deletados
+15:10:37 - 2 - Fim
+15:10:37 - 2 - Processo = 108 - Registros Deletados
+15:10:37 - 2 - Fim
+15:10:37 - 2 - Processo = 159 - Principio Ativo
+15:10:37 - 2 - Fim
+15:10:37 - 2 - Processo = 160 - Dicionario de Codigo
+15:10:37 - 2 - Fim
+15:10:38 - 2 - Processo = 148 - Precos dos Concorrentes
+15:10:38 - 2 - Processo = 102 - FiliaisGrupos
+15:10:38 - 2 - Fim
+15:10:38 - 2 - Processo = 108 - Registros Deletados
+15:10:38 - 2 - Fim
+15:10:40 - 2 - Processo = 999 - Validacao de Conexao
+15:10:40 - 2 - Fim
+15:10:41 - 2 - Processo = 117 - Transferencias
+15:10:41 - 2 - Fim
+15:10:41 - 2 - Processo = 118 - Itens Transferencias
+15:10:41 - 2 - Fim
+15:10:41 - 2 - Processo = 154 - Produtos Quantidade
+15:10:42 - 2 - Fim
+15:10:42 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:10:42 - 2 - Fim
+15:10:42 - 2 - Processo = 158 - Produtos Fidelidade
+15:10:42 - 2 - Fim
+15:10:42 - 2 - Processo = 999 - Validacao de Conexao
+15:10:42 - 2 - Fim
+15:10:42 - 2 - Processo = 999 - Validacao de Conexao
+15:10:43 - 2 - Fim
+15:10:43 - 2 - Processo = 999 - Validacao de Conexao
+15:10:43 - 2 - Fim
+15:10:44 - 2 - Processo = 108 - Registros Deletados
+15:10:44 - 2 - Fim
+15:10:44 - 2 - Processo = 103 - Produtos Incluidos
+15:10:44 - 2 - Fim
+15:10:44 - 2 - Processo = 119 - Cadastro dos Produtos
+15:10:44 - 2 - Fim
+15:10:44 - 2 - Processo = 1191 - Estoque
+15:10:44 - 2 - Fim
+15:10:45 - 2 - Processo = 125 - Precos de Venda
+15:10:45 - 2 - Fim
+15:10:45 - 2 - Processo = 999 - Validacao de Conexao
+15:10:45 - 2 - Fim
+15:10:46 - 2 - Processo = 0 - LogInterligacao
+15:10:46 - 2 - Inicio de GeraLogInterligacao 
+15:10:46 - 2 - Final de GeraLogInterligacao 
+15:14:48 - 2 - Processo = 999 - Validacao de Conexao
+15:14:48 - 2 - Fim
+15:14:49 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:14:49 - 2 - Fim
+15:14:49 - 2 - Processo = 122 - Contas a Pagar
+15:14:49 - 2 - Fim
+15:14:49 - 2 - Processo = 145 - Lancamentos a Prazo
+15:14:49 - 2 - Processo = 105 - Compras
+15:14:49 - 2 - Fim
+15:14:50 - 2 - Processo = 106 - Itens Compras
+15:14:50 - 2 - Fim
+15:14:50 - 2 - Processo = 156 - Itens Compras Lote
+15:14:50 - 2 - Fim
+15:14:50 - 2 - Processo = 121 - Contas a Receber
+15:14:50 - 2 - Fim
+15:14:50 - 2 - Processo = 150 - Contas a Receber Deletados
+15:14:50 - 2 - Fim
+15:14:51 - 2 - Processo = 110 - Clientes
+15:14:51 - 2 - Fim
+15:14:51 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:14:51 - 2 - Fim
+15:14:51 - 2 - Processo = 120 - Classes
+15:14:51 - 2 - Processo = 120 - Enviando Classes: 1
+15:14:51 - 2 - Fim
+15:14:52 - 2 - Processo = 129 - Familias
+15:14:52 - 2 - Fim
+15:14:52 - 2 - Processo = 114 - Distribuidores
+15:14:52 - 2 - Processo = 130 - Grupos de Balanco
+15:14:52 - 2 - Fim
+15:14:52 - 2 - Processo = 131 - Grupos de Compras
+15:14:52 - 2 - Fim
+15:14:53 - 2 - Processo = 132 - Grupos Curvas
+15:14:53 - 2 - Fim
+15:14:53 - 2 - Processo = 100 - Grupos
+15:14:53 - 2 - Fim
+15:14:53 - 2 - Processo = 135 - SubGrupos
+15:14:53 - 2 - Fim
+15:14:53 - 2 - Processo = 101 - Laboratorios
+15:14:53 - 2 - Fim
+15:14:54 - 2 - Processo = 104 - Vendedores
+15:14:54 - 2 - Fim
+15:14:54 - 2 - Processo = 123 - Vendedores Classes
+15:14:54 - 2 - Fim
+15:14:54 - 2 - Processo = 124 - Convenios Classes
+15:14:54 - 2 - Fim
+15:14:54 - 2 - Processo = 109 - Plano Contas
+15:14:54 - 2 - Fim
+15:14:55 - 2 - Processo = 111 - Convenios
+15:14:55 - 2 - Fim
+15:14:55 - 2 - Processo = 112 - Transportadoras
+15:14:55 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:14:55 - 2 - Fim
+15:14:55 - 2 - Processo = 113 - Cartoes
+15:14:55 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:14:55 - 2 - Fim
+15:14:55 - 2 - Processo = 115 - Filiais
+15:14:55 - 2 - Processo = 115 - Enviando Filiais: 3
+15:14:55 - 2 - Fim
+15:14:56 - 2 - Processo = 126 - Balancos
+15:14:56 - 2 - Fim
+15:14:56 - 2 - Processo = 127 - Metas da Filial
+15:14:56 - 2 - Fim
+15:14:56 - 2 - Processo = 128 - Metas dos Vendedores
+15:14:56 - 2 - Fim
+15:14:56 - 2 - Processo = 108 - Registros Deletados
+15:14:57 - 2 - Fim
+15:14:57 - 2 - Processo = 108 - Registros Deletados
+15:14:57 - 2 - Fim
+15:14:57 - 2 - Processo = 108 - Registros Deletados
+15:14:57 - 2 - Fim
+15:14:57 - 2 - Processo = 108 - Registros Deletados
+15:14:57 - 2 - Fim
+15:14:57 - 2 - Processo = 108 - Registros Deletados
+15:14:58 - 2 - Fim
+15:14:58 - 2 - Processo = 108 - Registros Deletados
+15:14:58 - 2 - Fim
+15:14:58 - 2 - Processo = 108 - Registros Deletados
+15:14:58 - 2 - Fim
+15:14:58 - 2 - Processo = 108 - Registros Deletados
+15:14:58 - 2 - Fim
+15:14:58 - 2 - Processo = 108 - Registros Deletados
+15:14:59 - 2 - Fim
+15:14:59 - 2 - Processo = 108 - Registros Deletados
+15:14:59 - 2 - Fim
+15:14:59 - 2 - Processo = 108 - Registros Deletados
+15:14:59 - 2 - Fim
+15:14:59 - 2 - Processo = 108 - Registros Deletados
+15:14:59 - 2 - Fim
+15:14:59 - 2 - Processo = 108 - Registros Deletados
+15:15:00 - 2 - Fim
+15:15:00 - 2 - Processo = 108 - Registros Deletados
+15:15:00 - 2 - Fim
+15:15:00 - 2 - Processo = 108 - Registros Deletados
+15:15:00 - 2 - Fim
+15:15:00 - 2 - Processo = 108 - Registros Deletados
+15:15:00 - 2 - Fim
+15:15:01 - 2 - Processo = 108 - Registros Deletados
+15:15:01 - 2 - Fim
+15:15:01 - 2 - Processo = 108 - Registros Deletados
+15:15:01 - 2 - Fim
+15:15:01 - 2 - Processo = 108 - Registros Deletados
+15:15:01 - 2 - Fim
+15:15:01 - 2 - Processo = 108 - Registros Deletados
+15:15:01 - 2 - Fim
+15:15:02 - 2 - Processo = 108 - Registros Deletados
+15:15:02 - 2 - Fim
+15:15:02 - 2 - Processo = 108 - Registros Deletados
+15:15:02 - 2 - Fim
+15:15:02 - 2 - Processo = 108 - Registros Deletados
+15:15:02 - 2 - Fim
+15:15:02 - 2 - Processo = 142 - Usuarios
+15:15:03 - 2 - Fim
+15:15:03 - 2 - Processo = 108 - Registros Deletados
+15:15:03 - 2 - Fim
+15:15:03 - 2 - Processo = 143 - Permissoes
+15:15:03 - 2 - Fim
+15:15:03 - 2 - Processo = 144 - Permissoes Modulos
+15:15:03 - 2 - Fim
+15:15:03 - 2 - Processo = 146 - Encartes
+15:15:04 - 2 - Processo = 147 - Itens dos Encartes
+15:15:04 - 2 - Processo = 133 - Redes
+15:15:04 - 2 - Fim
+15:15:04 - 2 - Processo = 134 - Concorrentes
+15:15:04 - 2 - Fim
+15:15:05 - 2 - Processo = 152 - Projetos Pharmalink
+15:15:05 - 2 - Fim
+15:15:05 - 2 - Processo = 153 - Perfis de Clientes
+15:15:05 - 2 - Fim
+15:15:05 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:15:05 - 2 - Processo = 108 - Registros Deletados
+15:15:05 - 2 - Fim
+15:15:06 - 2 - Processo = 108 - Registros Deletados
+15:15:06 - 2 - Fim
+15:15:06 - 2 - Processo = 108 - Registros Deletados
+15:15:06 - 2 - Fim
+15:15:06 - 2 - Processo = 159 - Principio Ativo
+15:15:06 - 2 - Fim
+15:15:06 - 2 - Processo = 160 - Dicionario de Codigo
+15:15:07 - 2 - Fim
+15:15:07 - 2 - Processo = 148 - Precos dos Concorrentes
+15:15:07 - 2 - Processo = 102 - FiliaisGrupos
+15:15:07 - 2 - Fim
+15:15:07 - 2 - Processo = 108 - Registros Deletados
+15:15:08 - 2 - Fim
+15:15:09 - 2 - Processo = 999 - Validacao de Conexao
+15:15:09 - 2 - Fim
+15:15:10 - 2 - Processo = 117 - Transferencias
+15:15:10 - 2 - Fim
+15:15:10 - 2 - Processo = 118 - Itens Transferencias
+15:15:10 - 2 - Fim
+15:15:10 - 2 - Processo = 154 - Produtos Quantidade
+15:15:10 - 2 - Fim
+15:15:11 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:15:11 - 2 - Fim
+15:15:11 - 2 - Processo = 158 - Produtos Fidelidade
+15:15:11 - 2 - Fim
+15:15:11 - 2 - Processo = 1 - Lancamentos
+15:15:11 - 2 - Processo = 1 - Lancamentos Recebidos: 3
+15:15:11 - 2 - Fim
+15:15:11 - 2 - Processo = 999 - Validacao de Conexao
+15:15:11 - 2 - Fim
+15:15:12 - 2 - Processo = 999 - Validacao de Conexao
+15:15:12 - 2 - Fim
+15:15:12 - 2 - Processo = 999 - Validacao de Conexao
+15:15:12 - 2 - Fim
+15:15:12 - 2 - Processo = 999 - Validacao de Conexao
+15:15:12 - 2 - Fim
+15:15:13 - 2 - Processo = 999 - Validacao de Conexao
+15:15:13 - 2 - Fim
+15:15:13 - 2 - Processo = 0 - ItensCompra
+15:15:13 - 2 - Processo = 5 - Itens de Pedido de Compra Recebidos: 3
+15:15:13 - 2 - Fim
+15:15:13 - 2 - Processo = 999 - Validacao de Conexao
+15:15:13 - 2 - Fim
+15:15:14 - 2 - Processo = 4 - Compras
+15:15:14 - 2 - Processo = 4 - Pedidos de Compra Recebidos: 2
+15:15:14 - 2 - Fim
+15:15:14 - 2 - Processo = 108 - Registros Deletados
+15:15:14 - 2 - Fim
+15:15:14 - 2 - Processo = 103 - Produtos Incluidos
+15:15:14 - 2 - Fim
+15:15:15 - 2 - Processo = 119 - Cadastro dos Produtos
+15:15:15 - 2 - Fim
+15:15:15 - 2 - Processo = 1191 - Estoque
+15:15:15 - 2 - Processo = 1191 - Enviando Estoque dos Produtos: 10
+15:15:15 - 2 - Fim
+15:15:15 - 2 - Processo = 1191 - Estoque
+15:15:15 - 2 - Fim
+15:15:16 - 2 - Processo = 125 - Precos de Venda
+15:15:16 - 2 - Fim
+15:15:16 - 2 - Processo = 66 - Produtos Lotas
+15:15:16 - 2 - Processo = 66 - Produtos Lotes Recebidos: 3
+15:15:16 - 2 - Fim
+15:15:17 - 2 - Processo = 999 - Validacao de Conexao
+15:15:17 - 2 - Fim
+15:15:17 - 2 - Processo = 7 - Estoque
+15:15:17 - 2 - Processo = 7 - Estoque de Produtos Recebidos: 3
+15:15:17 - 2 - Fim
+15:15:18 - 2 - Processo = 0 - LogInterligacao
+15:15:18 - 2 - Inicio de GeraLogInterligacao 
+15:15:18 - 2 - Final de GeraLogInterligacao 
+15:17:05 - 2 - Processo = 999 - Validacao de Conexao
+15:17:05 - 2 - Fim
+15:17:05 - 2 - Processo = 117 - Transferencias
+15:17:06 - 2 - Fim
+15:17:06 - 2 - Processo = 118 - Itens Transferencias
+15:17:06 - 2 - Fim
+15:17:06 - 2 - Processo = 154 - Produtos Quantidade
+15:17:06 - 2 - Fim
+15:17:06 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:17:06 - 2 - Fim
+15:17:07 - 2 - Processo = 158 - Produtos Fidelidade
+15:17:07 - 2 - Fim
+15:17:07 - 2 - Processo = 999 - Validacao de Conexao
+15:17:07 - 2 - Fim
+15:17:07 - 2 - Processo = 999 - Validacao de Conexao
+15:17:07 - 2 - Fim
+15:17:07 - 2 - Processo = 999 - Validacao de Conexao
+15:17:07 - 2 - Fim
+15:17:08 - 2 - Processo = 108 - Registros Deletados
+15:17:08 - 2 - Fim
+15:17:08 - 2 - Processo = 103 - Produtos Incluidos
+15:17:09 - 2 - Fim
+15:17:09 - 2 - Processo = 119 - Cadastro dos Produtos
+15:17:09 - 2 - Fim
+15:17:09 - 2 - Processo = 1191 - Estoque
+15:17:09 - 2 - Processo = 1191 - Enviando Estoque dos Produtos: 10
+15:17:09 - 2 - Fim
+15:17:10 - 2 - Processo = 1191 - Estoque
+15:17:10 - 2 - Fim
+15:17:10 - 2 - Processo = 125 - Precos de Venda
+15:17:10 - 2 - Fim
+15:17:11 - 2 - Processo = 999 - Validacao de Conexao
+15:17:11 - 2 - Fim
+15:17:12 - 2 - Processo = 0 - LogInterligacao
+15:17:12 - 2 - Inicio de GeraLogInterligacao 
+15:17:12 - 2 - Final de GeraLogInterligacao 
+15:17:12 - 2 - Processo = 999 - Validacao de Conexao
+15:17:12 - 2 - Fim
+15:17:12 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:17:13 - 2 - Fim
+15:17:13 - 2 - Processo = 122 - Contas a Pagar
+15:17:13 - 2 - Fim
+15:17:13 - 2 - Processo = 145 - Lancamentos a Prazo
+15:17:13 - 2 - Processo = 105 - Compras
+15:17:13 - 2 - Fim
+15:17:13 - 2 - Processo = 106 - Itens Compras
+15:17:14 - 2 - Processo = 106 - Enviando Itens Compra: 1
+15:17:14 - 2 - Fim
+15:17:14 - 2 - Processo = 156 - Itens Compras Lote
+15:17:14 - 2 - Fim
+15:17:14 - 2 - Processo = 121 - Contas a Receber
+15:17:14 - 2 - Fim
+15:17:14 - 2 - Processo = 150 - Contas a Receber Deletados
+15:17:14 - 2 - Fim
+15:17:15 - 2 - Processo = 110 - Clientes
+15:17:15 - 2 - Fim
+15:17:15 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:17:15 - 2 - Fim
+15:17:15 - 2 - Processo = 120 - Classes
+15:17:15 - 2 - Processo = 120 - Enviando Classes: 1
+15:17:15 - 2 - Fim
+15:17:15 - 2 - Processo = 129 - Familias
+15:17:15 - 2 - Fim
+15:17:16 - 2 - Processo = 114 - Distribuidores
+15:17:16 - 2 - Processo = 130 - Grupos de Balanco
+15:17:16 - 2 - Fim
+15:17:16 - 2 - Processo = 131 - Grupos de Compras
+15:17:16 - 2 - Fim
+15:17:16 - 2 - Processo = 132 - Grupos Curvas
+15:17:17 - 2 - Fim
+15:17:17 - 2 - Processo = 100 - Grupos
+15:17:17 - 2 - Fim
+15:17:17 - 2 - Processo = 135 - SubGrupos
+15:17:17 - 2 - Fim
+15:17:17 - 2 - Processo = 101 - Laboratorios
+15:17:17 - 2 - Fim
+15:17:17 - 2 - Processo = 104 - Vendedores
+15:17:18 - 2 - Fim
+15:17:18 - 2 - Processo = 123 - Vendedores Classes
+15:17:18 - 2 - Fim
+15:17:18 - 2 - Processo = 124 - Convenios Classes
+15:17:18 - 2 - Fim
+15:17:18 - 2 - Processo = 109 - Plano Contas
+15:17:18 - 2 - Fim
+15:17:18 - 2 - Processo = 111 - Convenios
+15:17:18 - 2 - Fim
+15:17:19 - 2 - Processo = 112 - Transportadoras
+15:17:19 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:17:19 - 2 - Fim
+15:17:19 - 2 - Processo = 113 - Cartoes
+15:17:19 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:17:19 - 2 - Fim
+15:17:19 - 2 - Processo = 115 - Filiais
+15:17:19 - 2 - Processo = 115 - Enviando Filiais: 3
+15:17:19 - 2 - Fim
+15:17:19 - 2 - Processo = 126 - Balancos
+15:17:20 - 2 - Fim
+15:17:20 - 2 - Processo = 127 - Metas da Filial
+15:17:20 - 2 - Fim
+15:17:20 - 2 - Processo = 128 - Metas dos Vendedores
+15:17:20 - 2 - Fim
+15:17:20 - 2 - Processo = 108 - Registros Deletados
+15:17:20 - 2 - Fim
+15:17:20 - 2 - Processo = 108 - Registros Deletados
+15:17:21 - 2 - Fim
+15:17:21 - 2 - Processo = 108 - Registros Deletados
+15:17:21 - 2 - Fim
+15:17:21 - 2 - Processo = 108 - Registros Deletados
+15:17:21 - 2 - Fim
+15:17:21 - 2 - Processo = 108 - Registros Deletados
+15:17:21 - 2 - Fim
+15:17:22 - 2 - Processo = 108 - Registros Deletados
+15:17:22 - 2 - Fim
+15:17:22 - 2 - Processo = 108 - Registros Deletados
+15:17:22 - 2 - Fim
+15:17:22 - 2 - Processo = 108 - Registros Deletados
+15:17:22 - 2 - Fim
+15:17:22 - 2 - Processo = 108 - Registros Deletados
+15:17:22 - 2 - Fim
+15:17:22 - 2 - Processo = 108 - Registros Deletados
+15:17:23 - 2 - Fim
+15:17:23 - 2 - Processo = 108 - Registros Deletados
+15:17:23 - 2 - Fim
+15:17:23 - 2 - Processo = 108 - Registros Deletados
+15:17:23 - 2 - Fim
+15:17:23 - 2 - Processo = 108 - Registros Deletados
+15:17:23 - 2 - Fim
+15:17:24 - 2 - Processo = 108 - Registros Deletados
+15:17:24 - 2 - Fim
+15:17:24 - 2 - Processo = 108 - Registros Deletados
+15:17:24 - 2 - Fim
+15:17:24 - 2 - Processo = 108 - Registros Deletados
+15:17:24 - 2 - Fim
+15:17:24 - 2 - Processo = 108 - Registros Deletados
+15:17:24 - 2 - Fim
+15:17:25 - 2 - Processo = 108 - Registros Deletados
+15:17:25 - 2 - Fim
+15:17:25 - 2 - Processo = 108 - Registros Deletados
+15:17:25 - 2 - Fim
+15:17:25 - 2 - Processo = 108 - Registros Deletados
+15:17:25 - 2 - Fim
+15:17:25 - 2 - Processo = 108 - Registros Deletados
+15:17:25 - 2 - Fim
+15:17:26 - 2 - Processo = 108 - Registros Deletados
+15:17:26 - 2 - Fim
+15:17:26 - 2 - Processo = 108 - Registros Deletados
+15:17:26 - 2 - Fim
+15:17:26 - 2 - Processo = 142 - Usuarios
+15:17:26 - 2 - Fim
+15:17:26 - 2 - Processo = 108 - Registros Deletados
+15:17:27 - 2 - Fim
+15:17:27 - 2 - Processo = 143 - Permissoes
+15:17:27 - 2 - Fim
+15:17:27 - 2 - Processo = 144 - Permissoes Modulos
+15:17:27 - 2 - Fim
+15:17:27 - 2 - Processo = 146 - Encartes
+15:17:27 - 2 - Processo = 147 - Itens dos Encartes
+15:17:28 - 2 - Processo = 133 - Redes
+15:17:28 - 2 - Fim
+15:17:28 - 2 - Processo = 134 - Concorrentes
+15:17:28 - 2 - Fim
+15:17:28 - 2 - Processo = 152 - Projetos Pharmalink
+15:17:28 - 2 - Fim
+15:17:28 - 2 - Processo = 153 - Perfis de Clientes
+15:17:29 - 2 - Fim
+15:17:29 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:17:29 - 2 - Processo = 108 - Registros Deletados
+15:17:29 - 2 - Fim
+15:17:29 - 2 - Processo = 108 - Registros Deletados
+15:17:29 - 2 - Fim
+15:17:29 - 2 - Processo = 108 - Registros Deletados
+15:17:30 - 2 - Fim
+15:17:30 - 2 - Processo = 159 - Principio Ativo
+15:17:30 - 2 - Fim
+15:17:30 - 2 - Processo = 160 - Dicionario de Codigo
+15:17:30 - 2 - Fim
+15:17:30 - 2 - Processo = 148 - Precos dos Concorrentes
+15:17:31 - 2 - Processo = 102 - FiliaisGrupos
+15:17:31 - 2 - Fim
+15:17:31 - 2 - Processo = 108 - Registros Deletados
+15:17:31 - 2 - Fim
+15:18:42 - 2 - Processo = 999 - Validacao de Conexao
+15:18:42 - 2 - Fim
+15:18:43 - 2 - Processo = 117 - Transferencias
+15:18:43 - 2 - Fim
+15:18:43 - 2 - Processo = 118 - Itens Transferencias
+15:18:43 - 2 - Fim
+15:18:43 - 2 - Processo = 154 - Produtos Quantidade
+15:18:43 - 2 - Fim
+15:18:44 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:18:44 - 2 - Fim
+15:18:44 - 2 - Processo = 158 - Produtos Fidelidade
+15:18:44 - 2 - Fim
+15:18:44 - 2 - Processo = 999 - Validacao de Conexao
+15:18:44 - 2 - Fim
+15:18:44 - 2 - Processo = 999 - Validacao de Conexao
+15:18:44 - 2 - Fim
+15:18:45 - 2 - Processo = 999 - Validacao de Conexao
+15:18:45 - 2 - Fim
+15:18:46 - 2 - Processo = 108 - Registros Deletados
+15:18:46 - 2 - Fim
+15:18:46 - 2 - Processo = 103 - Produtos Incluidos
+15:18:46 - 2 - Fim
+15:18:46 - 2 - Processo = 119 - Cadastro dos Produtos
+15:18:46 - 2 - Fim
+15:18:46 - 2 - Processo = 1191 - Estoque
+15:18:47 - 2 - Fim
+15:18:47 - 2 - Processo = 125 - Precos de Venda
+15:18:47 - 2 - Fim
+15:18:48 - 2 - Processo = 999 - Validacao de Conexao
+15:18:48 - 2 - Fim
+15:18:49 - 2 - Processo = 0 - LogInterligacao
+15:18:49 - 2 - Inicio de GeraLogInterligacao 
+15:18:49 - 2 - Final de GeraLogInterligacao 
+15:18:49 - 2 - Processo = 999 - Validacao de Conexao
+15:18:49 - 2 - Fim
+15:18:49 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:18:49 - 2 - Fim
+15:18:49 - 2 - Processo = 122 - Contas a Pagar
+15:18:50 - 2 - Fim
+15:18:50 - 2 - Processo = 145 - Lancamentos a Prazo
+15:18:50 - 2 - Processo = 105 - Compras
+15:18:50 - 2 - Fim
+15:18:50 - 2 - Processo = 106 - Itens Compras
+15:18:50 - 2 - Processo = 106 - Enviando Itens Compra: 37
+15:18:50 - 2 - Fim
+15:18:51 - 2 - Processo = 156 - Itens Compras Lote
+15:18:51 - 2 - Fim
+15:18:51 - 2 - Processo = 121 - Contas a Receber
+15:18:51 - 2 - Fim
+15:18:51 - 2 - Processo = 150 - Contas a Receber Deletados
+15:18:51 - 2 - Fim
+15:18:51 - 2 - Processo = 110 - Clientes
+15:18:51 - 2 - Fim
+15:18:52 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:18:52 - 2 - Fim
+15:18:52 - 2 - Processo = 120 - Classes
+15:18:52 - 2 - Processo = 120 - Enviando Classes: 1
+15:18:52 - 2 - Fim
+15:18:52 - 2 - Processo = 129 - Familias
+15:18:52 - 2 - Fim
+15:18:52 - 2 - Processo = 114 - Distribuidores
+15:18:52 - 2 - Processo = 114 - Enviando Distribuidores: 1
+15:18:53 - 2 - Fim
+15:18:53 - 2 - Processo = 130 - Grupos de Balanco
+15:18:53 - 2 - Fim
+15:18:53 - 2 - Processo = 131 - Grupos de Compras
+15:18:53 - 2 - Fim
+15:18:53 - 2 - Processo = 132 - Grupos Curvas
+15:18:53 - 2 - Fim
+15:18:53 - 2 - Processo = 100 - Grupos
+15:18:53 - 2 - Fim
+15:18:54 - 2 - Processo = 135 - SubGrupos
+15:18:54 - 2 - Fim
+15:18:54 - 2 - Processo = 101 - Laboratorios
+15:18:54 - 2 - Fim
+15:18:54 - 2 - Processo = 104 - Vendedores
+15:18:54 - 2 - Fim
+15:18:55 - 2 - Processo = 123 - Vendedores Classes
+15:18:55 - 2 - Fim
+15:18:55 - 2 - Processo = 124 - Convenios Classes
+15:18:55 - 2 - Fim
+15:18:55 - 2 - Processo = 109 - Plano Contas
+15:18:55 - 2 - Fim
+15:18:55 - 2 - Processo = 111 - Convenios
+15:18:55 - 2 - Fim
+15:18:55 - 2 - Processo = 112 - Transportadoras
+15:18:56 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:18:56 - 2 - Fim
+15:18:56 - 2 - Processo = 113 - Cartoes
+15:18:56 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:18:56 - 2 - Fim
+15:18:56 - 2 - Processo = 115 - Filiais
+15:18:56 - 2 - Processo = 115 - Enviando Filiais: 3
+15:18:56 - 2 - Fim
+15:18:56 - 2 - Processo = 126 - Balancos
+15:18:56 - 2 - Fim
+15:18:57 - 2 - Processo = 127 - Metas da Filial
+15:18:57 - 2 - Fim
+15:18:57 - 2 - Processo = 128 - Metas dos Vendedores
+15:18:57 - 2 - Fim
+15:18:57 - 2 - Processo = 108 - Registros Deletados
+15:18:57 - 2 - Fim
+15:18:57 - 2 - Processo = 108 - Registros Deletados
+15:18:57 - 2 - Fim
+15:18:58 - 2 - Processo = 108 - Registros Deletados
+15:18:58 - 2 - Fim
+15:18:58 - 2 - Processo = 108 - Registros Deletados
+15:18:58 - 2 - Fim
+15:18:58 - 2 - Processo = 108 - Registros Deletados
+15:18:58 - 2 - Fim
+15:18:58 - 2 - Processo = 108 - Registros Deletados
+15:18:58 - 2 - Fim
+15:18:58 - 2 - Processo = 108 - Registros Deletados
+15:18:59 - 2 - Fim
+15:18:59 - 2 - Processo = 108 - Registros Deletados
+15:18:59 - 2 - Fim
+15:18:59 - 2 - Processo = 108 - Registros Deletados
+15:18:59 - 2 - Fim
+15:18:59 - 2 - Processo = 108 - Registros Deletados
+15:18:59 - 2 - Fim
+15:18:59 - 2 - Processo = 108 - Registros Deletados
+15:19:00 - 2 - Fim
+15:19:00 - 2 - Processo = 108 - Registros Deletados
+15:19:00 - 2 - Fim
+15:19:00 - 2 - Processo = 108 - Registros Deletados
+15:19:00 - 2 - Fim
+15:19:00 - 2 - Processo = 108 - Registros Deletados
+15:19:00 - 2 - Fim
+15:19:00 - 2 - Processo = 108 - Registros Deletados
+15:19:01 - 2 - Fim
+15:19:01 - 2 - Processo = 108 - Registros Deletados
+15:19:01 - 2 - Fim
+15:19:01 - 2 - Processo = 108 - Registros Deletados
+15:19:01 - 2 - Fim
+15:19:01 - 2 - Processo = 108 - Registros Deletados
+15:19:01 - 2 - Fim
+15:19:01 - 2 - Processo = 108 - Registros Deletados
+15:19:02 - 2 - Fim
+15:19:02 - 2 - Processo = 108 - Registros Deletados
+15:19:02 - 2 - Fim
+15:19:02 - 2 - Processo = 108 - Registros Deletados
+15:19:02 - 2 - Fim
+15:19:02 - 2 - Processo = 108 - Registros Deletados
+15:19:02 - 2 - Fim
+15:19:03 - 2 - Processo = 108 - Registros Deletados
+15:19:03 - 2 - Fim
+15:19:03 - 2 - Processo = 142 - Usuarios
+15:19:03 - 2 - Fim
+15:19:03 - 2 - Processo = 108 - Registros Deletados
+15:19:03 - 2 - Fim
+15:19:03 - 2 - Processo = 143 - Permissoes
+15:19:03 - 2 - Fim
+15:19:03 - 2 - Processo = 144 - Permissoes Modulos
+15:19:04 - 2 - Fim
+15:19:04 - 2 - Processo = 146 - Encartes
+15:19:04 - 2 - Processo = 147 - Itens dos Encartes
+15:19:04 - 2 - Processo = 133 - Redes
+15:19:04 - 2 - Fim
+15:19:05 - 2 - Processo = 134 - Concorrentes
+15:19:05 - 2 - Fim
+15:19:05 - 2 - Processo = 152 - Projetos Pharmalink
+15:19:05 - 2 - Fim
+15:19:05 - 2 - Processo = 153 - Perfis de Clientes
+15:19:05 - 2 - Fim
+15:19:05 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:19:06 - 2 - Processo = 108 - Registros Deletados
+15:19:06 - 2 - Fim
+15:19:06 - 2 - Processo = 108 - Registros Deletados
+15:19:06 - 2 - Fim
+15:19:06 - 2 - Processo = 108 - Registros Deletados
+15:19:06 - 2 - Fim
+15:19:06 - 2 - Processo = 159 - Principio Ativo
+15:19:06 - 2 - Fim
+15:19:07 - 2 - Processo = 160 - Dicionario de Codigo
+15:19:07 - 2 - Fim
+15:19:07 - 2 - Processo = 148 - Precos dos Concorrentes
+15:19:07 - 2 - Processo = 102 - FiliaisGrupos
+15:19:07 - 2 - Fim
+15:19:08 - 2 - Processo = 108 - Registros Deletados
+15:19:08 - 2 - Fim
+15:22:08 - 2 - Processo = 999 - Validacao de Conexao
+15:22:08 - 2 - Fim
+15:22:08 - 2 - Processo = 117 - Transferencias
+15:22:08 - 2 - Fim
+15:22:08 - 2 - Processo = 118 - Itens Transferencias
+15:22:09 - 2 - Fim
+15:22:09 - 2 - Processo = 154 - Produtos Quantidade
+15:22:09 - 2 - Fim
+15:22:09 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:22:09 - 2 - Fim
+15:22:09 - 2 - Processo = 158 - Produtos Fidelidade
+15:22:09 - 2 - Fim
+15:22:09 - 2 - Processo = 999 - Validacao de Conexao
+15:22:10 - 2 - Fim
+15:22:10 - 2 - Processo = 999 - Validacao de Conexao
+15:22:10 - 2 - Fim
+15:22:10 - 2 - Processo = 999 - Validacao de Conexao
+15:22:10 - 2 - Fim
+15:22:11 - 2 - Processo = 108 - Registros Deletados
+15:22:11 - 2 - Fim
+15:22:11 - 2 - Processo = 103 - Produtos Incluidos
+15:22:11 - 2 - Fim
+15:22:11 - 2 - Processo = 119 - Cadastro dos Produtos
+15:22:11 - 2 - Fim
+15:22:12 - 2 - Processo = 1191 - Estoque
+15:22:12 - 2 - Fim
+15:22:12 - 2 - Processo = 125 - Precos de Venda
+15:22:12 - 2 - Fim
+15:22:13 - 2 - Processo = 999 - Validacao de Conexao
+15:22:13 - 2 - Fim
+15:22:13 - 2 - Processo = 0 - LogInterligacao
+15:22:13 - 2 - Inicio de GeraLogInterligacao 
+15:22:14 - 2 - Final de GeraLogInterligacao 
+15:22:14 - 2 - Processo = 999 - Validacao de Conexao
+15:22:14 - 2 - Fim
+15:22:14 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:22:14 - 2 - Fim
+15:22:14 - 2 - Processo = 122 - Contas a Pagar
+15:22:14 - 2 - Processo = 122 - Enviando Contas a Pagar: 2
+15:22:14 - 2 - Fim
+15:22:15 - 2 - Processo = 122 - Contas a Pagar
+15:22:15 - 2 - Fim
+15:22:15 - 2 - Processo = 145 - Lancamentos a Prazo
+15:22:15 - 2 - Processo = 105 - Compras
+15:22:15 - 2 - Processo = 105 - Enviando Compras: 1
+15:22:15 - 2 - Fim
+15:22:15 - 2 - Processo = 106 - Itens Compras
+15:22:16 - 2 - Fim
+15:22:16 - 2 - Processo = 156 - Itens Compras Lote
+15:22:16 - 2 - Fim
+15:22:16 - 2 - Processo = 121 - Contas a Receber
+15:22:16 - 2 - Fim
+15:22:16 - 2 - Processo = 150 - Contas a Receber Deletados
+15:22:16 - 2 - Fim
+15:22:17 - 2 - Processo = 110 - Clientes
+15:22:17 - 2 - Fim
+15:22:17 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:22:17 - 2 - Fim
+15:22:17 - 2 - Processo = 120 - Classes
+15:22:17 - 2 - Processo = 120 - Enviando Classes: 1
+15:22:17 - 2 - Fim
+15:22:17 - 2 - Processo = 129 - Familias
+15:22:17 - 2 - Fim
+15:22:18 - 2 - Processo = 114 - Distribuidores
+15:22:18 - 2 - Processo = 130 - Grupos de Balanco
+15:22:18 - 2 - Fim
+15:22:18 - 2 - Processo = 131 - Grupos de Compras
+15:22:18 - 2 - Fim
+15:22:18 - 2 - Processo = 132 - Grupos Curvas
+15:22:18 - 2 - Fim
+15:22:19 - 2 - Processo = 100 - Grupos
+15:22:19 - 2 - Fim
+15:22:19 - 2 - Processo = 135 - SubGrupos
+15:22:19 - 2 - Fim
+15:22:19 - 2 - Processo = 101 - Laboratorios
+15:22:19 - 2 - Fim
+15:22:19 - 2 - Processo = 104 - Vendedores
+15:22:19 - 2 - Fim
+15:22:20 - 2 - Processo = 123 - Vendedores Classes
+15:22:20 - 2 - Fim
+15:22:20 - 2 - Processo = 124 - Convenios Classes
+15:22:20 - 2 - Fim
+15:22:20 - 2 - Processo = 109 - Plano Contas
+15:22:20 - 2 - Fim
+15:22:20 - 2 - Processo = 111 - Convenios
+15:22:20 - 2 - Fim
+15:22:21 - 2 - Processo = 112 - Transportadoras
+15:22:21 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:22:21 - 2 - Fim
+15:22:21 - 2 - Processo = 113 - Cartoes
+15:22:21 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:22:21 - 2 - Fim
+15:22:21 - 2 - Processo = 115 - Filiais
+15:22:21 - 2 - Processo = 115 - Enviando Filiais: 3
+15:22:21 - 2 - Fim
+15:22:21 - 2 - Processo = 126 - Balancos
+15:22:21 - 2 - Fim
+15:22:22 - 2 - Processo = 127 - Metas da Filial
+15:22:22 - 2 - Fim
+15:22:22 - 2 - Processo = 128 - Metas dos Vendedores
+15:22:22 - 2 - Fim
+15:22:22 - 2 - Processo = 108 - Registros Deletados
+15:22:22 - 2 - Fim
+15:22:22 - 2 - Processo = 108 - Registros Deletados
+15:22:22 - 2 - Fim
+15:22:23 - 2 - Processo = 108 - Registros Deletados
+15:22:23 - 2 - Fim
+15:22:23 - 2 - Processo = 108 - Registros Deletados
+15:22:23 - 2 - Fim
+15:22:23 - 2 - Processo = 108 - Registros Deletados
+15:22:23 - 2 - Fim
+15:22:23 - 2 - Processo = 108 - Registros Deletados
+15:22:23 - 2 - Fim
+15:22:24 - 2 - Processo = 108 - Registros Deletados
+15:22:24 - 2 - Fim
+15:22:24 - 2 - Processo = 108 - Registros Deletados
+15:22:24 - 2 - Fim
+15:22:24 - 2 - Processo = 108 - Registros Deletados
+15:22:24 - 2 - Fim
+15:22:24 - 2 - Processo = 108 - Registros Deletados
+15:22:24 - 2 - Fim
+15:22:25 - 2 - Processo = 108 - Registros Deletados
+15:22:25 - 2 - Fim
+15:22:25 - 2 - Processo = 108 - Registros Deletados
+15:22:25 - 2 - Fim
+15:22:25 - 2 - Processo = 108 - Registros Deletados
+15:22:25 - 2 - Fim
+15:22:25 - 2 - Processo = 108 - Registros Deletados
+15:22:25 - 2 - Fim
+15:22:26 - 2 - Processo = 108 - Registros Deletados
+15:22:26 - 2 - Fim
+15:22:26 - 2 - Processo = 108 - Registros Deletados
+15:22:26 - 2 - Fim
+15:22:26 - 2 - Processo = 108 - Registros Deletados
+15:22:26 - 2 - Fim
+15:22:26 - 2 - Processo = 108 - Registros Deletados
+15:22:26 - 2 - Fim
+15:22:27 - 2 - Processo = 108 - Registros Deletados
+15:22:27 - 2 - Fim
+15:22:27 - 2 - Processo = 108 - Registros Deletados
+15:22:27 - 2 - Fim
+15:22:27 - 2 - Processo = 108 - Registros Deletados
+15:22:27 - 2 - Fim
+15:22:27 - 2 - Processo = 108 - Registros Deletados
+15:22:27 - 2 - Fim
+15:22:28 - 2 - Processo = 108 - Registros Deletados
+15:22:28 - 2 - Fim
+15:22:28 - 2 - Processo = 142 - Usuarios
+15:22:28 - 2 - Fim
+15:22:28 - 2 - Processo = 108 - Registros Deletados
+15:22:28 - 2 - Fim
+15:22:28 - 2 - Processo = 143 - Permissoes
+15:22:28 - 2 - Fim
+15:22:29 - 2 - Processo = 144 - Permissoes Modulos
+15:22:29 - 2 - Fim
+15:22:29 - 2 - Processo = 146 - Encartes
+15:22:29 - 2 - Processo = 147 - Itens dos Encartes
+15:22:29 - 2 - Processo = 133 - Redes
+15:22:29 - 2 - Fim
+15:22:30 - 2 - Processo = 134 - Concorrentes
+15:22:30 - 2 - Fim
+15:22:30 - 2 - Processo = 152 - Projetos Pharmalink
+15:22:30 - 2 - Fim
+15:22:30 - 2 - Processo = 153 - Perfis de Clientes
+15:22:30 - 2 - Fim
+15:22:30 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:22:31 - 2 - Processo = 108 - Registros Deletados
+15:22:31 - 2 - Fim
+15:22:31 - 2 - Processo = 108 - Registros Deletados
+15:22:31 - 2 - Fim
+15:22:31 - 2 - Processo = 108 - Registros Deletados
+15:22:31 - 2 - Fim
+15:22:31 - 2 - Processo = 159 - Principio Ativo
+15:22:31 - 2 - Fim
+15:22:32 - 2 - Processo = 160 - Dicionario de Codigo
+15:22:32 - 2 - Fim
+15:22:32 - 2 - Processo = 148 - Precos dos Concorrentes
+15:22:32 - 2 - Processo = 102 - FiliaisGrupos
+15:22:32 - 2 - Fim
+15:22:33 - 2 - Processo = 108 - Registros Deletados
+15:22:33 - 2 - Fim
+15:23:54 - 2 - Processo = 999 - Validacao de Conexao
+15:23:54 - 2 - Fim
+15:23:55 - 2 - Processo = 117 - Transferencias
+15:23:55 - 2 - Fim
+15:23:55 - 2 - Processo = 118 - Itens Transferencias
+15:23:55 - 2 - Fim
+15:23:55 - 2 - Processo = 154 - Produtos Quantidade
+15:23:55 - 2 - Fim
+15:23:55 - 2 - Processo = 155 - Produtos Farmacia Popular
+15:23:56 - 2 - Fim
+15:23:56 - 2 - Processo = 158 - Produtos Fidelidade
+15:23:56 - 2 - Fim
+15:23:56 - 2 - Processo = 999 - Validacao de Conexao
+15:23:56 - 2 - Fim
+15:23:56 - 2 - Processo = 999 - Validacao de Conexao
+15:23:56 - 2 - Fim
+15:23:57 - 2 - Processo = 999 - Validacao de Conexao
+15:23:57 - 2 - Fim
+15:23:57 - 2 - Processo = 108 - Registros Deletados
+15:23:57 - 2 - Fim
+15:23:58 - 2 - Processo = 103 - Produtos Incluidos
+15:23:58 - 2 - Fim
+15:23:58 - 2 - Processo = 119 - Cadastro dos Produtos
+15:23:58 - 2 - Processo = 119 - Enviando Cadastro de Produtos: 37
+15:23:58 - 2 - Fim
+15:23:59 - 2 - Processo = 119 - Cadastro dos Produtos
+15:23:59 - 2 - Fim
+15:23:59 - 2 - Processo = 1191 - Estoque
+15:23:59 - 2 - Fim
+15:23:59 - 2 - Processo = 125 - Precos de Venda
+15:23:59 - 2 - Processo = 125 - Enviando Precos de Venda: 37
+15:23:59 - 2 - Fim
+15:24:02 - 2 - Processo = 125 - Precos de Venda
+15:24:02 - 2 - Fim
+15:24:02 - 2 - Processo = 999 - Validacao de Conexao
+15:24:02 - 2 - Fim
+15:24:03 - 2 - Processo = 0 - LogInterligacao
+15:24:03 - 2 - Inicio de GeraLogInterligacao 
+15:24:03 - 2 - Final de GeraLogInterligacao 
+15:24:04 - 2 - Processo = 999 - Validacao de Conexao
+15:24:04 - 2 - Fim
+15:24:04 - 2 - Processo = 157 - Comando de Reexportacao de Dados
+15:24:04 - 2 - Fim
+15:24:04 - 2 - Processo = 122 - Contas a Pagar
+15:24:04 - 2 - Fim
+15:24:04 - 2 - Processo = 145 - Lancamentos a Prazo
+15:24:05 - 2 - Processo = 105 - Compras
+15:24:05 - 2 - Processo = 105 - Enviando Compras: 1
+15:24:05 - 2 - Fim
+15:24:05 - 2 - Processo = 106 - Itens Compras
+15:24:05 - 2 - Processo = 106 - Enviando Itens Compra: 37
+15:24:05 - 2 - Fim
+15:24:05 - 2 - Processo = 156 - Itens Compras Lote
+15:24:06 - 2 - Fim
+15:24:06 - 2 - Processo = 121 - Contas a Receber
+15:24:06 - 2 - Fim
+15:24:06 - 2 - Processo = 150 - Contas a Receber Deletados
+15:24:06 - 2 - Fim
+15:24:06 - 2 - Processo = 110 - Clientes
+15:24:06 - 2 - Fim
+15:24:06 - 2 - Processo = 151 - Limite e Saldo dos Clientes
+15:24:07 - 2 - Fim
+15:24:07 - 2 - Processo = 120 - Classes
+15:24:07 - 2 - Processo = 120 - Enviando Classes: 1
+15:24:07 - 2 - Fim
+15:24:07 - 2 - Processo = 129 - Familias
+15:24:07 - 2 - Fim
+15:24:07 - 2 - Processo = 114 - Distribuidores
+15:24:07 - 2 - Processo = 130 - Grupos de Balanco
+15:24:08 - 2 - Fim
+15:24:08 - 2 - Processo = 131 - Grupos de Compras
+15:24:08 - 2 - Fim
+15:24:08 - 2 - Processo = 132 - Grupos Curvas
+15:24:08 - 2 - Fim
+15:24:08 - 2 - Processo = 100 - Grupos
+15:24:08 - 2 - Fim
+15:24:09 - 2 - Processo = 135 - SubGrupos
+15:24:09 - 2 - Fim
+15:24:09 - 2 - Processo = 101 - Laboratorios
+15:24:09 - 2 - Fim
+15:24:09 - 2 - Processo = 104 - Vendedores
+15:24:09 - 2 - Fim
+15:24:09 - 2 - Processo = 123 - Vendedores Classes
+15:24:09 - 2 - Fim
+15:24:10 - 2 - Processo = 124 - Convenios Classes
+15:24:10 - 2 - Fim
+15:24:10 - 2 - Processo = 109 - Plano Contas
+15:24:10 - 2 - Fim
+15:24:10 - 2 - Processo = 111 - Convenios
+15:24:10 - 2 - Fim
+15:24:10 - 2 - Processo = 112 - Transportadoras
+15:24:10 - 2 - Processo = 112 - Enviando Transportadoras: 2
+15:24:10 - 2 - Fim
+15:24:11 - 2 - Processo = 113 - Cartoes
+15:24:11 - 2 - Processo = 113 - Enviando Cartoes: 2
+15:24:11 - 2 - Fim
+15:24:11 - 2 - Processo = 115 - Filiais
+15:24:11 - 2 - Processo = 115 - Enviando Filiais: 3
+15:24:11 - 2 - Fim
+15:24:11 - 2 - Processo = 126 - Balancos
+15:24:11 - 2 - Fim
+15:24:11 - 2 - Processo = 127 - Metas da Filial
+15:24:11 - 2 - Fim
+15:24:12 - 2 - Processo = 128 - Metas dos Vendedores
+15:24:12 - 2 - Fim
+15:24:12 - 2 - Processo = 108 - Registros Deletados
+15:24:12 - 2 - Fim
+15:24:12 - 2 - Processo = 108 - Registros Deletados
+15:24:12 - 2 - Fim
+15:24:12 - 2 - Processo = 108 - Registros Deletados
+15:24:12 - 2 - Fim
+15:24:13 - 2 - Processo = 108 - Registros Deletados
+15:24:13 - 2 - Fim
+15:24:13 - 2 - Processo = 108 - Registros Deletados
+15:24:13 - 2 - Fim
+15:24:13 - 2 - Processo = 108 - Registros Deletados
+15:24:13 - 2 - Fim
+15:24:13 - 2 - Processo = 108 - Registros Deletados
+15:24:13 - 2 - Fim
+15:24:14 - 2 - Processo = 108 - Registros Deletados
+15:24:14 - 2 - Fim
+15:24:14 - 2 - Processo = 108 - Registros Deletados
+15:24:14 - 2 - Fim
+15:24:14 - 2 - Processo = 108 - Registros Deletados
+15:24:14 - 2 - Fim
+15:24:14 - 2 - Processo = 108 - Registros Deletados
+15:24:15 - 2 - Fim
+15:24:15 - 2 - Processo = 108 - Registros Deletados
+15:24:15 - 2 - Fim
+15:24:15 - 2 - Processo = 108 - Registros Deletados
+15:24:15 - 2 - Fim
+15:24:15 - 2 - Processo = 108 - Registros Deletados
+15:24:15 - 2 - Fim
+15:24:15 - 2 - Processo = 108 - Registros Deletados
+15:24:16 - 2 - Fim
+15:24:16 - 2 - Processo = 108 - Registros Deletados
+15:24:16 - 2 - Fim
+15:24:16 - 2 - Processo = 108 - Registros Deletados
+15:24:16 - 2 - Fim
+15:24:16 - 2 - Processo = 108 - Registros Deletados
+15:24:16 - 2 - Fim
+15:24:16 - 2 - Processo = 108 - Registros Deletados
+15:24:17 - 2 - Fim
+15:24:17 - 2 - Processo = 108 - Registros Deletados
+15:24:17 - 2 - Fim
+15:24:17 - 2 - Processo = 108 - Registros Deletados
+15:24:17 - 2 - Fim
+15:24:17 - 2 - Processo = 108 - Registros Deletados
+15:24:17 - 2 - Fim
+15:24:18 - 2 - Processo = 108 - Registros Deletados
+15:24:18 - 2 - Fim
+15:24:18 - 2 - Processo = 142 - Usuarios
+15:24:18 - 2 - Fim
+15:24:18 - 2 - Processo = 108 - Registros Deletados
+15:24:18 - 2 - Fim
+15:24:18 - 2 - Processo = 143 - Permissoes
+15:24:18 - 2 - Fim
+15:24:19 - 2 - Processo = 144 - Permissoes Modulos
+15:24:19 - 2 - Fim
+15:24:19 - 2 - Processo = 146 - Encartes
+15:24:19 - 2 - Processo = 147 - Itens dos Encartes
+15:24:19 - 2 - Processo = 133 - Redes
+15:24:19 - 2 - Fim
+15:24:20 - 2 - Processo = 134 - Concorrentes
+15:24:20 - 2 - Fim
+15:24:20 - 2 - Processo = 152 - Projetos Pharmalink
+15:24:20 - 2 - Fim
+15:24:20 - 2 - Processo = 153 - Perfis de Clientes
+15:24:20 - 2 - Fim
+15:24:20 - 2 - Processo = 149 - Precos Deletados dos Concorrentes
+15:24:21 - 2 - Processo = 108 - Registros Deletados
+15:24:21 - 2 - Fim
+15:24:21 - 2 - Processo = 108 - Registros Deletados
+15:24:21 - 2 - Fim
+15:24:21 - 2 - Processo = 108 - Registros Deletados
+15:24:21 - 2 - Fim
+15:24:21 - 2 - Processo = 159 - Principio Ativo
+15:24:22 - 2 - Fim
+15:24:22 - 2 - Processo = 160 - Dicionario de Codigo
+15:24:22 - 2 - Fim
+15:24:22 - 2 - Processo = 148 - Precos dos Concorrentes
+15:24:22 - 2 - Processo = 102 - FiliaisGrupos
+15:24:22 - 2 - Fim
+15:24:23 - 2 - Processo = 108 - Registros Deletados
+15:24:23 - 2 - Fim

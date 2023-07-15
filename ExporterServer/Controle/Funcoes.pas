@@ -28,6 +28,10 @@ uses
  function  RetornaId ( Campo : String ) : Double;
 
  procedure GeraLog(Mensagem : String);
+ procedure GravaLog(Texto: String);
+
+ var
+ StrFilial:string;
 
 
 implementation
@@ -35,6 +39,19 @@ implementation
 uses Udm;
 
 
+procedure GravaLog(Texto: String);
+var Log : TextFile;
+begin
+//  exit;
+  AssignFile(Log, 'Logs\LogServer'+FormatDateTime('yyyymmdd', Date)+ '_' + (StrFilial)+'.txt');
+  if FileExists('Logs\LogServer'+FormatDateTime('yyyymmdd', Date)+ '_'   + (StrFilial)+'.txt') then
+     Append(Log)
+  else
+     ReWrite(Log);
+  Writeln(Log, Texto);
+  //Flush(Log);
+  CloseFile(Log);
+end;
 
 function  RetornaId ( Campo : String ) : Double;
 begin

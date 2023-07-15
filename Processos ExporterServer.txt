@@ -1,0 +1,175 @@
+Matriz Recebendo da Loja
+******************************
+Processo = 0 - LogInterligacao
+Processo = 1 - Lancamentos
+Processo = 2 - Caixa
+Processo = 3 - Contas a Receber
+Processo = 4 - Compras
+Processo = 5 - ItensCompra
+Processo = 6 - Contas a Pagar
+Processo = 7 - Estoque
+Processo = 8  - Operadores de Caixa
+Processo = 9 - Entregas
+Processo = 10 - Cheques
+Processo = 11 - Transferencias
+Processo = 12 - Itens das Transferencias
+Processo = 13 - Caderno de Faltas
+Processo = 14 - Clientes
+Processo = 15 - CRM
+Processo = 16 - Lancamentos a Prazo
+Processo = 17 - Compras Boletos
+Processo = 18 - Vendas para CallCenter
+Processo = 19 - VendasFP para CallCenter
+Processo = 50 - Codigo de Barras proveniente de Balanco
+Processo = 51 - Balancos
+Processo = 52 - Precos da Filial
+Processo = 53 - Compras Deletadas
+Processo = 54 - Produtos Totais
+Processo = 55 - Usuarios
+Processo = 56 - Sintegra Notas
+Processo = 57 - Sintegra Itens Notas
+Processo = 58 - Sintegra Pedidos Itens
+Processo = 59 - SintegraR60
+Processo = 60 - SintegraR60I
+Processo = 61 - Contas a Pagar Deletadas
+Processo = 62 - Clientes Deletados
+Processo = 63 - Posicao Estoque
+Processo = 64 - Contas a Receber Deletadas
+Processo = 65 - Sintegra Notas Deletadas
+Processo = 66 - Produtos Lotas
+Processo = 67 - Conferencia Nota
+Processo = 68 - Itens Compras Lotes
+Processo = 69 - Caixas Deletados
+Processo = 70 - Produtos Lotes ST
+Processo = 71 - ContasPagarCompras
+Processo = 72 - VendasItensExcluidos
+
+
+
+Matriz Enviando para Loja
+******************************
+
+Processo = 100 - Grupos
+Processo = 101 - Laboratorios
+Processo = 102 - FiliaisGrupos
+Processo = 103 - Produtos Incluidos
+Processo = 104 - Vendedores
+Processo = 105 - Compras
+Processo = 106 - Itens Compras
+Processo = 107 - ConveniosPBM
+Processo = 108 - Registros Deletados
+Processo = 109 - Plano Contas
+Processo = 110 - Clientes
+Processo = 111 - Convenios
+Processo = 112 - Transportadoras
+Processo = 113 - Cartoes
+Processo = 114 - Distribuidores
+Processo = 115 - Filiais
+Processo = 116 - Formas de Pagamento
+Processo = 117 - Transferencias
+Processo = 118 - Itens Transferencias
+Processo = 119 - Cadastro dos Produtos
+Processo = 1191 - Estoque
+Processo = 1192 - Consistencia Estoque Lojas
+Processo = 120 - Classes
+Processo = 121 - Contas a Receber
+Processo = 122 - Contas a Pagar
+Processo = 123 - Vendedores Classes
+Processo = 124 - Convenios Classes
+Processo = 125 - Precos de Venda
+Processo = 126 - Balancos
+Processo = 127 - Metas da Filial
+Processo = 128 - Metas dos Vendedores
+Processo = 129 - Familias
+Processo = 130 - Grupos de Balanco
+Processo = 131 - Grupos de Compras
+Processo = 132 - Grupos Curvas
+Processo = 133 - Redes
+Processo = 134 - Concorrentes
+Processo = 135 - SubGrupos
+Processo = 136 - Convenios Grupos
+Processo = 137 - Contas_Pagar_Compras
+Processo = 138 - Produtos_Convenios_PBM
+Processo = 139 - Usuários Grupos
+Processo = 140 - Transferencias no ato da venda
+Processo = 141 - Itens da transferencia no ato da venda
+Processo = 142 - Usuarios
+Processo = 143 - Permissoes
+Processo = 144 - Permissoes Modulos
+Processo = 145 - Lancamentos a Prazo
+Processo = 146 - Encartes
+Processo = 147 - Itens dos Encartes
+Processo = 148 - Precos dos Concorrentes
+Processo = 149 - Precos Deletados dos Concorrentes
+Processo = 150 - Contas a Receber Deletados
+Processo = 151 - Limite e Saldo dos Clientes
+Processo = 152 - Projetos Pharmalink
+Processo = 153 - Perfis de Clientes
+Processo = 154 - Produtos Quantidade
+Processo = 155 - Produtos Farmacia Popular
+Processo = 156 - Itens Compras Lote
+Processo = 157 - Comando de Reexportacao de Dados
+Processo = 158 - Produtos Fidelidade
+Processo = 159 - Principio Ativo
+Processo = 160 - Dicionario de Codigo
+Processo = 161 - Produtos Fisco
+Processo = 162 - Produtos Compostos
+Processo = 163 - Compras Boletos
+Processo = 164 - Produtos Barras
+
+Processo = 999 - Validacao de Conexao
+
+
+
+Processos de Consistências
+*********************************
+
+Processo = 1000 - Conferencia de Lancamentos
+Processo = 1001 - Conferencia de Caixa
+Processo = 1002 - Envio de Codigos dos Lancamentos
+Processo = 1003 - Envio de Codigos do Caixa
+Processo = 1004 - Conferencia de Transferencias
+Processo = 1005 - Conferencia de Itens das Transferencias
+Processo = 1006 - Envio de Codigos das Transferencias
+Processo = 1007 - Envio de Codigos dos Itens das Transfencias
+Processo = 1008 - Conferencia de Contas a Receber
+Processo = 1009 - Envio de Codigos das Contas a Receber
+Processo = 10109999 - Envio de Codigo de Produtos para Exclusao
+Processo = 1010 - Enviando Id_Produto para Conferencia
+Processo = 10119999 - Envio de Codigo dos Produtos para Inclusao
+Processo = 1011 - Enviando Produtos para inclusao
+Processo = 1012 - Conferencia de Lancamentos a Prazo
+Processo = 1013 - Envio de Codigos de Lancamentos a Prazo
+
+Processo = 2001 - Consistencia de Classes
+Processo = 2002 - Consistencia de Grupos
+Processo = 2003 - Consistencia de Laboratorios
+Processo = 2004 - Consistencia de Familias
+Processo = 2005 - Consistencia de Grupos Compras
+Processo = 2006 - Consistencia de Grupos Balanco
+Processo = 2007 - Consistencia de Distribuidores
+Processo = 2008 - Consistencia de Cartoes
+Processo = 2009 - Consistencia de Plano Contas
+Processo = 2010 - Consistencia de Vendedores
+Processo = 2011 - Consistencia de Convenios
+Processo = 2013 - Consistencia de Contas a Receber
+Processo = 2014 - Consistencia de Contas a Receber
+Processo = 2015 - Consistencia de Usuarios
+Processo = 2016 - Consistencia de Produtos Preço Quantidade
+Processo = 2017 - Consistencia de Produtos Fidelidade
+
+Processo = 10000  - Conferencia dos Lancamentos
+Processo = 10001  - Conferencia de Caixas
+
+
+
+
+Processos Farmax
+**********************
+
+Processo = 90001  - LogAcesso
+Processo = 90002  - Interligacao
+Processo = 90003  - Verifica Financeiro
+Processo = 90004  - Boletos Farmax
+Processo = 90005  - Duplicatas Farmax
+Processo = 90100  - Dicionário Farmax

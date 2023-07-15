@@ -1,0 +1,133 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 22052018 as 15:06:48 horas
+22/05/2018 15:06:48===============================================================
+22/05/2018 15:06:48 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ComprasDeletadas_2_20180522145855.xml
+22/05/2018 15:06:48 - Compras Deletadas: 2
+22/05/2018 15:06:48===============================================================
+22/05/2018 15:06:48 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ContasPagarDeletadas_2_20180522145856.xml
+22/05/2018 15:06:48 - Contas Pagar Deletadas: 2
+22/05/2018 15:06:48===============================================================
+22/05/2018 15:06:48 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Contas_Receber_2_20180522145917.xml
+22/05/2018 15:06:48 - Contas a Receber: 25
+22/05/2018 15:06:48===============================================================
+22/05/2018 15:06:48 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522145919.xml
+22/05/2018 15:06:48 - Lancamentos: 121
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522145925.xml
+22/05/2018 15:06:49 - Produtos Lotes: 47
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522145926.xml
+22/05/2018 15:06:49 - Estoques / Custos : 47
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150056.xml
+22/05/2018 15:06:49 - Estoques / Custos : 2
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_2_20180522150435.xml
+22/05/2018 15:06:49 - Itens Compras: 10
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522150434.xml
+22/05/2018 15:06:49 - Lancamentos: 10
+22/05/2018 15:06:49===============================================================
+22/05/2018 15:06:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Compras_2_20180522150436.xml
+22/05/2018 15:06:50 - Compras: 1
+22/05/2018 15:06:50===============================================================
+22/05/2018 15:06:50 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522150438.xml
+22/05/2018 15:06:50 - Produtos Lotes: 10
+22/05/2018 15:06:50===============================================================
+22/05/2018 15:06:50 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150438.xml
+22/05/2018 15:06:50 - Estoques / Custos : 10
+22/05/2018 15:06:50 - Encerrando o processo. 
+22/05/2018 15:06:50 - Processo concluido Rodando como Aplicacao. 
+22/05/2018 15:11:44===============================================================
+22/05/2018 15:11:44 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ComprasDeletadas_2_20180522145855.xml
+22/05/2018 15:11:44 - Compras Deletadas: 2
+22/05/2018 15:11:44===============================================================
+22/05/2018 15:11:44 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ContasPagarDeletadas_2_20180522145856.xml
+22/05/2018 15:11:44 - Contas Pagar Deletadas: 2
+22/05/2018 15:11:44===============================================================
+22/05/2018 15:11:44 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Contas_Receber_2_20180522145917.xml
+22/05/2018 15:11:44 - Contas a Receber: 25
+22/05/2018 15:11:44===============================================================
+22/05/2018 15:11:44 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522145919.xml
+22/05/2018 15:11:45 - Lancamentos: 121
+22/05/2018 15:11:45===============================================================
+22/05/2018 15:11:45 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522145925.xml
+22/05/2018 15:11:45 - Produtos Lotes: 47
+22/05/2018 15:11:45===============================================================
+22/05/2018 15:11:45 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522145926.xml
+22/05/2018 15:11:45 - Estoques / Custos : 47
+22/05/2018 15:11:45===============================================================
+22/05/2018 15:11:45 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150056.xml
+22/05/2018 15:11:45 - Estoques / Custos : 2
+22/05/2018 15:11:45===============================================================
+22/05/2018 15:11:45 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_2_20180522150435.xml
+22/05/2018 15:11:45 - Itens Compras: 10
+22/05/2018 15:11:46===============================================================
+22/05/2018 15:11:46 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522150434.xml
+22/05/2018 15:11:46 - Lancamentos: 10
+22/05/2018 15:11:46===============================================================
+22/05/2018 15:11:46 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Compras_2_20180522150436.xml
+22/05/2018 15:11:46 - Compras: 1
+22/05/2018 15:11:46===============================================================
+22/05/2018 15:11:46 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522150438.xml
+22/05/2018 15:11:46 - Produtos Lotes: 10
+22/05/2018 15:11:46===============================================================
+22/05/2018 15:11:46 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150438.xml
+22/05/2018 15:11:46 - Estoques / Custos : 10
+22/05/2018 15:11:46 - Encerrando o processo. 
+22/05/2018 15:11:46 - Processo concluido Rodando como Aplicacao. 
+22/05/2018 15:16:02===============================================================
+22/05/2018 15:16:02 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ComprasDeletadas_2_20180522145855.xml
+22/05/2018 15:16:02 - Compras Deletadas: 2
+22/05/2018 15:16:02===============================================================
+22/05/2018 15:16:02 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ContasPagarDeletadas_2_20180522145856.xml
+22/05/2018 15:16:03 - Contas Pagar Deletadas: 2
+22/05/2018 15:16:03===============================================================
+22/05/2018 15:16:03 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Contas_Receber_2_20180522145917.xml
+22/05/2018 15:16:03 - Contas a Receber: 25
+22/05/2018 15:16:03===============================================================
+22/05/2018 15:16:03 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522145919.xml
+22/05/2018 15:16:03 - Lancamentos: 121
+22/05/2018 15:16:03===============================================================
+22/05/2018 15:16:03 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522145925.xml
+22/05/2018 15:16:03 - Produtos Lotes: 47
+22/05/2018 15:16:03===============================================================
+22/05/2018 15:16:03 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522145926.xml
+22/05/2018 15:16:03 - Estoques / Custos : 47
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150056.xml
+22/05/2018 15:16:04 - Estoques / Custos : 2
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_2_20180522150435.xml
+22/05/2018 15:16:04 - Itens Compras: 10
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522150434.xml
+22/05/2018 15:16:04 - Lancamentos: 10
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Compras_2_20180522150436.xml
+22/05/2018 15:16:04 - Compras: 1
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522150438.xml
+22/05/2018 15:16:04 - Produtos Lotes: 10
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150438.xml
+22/05/2018 15:16:04 - Estoques / Custos : 10
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522150853.xml
+22/05/2018 15:16:04 - Estoques / Custos : 2
+22/05/2018 15:16:04===============================================================
+22/05/2018 15:16:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Lancamentos_2_20180522151511.xml
+22/05/2018 15:16:04 - Lancamentos: 3
+22/05/2018 15:16:05===============================================================
+22/05/2018 15:16:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_2_20180522151513.xml
+22/05/2018 15:16:05 - Itens Compras: 3
+22/05/2018 15:16:05===============================================================
+22/05/2018 15:16:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Compras_2_20180522151514.xml
+22/05/2018 15:16:05 - Compras: 2
+22/05/2018 15:16:05===============================================================
+22/05/2018 15:16:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\ProdutosLotes_2_20180522151516.xml
+22/05/2018 15:16:05 - Produtos Lotes: 3
+22/05/2018 15:16:05===============================================================
+22/05/2018 15:16:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_02_20180522151517.xml
+22/05/2018 15:16:05 - Estoques / Custos : 3
+22/05/2018 15:16:05 - Encerrando o processo. 
+22/05/2018 15:16:05 - Processo concluido Rodando como Aplicacao. 

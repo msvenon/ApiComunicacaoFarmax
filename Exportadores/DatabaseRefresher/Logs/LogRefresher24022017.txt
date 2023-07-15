@@ -1,0 +1,62 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 24022017 as 11:09:52 horas
+24/02/2017 11:09:52 - Alteracao de data do Sistema : 22/02/2017
+24/02/2017 11:09:52 - ApagaArquivos
+24/02/2017 11:09:52 >>>------ Alteracao ------<<< Data Anterior : 22/02/2017  Data Atual : 24/02/2017
+24/02/2017 11:09:53 - Gravacao da Nova data do dia executada com Sucesso.24/02/2017
+24/02/2017 11:09:53 - Iniciando o backup do banco.
+24/02/2017 11:10:58===============================================================
+24/02/2017 11:10:58 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeLotesLancamentos_3_20170224110658.xml
+24/02/2017 11:11:04 - Lancamentos: 6
+24/02/2017 11:11:05===============================================================
+24/02/2017 11:11:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeCaixaCaixa_3_20170224110708.xml
+24/02/2017 11:11:08 - Caixa: 2
+24/02/2017 11:11:09===============================================================
+24/02/2017 11:11:09 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsOperadoresOperadores_3_20170224110719.xml
+24/02/2017 11:11:12 - Operadores: 44
+24/02/2017 11:11:14===============================================================
+24/02/2017 11:11:14 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeProdutosProdutos_3_20170224110733.xml
+24/02/2017 11:13:29===============================================================
+24/02/2017 11:13:29 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeLotesLancamentos_3_20170224110658.xml
+24/02/2017 11:13:29 - Lancamentos: 6
+24/02/2017 11:13:29===============================================================
+24/02/2017 11:13:29 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeCaixaCaixa_3_20170224110708.xml
+24/02/2017 11:13:30 - Caixa: 2
+24/02/2017 11:13:30===============================================================
+24/02/2017 11:13:30 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsOperadoresOperadores_3_20170224110719.xml
+24/02/2017 11:13:30 - Operadores: 44
+24/02/2017 11:13:30===============================================================
+24/02/2017 11:13:30 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeProdutosProdutos_03_20170224110733.xml
+24/02/2017 11:13:30 - Estoques / Custos : 1
+24/02/2017 11:13:30===============================================================
+24/02/2017 11:13:30 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsControladorControleValores_3_20170224110733.xml
+24/02/2017 11:13:31 - Controle de Interligacao: 1
+24/02/2017 11:13:31 - Encerrando o processo. 
+24/02/2017 11:13:31 - Processo concluido Rodando como Aplicacao. 
+24/02/2017 11:13:57===============================================================
+24/02/2017 11:13:57 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeLotesLancamentos_3_20170224110658.xml
+24/02/2017 11:13:59 - Lancamentos: 6
+24/02/2017 11:13:59===============================================================
+24/02/2017 11:13:59 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeCaixaCaixa_3_20170224110708.xml
+24/02/2017 11:13:59 - Caixa: 2
+24/02/2017 11:13:59===============================================================
+24/02/2017 11:13:59 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsOperadoresOperadores_3_20170224110719.xml
+24/02/2017 11:13:59 - Operadores: 44
+24/02/2017 11:13:59===============================================================
+24/02/2017 11:13:59 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeProdutosProdutos_3_20170224110733.xml
+24/02/2017 11:14:38===============================================================
+24/02/2017 11:14:38 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeLotesLancamentos_3_20170224110658.xml
+24/02/2017 11:14:38 - Lancamentos: 6
+24/02/2017 11:14:38===============================================================
+24/02/2017 11:14:38 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeCaixaCaixa_3_20170224110708.xml
+24/02/2017 11:14:38 - Caixa: 2
+24/02/2017 11:14:38===============================================================
+24/02/2017 11:14:38 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsOperadoresOperadores_3_20170224110719.xml
+24/02/2017 11:14:38 - Operadores: 44
+24/02/2017 11:14:39===============================================================
+24/02/2017 11:14:39 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsCeProdutosProdutos_03_20170224110733.xml
+24/02/2017 11:14:47 - Estoques / Custos : 1
+24/02/2017 11:14:49===============================================================
+24/02/2017 11:14:49 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\CdsControladorControleValores_3_20170224110733.xml
+24/02/2017 11:14:49 - Controle de Interligacao: 1
+24/02/2017 11:14:49 - Encerrando o processo. 
+24/02/2017 11:14:49 - Processo concluido Rodando como Aplicacao. 

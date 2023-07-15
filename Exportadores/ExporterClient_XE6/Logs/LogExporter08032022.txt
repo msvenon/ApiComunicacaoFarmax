@@ -1,0 +1,160 @@
+>>>>>>>>>>>>>>>Iniciando o Dia 08032022 as 15:11:10 horas
+15:11:10 - Inicializando o ExporterTrigger.
+15:11:43 - Data Encontrada no Banco: 23/02/2022
+15:11:44 - Alteracao de data do Sistema : 23/02/2022
+15:11:45 - ApagaArquivos
+15:11:46 - ArmazenaVendaMaior
+08/03/2022 15:11:49 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:11:51 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:11:52 - Iniciando o backup do banco.
+15:12:19 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:12:24 - Executando Sp Preenche Grupos e Curvas...
+15:12:24 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:12:30 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:12:35 - Mudança de Mes.....: de 2 para 3
+15:12:35 - Calculo de MediaF, eSeg e eMax. 
+15:12:38 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:13:00 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:13:01 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:14:41 - Inicializando o ExporterTrigger.
+15:14:48 - Data Encontrada no Banco: 23/02/2022
+15:14:48 - Alteracao de data do Sistema : 23/02/2022
+15:14:48 - ApagaArquivos
+15:14:48 - ArmazenaVendaMaior
+08/03/2022 15:14:48 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:14:48 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:14:48 - Iniciando o backup do banco.
+15:15:07 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:15:07 - Executando Sp Preenche Grupos e Curvas...
+15:15:07 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:15:07 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:15:10 - Mudança de Mes.....: de 2 para 3
+15:15:10 - Calculo de MediaF, eSeg e eMax. 
+15:15:10 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:15:20 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:15:21 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:17:34 - Inicializando o ExporterTrigger.
+15:17:35 - Data Encontrada no Banco: 23/02/2022
+15:17:35 - Alteracao de data do Sistema : 23/02/2022
+15:17:35 - ApagaArquivos
+15:17:35 - ArmazenaVendaMaior
+08/03/2022 15:17:35 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:17:35 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:17:35 - Iniciando o backup do banco.
+15:17:54 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:17:54 - Executando Sp Preenche Grupos e Curvas...
+15:17:54 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:17:54 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:17:57 - Mudança de Mes.....: de 2 para 3
+15:17:57 - Calculo de MediaF, eSeg e eMax. 
+15:17:57 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:18:04 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:18:04 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:21:40 - Inicializando o ExporterTrigger.
+15:21:41 - Data Encontrada no Banco: 23/02/2022
+15:21:41 - Alteracao de data do Sistema : 23/02/2022
+15:21:41 - ApagaArquivos
+15:21:41 - ArmazenaVendaMaior
+08/03/2022 15:21:41 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:21:41 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:21:41 - Iniciando o backup do banco.
+15:22:00 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:22:00 - Executando Sp Preenche Grupos e Curvas...
+15:22:00 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:22:01 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:22:03 - Mudança de Mes.....: de 2 para 3
+15:22:03 - Calculo de MediaF, eSeg e eMax. 
+15:22:03 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:22:09 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:22:09 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:27:01 - Inicializando o ExporterTrigger.
+15:27:01 - Data Encontrada no Banco: 08/03/2022
+15:27:01 - Disparando o ExporterClientQuick.
+Sem conexão com o banco 192.168.100.25:d:\farmaxwin\Farmax.fdb
+15:28:08 - Inicializando o ExporterTrigger.
+15:28:08 - Data Encontrada no Banco: 23/02/2022
+15:28:08 - Alteracao de data do Sistema : 23/02/2022
+15:28:08 - ApagaArquivos
+15:28:08 - ArmazenaVendaMaior
+08/03/2022 15:28:08 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:28:08 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:28:08 - Iniciando o backup do banco.
+15:28:27 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:28:27 - Executando Sp Preenche Grupos e Curvas...
+15:28:27 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:28:27 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:28:29 - Mudança de Mes.....: de 2 para 3
+15:28:29 - Calculo de MediaF, eSeg e eMax. 
+15:28:29 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:28:41 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:28:41 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:31:06 - Inicializando o ExporterTrigger.
+15:31:07 - Data Encontrada no Banco: 23/02/2022
+15:31:07 - Alteracao de data do Sistema : 23/02/2022
+15:31:07 - ApagaArquivos
+15:31:07 - ArmazenaVendaMaior
+08/03/2022 15:31:07 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:31:07 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:31:07 - Iniciando o backup do banco.
+15:31:25 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:31:25 - Executando Sp Preenche Grupos e Curvas...
+15:31:25 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:31:26 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:31:28 - Mudança de Mes.....: de 2 para 3
+15:31:28 - Calculo de MediaF, eSeg e eMax. 
+15:31:28 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX
+15:31:32 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:31:32 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:32:20 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_META_NOVA(, 2, 2022, 30)
+15:37:44 - Inicializando o ExporterTrigger.
+15:37:44 - Data Encontrada no Banco: 23/02/2022
+15:37:44 - Alteracao de data do Sistema : 23/02/2022
+15:37:44 - ApagaArquivos
+15:37:44 - ArmazenaVendaMaior
+08/03/2022 15:37:44 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:37:44 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:37:44 - Iniciando o backup do banco.
+15:38:02 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:38:02 - Executando Sp Preenche Grupos e Curvas...
+15:38:02 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:38:03 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:38:05 - Mudança de Mes.....: de 2 para 3
+15:38:05 - Calculo de MediaF, eSeg e eMax. 
+15:38:10 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX(2)
+15:39:02 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:39:02 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:39:08 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_META_NOVA(2, 2, 2022, 30)
+15:39:08 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_META_NOVA_VEND(2, 2, 2022)
+15:39:08 - Execucao de: ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE
+15:39:08 - Preparando produtos com movimento de estoque para envio à Matriz. 
+15:39:08 - Execucao de: UPDATE PRODUTOS SET ENVIADO = ' ' WHERE ID_PRODUTO IN (SELECT DISTINCT ID_PRODUTO FROM LANCAMENTOS WHERE ID_PRODUTO > 0 AND CD_FILIAL > 0 AND DATA_LANCAMENTO > CURRENT_DATE - 10)
+15:42:03 - Inicializando o ExporterTrigger.
+15:42:04 - Data Encontrada no Banco: 23/02/2022
+15:42:04 - Alteracao de data do Sistema : 23/02/2022
+15:42:04 - ApagaArquivos
+15:42:04 - ArmazenaVendaMaior
+08/03/2022 15:42:04 -------------------------------------- Alteracao: Data Anterior : 23/02/2022Data Atual : 08/03/2022
+15:42:04 - Gravacao da Nova data do dia executada com Sucesso.08/03/2022
+15:42:04 - Iniciando o backup do banco.
+15:42:26 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_SALDO_COMISSAO('03/08/2022', '2')
+15:42:26 - Executando Sp Preenche Grupos e Curvas...
+15:42:26 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_GRUPOS_CURVA
+15:42:27 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_VENDA_PRODUTO_LOJA
+Executada PROCEDURE SP_PREENCHE_VENDA_PRODUTO na virada do Mes: "08/03/2022"
+15:42:29 - Mudança de Mes.....: de 2 para 3
+15:42:29 - Calculo de MediaF, eSeg e eMax. 
+15:42:42 - Execucao de: EXECUTE PROCEDURE SP_CALCULA_MEDIAF_ESEG_EMAX(2)
+15:43:36 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_ESTOQUE_INICIA_DIA('03/07/2022', 15)
+15:43:36 - Execucao de: EXECUTE PROCEDURE SP_RECALCULA_PRODUTOSTOTAIS
+15:43:46 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_META_NOVA(2, 2, 2022, 30)
+15:43:50 - Execucao de: EXECUTE PROCEDURE SP_PREENCHE_META_NOVA_VEND(2, 2, 2022)
+15:43:54 - Execucao de: ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE
+15:43:56 - Preparando produtos com movimento de estoque para envio à Matriz. 
+15:44:54 - Execucao de: UPDATE PRODUTOS SET ENVIADO = ' ' WHERE ID_PRODUTO IN (SELECT DISTINCT ID_PRODUTO FROM LANCAMENTOS WHERE ID_PRODUTO > 0 AND CD_FILIAL > 0 AND DATA_LANCAMENTO > CURRENT_DATE - 10)

@@ -26,12 +26,15 @@ type
     cdsControleCAMPO: TStringField;
     cdsControleVALOR: TFloatField;
     FDStored: TFDStoredProc;
+    SqlAtualizaClientes: TFDQuery;
+    FDMemTableClientes: TFDMemTable;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
    procedure ValidaBd;
    function  Crypt(Action, Src: String): String;
+
   end;
 
 var

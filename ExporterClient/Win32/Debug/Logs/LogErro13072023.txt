@@ -1,6 +1,0 @@
-13/07/2023 - 11:45:01 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000/"
-13/07/2023 - 11:45:34 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Erro ao consultar dados da filial em parametros:Invalid URL: "localhost:9000"
-13/07/2023 - 11:45:55 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Conexao da Filial validada na matriz cnpj:33355207000219
-13/07/2023 - 11:47:53 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Conexao da Filial validada na matriz cnpj:33355207000219
-13/07/2023 - 11:49:55 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Conexao da Filial validada na matriz cnpj:33355207000219
-13/07/2023 - 12:52:52 - C:\&FarmaSoft\ApiComunicacaoHourse\ExporterClient\Win32\Debug\ExporterClient.exe - Conexao da Filial validada na matriz cnpj:33355207000219

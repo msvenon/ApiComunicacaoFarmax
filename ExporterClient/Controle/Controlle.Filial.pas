@@ -1,6 +1,9 @@
 unit Controlle.Filial;
 
+
+
 interface
+
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
@@ -9,16 +12,15 @@ uses
   Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons,
-  Vcl.WinXCtrls,RESTRequest4D, DataSet.Serialize,system.json,REST.Client,
+  Vcl.WinXCtrls,system.json,REST.Client,
   REST.Types, dxGDIPlusClasses, FireDAC.Stan.StorageXML,midaslib,
   JPeg,IdHTTP, Winapi.CommCtrl, IdBaseComponent, IdComponent,
-  IdTCPConnection, IdTCPClient,ShellAPI,Wininet;
+  IdTCPConnection, IdTCPClient,ShellAPI,Wininet,
+  Horse,DataSet.Serialize,RESTRequest4D;
+
 
 
 function validafilial:boolean;
-
-
-
 
 
 implementation
@@ -28,7 +30,6 @@ uses Udm, Funcoes;
 
 function validafilial:boolean;
 var
-
   sql,cnpjloja,cnpj:string;
   LResponse: IResponse;
   TJsonfilial :TJSONObject;

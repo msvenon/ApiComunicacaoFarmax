@@ -23,4 +23,11 @@ object FrmPrincipal: TFrmPrincipal
     TabOrder = 0
     OnClick = Button1Click
   end
+  object Memo1: TMemo
+    Left = 320
+    Top = 104
+    Width = 129
+    Height = 57
+    TabOrder = 1
+  end
 end

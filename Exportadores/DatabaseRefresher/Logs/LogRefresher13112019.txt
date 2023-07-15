@@ -1,0 +1,11 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 13112019 as 15:36:58 horas
+13/11/2019 15:36:58===============================================================
+13/11/2019 15:37:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_03_20191113152311.xml
+13/11/2019 15:39:12 - Estoques / Custos : 11
+13/11/2019 15:40:52 - Encerrando o processo. 
+13/11/2019 15:40:52 - Processo concluido Rodando como Aplicacao. 
+13/11/2019 15:42:40===============================================================
+13/11/2019 15:42:40 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_03_20191113152311.xml
+13/11/2019 15:42:40 - Estoques / Custos : 11
+13/11/2019 15:42:41 - Encerrando o processo. 
+13/11/2019 15:42:41 - Processo concluido Rodando como Aplicacao. 

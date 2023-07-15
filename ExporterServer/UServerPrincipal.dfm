@@ -2,9 +2,9 @@ object ServerPrincipal: TServerPrincipal
   Left = 0
   Top = 0
   Caption = 'ServerMonitoramento'
-  ClientHeight = 117
-  ClientWidth = 284
-  Color = clBtnFace
+  ClientHeight = 166
+  ClientWidth = 391
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -56,5 +56,12 @@ object ServerPrincipal: TServerPrincipal
     ParentFont = False
     TabOrder = 0
     Text = '9000'
+  end
+  object Memo1: TMemo
+    Left = 304
+    Top = 109
+    Width = 49
+    Height = 49
+    TabOrder = 1
   end
 end
