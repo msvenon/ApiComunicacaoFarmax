@@ -638,10 +638,8 @@ object DmExporterQuick: TDmExporterQuick
   end
   object HTTPRIO1: THTTPRIO
     URL = 'http://localhost/ExporterServer/ExporterServer.exe/soap/IDm'
+    HTTPWebNode.URL = 'http://localhost/ExporterServer/ExporterServer.exe/soap/IDm'
     HTTPWebNode.Agent = 'Borland SOAP 1.2'
-    HTTPWebNode.UseUTF8InHeader = True
-    HTTPWebNode.InvokeOptions = [soIgnoreInvalidCerts, soAutoCheckAccessPointViaUDDI]
-    HTTPWebNode.WebNodeOptions = []
     Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]
     Left = 112
     Top = 8
@@ -1694,8 +1692,8 @@ object DmExporterQuick: TDmExporterQuick
         Name = 'FILIAL'
         ParamType = ptInput
       end>
-    Left = 519
-    Top = 440
+    Left = 543
+    Top = 464
     object CdsCdCaixaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
       Required = True
@@ -4520,7 +4518,7 @@ object DmExporterQuick: TDmExporterQuick
         ParamType = ptInput
       end>
     Left = 782
-    Top = 440
+    Top = 464
     object CdsCdLancamentoCD_LANCAMENTO: TFloatField
       FieldName = 'CD_LANCAMENTO'
     end

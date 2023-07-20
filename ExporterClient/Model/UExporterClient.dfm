@@ -1,10 +1,10 @@
 object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'ExporterClient'
+  Caption = 'ExporterClientPrincipal'
   ClientHeight = 181
   ClientWidth = 486
-  Color = clBtnFace
+  Color = clInactiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -12,14 +12,15 @@ object FrmPrincipal: TFrmPrincipal
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 104
-    Top = 48
+    Left = 40
+    Top = 32
     Width = 129
     Height = 49
-    Caption = 'teste'
+    Caption = 'Teste Envio'
     TabOrder = 0
     OnClick = Button1Click
   end

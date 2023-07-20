@@ -25,16 +25,33 @@ uses
  Function FazLogErroApply(Cds : TClientDataSet; Evento : String) : Boolean;
  function VersaoExe(const Filename: String): String;
  function ConectadoInternet: boolean;
- function  RetornaId ( Campo : String ) : Double;
+ function RetornaId ( Campo : String ) : Double;
 
  procedure GeraLog(Mensagem : String);
+ procedure GravaLog(cMensagem: string);
 
 
 implementation
 
 uses Udm;
 
-
+ procedure GravaLog(cMensagem: string);
+var Log : TextFile;
+begin
+  if FileExists(ExtractFilePath(Application.ExeName) + 'Logs\LogExporter' + FormatDateTime('ddmmyyyy',Date) + '.txt') then
+   begin
+     AssignFile(Log, ExtractFilePath(Application.ExeName) + 'Logs\LogExporter' + FormatDateTime('ddmmyyyy',Date) + '.txt');
+     Append(Log);
+   end
+  else
+    begin
+     AssignFile(Log, ExtractFilePath(Application.ExeName) + 'Logs\LogExporter' + FormatDateTime('ddmmyyyy',Date) + '.txt');
+     Rewrite(Log);
+     Writeln(Log, ' - Iniciando o Dia ' + FormatDateTime('dd/mm/yyyy',Date) + ' as ' + FormatDateTime('hh:mm:ss',Time) + ' horas');
+    end;
+  Writeln(Log, cMensagem);
+  CloseFile(Log);
+ end;
 
 function  RetornaId ( Campo : String ) : Double;
 begin

@@ -30,7 +30,7 @@ uses Udm, Funcoes;
 
 function validafilial:boolean;
 var
-  sql,cnpjloja,cnpj:string;
+  sql,cnpjloja:string;
   LResponse: IResponse;
   TJsonfilial :TJSONObject;
 
@@ -42,6 +42,7 @@ begin
 
    try
 
+     DM.Query.SQL.Clear;
      DM.Query.Open(sql);
 
      if DM.Query.RecordCount>0 then

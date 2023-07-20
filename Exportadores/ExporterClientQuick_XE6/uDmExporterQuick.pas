@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Classes, InvokeRegistry, FMTBcd, DB, SqlExpr, Rio,
-  SOAPHTTPClient, Provider, DBClient, Data.DBXFirebird;
+  SOAPHTTPClient, Provider, DBClient, Data.DBXFirebird, System.Net.URLClient;
 
 type
   TDmExporterQuick = class(TDataModule)

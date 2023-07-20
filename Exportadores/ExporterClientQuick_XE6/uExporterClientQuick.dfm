@@ -2,8 +2,8 @@ object FrmExporterClientQuick: TFrmExporterClientQuick
   Left = 0
   Top = 1
   Caption = 'Exportacao da Loja Para Matriz'
-  ClientHeight = 1
-  ClientWidth = 120
+  ClientHeight = 364
+  ClientWidth = 500
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

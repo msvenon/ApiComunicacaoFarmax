@@ -108,8 +108,8 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Controle\Funcoes.pas"/>
-        <DCCReference Include="Controle\Controlle.Processos.pas"/>
         <DCCReference Include="Controle\Controlle.Filial.pas"/>
+        <DCCReference Include="Controle\Controlle.ClientQuick.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -21,19 +21,19 @@ type
     procedure ConfirmaTransacao;
     procedure CancelaTransacao;
 
-    function  EnviarContasReceber : Boolean;
-    function  EnviarProdutosLotes : Boolean;
-    function  EnviarProdutosLotesST : Boolean;
+    function  EnviarContasReceber : Boolean; //
+    function  EnviarProdutosLotes : Boolean; //
+    function  EnviarProdutosLotesST : Boolean; //
 
-    procedure EnvioLotes;
-    procedure EnvioLotesAPrazo;
-    procedure EnvioCaixa;
-    function  BuscaMatrizProdutosIncluidos : Boolean;
-    function  EnviandoEstoque : Boolean;
-    procedure EnviandoOperadoresCaixa;
-    function  EnviandoClientes : Boolean;
-    procedure EnviandoCRM;
-    procedure EnviandoEntregas;
+    procedure EnvioLotes; //
+    procedure EnvioLotesAPrazo;  //
+    procedure EnvioCaixa; //
+    function  BuscaMatrizProdutosIncluidos : Boolean;   //
+    function  EnviandoEstoque : Boolean;  //
+    procedure EnviandoOperadoresCaixa;  //
+    function  EnviandoClientes : Boolean; //
+    procedure EnviandoCRM; //
+    procedure EnviandoEntregas;//
     procedure EnviandoChequesRecebidos;
     procedure EnviandoItensTransfer;
     procedure EnviandoTransfer;
@@ -72,7 +72,7 @@ type
 
     procedure MontaSQL_Precos(Filial : String);
     procedure CriaCamposPrecos(sFilial : String);
-    procedure ConsistenciaDados;
+    procedure ConsistenciaDados;  //
 
 
     function SetaEnviado9 : Boolean;
@@ -813,7 +813,7 @@ end;
 
 function TFrmExporterClientQuick.EnviarContasReceber : Boolean;
 var Dados : Variant;
-    Sql : String;
+    Sql,sql2 : String;
 begin
   //processamento e envio de Cecadfin.dat
   Try
@@ -2266,6 +2266,7 @@ begin
       (DmExporterQuick.HTTPRIO1 as IDmProcessa).Processa(0, Filial, DmExporterQuick.CdsControlador.Data);
       DmExporterQuick.CdsControlador.Close;
       GravaLog(TimetoStr(Time) + ' - Consistencia de Dados - Final do Processo ');
+
     except
       CancelaTransacao;
       GravaLog(TimetoStr(Time) + ' - Não foi possível fazer a consistencia de dados. 2');
