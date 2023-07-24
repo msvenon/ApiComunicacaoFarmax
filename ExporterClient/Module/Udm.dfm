@@ -2,7 +2,7 @@ object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   Height = 590
-  Width = 1490
+  Width = 1507
   object FDConn: TFDConnection
     Params.Strings = (
       'User_Name=sysdba'
@@ -227,7 +227,7 @@ object DM: TDM
     Aggregates = <>
     Params = <>
     Left = 368
-    Top = 219
+    Top = 187
   end
   object FdLancamentosLoja: TFDQuery
     Connection = FDConn
@@ -2075,7 +2075,7 @@ object DM: TDM
       
         ' LANCAMENTOS_APRAZO.CD_LANCAMENTO = TEMP_LANCAMENTOS_APRAZO2.CD_' +
         'LANCAMENTO')
-    Left = 688
+    Left = 674
     Top = 83
     ParamData = <
       item
@@ -2088,7 +2088,7 @@ object DM: TDM
   end
   object dspCelotes2: TDataSetProvider
     DataSet = FDceLotes2
-    Left = 688
+    Left = 674
     Top = 126
   end
   object cdsCelotes2: TClientDataSet
@@ -2101,7 +2101,7 @@ object DM: TDM
         ParamType = ptInput
       end>
     ProviderName = 'dspCelotes2'
-    Left = 688
+    Left = 674
     Top = 167
     object cdsCelotes2ID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
@@ -2289,19 +2289,19 @@ object DM: TDM
       ' CAIXA'
       'WHERE'
       ' DATA >= CURRENT_DATE - 1')
-    Left = 768
+    Left = 754
     Top = 82
   end
   object dspNUmeroCaixaLoja: TDataSetProvider
     DataSet = FDNumeroCaixaLoja
-    Left = 771
+    Left = 757
     Top = 125
   end
   object cdsNumeroCaixaLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspNUmeroCaixaLoja'
-    Left = 771
+    Left = 757
     Top = 169
     object cdsNumeroCaixaLojaCOUNT: TIntegerField
       FieldName = 'COUNT'
@@ -2317,19 +2317,19 @@ object DM: TDM
       ' CAIXA'
       'WHERE'
       ' DATA >= CURRENT_DATE - 1')
-    Left = 864
+    Left = 841
     Top = 82
   end
   object dspCaixaLoja: TDataSetProvider
     DataSet = FDCaixaLoja
-    Left = 867
+    Left = 844
     Top = 125
   end
   object cdsCaixaLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCaixaLoja'
-    Left = 867
+    Left = 844
     Top = 169
     object cdsCaixaLojaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
@@ -2344,8 +2344,8 @@ object DM: TDM
         Name = 'FILIAL'
         ParamType = ptInput
       end>
-    Left = 863
-    Top = 215
+    Left = 848
+    Top = 199
     object CdsCdCaixaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
       Required = True
@@ -2360,19 +2360,19 @@ object DM: TDM
       ' CAIXA'
       'WHERE'
       ' ENVIADO = '#39'9'#39)
-    Left = 936
+    Left = 913
     Top = 82
   end
   object dspCeCaixa: TDataSetProvider
     DataSet = FDCeCaixa
-    Left = 939
+    Left = 916
     Top = 125
   end
   object cdsCeCaixa: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCeCaixa'
-    Left = 939
+    Left = 916
     Top = 169
     object cdsCeCaixaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
@@ -2710,31 +2710,31 @@ object DM: TDM
   end
   object DspCeProdutos: TDataSetProvider
     DataSet = FDCeProdutos
-    Left = 1008
+    Left = 985
     Top = 130
   end
   object CdsCeProdutos: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeProdutos'
-    Left = 1008
+    Left = 985
     Top = 169
   end
   object FDCeProdutos: TFDQuery
     Connection = FDConn
-    Left = 1005
+    Left = 982
     Top = 82
   end
   object dspOperadores: TDataSetProvider
     DataSet = FDOperadores
-    Left = 1088
+    Left = 1065
     Top = 130
   end
   object cdsOperadores: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspOperadores'
-    Left = 1088
+    Left = 1065
     Top = 169
     object cdsOperadoresID_OPERADORCAIXA: TFloatField
       FieldName = 'ID_OPERADORCAIXA'
@@ -2806,19 +2806,19 @@ object DM: TDM
       ' OPERADORES'
       'WHERE '
       ' STATUS <> '#39'C'#39' AND (ENVIADO <> '#39'2'#39' OR ENVIADO IS NULL)')
-    Left = 1085
+    Left = 1062
     Top = 82
   end
   object dspCrm: TDataSetProvider
     DataSet = FDCrm
-    Left = 1147
+    Left = 1124
     Top = 132
   end
   object cdsCRM: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCrm'
-    Left = 1147
+    Left = 1124
     Top = 171
     object cdsCRMID_CRM: TFloatField
       FieldName = 'ID_CRM'
@@ -2917,19 +2917,19 @@ object DM: TDM
       ' CRM'
       'WHERE'
       ' ENVIADO = '#39'9'#39)
-    Left = 1144
+    Left = 1121
     Top = 84
   end
   object dspEntregas: TDataSetProvider
     DataSet = FdEntregas
-    Left = 1203
+    Left = 1180
     Top = 132
   end
   object cdsEntregas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspEntregas'
-    Left = 1203
+    Left = 1180
     Top = 171
     object cdsEntregasCD_FILIAL: TFloatField
       FieldName = 'CD_FILIAL'
@@ -3002,7 +3002,2387 @@ object DM: TDM
       ' ENTREGAS'
       'WHERE'
       ' ENVIADO = '#39'9'#39)
-    Left = 1200
+    Left = 1177
     Top = 83
+  end
+  object FDItensTransfer: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT '
+      ' ITENS_TRANSFER.*'
+      'FROM'
+      ' ITENS_TRANSFER'
+      'WHERE'
+      ' ITENS_TRANSFER.CD_TRANSFER = :CD_TRANSFER AND'
+      ' ITENS_TRANSFER.ID_PRODUTO = :ID_PRODUTO')
+    Left = 28
+    Top = 224
+    ParamData = <
+      item
+        Position = 1
+        Name = 'CD_TRANSFER'
+        DataType = ftFloat
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'ID_PRODUTO'
+        DataType = ftFloat
+        ParamType = ptInput
+      end>
+  end
+  object DspItensTransfer: TDataSetProvider
+    DataSet = FDItensTransfer
+    Left = 28
+    Top = 269
+  end
+  object QryItensTransfer: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftFloat
+        Name = 'CD_TRANSFER'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'ID_PRODUTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DspItensTransfer'
+    Left = 31
+    Top = 315
+    object QryItensTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+      Origin = 'CD_TRANSFER'
+    end
+    object QryItensTransferID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+    end
+    object QryItensTransferCD_PRODUTO: TFloatField
+      FieldName = 'CD_PRODUTO'
+      Origin = 'CD_PRODUTO'
+    end
+    object QryItensTransferCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+      Origin = 'CD_GRUPO'
+    end
+    object QryItensTransferCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+      Origin = 'CD_LABORATORIO'
+    end
+    object QryItensTransferDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 60
+    end
+    object QryItensTransferQUANTIDADE_SOLICITADA: TFloatField
+      FieldName = 'QUANTIDADE_SOLICITADA'
+      Origin = 'QUANTIDADE_SOLICITADA'
+    end
+    object QryItensTransferQUANTIDADE_ENVIADA: TFloatField
+      FieldName = 'QUANTIDADE_ENVIADA'
+      Origin = 'QUANTIDADE_ENVIADA'
+    end
+    object QryItensTransferQUANTIDADE_RECEBIDA: TFloatField
+      FieldName = 'QUANTIDADE_RECEBIDA'
+      Origin = 'QUANTIDADE_RECEBIDA'
+    end
+    object QryItensTransferVALOR: TFloatField
+      FieldName = 'VALOR'
+      Origin = 'VALOR'
+    end
+    object QryItensTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      Origin = 'OBSERVACOES'
+      Size = 255
+    end
+    object QryItensTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      Size = 1
+    end
+    object QryItensTransferCD_CLASSE: TFloatField
+      FieldName = 'CD_CLASSE'
+      Origin = 'CD_CLASSE'
+    end
+  end
+  object CdsItensTransfer: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 31
+    Top = 361
+    object CdsItensTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object CdsItensTransferID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object CdsItensTransferCD_PRODUTO: TFloatField
+      FieldName = 'CD_PRODUTO'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      ProviderFlags = [pfInUpdate]
+      Size = 45
+    end
+    object CdsItensTransferQUANTIDADE_SOLICITADA: TFloatField
+      FieldName = 'QUANTIDADE_SOLICITADA'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferQUANTIDADE_ENVIADA: TFloatField
+      FieldName = 'QUANTIDADE_ENVIADA'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferQUANTIDADE_RECEBIDA: TFloatField
+      FieldName = 'QUANTIDADE_RECEBIDA'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferVALOR: TFloatField
+      FieldName = 'VALOR'
+      ProviderFlags = [pfInUpdate]
+    end
+    object CdsItensTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      ProviderFlags = [pfInUpdate]
+      Size = 255
+    end
+    object CdsItensTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      ProviderFlags = [pfInUpdate]
+      Size = 1
+    end
+    object CdsItensTransferCD_CLASSE: TFloatField
+      FieldName = 'CD_CLASSE'
+      ProviderFlags = [pfInUpdate]
+    end
+  end
+  object DspCeItensTransfer: TDataSetProvider
+    DataSet = TbItensTransfer
+    Left = 112
+    Top = 267
+  end
+  object CdsCeItensTransfer: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCeItensTransfer'
+    Left = 112
+    Top = 313
+    object CdsCeItensTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+    end
+    object CdsCeItensTransferID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+    end
+    object CdsCeItensTransferCD_PRODUTO: TFloatField
+      FieldName = 'CD_PRODUTO'
+    end
+    object CdsCeItensTransferCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+    end
+    object CdsCeItensTransferCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+    end
+    object CdsCeItensTransferDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 45
+    end
+    object CdsCeItensTransferQUANTIDADE_SOLICITADA: TFloatField
+      FieldName = 'QUANTIDADE_SOLICITADA'
+    end
+    object CdsCeItensTransferQUANTIDADE_ENVIADA: TFloatField
+      FieldName = 'QUANTIDADE_ENVIADA'
+    end
+    object CdsCeItensTransferQUANTIDADE_RECEBIDA: TFloatField
+      FieldName = 'QUANTIDADE_RECEBIDA'
+    end
+    object CdsCeItensTransferVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object CdsCeItensTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      Size = 255
+    end
+    object CdsCeItensTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsCeItensTransferCD_CLASSE: TFloatField
+      FieldName = 'CD_CLASSE'
+    end
+  end
+  object TbItensTransfer: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' ITENS_TRANSFER.*'
+      'FROM'
+      ' TRANSFER, '
+      ' ITENS_TRANSFER'
+      'WHERE'
+      ' TRANSFER.CD_TRANSFER = ITENS_TRANSFER.CD_TRANSFER AND'
+      ' ITENS_TRANSFER.STATUS <> '#39'A'#39' AND'
+      ' TRANSFER.ENVIADO = '#39'9'#39)
+    Left = 113
+    Top = 224
+  end
+  object CdsCeTransfer: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCeTransfer'
+    Left = 191
+    Top = 311
+    object CdsCeTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+    end
+    object CdsCeTransferDATA_GERACAO: TDateField
+      FieldName = 'DATA_GERACAO'
+    end
+    object CdsCeTransferDATA_ENVIO: TDateField
+      FieldName = 'DATA_ENVIO'
+    end
+    object CdsCeTransferHORA_ENVIO: TTimeField
+      FieldName = 'HORA_ENVIO'
+    end
+    object CdsCeTransferDATA_CONCLUSAO: TDateField
+      FieldName = 'DATA_CONCLUSAO'
+    end
+    object CdsCeTransferHORA_CONCLUSAO: TTimeField
+      FieldName = 'HORA_CONCLUSAO'
+    end
+    object CdsCeTransferCD_FILIAL_ORIGEM: TFloatField
+      FieldName = 'CD_FILIAL_ORIGEM'
+    end
+    object CdsCeTransferCD_FILIAL_DESTINO: TFloatField
+      FieldName = 'CD_FILIAL_DESTINO'
+    end
+    object CdsCeTransferCD_USUARIO_ORIGEM: TFloatField
+      FieldName = 'CD_USUARIO_ORIGEM'
+    end
+    object CdsCeTransferCD_USUARIO_DESTINO: TFloatField
+      FieldName = 'CD_USUARIO_DESTINO'
+    end
+    object CdsCeTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      Size = 255
+    end
+    object CdsCeTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsCeTransferENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsCeTransferHORA_GERACAO: TTimeField
+      FieldName = 'HORA_GERACAO'
+    end
+    object CdsCeTransferCD_VENDEDOR: TFloatField
+      FieldName = 'CD_VENDEDOR'
+    end
+  end
+  object DspCeTransfer: TDataSetProvider
+    DataSet = FDTransfer
+    Left = 191
+    Top = 269
+  end
+  object FDTransfer: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' TRANSFER'
+      'WHERE'
+      ' STATUS <> '#39'A'#39' AND'
+      ' ENVIADO = '#39'9'#39)
+    Left = 191
+    Top = 226
+  end
+  object DspCadernoFaltas: TDataSetProvider
+    DataSet = FDCardenoFaltas
+    Left = 276
+    Top = 268
+  end
+  object CdsCadernoFaltas: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCadernoFaltas'
+    Left = 276
+    Top = 309
+    object CdsCadernoFaltasCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Origin = 'CD_FILIAL'
+    end
+    object CdsCadernoFaltasID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+    end
+    object CdsCadernoFaltasCD_PRODUTO: TStringField
+      FieldName = 'CD_PRODUTO'
+      Origin = 'CD_PRODUTO'
+      Size = 6
+    end
+    object CdsCadernoFaltasCD_CLIENTE: TFloatField
+      FieldName = 'CD_CLIENTE'
+      Origin = 'CD_CLIENTE'
+    end
+    object CdsCadernoFaltasCLIENTE: TStringField
+      FieldName = 'CLIENTE'
+      Origin = 'CLIENTE'
+      Size = 100
+    end
+    object CdsCadernoFaltasDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 60
+    end
+    object CdsCadernoFaltasCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+      Origin = 'CD_GRUPO'
+    end
+    object CdsCadernoFaltasCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+      Origin = 'CD_LABORATORIO'
+    end
+    object CdsCadernoFaltasCD_CLASSE: TFloatField
+      FieldName = 'CD_CLASSE'
+      Origin = 'CD_CLASSE'
+    end
+    object CdsCadernoFaltasCURVA: TStringField
+      FieldName = 'CURVA'
+      Origin = 'CURVA'
+      Size = 1
+    end
+    object CdsCadernoFaltasCD_VENDEDOR: TFloatField
+      FieldName = 'CD_VENDEDOR'
+      Origin = 'CD_VENDEDOR'
+    end
+    object CdsCadernoFaltasDATA: TDateField
+      FieldName = 'DATA'
+      Origin = '"DATA"'
+    end
+    object CdsCadernoFaltasQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+      Origin = 'QUANTIDADE'
+    end
+    object CdsCadernoFaltasID_MOTIVOFALTA: TFloatField
+      FieldName = 'ID_MOTIVOFALTA'
+      Origin = 'ID_MOTIVOFALTA'
+    end
+    object CdsCadernoFaltasSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      Size = 1
+    end
+  end
+  object FDCardenoFaltas: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' CADERNO_FALTAS'
+      'WHERE'
+      ' (STATUS <> '#39'E'#39') OR (STATUS IS NULL)')
+    Left = 272
+    Top = 227
+  end
+  object DspPrecoVenda: TDataSetProvider
+    DataSet = FDPrecoVenda
+    Left = 365
+    Top = 270
+  end
+  object CdsPrecoVenda: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspPrecoVenda'
+    Left = 365
+    Top = 310
+  end
+  object FDPrecoVenda: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT '
+      '  FIRST 2000 '
+      '  PRODUTOS.ID_PRODUTO,'
+      '  PRODUTOS.PRECO_VENDA_1,'
+      '  PRODUTOS.PRECO_PROMOCAO_1,'
+      '  PRODUTOS.DT_VENCIMENTO_PROMOCAO_1,'
+      '  PRODUTOS.DT_REAJUSTE_1'
+      'FROM '
+      ' PRODUTOS,'
+      ' TEMP_PRODUTOS'
+      'WHERE '
+      ' PRODUTOS.ID_PRODUTO = TEMP_PRODUTOS.ID_PRODUTO AND'
+      ' TEMP_PRODUTOS.CD_FILIAL = :FILIAL AND '
+      ' TEMP_PRODUTOS.PROCESSO = 125')
+    Left = 365
+    Top = 230
+    ParamData = <
+      item
+        Name = 'FILIAL'
+        DataType = ftInteger
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+  object DspConferenciaNota: TDataSetProvider
+    DataSet = FdConferenciaNota
+    Left = 458
+    Top = 271
+  end
+  object CdsConferenciaNota: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspConferenciaNota'
+    Left = 458
+    Top = 310
+    object CdsConferenciaNotaID_CONFERENCIANOTA: TFloatField
+      FieldName = 'ID_CONFERENCIANOTA'
+      Required = True
+    end
+    object CdsConferenciaNotaCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+    end
+    object CdsConferenciaNotaCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsConferenciaNotaNOTA_FISCAL: TStringField
+      FieldName = 'NOTA_FISCAL'
+      Size = 7
+    end
+    object CdsConferenciaNotaID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+    end
+    object CdsConferenciaNotaCD_PRODUTO: TStringField
+      FieldName = 'CD_PRODUTO'
+      Size = 6
+    end
+    object CdsConferenciaNotaCODIGO_BARRAS_1: TStringField
+      FieldName = 'CODIGO_BARRAS_1'
+      Size = 13
+    end
+    object CdsConferenciaNotaDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 100
+    end
+    object CdsConferenciaNotaCD_CLASSE: TFloatField
+      FieldName = 'CD_CLASSE'
+    end
+    object CdsConferenciaNotaCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+    end
+    object CdsConferenciaNotaCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+    end
+    object CdsConferenciaNotaCLASSE: TStringField
+      FieldName = 'CLASSE'
+      Size = 100
+    end
+    object CdsConferenciaNotaGRUPO: TStringField
+      FieldName = 'GRUPO'
+      Size = 100
+    end
+    object CdsConferenciaNotaLABORATORIO: TStringField
+      FieldName = 'LABORATORIO'
+      Size = 100
+    end
+    object CdsConferenciaNotaVL_UNITARIO: TFloatField
+      FieldName = 'VL_UNITARIO'
+    end
+    object CdsConferenciaNotaVL_UNITARIO_NOTA: TFloatField
+      FieldName = 'VL_UNITARIO_NOTA'
+    end
+    object CdsConferenciaNotaQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+    end
+    object CdsConferenciaNotaQUANTIDADE_NOTA: TFloatField
+      FieldName = 'QUANTIDADE_NOTA'
+    end
+    object CdsConferenciaNotaSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsConferenciaNotaSTATUSCONFERENCIA: TStringField
+      FieldName = 'STATUSCONFERENCIA'
+      Size = 1
+    end
+    object CdsConferenciaNotaCD_USUARIO_CONFERENCIA: TFloatField
+      FieldName = 'CD_USUARIO_CONFERENCIA'
+    end
+    object CdsConferenciaNotaUSUARIO_CONFERENCIA: TStringField
+      FieldName = 'USUARIO_CONFERENCIA'
+    end
+    object CdsConferenciaNotaENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsConferenciaNotaCD_SUBGRUPO: TFloatField
+      FieldName = 'CD_SUBGRUPO'
+    end
+    object CdsConferenciaNotaQT_EMBALAGEM: TFloatField
+      FieldName = 'QT_EMBALAGEM'
+    end
+  end
+  object FdConferenciaNota: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT * FROM CONFERENCIA_NOTA '
+      'WHERE ENVIADO = '#39'9'#39)
+    Left = 456
+    Top = 232
+  end
+  object DspCeUsu: TDataSetProvider
+    DataSet = FDUsu
+    Left = 538
+    Top = 272
+  end
+  object CdsCeUsu: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCeUsu'
+    Left = 538
+    Top = 311
+    object CdsCeUsuCD_USUARIO: TFloatField
+      FieldName = 'CD_USUARIO'
+      Required = True
+    end
+    object CdsCeUsuSENHA: TStringField
+      FieldName = 'SENHA'
+      Size = 15
+    end
+  end
+  object FDUsu: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' CD_USUARIO,'
+      ' SENHA'
+      'FROM'
+      ' USUARIOS'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 536
+    Top = 232
+  end
+  object DspPosicaoEstoque: TDataSetProvider
+    DataSet = FDPosicaoEstoque
+    Left = 608
+    Top = 272
+  end
+  object CdsPosicaoEstoque: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspPosicaoEstoque'
+    Left = 608
+    Top = 310
+    object CdsPosicaoEstoqueDATA: TDateField
+      FieldName = 'DATA'
+      Required = True
+    end
+    object CdsPosicaoEstoqueCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Required = True
+    end
+    object CdsPosicaoEstoqueID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Required = True
+    end
+    object CdsPosicaoEstoqueQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+    end
+    object CdsPosicaoEstoqueCUSTO: TFloatField
+      FieldName = 'CUSTO'
+    end
+    object CdsPosicaoEstoqueVENDA: TFloatField
+      FieldName = 'VENDA'
+    end
+    object CdsPosicaoEstoqueENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+  end
+  object FDPosicaoEstoque: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' POSICAOESTOQUEDATA.*'
+      'FROM '
+      ' POSICAOESTOQUEDATA,'
+      ' TEMP_POSICAOESTOQUE2'
+      'WHERE'
+      ' POSICAOESTOQUEDATA.ID_PRODUTO = TEMP_POSICAOESTOQUE2.ID_PRODUTO')
+    Left = 608
+    Top = 233
+  end
+  object DspCeDuplic: TDataSetProvider
+    DataSet = FDDuplic
+    Left = 688
+    Top = 272
+  end
+  object CdsCeDuplic: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCeDuplic'
+    Left = 688
+    Top = 310
+    object CdsCeDuplicCD_CONTAS_PAGAR: TFloatField
+      FieldName = 'CD_CONTAS_PAGAR'
+      Required = True
+    end
+    object CdsCeDuplicCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Required = True
+    end
+    object CdsCeDuplicCD_DISTRIBUIDOR: TFloatField
+      FieldName = 'CD_DISTRIBUIDOR'
+      Required = True
+    end
+    object CdsCeDuplicCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+    end
+    object CdsCeDuplicCD_CONTA: TFloatField
+      FieldName = 'CD_CONTA'
+    end
+    object CdsCeDuplicCD_FORMA_PAGAMENTO: TFloatField
+      FieldName = 'CD_FORMA_PAGAMENTO'
+    end
+    object CdsCeDuplicCD_PLANO_CONTAS: TFloatField
+      FieldName = 'CD_PLANO_CONTAS'
+    end
+    object CdsCeDuplicNUMERO_NOTA: TStringField
+      FieldName = 'NUMERO_NOTA'
+      Size = 6
+    end
+    object CdsCeDuplicSERIAL_NOTA: TStringField
+      FieldName = 'SERIAL_NOTA'
+      Size = 3
+    end
+    object CdsCeDuplicDOCUMENTO: TStringField
+      DisplayWidth = 20
+      FieldName = 'DOCUMENTO'
+    end
+    object CdsCeDuplicDT_NOTA: TDateField
+      FieldName = 'DT_NOTA'
+    end
+    object CdsCeDuplicDT_VENCIMENTO: TDateField
+      FieldName = 'DT_VENCIMENTO'
+    end
+    object CdsCeDuplicVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object CdsCeDuplicOBSERVACAO: TMemoField
+      FieldName = 'OBSERVACAO'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object CdsCeDuplicDT_LANCAMENTO: TDateField
+      FieldName = 'DT_LANCAMENTO'
+    end
+    object CdsCeDuplicDT_PAGAMENTO: TDateField
+      FieldName = 'DT_PAGAMENTO'
+    end
+    object CdsCeDuplicDT_BOLETO: TDateField
+      FieldName = 'DT_BOLETO'
+    end
+    object CdsCeDuplicVL_PAGAMENTO: TFloatField
+      FieldName = 'VL_PAGAMENTO'
+    end
+    object CdsCeDuplicVL_JUROS: TFloatField
+      FieldName = 'VL_JUROS'
+    end
+    object CdsCeDuplicVL_DESCONTO: TFloatField
+      FieldName = 'VL_DESCONTO'
+    end
+    object CdsCeDuplicVL_SALDO: TFloatField
+      FieldName = 'VL_SALDO'
+    end
+    object CdsCeDuplicNOSSO_NUMERO: TStringField
+      DisplayWidth = 20
+      FieldName = 'NOSSO_NUMERO'
+    end
+    object CdsCeDuplicBANCO: TStringField
+      FieldName = 'BANCO'
+      Size = 3
+    end
+    object CdsCeDuplicAGENCIA: TStringField
+      FieldName = 'AGENCIA'
+      Size = 6
+    end
+    object CdsCeDuplicCONTA: TStringField
+      FieldName = 'CONTA'
+      Size = 15
+    end
+    object CdsCeDuplicHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object CdsCeDuplicNR_CHEQUE: TStringField
+      FieldName = 'NR_CHEQUE'
+      Size = 10
+    end
+    object CdsCeDuplicSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsCeDuplicENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsCeDuplicDT_ENTRADA: TDateField
+      FieldName = 'DT_ENTRADA'
+    end
+    object CdsCeDuplicDESPESAFINANCEIRA: TFloatField
+      FieldName = 'DESPESAFINANCEIRA'
+    end
+    object CdsCeDuplicTIPO: TStringField
+      FieldName = 'TIPO'
+      Size = 1
+    end
+    object CdsCeDuplicID_DDA_BOLETOS: TIntegerField
+      FieldName = 'ID_DDA_BOLETOS'
+    end
+  end
+  object FDDuplic: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM '
+      ' CONTAS_PAGAR'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 688
+    Top = 232
+  end
+  object DspCePedid1: TDataSetProvider
+    DataSet = FDPedid1
+    Left = 756
+    Top = 275
+  end
+  object CdsCePedid1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCePedid1'
+    Left = 757
+    Top = 312
+    object CdsCePedid1CD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+      Required = True
+    end
+    object CdsCePedid1CD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Required = True
+    end
+    object CdsCePedid1CD_DISTRIBUIDOR: TFloatField
+      FieldName = 'CD_DISTRIBUIDOR'
+      Required = True
+    end
+    object CdsCePedid1CD_PLANO_CONTAS: TFloatField
+      FieldName = 'CD_PLANO_CONTAS'
+    end
+    object CdsCePedid1CD_OBSERVACAO: TFloatField
+      FieldName = 'CD_OBSERVACAO'
+    end
+    object CdsCePedid1CD_TRANSPORTADORA: TFloatField
+      FieldName = 'CD_TRANSPORTADORA'
+    end
+    object CdsCePedid1DT_PEDIDO: TDateField
+      FieldName = 'DT_PEDIDO'
+    end
+    object CdsCePedid1NOTA_FISCAL: TStringField
+      FieldName = 'NOTA_FISCAL'
+      Size = 6
+    end
+    object CdsCePedid1SERIE_NOTA_FISCAL: TStringField
+      FieldName = 'SERIE_NOTA_FISCAL'
+      Size = 3
+    end
+    object CdsCePedid1DT_EMISSAO: TDateField
+      FieldName = 'DT_EMISSAO'
+    end
+    object CdsCePedid1BOLETO: TStringField
+      FieldName = 'BOLETO'
+      Size = 1
+    end
+    object CdsCePedid1DT_BOLETO: TDateField
+      FieldName = 'DT_BOLETO'
+    end
+    object CdsCePedid1CD_CFOP: TFloatField
+      FieldName = 'CD_CFOP'
+    end
+    object CdsCePedid1DT_ENTRADA: TDateField
+      FieldName = 'DT_ENTRADA'
+    end
+    object CdsCePedid1VL_IPI: TFloatField
+      FieldName = 'VL_IPI'
+    end
+    object CdsCePedid1VL_ICM: TFloatField
+      FieldName = 'VL_ICM'
+    end
+    object CdsCePedid1TOTAL_NOTA: TFloatField
+      FieldName = 'TOTAL_NOTA'
+    end
+    object CdsCePedid1ICM_BASE_CALCULO: TFloatField
+      FieldName = 'ICM_BASE_CALCULO'
+    end
+    object CdsCePedid1ICM_ISENTO: TFloatField
+      FieldName = 'ICM_ISENTO'
+    end
+    object CdsCePedid1ICM_OUTROS: TFloatField
+      FieldName = 'ICM_OUTROS'
+    end
+    object CdsCePedid1ICM_BASESUBST: TFloatField
+      FieldName = 'ICM_BASESUBST'
+    end
+    object CdsCePedid1ICM_VALORSUBST: TFloatField
+      FieldName = 'ICM_VALORSUBST'
+    end
+    object CdsCePedid1VL_TOTALPRODUTOS: TFloatField
+      FieldName = 'VL_TOTALPRODUTOS'
+    end
+    object CdsCePedid1VL_SEGURO: TFloatField
+      FieldName = 'VL_SEGURO'
+    end
+    object CdsCePedid1OUTRAS_DESPESAS: TFloatField
+      FieldName = 'OUTRAS_DESPESAS'
+    end
+    object CdsCePedid1VL_FRETE: TFloatField
+      FieldName = 'VL_FRETE'
+    end
+    object CdsCePedid1IPI_BASE_CALCULO: TFloatField
+      FieldName = 'IPI_BASE_CALCULO'
+    end
+    object CdsCePedid1IPI_ISENTO: TFloatField
+      FieldName = 'IPI_ISENTO'
+    end
+    object CdsCePedid1IPI_OUTROS: TFloatField
+      FieldName = 'IPI_OUTROS'
+    end
+    object CdsCePedid1D_ICMV: TFloatField
+      FieldName = 'D_ICMV'
+    end
+    object CdsCePedid1D_IPIV: TFloatField
+      FieldName = 'D_IPIV'
+    end
+    object CdsCePedid1D_TOTNT: TFloatField
+      FieldName = 'D_TOTNT'
+    end
+    object CdsCePedid1UNIDADES: TFloatField
+      FieldName = 'UNIDADES'
+    end
+    object CdsCePedid1NUMERO_ITENS: TFloatField
+      FieldName = 'NUMERO_ITENS'
+    end
+    object CdsCePedid1FATURAMENTO: TStringField
+      FieldName = 'FATURAMENTO'
+      Size = 10
+    end
+    object CdsCePedid1MOTIVO: TStringField
+      FieldName = 'MOTIVO'
+      Size = 1
+    end
+    object CdsCePedid1ENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsCePedid1STATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsCePedid1VL_DESCONTO_NOTA: TFloatField
+      FieldName = 'VL_DESCONTO_NOTA'
+    end
+    object CdsCePedid1CD_USUARIO_CRIACAO: TFloatField
+      FieldName = 'CD_USUARIO_CRIACAO'
+    end
+    object CdsCePedid1USUARIO_DIGITACAO: TStringField
+      FieldName = 'USUARIO_DIGITACAO'
+    end
+    object CdsCePedid1CD_USUARIO_DIGITACAO: TFloatField
+      FieldName = 'CD_USUARIO_DIGITACAO'
+    end
+    object CdsCePedid1USUARIO_CRIACAO: TStringField
+      FieldName = 'USUARIO_CRIACAO'
+    end
+    object CdsCePedid1CD_USUARIO_CONCLUSAO: TFloatField
+      FieldName = 'CD_USUARIO_CONCLUSAO'
+    end
+    object CdsCePedid1USUARIO_CONCLUSAO: TStringField
+      FieldName = 'USUARIO_CONCLUSAO'
+    end
+    object CdsCePedid1CD_USUARIO_ENVIO: TFloatField
+      FieldName = 'CD_USUARIO_ENVIO'
+    end
+    object CdsCePedid1USUARIO_ENVIO: TStringField
+      FieldName = 'USUARIO_ENVIO'
+    end
+    object CdsCePedid1VINCULADO: TStringField
+      FieldName = 'VINCULADO'
+      Size = 1
+    end
+    object CdsCePedid1CD_COMPRAS_VINCULADO: TFloatField
+      FieldName = 'CD_COMPRAS_VINCULADO'
+    end
+    object CdsCePedid1TEMVINCULADO: TStringField
+      FieldName = 'TEMVINCULADO'
+      Size = 1
+    end
+    object CdsCePedid1STATUSCONFERENCIA: TStringField
+      FieldName = 'STATUSCONFERENCIA'
+      Size = 1
+    end
+    object CdsCePedid1CD_USUARIO_CONFERENCIA: TFloatField
+      FieldName = 'CD_USUARIO_CONFERENCIA'
+    end
+    object CdsCePedid1USUARIO_CONFERENCIA: TStringField
+      FieldName = 'USUARIO_CONFERENCIA'
+    end
+    object CdsCePedid1CONFIGGERACAO: TStringField
+      FieldName = 'CONFIGGERACAO'
+      Size = 1000
+    end
+    object CdsCePedid1LOCALGERACAO: TStringField
+      FieldName = 'LOCALGERACAO'
+      Size = 1
+    end
+    object CdsCePedid1MODELONF: TStringField
+      FieldName = 'MODELONF'
+      Size = 2
+    end
+    object CdsCePedid1VL_ISENTOICMS: TFloatField
+      FieldName = 'VL_ISENTOICMS'
+    end
+    object CdsCePedid1ICMS_RETIDO: TFloatField
+      FieldName = 'ICMS_RETIDO'
+    end
+    object CdsCePedid1PHARMALINK: TStringField
+      FieldName = 'PHARMALINK'
+      Size = 1
+    end
+    object CdsCePedid1BONIFICACAO: TStringField
+      FieldName = 'BONIFICACAO'
+      Size = 1
+    end
+    object CdsCePedid1CHAVENFE: TStringField
+      FieldName = 'CHAVENFE'
+      Size = 100
+    end
+    object CdsCePedid1VL_PIS: TFloatField
+      FieldName = 'VL_PIS'
+    end
+    object CdsCePedid1VL_COFINS: TFloatField
+      FieldName = 'VL_COFINS'
+    end
+    object CdsCePedid1INFCPL: TStringField
+      FieldName = 'INFCPL'
+      Size = 10000
+    end
+    object CdsCePedid1TRANSFERENCIA: TStringField
+      FieldName = 'TRANSFERENCIA'
+      Size = 1
+    end
+    object CdsCePedid1CONSIGNACAO: TStringField
+      FieldName = 'CONSIGNACAO'
+      Size = 1
+    end
+    object CdsCePedid1VL_FCP: TFMTBCDField
+      FieldName = 'VL_FCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1VL_FCPST: TFMTBCDField
+      FieldName = 'VL_FCPST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1VL_FCPSTRET: TFMTBCDField
+      FieldName = 'VL_FCPSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1VL_II: TFMTBCDField
+      FieldName = 'VL_II'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1ICM_BASESUBSTRET: TFMTBCDField
+      FieldName = 'ICM_BASESUBSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1ICM_VALORSUBSTRET: TFMTBCDField
+      FieldName = 'ICM_VALORSUBSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedid1ICMSDESONERACAO: TFMTBCDField
+      FieldName = 'ICMSDESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object FDPedid1: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' COMPRAS'
+      'WHERE'
+      
+        ' CD_COMPRAS IN (SELECT CD_COMPRAS FROM TEMP_COMPRAS WHERE ENVIAD' +
+        'O = '#39'9'#39' AND PROCESSO = '#39'4'#39')')
+    Left = 758
+    Top = 234
+  end
+  object DspCePedido: TDataSetProvider
+    DataSet = FDPedido
+    Left = 822
+    Top = 275
+  end
+  object CdsCePedido: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCePedido'
+    Left = 822
+    Top = 314
+    object CdsCePedidoCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+      Required = True
+    end
+    object CdsCePedidoID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Required = True
+    end
+    object CdsCePedidoCD_PRODUTO: TStringField
+      FieldName = 'CD_PRODUTO'
+      Required = True
+      Size = 5
+    end
+    object CdsCePedidoCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsCePedidoCODIGO: TFloatField
+      FieldName = 'CODIGO'
+    end
+    object CdsCePedidoDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 40
+    end
+    object CdsCePedidoSALDO: TFloatField
+      FieldName = 'SALDO'
+    end
+    object CdsCePedidoESTOQUE_MINIMO: TFloatField
+      FieldName = 'ESTOQUE_MINIMO'
+    end
+    object CdsCePedidoESTOQUE_MAXIMO: TFloatField
+      FieldName = 'ESTOQUE_MAXIMO'
+    end
+    object CdsCePedidoLABORATORIO: TStringField
+      FieldName = 'LABORATORIO'
+      Size = 40
+    end
+    object CdsCePedidoGRUPO: TStringField
+      FieldName = 'GRUPO'
+      Size = 40
+    end
+    object CdsCePedidoCLASSE: TStringField
+      FieldName = 'CLASSE'
+      Size = 40
+    end
+    object CdsCePedidoCD_SITUACAO_TRIB: TFloatField
+      FieldName = 'CD_SITUACAO_TRIB'
+    end
+    object CdsCePedidoQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+      Required = True
+    end
+    object CdsCePedidoVL_UNITARIO: TFloatField
+      FieldName = 'VL_UNITARIO'
+    end
+    object CdsCePedidoPERCENTUAL_ICMS: TFloatField
+      FieldName = 'PERCENTUAL_ICMS'
+    end
+    object CdsCePedidoREDUCAO_ICMS: TFloatField
+      FieldName = 'REDUCAO_ICMS'
+    end
+    object CdsCePedidoVL_ICMS: TFloatField
+      FieldName = 'VL_ICMS'
+    end
+    object CdsCePedidoPERCENTUAL_DESCONTO: TFloatField
+      FieldName = 'PERCENTUAL_DESCONTO'
+    end
+    object CdsCePedidoVL_DESCONTO: TFloatField
+      FieldName = 'VL_DESCONTO'
+    end
+    object CdsCePedidoPERCENTUAL_IPI: TFloatField
+      FieldName = 'PERCENTUAL_IPI'
+    end
+    object CdsCePedidoVL_IPI: TFloatField
+      FieldName = 'VL_IPI'
+    end
+    object CdsCePedidoVL_TOTAL: TFloatField
+      FieldName = 'VL_TOTAL'
+    end
+    object CdsCePedidoPERCENTUAL_MARGEM: TFloatField
+      FieldName = 'PERCENTUAL_MARGEM'
+    end
+    object CdsCePedidoCD_ATENDIMENTO: TStringField
+      FieldName = 'CD_ATENDIMENTO'
+      Size = 2
+    end
+    object CdsCePedidoNOVO_PRECO: TFloatField
+      FieldName = 'NOVO_PRECO'
+    end
+    object CdsCePedidoNOVO_CUSTO: TFloatField
+      FieldName = 'NOVO_CUSTO'
+    end
+    object CdsCePedidoATUALIZAR_PRECO: TStringField
+      FieldName = 'ATUALIZAR_PRECO'
+      Size = 1
+    end
+    object CdsCePedidoENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsCePedidoPRECO_VENDA: TFloatField
+      FieldName = 'PRECO_VENDA'
+    end
+    object CdsCePedidoQT_EMBALAGEM: TFloatField
+      FieldName = 'QT_EMBALAGEM'
+    end
+    object CdsCePedidoCD_FILIAL_DESTINO: TFloatField
+      FieldName = 'CD_FILIAL_DESTINO'
+    end
+    object CdsCePedidoULTIMOCUSTO: TFloatField
+      FieldName = 'ULTIMOCUSTO'
+    end
+    object CdsCePedidoPRECO_REAJUSTADO: TStringField
+      FieldName = 'PRECO_REAJUSTADO'
+      Size = 1
+    end
+    object CdsCePedidoCURVA: TStringField
+      FieldName = 'CURVA'
+      Size = 1
+    end
+    object CdsCePedidoMEDIAF: TFloatField
+      FieldName = 'MEDIAF'
+    end
+    object CdsCePedidoCODIGO_BARRAS: TStringField
+      FieldName = 'CODIGO_BARRAS'
+      Size = 13
+    end
+    object CdsCePedidoUNIDADE: TStringField
+      FieldName = 'UNIDADE'
+      Size = 2
+    end
+    object CdsCePedidoICMS: TStringField
+      FieldName = 'ICMS'
+      Size = 2
+    end
+    object CdsCePedidoBASEICMS: TFloatField
+      FieldName = 'BASEICMS'
+    end
+    object CdsCePedidoBASEICMSSUBSTITUICAO: TFloatField
+      FieldName = 'BASEICMSSUBSTITUICAO'
+    end
+    object CdsCePedidoSITUACAOTRIBITARIA: TStringField
+      FieldName = 'SITUACAOTRIBITARIA'
+      Size = 3
+    end
+    object CdsCePedidoLOTE: TStringField
+      FieldName = 'LOTE'
+    end
+    object CdsCePedidoFABRICACAO: TDateField
+      FieldName = 'FABRICACAO'
+    end
+    object CdsCePedidoVALIDADE: TDateField
+      FieldName = 'VALIDADE'
+    end
+    object CdsCePedidoPRECO_PROMOCAO_ATUAL: TFloatField
+      FieldName = 'PRECO_PROMOCAO_ATUAL'
+    end
+    object CdsCePedidoPRECO_PROMOCAO: TFloatField
+      FieldName = 'PRECO_PROMOCAO'
+    end
+    object CdsCePedidoDESCONTO_OUTROS: TFloatField
+      FieldName = 'DESCONTO_OUTROS'
+    end
+    object CdsCePedidoDIASSEMVENDER: TStringField
+      FieldName = 'DIASSEMVENDER'
+      Size = 1
+    end
+    object CdsCePedidoCFOP: TStringField
+      FieldName = 'CFOP'
+      Size = 10
+    end
+    object CdsCePedidoVALORICMSSUBTITUICAO: TFloatField
+      FieldName = 'VALORICMSSUBTITUICAO'
+    end
+    object CdsCePedidoCUSTO_APLICADO: TFloatField
+      FieldName = 'CUSTO_APLICADO'
+    end
+    object CdsCePedidoMARGEM_VALOR_AGREGADO: TFloatField
+      FieldName = 'MARGEM_VALOR_AGREGADO'
+    end
+    object CdsCePedidoREDUCAO_ICMS_ST: TFloatField
+      FieldName = 'REDUCAO_ICMS_ST'
+    end
+    object CdsCePedidoPERCENTUAL_ICMS_ST: TFloatField
+      FieldName = 'PERCENTUAL_ICMS_ST'
+    end
+    object CdsCePedidoPIS_CST: TStringField
+      FieldName = 'PIS_CST'
+      Size = 3
+    end
+    object CdsCePedidoPIS_BASE_CALCULO: TFloatField
+      FieldName = 'PIS_BASE_CALCULO'
+    end
+    object CdsCePedidoPIS_PERCENTUAL: TFloatField
+      FieldName = 'PIS_PERCENTUAL'
+    end
+    object CdsCePedidoPIS_VALOR: TFloatField
+      FieldName = 'PIS_VALOR'
+    end
+    object CdsCePedidoCOFINS_CST: TStringField
+      FieldName = 'COFINS_CST'
+      Size = 3
+    end
+    object CdsCePedidoCOFINS_BASE_CALCULO: TFloatField
+      FieldName = 'COFINS_BASE_CALCULO'
+    end
+    object CdsCePedidoCOFINS_PERCENTUAL: TFloatField
+      FieldName = 'COFINS_PERCENTUAL'
+    end
+    object CdsCePedidoCOFINS_VALOR: TFloatField
+      FieldName = 'COFINS_VALOR'
+    end
+    object CdsCePedidoVALOR_OUTRASDESPESAS: TFloatField
+      FieldName = 'VALOR_OUTRASDESPESAS'
+    end
+    object CdsCePedidoVALOR_SEGURO: TFloatField
+      FieldName = 'VALOR_SEGURO'
+    end
+    object CdsCePedidoVALOR_FRETE: TFloatField
+      FieldName = 'VALOR_FRETE'
+    end
+    object CdsCePedidoVALOR_ISENTO: TFloatField
+      FieldName = 'VALOR_ISENTO'
+    end
+    object CdsCePedidoVALOR_OUTRAS: TFloatField
+      FieldName = 'VALOR_OUTRAS'
+    end
+    object CdsCePedidoBASECALCULO_IPI: TFloatField
+      FieldName = 'BASECALCULO_IPI'
+    end
+    object CdsCePedidoCST_IPI: TIntegerField
+      FieldName = 'CST_IPI'
+    end
+    object CdsCePedidoNATUREZA_ISENTA_PIS: TStringField
+      FieldName = 'NATUREZA_ISENTA_PIS'
+      Size = 100
+    end
+    object CdsCePedidoNATUREZA_ISENTA_COFINS: TStringField
+      FieldName = 'NATUREZA_ISENTA_COFINS'
+      Size = 100
+    end
+    object CdsCePedidoCEST: TStringField
+      FieldName = 'CEST'
+      Size = 100
+    end
+    object CdsCePedidoBASECALCULOFCP: TFMTBCDField
+      FieldName = 'BASECALCULOFCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoALIQUOTAFCP: TFMTBCDField
+      FieldName = 'ALIQUOTAFCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoVALORFCP: TFMTBCDField
+      FieldName = 'VALORFCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoBASECALCULOFCPST: TFMTBCDField
+      FieldName = 'BASECALCULOFCPST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoALIQUOTAFCPST: TFMTBCDField
+      FieldName = 'ALIQUOTAFCPST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoVALORFCPST: TFMTBCDField
+      FieldName = 'VALORFCPST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoBASECALCULOFCPSTRET: TFMTBCDField
+      FieldName = 'BASECALCULOFCPSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoALIQUOTAFCPSTRET: TFMTBCDField
+      FieldName = 'ALIQUOTAFCPSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoVALORFCPSTRET: TFMTBCDField
+      FieldName = 'VALORFCPSTRET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoBASEICMSSUBSTITUICAORET: TFMTBCDField
+      FieldName = 'BASEICMSSUBSTITUICAORET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoPERCENTUAL_ICMS_ST_RET: TFMTBCDField
+      FieldName = 'PERCENTUAL_ICMS_ST_RET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoVALORICMSSUBSTITUICAORET: TFMTBCDField
+      FieldName = 'VALORICMSSUBSTITUICAORET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoNCM: TStringField
+      FieldName = 'NCM'
+    end
+    object CdsCePedidoORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 1
+    end
+    object CdsCePedidoINFORMACOESADICIONAIS: TStringField
+      FieldName = 'INFORMACOESADICIONAIS'
+      Size = 500
+    end
+    object CdsCePedidoMODALIDADEBC: TIntegerField
+      FieldName = 'MODALIDADEBC'
+    end
+    object CdsCePedidoMODALIDADEBCST: TIntegerField
+      FieldName = 'MODALIDADEBCST'
+    end
+    object CdsCePedidoICMSBCUFDEST: TFMTBCDField
+      FieldName = 'ICMSBCUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSBCFCPUFDEST: TFMTBCDField
+      FieldName = 'ICMSBCFCPUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSPERCENTUALFCPUFDEST: TFMTBCDField
+      FieldName = 'ICMSPERCENTUALFCPUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSVALORFCPUFDEST: TFMTBCDField
+      FieldName = 'ICMSVALORFCPUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSPERCENTUALINTER: TFMTBCDField
+      FieldName = 'ICMSPERCENTUALINTER'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSPERCENTUALUFDEST: TFMTBCDField
+      FieldName = 'ICMSPERCENTUALUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSVALORUFREMET: TFMTBCDField
+      FieldName = 'ICMSVALORUFREMET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSVALORUFDEST: TFMTBCDField
+      FieldName = 'ICMSVALORUFDEST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoICMSPERCENTUALINTERPART: TFMTBCDField
+      FieldName = 'ICMSPERCENTUALINTERPART'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoCODIGOANVISA: TStringField
+      FieldName = 'CODIGOANVISA'
+      Size = 15
+    end
+    object CdsCePedidoPMC: TFMTBCDField
+      FieldName = 'PMC'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoCODIGOBENEFICIO: TStringField
+      FieldName = 'CODIGOBENEFICIO'
+      Size = 10
+    end
+    object CdsCePedidoMOTIVODESONERACAO: TStringField
+      FieldName = 'MOTIVODESONERACAO'
+      Size = 100
+    end
+    object CdsCePedidoVALORDESONERACAO: TFMTBCDField
+      FieldName = 'VALORDESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsCePedidoPERCENTUALDESONERACAO: TFMTBCDField
+      FieldName = 'PERCENTUALDESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object FDPedido: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' ITENS_COMPRA.*'
+      'FROM'
+      ' ITENS_COMPRA, TEMP_COMPRAS'
+      'WHERE'
+      ' ITENS_COMPRA.ID_PRODUTO = TEMP_COMPRAS.ID_PRODUTO AND'
+      ' ITENS_COMPRA.CD_COMPRAS = TEMP_COMPRAS.CD_COMPRAS AND'
+      ' TEMP_COMPRAS.PROCESSO = '#39'5'#39' AND'
+      ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
+    Left = 822
+    Top = 237
+  end
+  object DspLotesItensCompra: TDataSetProvider
+    DataSet = FDLotesItensCompra
+    Left = 899
+    Top = 276
+  end
+  object CdsLotesItensCompra: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspLotesItensCompra'
+    Left = 899
+    Top = 316
+    object CdsLotesItensCompraCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+      Origin = 'CD_COMPRAS'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object CdsLotesItensCompraCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Origin = 'CD_FILIAL'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object CdsLotesItensCompraCD_DISTRIBUIDOR: TFloatField
+      FieldName = 'CD_DISTRIBUIDOR'
+      Origin = 'CD_DISTRIBUIDOR'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object CdsLotesItensCompraNOTA_FISCAL: TStringField
+      FieldName = 'NOTA_FISCAL'
+      Origin = 'NOTA_FISCAL'
+      Size = 10
+    end
+    object CdsLotesItensCompraID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object CdsLotesItensCompraLOTE: TStringField
+      FieldName = 'LOTE'
+      Origin = 'LOTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object CdsLotesItensCompraQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+      Origin = 'QUANTIDADE'
+    end
+    object CdsLotesItensCompraFABRICACAO: TDateField
+      FieldName = 'FABRICACAO'
+      Origin = 'FABRICACAO'
+    end
+    object CdsLotesItensCompraVALIDADE: TDateField
+      FieldName = 'VALIDADE'
+      Origin = 'VALIDADE'
+    end
+  end
+  object FDLotesItensCompra: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT '
+      ' ITENS_COMPRA_LOTE.* '
+      'FROM '
+      ' ITENS_COMPRA_LOTE,'
+      'TEMP_ITENS_COMPRA_LOTE'
+      'WHERE '
+      
+        ' ITENS_COMPRA_LOTE.CD_COMPRAS = TEMP_ITENS_COMPRA_LOTE.CD_COMPRA' +
+        'S AND'
+      
+        ' ITENS_COMPRA_LOTE.ID_PRODUTO = TEMP_ITENS_COMPRA_LOTE.ID_PRODUT' +
+        'O AND'
+      ' ITENS_COMPRA_LOTE.LOTE = TEMP_ITENS_COMPRA_LOTE.LOTE AND'
+      ' TEMP_ITENS_COMPRA_LOTE.ENVIADO = '#39'9'#39)
+    Left = 896
+    Top = 237
+  end
+  object CdsContasPagarCompras: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspContasPagarCompras'
+    Left = 1012
+    Top = 317
+    object CdsContasPagarComprasCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Origin = 'CD_FILIAL'
+    end
+    object CdsContasPagarComprasCD_CONTAS_PAGAR: TFloatField
+      FieldName = 'CD_CONTAS_PAGAR'
+      Origin = 'CD_CONTAS_PAGAR'
+    end
+    object CdsContasPagarComprasCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+      Origin = 'CD_COMPRAS'
+    end
+    object CdsContasPagarComprasDT_EMISSAO: TDateField
+      FieldName = 'DT_EMISSAO'
+      Origin = 'DT_EMISSAO'
+    end
+    object CdsContasPagarComprasNOTA_FISCAL: TStringField
+      FieldName = 'NOTA_FISCAL'
+      Origin = 'NOTA_FISCAL'
+      Size = 100
+    end
+    object CdsContasPagarComprasVALOR: TFMTBCDField
+      FieldName = 'VALOR'
+      Origin = 'VALOR'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object DspContasPagarCompras: TDataSetProvider
+    DataSet = FDContasPagarCompras
+    Left = 1012
+    Top = 277
+  end
+  object FDContasPagarCompras: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' CONTAS_PAGAR_COMPRAS.*'
+      'FROM'
+      ' CONTAS_PAGAR_COMPRAS, TEMP_COMPRAS'
+      'WHERE'
+      ' CONTAS_PAGAR_COMPRAS.CD_COMPRAS = TEMP_COMPRAS.CD_COMPRAS AND'
+      
+        ' CONTAS_PAGAR_COMPRAS.CD_CONTAS_PAGAR = TEMP_COMPRAS.ID_PRODUTO ' +
+        'AND'
+      ' TEMP_COMPRAS.PROCESSO = '#39'71'#39' AND'
+      ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
+    Left = 1011
+    Top = 236
+  end
+  object DspComprasBoletos: TDataSetProvider
+    DataSet = FDComprasBoletos
+    Left = 1258
+    Top = 130
+  end
+  object CdsComprasBoletos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspComprasBoletos'
+    Left = 1258
+    Top = 170
+    object CdsComprasBoletosCD_COMPRAS: TFloatField
+      FieldName = 'CD_COMPRAS'
+      Required = True
+    end
+    object CdsComprasBoletosCD_BOLETO: TFloatField
+      FieldName = 'CD_BOLETO'
+      Required = True
+    end
+    object CdsComprasBoletosNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Size = 100
+    end
+    object CdsComprasBoletosVENCIMENTO: TDateField
+      FieldName = 'VENCIMENTO'
+    end
+    object CdsComprasBoletosJUROS: TFMTBCDField
+      FieldName = 'JUROS'
+      Precision = 18
+      Size = 2
+    end
+    object CdsComprasBoletosDEDUCOES: TFMTBCDField
+      FieldName = 'DEDUCOES'
+      Precision = 18
+      Size = 2
+    end
+    object CdsComprasBoletosDESPESASFINANCEIRAS: TFMTBCDField
+      FieldName = 'DESPESASFINANCEIRAS'
+      Precision = 18
+      Size = 2
+    end
+    object CdsComprasBoletosVALOR: TFMTBCDField
+      FieldName = 'VALOR'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object FDComprasBoletos: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' COMPRAS_BOLETOS.*'
+      'FROM'
+      ' COMPRAS_BOLETOS, TEMP_COMPRAS'
+      'WHERE'
+      ' COMPRAS_BOLETOS.CD_COMPRAS = TEMP_COMPRAS.CD_COMPRAS AND'
+      ' COMPRAS_BOLETOS.CD_BOLETO = TEMP_COMPRAS.ID_PRODUTO AND'
+      ' TEMP_COMPRAS.PROCESSO = '#39'17'#39' AND'
+      ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
+    Left = 1257
+    Top = 88
+  end
+  object DspSintegraNF: TDataSetProvider
+    DataSet = FDSintegraNF
+    Left = 1348
+    Top = 133
+  end
+  object CdsSintegraNF: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspSintegraNF'
+    Left = 1351
+    Top = 170
+    object CdsSintegraNFCOD_NF_ENTRADA: TIntegerField
+      FieldName = 'COD_NF_ENTRADA'
+      Required = True
+    end
+    object CdsSintegraNFCD_FILIAL: TIntegerField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsSintegraNFNUM_FORM: TStringField
+      FieldName = 'NUM_FORM'
+      Size = 30
+    end
+    object CdsSintegraNFSERIE_FORM: TStringField
+      FieldName = 'SERIE_FORM'
+      Size = 10
+    end
+    object CdsSintegraNFNUM_VIA: TIntegerField
+      FieldName = 'NUM_VIA'
+    end
+    object CdsSintegraNFNUM_NF: TStringField
+      FieldName = 'NUM_NF'
+      Size = 30
+    end
+    object CdsSintegraNFSERIE_NF: TStringField
+      FieldName = 'SERIE_NF'
+      Size = 10
+    end
+    object CdsSintegraNFSUBSERIE_NF: TStringField
+      FieldName = 'SUBSERIE_NF'
+      Size = 10
+    end
+    object CdsSintegraNFMODELO_NF: TStringField
+      FieldName = 'MODELO_NF'
+      FixedChar = True
+      Size = 2
+    end
+    object CdsSintegraNFSITUACAO_NF: TStringField
+      FieldName = 'SITUACAO_NF'
+      Size = 2
+    end
+    object CdsSintegraNFEMITENTE_NF: TStringField
+      FieldName = 'EMITENTE_NF'
+      Size = 2
+    end
+    object CdsSintegraNFNUM_ITENS: TIntegerField
+      FieldName = 'NUM_ITENS'
+    end
+    object CdsSintegraNFCOD_CLI_FORNECEDOR: TIntegerField
+      FieldName = 'COD_CLI_FORNECEDOR'
+    end
+    object CdsSintegraNFCOD_CLI_DESTINATARIO: TIntegerField
+      FieldName = 'COD_CLI_DESTINATARIO'
+    end
+    object CdsSintegraNFCOD_CLI_TRANSP: TIntegerField
+      FieldName = 'COD_CLI_TRANSP'
+    end
+    object CdsSintegraNFDATAHORA_EMISSAO: TDateField
+      FieldName = 'DATAHORA_EMISSAO'
+    end
+    object CdsSintegraNFDATAHORA_SAIDAENTRADA: TDateField
+      FieldName = 'DATAHORA_SAIDAENTRADA'
+    end
+    object CdsSintegraNFDATAHORA_SAIDA: TDateField
+      FieldName = 'DATAHORA_SAIDA'
+    end
+    object CdsSintegraNFDATAHORA_RECEBIMENTO: TDateField
+      FieldName = 'DATAHORA_RECEBIMENTO'
+    end
+    object CdsSintegraNFNATUREZA_OP: TStringField
+      FieldName = 'NATUREZA_OP'
+      Size = 255
+    end
+    object CdsSintegraNFCFOP: TStringField
+      FieldName = 'CFOP'
+      Size = 10
+    end
+    object CdsSintegraNFDESCONTO: TFMTBCDField
+      FieldName = 'DESCONTO'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFVALOR_TOTALPRODUTO: TFMTBCDField
+      FieldName = 'VALOR_TOTALPRODUTO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_TOTALNF: TFMTBCDField
+      FieldName = 'VALOR_TOTALNF'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFALIQUOTA_ICMS: TFMTBCDField
+      FieldName = 'ALIQUOTA_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFBASE_ICMS: TFMTBCDField
+      FieldName = 'BASE_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_FRETE: TFMTBCDField
+      FieldName = 'VALOR_FRETE'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_ICMS: TFMTBCDField
+      FieldName = 'VALOR_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_SEGURO: TFMTBCDField
+      FieldName = 'VALOR_SEGURO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFBASE_ICMS_SUBST: TFMTBCDField
+      FieldName = 'BASE_ICMS_SUBST'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFOUTRAS_DESPESAS: TFMTBCDField
+      FieldName = 'OUTRAS_DESPESAS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_ICMS_SUBST: TFMTBCDField
+      FieldName = 'VALOR_ICMS_SUBST'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_IPI: TFMTBCDField
+      FieldName = 'VALOR_IPI'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_ISENTO_IPI: TFMTBCDField
+      FieldName = 'VALOR_ISENTO_IPI'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFVALOR_ISENTO_ICMS: TFMTBCDField
+      FieldName = 'VALOR_ISENTO_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFICMS_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_RETIDO'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFFAT_01: TStringField
+      FieldName = 'FAT_01'
+      Size = 30
+    end
+    object CdsSintegraNFVENCIMENTO_01: TSQLTimeStampField
+      FieldName = 'VENCIMENTO_01'
+    end
+    object CdsSintegraNFVALOR_01: TFMTBCDField
+      FieldName = 'VALOR_01'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFFAT_02: TStringField
+      FieldName = 'FAT_02'
+      Size = 30
+    end
+    object CdsSintegraNFVENCIMENTO_02: TSQLTimeStampField
+      FieldName = 'VENCIMENTO_02'
+    end
+    object CdsSintegraNFVALOR_02: TFMTBCDField
+      FieldName = 'VALOR_02'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFFAT_03: TStringField
+      FieldName = 'FAT_03'
+      Size = 30
+    end
+    object CdsSintegraNFVENCIMENTO_03: TSQLTimeStampField
+      FieldName = 'VENCIMENTO_03'
+    end
+    object CdsSintegraNFVALOR_03: TFMTBCDField
+      FieldName = 'VALOR_03'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraNFTRANSP_NOME: TStringField
+      FieldName = 'TRANSP_NOME'
+      Size = 60
+    end
+    object CdsSintegraNFTRANSP_FRETE_CONTA: TStringField
+      FieldName = 'TRANSP_FRETE_CONTA'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_PLACA_VEICULO: TStringField
+      FieldName = 'TRANSP_PLACA_VEICULO'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_UF_VEICULO: TStringField
+      FieldName = 'TRANSP_UF_VEICULO'
+      Size = 2
+    end
+    object CdsSintegraNFTRANSP_CNPJ_CPF: TStringField
+      FieldName = 'TRANSP_CNPJ_CPF'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_ENDER: TStringField
+      FieldName = 'TRANSP_ENDER'
+      Size = 255
+    end
+    object CdsSintegraNFTRANSP_MUNICIPIO: TStringField
+      FieldName = 'TRANSP_MUNICIPIO'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_UF: TStringField
+      FieldName = 'TRANSP_UF'
+      Size = 2
+    end
+    object CdsSintegraNFTRANSP_IE: TStringField
+      FieldName = 'TRANSP_IE'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_QNT: TIntegerField
+      FieldName = 'TRANSP_QNT'
+    end
+    object CdsSintegraNFTRANSP_ESPECIE: TStringField
+      FieldName = 'TRANSP_ESPECIE'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_MARCA: TStringField
+      FieldName = 'TRANSP_MARCA'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_NRO: TIntegerField
+      FieldName = 'TRANSP_NRO'
+    end
+    object CdsSintegraNFTRANSP_PESO_B: TStringField
+      FieldName = 'TRANSP_PESO_B'
+      Size = 30
+    end
+    object CdsSintegraNFTRANSP_PESO_L: TStringField
+      FieldName = 'TRANSP_PESO_L'
+      Size = 30
+    end
+    object CdsSintegraNFDADOS_ADICIONAIS: TStringField
+      FieldName = 'DADOS_ADICIONAIS'
+      Size = 255
+    end
+    object CdsSintegraNFOBS: TBlobField
+      FieldName = 'OBS'
+      Size = 8
+    end
+    object CdsSintegraNFDATAHORA: TSQLTimeStampField
+      FieldName = 'DATAHORA'
+    end
+    object CdsSintegraNFENABLED: TIntegerField
+      FieldName = 'ENABLED'
+    end
+    object CdsSintegraNFULTATUAL: TSQLTimeStampField
+      FieldName = 'ULTATUAL'
+    end
+    object CdsSintegraNFULTATUALCODSETOR: TIntegerField
+      FieldName = 'ULTATUALCODSETOR'
+    end
+    object CdsSintegraNFULTATUALCODSETORUSER: TIntegerField
+      FieldName = 'ULTATUALCODSETORUSER'
+    end
+    object CdsSintegraNFNOME_FORNECEDOR: TStringField
+      FieldName = 'NOME_FORNECEDOR'
+      Size = 50
+    end
+    object CdsSintegraNFENDERECO_FORNECEDOR: TStringField
+      FieldName = 'ENDERECO_FORNECEDOR'
+      Size = 255
+    end
+    object CdsSintegraNFBAIRRO_FORNECEDOR: TStringField
+      FieldName = 'BAIRRO_FORNECEDOR'
+      Size = 50
+    end
+    object CdsSintegraNFCIDADE_FORNECEDOR: TStringField
+      FieldName = 'CIDADE_FORNECEDOR'
+      Size = 50
+    end
+    object CdsSintegraNFFONE_FORNECEDOR: TStringField
+      FieldName = 'FONE_FORNECEDOR'
+      Size = 30
+    end
+    object CdsSintegraNFCEP_FORNECEDOR: TStringField
+      FieldName = 'CEP_FORNECEDOR'
+      Size = 30
+    end
+    object CdsSintegraNFCNPJ_FORNECEDOR: TStringField
+      FieldName = 'CNPJ_FORNECEDOR'
+      Size = 30
+    end
+    object CdsSintegraNFIE_FORNECEDOR: TStringField
+      FieldName = 'IE_FORNECEDOR'
+      Size = 30
+    end
+    object CdsSintegraNFUF_FORNECEDOR: TStringField
+      FieldName = 'UF_FORNECEDOR'
+      Size = 3
+    end
+    object CdsSintegraNFBRANCOS: TStringField
+      FieldName = 'BRANCOS'
+    end
+    object CdsSintegraNFFISCAL: TIntegerField
+      FieldName = 'FISCAL'
+    end
+    object CdsSintegraNFENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsSintegraNFCHAVENFE: TStringField
+      FieldName = 'CHAVENFE'
+      Size = 100
+    end
+    object CdsSintegraNFICMS_BASE_CALCULO_ST_RET: TFMTBCDField
+      FieldName = 'ICMS_BASE_CALCULO_ST_RET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFICMS_FCP: TFMTBCDField
+      FieldName = 'ICMS_FCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFICMS_FCP_ST: TFMTBCDField
+      FieldName = 'ICMS_FCP_ST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFICMS_FCP_ST_RET: TFMTBCDField
+      FieldName = 'ICMS_FCP_ST_RET'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_II: TFMTBCDField
+      FieldName = 'VALOR_II'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFBASE_IPI: TFMTBCDField
+      FieldName = 'BASE_IPI'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_PIS: TFMTBCDField
+      FieldName = 'VALOR_PIS'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFVALOR_COFINS: TFMTBCDField
+      FieldName = 'VALOR_COFINS'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraNFICMS_VALOR_DESONERACAO: TFMTBCDField
+      FieldName = 'ICMS_VALOR_DESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object FDSintegraNF: TFDQuery
+    Active = True
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' SINTEGRA_NF_ENTRADA'
+      'WHERE'
+      ' ENVIADO= '#39'9'#39)
+    Left = 1348
+    Top = 92
+  end
+  object DspSintegraItensNF: TDataSetProvider
+    DataSet = FDSintegraItensNF
+    Left = 1436
+    Top = 134
+  end
+  object CdsSintegraItensNF: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspSintegraItensNF'
+    Left = 1438
+    Top = 170
+    object CdsSintegraItensNFCOD_NF_ENTRADA_ITENS: TIntegerField
+      FieldName = 'COD_NF_ENTRADA_ITENS'
+      Required = True
+    end
+    object CdsSintegraItensNFCD_FILIAL: TIntegerField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsSintegraItensNFCOD_NF_ENTRADA: TIntegerField
+      FieldName = 'COD_NF_ENTRADA'
+      Required = True
+    end
+    object CdsSintegraItensNFCOD_PRODUTOS: TIntegerField
+      FieldName = 'COD_PRODUTOS'
+    end
+    object CdsSintegraItensNFREF_PRODUTOS: TStringField
+      FieldName = 'REF_PRODUTOS'
+      Size = 30
+    end
+    object CdsSintegraItensNFNUM_ITEM: TIntegerField
+      FieldName = 'NUM_ITEM'
+    end
+    object CdsSintegraItensNFCL_FIS: TStringField
+      FieldName = 'CL_FIS'
+      Size = 15
+    end
+    object CdsSintegraItensNFS_TRIB: TStringField
+      FieldName = 'S_TRIB'
+      Size = 15
+    end
+    object CdsSintegraItensNFPRODUTO: TStringField
+      FieldName = 'PRODUTO'
+      Size = 50
+    end
+    object CdsSintegraItensNFCOD_GRUPOP: TIntegerField
+      FieldName = 'COD_GRUPOP'
+    end
+    object CdsSintegraItensNFCOD_SUBGRUPOP: TIntegerField
+      FieldName = 'COD_SUBGRUPOP'
+    end
+    object CdsSintegraItensNFDATAHORA: TSQLTimeStampField
+      FieldName = 'DATAHORA'
+    end
+    object CdsSintegraItensNFQUANTIDADE: TFMTBCDField
+      FieldName = 'QUANTIDADE'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFPRC_CUSTO: TFMTBCDField
+      FieldName = 'PRC_CUSTO'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFVALOR_DESCONTO: TFMTBCDField
+      FieldName = 'VALOR_DESCONTO'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFVALOR_IPI: TFMTBCDField
+      FieldName = 'VALOR_IPI'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFSUBTOTAL: TFMTBCDField
+      FieldName = 'SUBTOTAL'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFBASE_ICMS: TFMTBCDField
+      FieldName = 'BASE_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFBASE_ICMS_SUBST: TFMTBCDField
+      FieldName = 'BASE_ICMS_SUBST'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFVALOR_ICMS: TFMTBCDField
+      FieldName = 'VALOR_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFENABLE_NUMSERIE: TIntegerField
+      FieldName = 'ENABLE_NUMSERIE'
+    end
+    object CdsSintegraItensNFOBS: TStringField
+      FieldName = 'OBS'
+      Size = 255
+    end
+    object CdsSintegraItensNFENABLED: TIntegerField
+      FieldName = 'ENABLED'
+    end
+    object CdsSintegraItensNFULTATUAL: TSQLTimeStampField
+      FieldName = 'ULTATUAL'
+    end
+    object CdsSintegraItensNFULTATUALCODSETOR: TIntegerField
+      FieldName = 'ULTATUALCODSETOR'
+    end
+    object CdsSintegraItensNFULTATUALCODSETORUSER: TIntegerField
+      FieldName = 'ULTATUALCODSETORUSER'
+    end
+    object CdsSintegraItensNFAPR_UND: TStringField
+      FieldName = 'APR_UND'
+      Size = 6
+    end
+    object CdsSintegraItensNFPERC_DESCONTO: TFMTBCDField
+      FieldName = 'PERC_DESCONTO'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFALIQUOTA_IPI: TFMTBCDField
+      FieldName = 'ALIQUOTA_IPI'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFALIQUOTA_ICMS: TFMTBCDField
+      FieldName = 'ALIQUOTA_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFREDUCAO_BASE_ICMS: TFMTBCDField
+      FieldName = 'REDUCAO_BASE_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraItensNFENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsSintegraItensNFCFOP: TStringField
+      FieldName = 'CFOP'
+      Size = 10
+    end
+    object CdsSintegraItensNFVALOR_ICMS_SUBTITUICAO: TFMTBCDField
+      FieldName = 'VALOR_ICMS_SUBTITUICAO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFMARGEM_VALOR_AGREGADO: TFMTBCDField
+      FieldName = 'MARGEM_VALOR_AGREGADO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFREDUCAO_ICMS_ST: TFMTBCDField
+      FieldName = 'REDUCAO_ICMS_ST'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFPERCENTUAL_ICMS_ST: TFMTBCDField
+      FieldName = 'PERCENTUAL_ICMS_ST'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFPIS_CST: TStringField
+      FieldName = 'PIS_CST'
+      Size = 3
+    end
+    object CdsSintegraItensNFPIS_BASE_CALCULO: TFMTBCDField
+      FieldName = 'PIS_BASE_CALCULO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFPIS_PERCENTUAL: TFMTBCDField
+      FieldName = 'PIS_PERCENTUAL'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFPIS_VALOR: TFMTBCDField
+      FieldName = 'PIS_VALOR'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFCOFINS_CST: TStringField
+      FieldName = 'COFINS_CST'
+      Size = 3
+    end
+    object CdsSintegraItensNFCOFINS_BASE_CALCULO: TFMTBCDField
+      FieldName = 'COFINS_BASE_CALCULO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFCOFINS_PERCENTUAL: TFMTBCDField
+      FieldName = 'COFINS_PERCENTUAL'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFCOFINS_VALOR: TFMTBCDField
+      FieldName = 'COFINS_VALOR'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFVALOR_OUTRASDESPESAS: TFMTBCDField
+      FieldName = 'VALOR_OUTRASDESPESAS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFVALOR_FRETE: TFMTBCDField
+      FieldName = 'VALOR_FRETE'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFVALOR_SEGURO: TFMTBCDField
+      FieldName = 'VALOR_SEGURO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFVALOR_ISENTO: TFMTBCDField
+      FieldName = 'VALOR_ISENTO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraItensNFIPI_CST: TStringField
+      FieldName = 'IPI_CST'
+      Size = 3
+    end
+    object CdsSintegraItensNFIPI_BASE_CALCULO: TFMTBCDField
+      FieldName = 'IPI_BASE_CALCULO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_BASE_CALCULO_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_BASE_CALCULO_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_VALOR_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_VALOR_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_BASE_CALCULO_FCP: TFMTBCDField
+      FieldName = 'ICMS_BASE_CALCULO_FCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_FCP: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_FCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_VALOR_FCP: TFMTBCDField
+      FieldName = 'ICMS_VALOR_FCP'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_BASE_CALCULO_FCP_ST: TFMTBCDField
+      FieldName = 'ICMS_BASE_CALCULO_FCP_ST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_FCP_ST: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_FCP_ST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_VALOR_FCP_ST: TFMTBCDField
+      FieldName = 'ICMS_VALOR_FCP_ST'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_BASE_CALCULO_FCP_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_BASE_CALCULO_FCP_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_FCP_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_FCP_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_VALOR_FCP_ST_RETIDO: TFMTBCDField
+      FieldName = 'ICMS_VALOR_FCP_ST_RETIDO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_REDUCAO: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_REDUCAO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_CODBENEFICIO: TStringField
+      FieldName = 'ICMS_CODBENEFICIO'
+      Size = 10
+    end
+    object CdsSintegraItensNFICMS_MOTIVODESONERACAO: TStringField
+      FieldName = 'ICMS_MOTIVODESONERACAO'
+      Size = 100
+    end
+    object CdsSintegraItensNFICMS_VALOR_DESONERACAO: TFMTBCDField
+      FieldName = 'ICMS_VALOR_DESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+    object CdsSintegraItensNFICMS_PERCENTUAL_DESONERACAO: TFMTBCDField
+      FieldName = 'ICMS_PERCENTUAL_DESONERACAO'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object FDSintegraItensNF: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT '
+      ' *'
+      'FROM'
+      ' SINTEGRA_NF_ENTRADA_ITENS'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 1432
+    Top = 88
   end
 end

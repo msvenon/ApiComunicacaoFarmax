@@ -1,4 +1,0 @@
-15/07/2023 - 02:19:28 - C:\&FarmaxSistema\ApiComunicacaoFarmax\ExporterClient\Win32\Debug\ExporterClient.exe - 02:19:28 - Enviando Clientes
-15/07/2023 - 02:19:34 - C:\&FarmaxSistema\ApiComunicacaoFarmax\ExporterClient\Win32\Debug\ExporterClient.exe - 02:19:34 - total: 300 - de Clientes enviado.
-15/07/2023 - 02:19:40 - C:\&FarmaxSistema\ApiComunicacaoFarmax\ExporterClient\Win32\Debug\ExporterClient.exe - 02:19:40 - Enviando Clientes
-15/07/2023 - 02:19:47 - C:\&FarmaxSistema\ApiComunicacaoFarmax\ExporterClient\Win32\Debug\ExporterClient.exe - 02:19:47 - total: 300 - de Clientes enviado.

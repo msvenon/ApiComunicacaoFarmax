@@ -4,10 +4,10 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
-  Vcl.WinXPanels, Vcl.DBCtrls, {dxGDIPlusClasses,} Vcl.ExtCtrls, Data.DB,
+  Vcl.Controls, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.WinXPanels, Vcl.DBCtrls, Vcl.ExtCtrls, Data.DB,Forms,
   Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, DBClient, Provider, FMTBcd,
   FireDAC.DApt.Intf, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons,
   Vcl.WinXCtrls,system.json,REST.Client,
   REST.Types, dxGDIPlusClasses, FireDAC.Stan.StorageXML,midaslib,
@@ -17,26 +17,63 @@ uses
   DataSet.Serialize,
   RESTRequest4D;
 
-   Function  StrTran( cString, cProcura, cTroca : string ): string;
-
-
+    Function  StrTran( cString, cProcura, cTroca : string ): string;
     function EnviarContasReceber : Boolean;
     function EnviarProdutosLotes : Boolean;
     function EnviarProdutosLotesST : Boolean;
+    function BuscaMatrizProdutosIncluidos : Boolean;
+    function EnviandoEstoque : Boolean;
+    function EnviandoClientes: Boolean;
+    function EnviandoPosicaoEstoque : Boolean;
 
     procedure EnvioLotes;
     procedure EnvioLotesAPrazo;
     procedure EnvioCaixa;
-    function  BuscaMatrizProdutosIncluidos : Boolean;
-    function  EnviandoEstoque : Boolean;
     procedure EnviandoOperadoresCaixa;
     procedure EnviandoCRM;
     procedure EnviandoEntregas;
+    procedure EnviandoChequesRecebidos;
+    procedure EnviandoItensTransfer;
+    procedure EnviandoTransfer;
+    procedure EnviandoTransfer1;
+    procedure EnviandoCadernoFaltas;
+    Procedure EnviandoPrecosFilial;
+    procedure EnviandoConferenciaNota;
+    procedure EnviandoContasPagar;
+    procedure EnviandoContasPagarCompras;
+    procedure EnviandoCompras;
+    procedure EnviandoItensCompras;
+    procedure EnviandoItensComprasLote;
+
+     {  Sintegra  }
+    procedure EnviandoSintegraNotas;
+    procedure EnviandoSintegraNotasItens;
+//    procedure EnviandoSintegraPedidos;
+//    procedure EnviandoSintegraR60;
+//    procedure EnviandoSintegraR60I;
+//
+//
+//    procedure EnviandoVendasItensExcluidos;
+//
+//    procedure RecebendoItensTransfer;
+//    procedure RecebendoTransfer;
+//    procedure RecebendoProdutosQuantidade;
+//    procedure RecebendoProdutosFP;
+//    procedure RecebendoProdutosFidelidade;
+//    function  RecebendoCadastro : Boolean;
+//    function  RecebendoEstoques : Boolean;
+//    Function  RecebendoPrecos : Boolean;
+//    procedure RecebendoProdutosDeletados;
+//    procedure RecebendoProdutosFidelidadeDeletados;
+//    procedure RecebendoProdutosQuantidadeDeletados;
 
 
 
-    function EnviandoClientes: Boolean;
+
+
     procedure ConsistenciaDados;
+    procedure MontaSQL_Precos(Filial : String);
+    procedure CriaCamposPrecos(sFilial : String);
 
 
 var
@@ -70,7 +107,7 @@ const
 
 implementation
 
-uses UExporterClient, Udm, Funcoes, Controlle.Filial;
+uses UExporterClient, Udm, Funcoes, Controlle.Filial, Winapi.ActiveX;
 
 function EnviandoClientes: Boolean;
 var
@@ -1505,6 +1542,7 @@ begin
 
          LResponse := TRequest.New.BaseURL(dm.BaseUrl )
          .Resource('produtosnovos')
+         .AcceptEncoding('gzip, deflate')
          .AddBody(arrayEstoque.ToString)
          .Accept('application/json')
          .get;
@@ -1548,5 +1586,1166 @@ begin
 
 end;
 
+procedure EnviandoChequesRecebidos;
+var
+  sql:string;
+LResponse: IResponse;
+arrayChequerecebidos:TJSONArray;
+begin
+
+ //envia para a matriz os dados de cheques recebidos
+  Try
+
+   Try
+     DM.Query.SQL.Clear;
+     DM.Query.SQL.Text := 'ALTER TRIGGER CHEQUESRECEBIDOS_BI0 INACTIVE';
+     DM.Query.ExecSQL;
+
+   Except
+     DM.Query.SQL.Clear;
+   End;
+
+   Sql :=' SELECT  * FROM  CHEQUESRECEBIDOS WHERE  ENVIADO = ''9''';
+   DM.Query.SQL.Text := 'UPDATE CHEQUESRECEBIDOS SET ENVIADO = '+QuotedStr('9')+' WHERE (ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2')+')';
+   DM.Query.ExecSQL(false);
+
+   DM.Query.SQL.Text := Sql;
+   DM.Query.Open();
+
+   if  DM.Query.RecordCount <> 0 then
+    begin
+      // VerificaConexao('');
+
+      try
+
+       GravaLog(TimetoStr(Time) + ' - Enviando Cheques Recebidos: ' + FloatToStr(DM.Query.RecordCount));
+//             Dados := (DmExporterQuick.HTTPRIO1 as IDmProcessa).Processa(10, Filial, DmExporterQuick.CdsCheques.Data);
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('produtosnovos')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arrayChequerecebidos.ToString)
+       .Accept('application/json')
+       .post;
+       FreeAndNil(arrayChequerecebidos);
+
+       if LResponse.StatusCode=200 then
+         begin
+           DM.Query.SQL.Clear;
+           DM.Query.SQL.Text := 'UPDATE CHEQUESRECEBIDOS SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+           DM.Query.ExecSQL(True);
+         end;
+      Except on E:Exception do
+            begin
+
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Cheques - '+E.Message);
+
+
+              Try
+
+                DM.Query.SQL.Text:= 'ALTER TRIGGER CHEQUESRECEBIDOS_BI0 ACTIVE';
+                DM.Query.ExecSQL(True);
+
+              Except
+                 DM.Query.SQL.Clear;
+              End;
+
+              Exit;
+            end;
+
+      end;
+    end;
+
+
+  Finally
+     DM.Query.sql.Clear;
+
+    Try
+      DM.Query.sql.Text := 'ALTER TRIGGER CHEQUESRECEBIDOS_BI0 ACTIVE';
+      DM.Query.ExecSQL(false);
+    Except
+      DM.Query.sql.Clear;
+    End;
+  End;
+
+end;
+
+procedure EnviandoItensTransfer;
+var
+  sql:string;
+LResponse: IResponse;
+arrayItensTransfer:TJSONArray;
+begin
+   //envia para a matriz os dados de ItensTransfer
+  Try
+   Dm.CdsCeItensTransfer.Open;
+    If Dm.CdsCeItensTransfer.RecordCount <> 0 then
+    begin
+       //VerificaConexao('');
+
+       GravaLog(TimetoStr(Time) + ' - Enviando ItensTransfer: ' + FloatToStr(Dm.CdsCeItensTransfer.RecordCount));
+      // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(12, Filial, Dm.CdsCeItensTransfer.Data);
+      try
+
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('produtosnovos')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arrayItensTransfer.ToString)
+       .Accept('application/json')
+       .post;
+       FreeAndNil(arrayItensTransfer);
+         if LResponse.StatusCode=200 then
+         begin
+          Dm.CdsCeItensTransfer.Close;
+         end;
+
+      Except  on E:Exception do
+            begin
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  ItensTransfer - '+E.Message);
+              Dm.CdsCeItensTransfer.Close;
+            end;
+
+
+      end;
+    end;
+
+  Finally
+    Dm.CdsCeItensTransfer.Close;
+  End;
+
+
+end;
+
+procedure EnviandoTransfer;
+var
+ sql :String;
+ LResponse: IResponse;
+arrayTransfer:TJSONArray;
+begin
+  //envia para a matriz os dados de cabeçalho da Transfer
+  Try
+
+    Try
+      Dm.Query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER INACTIVE';
+      Dm.Query.ExecSQL(True);
+    Except
+      Dm.Query.SQL.Clear;
+    End;
+
+   Sql := 'SELECT * FROM TRANSFER WHERE STATUS <> '''+'A'+''' AND ENVIADO = '''+'9'+'''';
+   Dm.CdsCeTransfer.Close;
+
+     Dm.FDTransfer.sql.Text := 'UPDATE TRANSFER SET ENVIADO = '+QuotedStr('9')+' WHERE ((ENVIADO IS NULL) OR (ENVIADO <> '+QuotedStr('2')+')) AND (STATUS <> ''' + 'A' + ''')';
+     Dm.FDTransfer.ExecSQL;
+     Dm.CdsCeTransfer.Close;
+
+     GravaLog(TimetoStr(Time) + ' - Inicio do processo de ItensTransfer');
+
+     Try
+       EnviandoItensTransfer;
+     Except
+       on E:Exception do
+         begin
+           GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de ItensTransfer - ' + E.Message);
+           Dm.CdsCeItensTransfer.Close;
+         end;
+     end;
+
+     GravaLog(TimetoStr(Time) + ' - Fim do processo de ItensTransfer');
+
+     GravaLog(TimetoStr(Time) + ' - Inicio do processo de Transfer');
+     Dm.FDTransfer.sql.Text := Sql;
+     Dm.CdsCeTransfer.Open;
+     if Dm.CdsCeTransfer.RecordCount > 0 then
+      begin
+
+        GravaLog(TimetoStr(Time) + ' - Enviando Transfer: ' + FloatToStr(Dm.CdsCeTransfer.RecordCount));
+
+        // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(11, Filial, Dm.CdsCeTransfer.Data);
+         try
+
+           LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+           .Resource('produtosnovos')
+           .AcceptEncoding('gzip, deflate')
+           .AddBody(arrayTransfer.ToString)
+           .Accept('application/json')
+           .post;
+            FreeAndNil(arrayTransfer);
+
+           if LResponse.StatusCode=200 then
+             begin
+               Dm.CdsCeTransfer.Close;
+               Dm.FDTransfer.Close;
+               Dm.FDTransfer.sql.Text := 'UPDATE TRANSFER SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+               Dm.FDTransfer.ExecSQL(True);
+              end;
+
+          Except  on E:Exception do
+              begin
+
+                GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Transfer - '+E.Message);
+                Dm.CdsCeTransfer.Close;
+                Try
+                  Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER ACTIVE';
+                  Dm.query.ExecSQL(True);
+                Except
+                End;
+                Dm.CdsCeTransfer.Close;
+                Exit;
+
+              end;
+         end;
+      end;
+
+     GravaLog(TimetoStr(Time) + ' - Fim do processo de Transfer');
+
+  Finally
+    Dm.CdsCeTransfer.Close;
+    Try
+      Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER ACTIVE';
+      Dm.query.ExecSQL(True);
+    Except
+      Dm.query.sql.Clear;
+    End;
+  End;
+
+end;
+
+procedure EnviandoTransfer1;
+var
+sql:String;
+LResponse: IResponse;
+arrayTransfer:TJSONArray;
+begin
+
+  //envia para a matriz os dados de Transfer
+  Try
+
+  Try
+    Dm.query.SQL.Text:= 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER INACTIVE';
+    Dm.query.ExecSQL(True);
+  Except
+    Dm.query.sql.Clear;
+  End;
+
+  Sql := 'SELECT * FROM TRANSFER WHERE STATUS <> '''+'A'+''' AND ENVIADO = '''+'9'+'''';
+  Dm.CdsCeTransfer.Close;
+
+     GravaLog(TimetoStr(Time) + ' - Inicio do processo Transfer1');
+
+     Dm.FDTransfer.sql.Text := 'UPDATE TRANSFER SET ENVIADO = '+QuotedStr('9')+' WHERE ((ENVIADO IS NULL) OR (ENVIADO <> '+QuotedStr('2')+')) AND (STATUS <> ''' + 'A' + ''')';
+
+     Dm.FDTransfer.ExecSQL;
+
+     Dm.CdsCeTransfer.Close;
+     Dm.FDTransfer.sql.Text := Sql;
+     Dm.CdsCeTransfer.Open;
+
+     if Dm.CdsCeTransfer.RecordCount > 0 then
+      begin
+         GravaLog(TimetoStr(Time) + ' - Verificando conexao');
+         //VerificaConexao('');
+
+         GravaLog(TimetoStr(Time) + ' - Enviando Transfer: ' + FloatToStr(Dm.CdsCeTransfer.RecordCount));
+
+         //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(11, Filial, Dm.CdsCeTransfer.Data);
+       try
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('transfer')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayTransfer.ToString)
+         .Accept('application/json')
+         .post;
+          FreeAndNil(arrayTransfer);
+
+          if LResponse.StatusCode=200 then
+           begin
+             GravaLog(TimetoStr(Time) + ' - Fim do processo Transfer1');
+
+             Dm.CdsCeTransfer.Close;
+             Dm.FDTransfer.Close;
+             Dm.FDTransfer.sql.Text := 'UPDATE TRANSFER SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+             Dm.FDTransfer.ExecSQL(True);
+
+             GravaLog(TimetoStr(Time) + ' - Inicio do processo ItensTransfer1');
+
+             Try
+               EnviandoItensTransfer;
+               GravaLog(TimetoStr(Time) + ' - Fim do processo ItensTransfer1');
+             Except
+               on E:Exception do
+                 begin
+                   GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de ItensTransfer - ' + E.Message);
+                   Dm.CdsCeItensTransfer.Close;
+                 end;
+             end;
+
+           end;
+
+       Except on E:Exception do
+          begin
+            GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Transfer - '+E.Message);
+            Dm.CdsCeTransfer.Close;
+            Try
+              Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER ACTIVE';
+              Dm.query.ExecSQL(True);
+            Except
+
+            End;
+            Dm.CdsCeTransfer.Close;
+            Exit;
+          end;
+
+       end;
+
+      end;
+
+  Finally
+    Dm.CdsCeTransfer.Close;
+    Try
+      Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER ACTIVE';
+      Dm.query.ExecSQL(True);
+    Except
+      Dm.query.sql.Clear;
+    End;
+  End;
+
+end;
+
+procedure EnviandoCadernoFaltas;
+var
+sql:String;
+LResponse: IResponse;
+arrayCadernoFaltas:TJSONArray;
+begin
+ //envia para a matriz os dados de CadernoFaltas
+
+  Try
+
+   Dm.CdsCadernoFaltas.Open;
+   if Dm.CdsCadernoFaltas.RecordCount <> 0 then
+    begin
+     GravaLog(TimetoStr(Time) + ' - Enviando Caderno Faltas: ' + FloatToStr(Dm.CdsCadernoFaltas.RecordCount));
+
+       try
+          // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(13, Filial, Dm.CdsCadernoFaltas.Data);
+
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('cadernodefaltas')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arrayCadernoFaltas.ToString)
+       .Accept('application/json')
+       .post;
+        FreeAndNil(arrayCadernoFaltas);
+
+         if LResponse.StatusCode=200 then
+           begin
+             Dm.CdsCadernoFaltas.Close;
+           end;
+
+       except
+          on E:Exception do
+            begin
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Caderno Faltas - '+E.Message);
+              Dm.CdsCadernoFaltas.Close;
+              Exit;
+            end;
+       end;
+    end;
+
+  Finally
+    Dm.CdsCadernoFaltas.Close;
+    Dm.query.sql.Text := 'UPDATE CADERNO_FALTAS SET STATUS = ' + QuotedStr('E') + ' WHERE (STATUS IS NULL) OR (STATUS <> ' + QuotedStr('E') + ')';
+    Try
+     Dm.query.ExecSQL(True);
+    Except
+      Dm.query.sql.Clear;
+    end;
+  End;
+
+end;
+
+Procedure EnviandoPrecosFilial;
+var
+sql:String;
+LResponse: IResponse;
+arrayCadernoFaltas:TJSONArray;
+begin
+
+   Try
+     Dm.CdsPrecoVenda.Close;
+     MontaSQL_Precos(dm.cdfilialparametro);
+     Dm.CdsPrecoVenda.Open;
+
+     if Dm.CdsPrecoVenda.RecordCount <> 0 then
+      begin
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Enviando Precos de Venda: ' + FloatToStr(Dm.CdsPrecoVenda.RecordCount));
+       //  Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(52, Filial, Dm.CdsPrecoVenda.Data);
+
+         try
+
+           LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+           .Resource('precosfilial')
+           .AcceptEncoding('gzip, deflate')
+           .AddBody(arrayCadernoFaltas.ToString)
+           .Accept('application/json')
+           .post;
+           FreeAndNil(arrayCadernoFaltas);
+          if lresponse.statuscode=200 then
+            begin
+               Dm.CdsPrecoVenda.Close;
+            end;
+
+          Except
+         on E:Exception do
+            begin
+              Dm.CdsPrecoVenda.Close;
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Preco de Venda - '+ E.Message);
+            end;
+
+         end;
+
+      end
+     else
+      begin
+        Exit;
+      end;
+
+     Dm.query.sql.Text := 'DELETE FROM TEMP_PRODUTOS WHERE PROCESSO = 52 AND ENVIADO = '+QuotedStr('9');
+     Dm.query.ExecSQL(True);
+     Dm.query.sql.Text := 'DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 52';
+     Dm.query.ExecSQL(True);
+
+   finally
+    Dm.CdsPrecoVenda.Close;
+    Dm.query.sql.Clear;
+   End;
+
+end;
+
+procedure MontaSQL_Precos(Filial : String);
+var
+ ComandoSQL : String;
+begin
+
+  dm.query.sql.Text := 'DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 52';
+  Dm.query.ExecSQL(True);
+
+  ComandoSQL := '';
+  ComandoSQL := 'INSERT INTO TEMP_PRODUTOS2 SELECT FIRST 1000 * FROM TEMP_PRODUTOS ' +
+                'WHERE PROCESSO = 52';
+  Dm.FDPrecoVenda.sql.Text := ComandoSql;
+  Dm.FDPrecoVenda.ExecSQL(True);
+
+  ComandoSQL := '';
+  ComandoSQL := 'UPDATE TEMP_PRODUTOS SET ENVIADO = ' + QuotedStr('9') +
+                ' WHERE ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_PRODUTOS2)';
+
+  Dm.FDPrecoVenda.sql.Text := ComandoSql;
+  Dm.FDPrecoVenda.ExecSQL(True);
+
+
+  ComandoSQL := '';
+  ComandoSQL := 'SELECT FIRST 1000 PRODUTOS.ID_PRODUTO, ' +
+                ' CAST(CAST(PRODUTOS.PRECO_VENDA AS NUMERIC(10,2)) AS DOUBLE PRECISION) AS PRECO_VENDA, ' +
+                ' CAST(CAST(PRODUTOS.PRECO_PROMOCAO AS NUMERIC(10,2)) AS DOUBLE PRECISION) AS PRECO_PROMOCAO, ' +
+                ' PRODUTOS.DT_VENCIMENTO_PROMOCAO, PRODUTOS.DT_REAJUSTE, PRODUTOS.USUARIO ' +
+                ' FROM PRODUTOS, TEMP_PRODUTOS ' +
+                ' WHERE PRODUTOS.ID_PRODUTO = TEMP_PRODUTOS.ID_PRODUTO AND ' +
+                ' TEMP_PRODUTOS.PROCESSO = 52 AND TEMP_PRODUTOS.ENVIADO = ' + QuotedStr('9');
+  Dm.FDPrecoVenda.sql.Text := ComandoSQL;
+  Dm.FDPrecoVenda.Params.Clear;
+  CriaCamposPrecos(dm.cdfilialparametro);
+
+end;
+
+procedure CriaCamposPrecos(sFilial : String);
+var
+fIdProduto, fPrecoVenda, fPrecoPromocao : TFloatField;
+fDtVencimentoPromocao, fDtReajuste : TDateField;
+fUsuario : TstringField;
+
+begin
+
+ fIdProduto               := TFloatField.Create(nil);
+ fIdProduto.FieldName     := 'ID_PRODUTO';
+ fIdProduto.FieldKind     := fkData;
+ fIdProduto.DisplayLabel  := 'ID_PRODUTO';
+ fIdProduto.Visible       := True;
+ fIdProduto.Name          := Dm.CdsPrecoVenda.Name + fIdProduto.FieldName;
+ fIdProduto.Index         := 0;
+ fIdProduto.DataSet       :=  (Dm.CdsPrecoVenda as TDataSet);
+
+ fPrecoVenda              := TFloatField.Create(nil);
+ fPrecoVenda.FieldName    := 'PRECO_VENDA';
+ fPrecoVenda.FieldKind    := fkData;
+ fPrecoVenda.DisplayLabel := 'PRECO_VENDA';
+ fPrecoVenda.Visible      := True;
+ fPrecoVenda.Name         := Dm.CdsPrecoVenda.Name + fPrecoVenda.FieldName;
+ fPrecoVenda.Index        := 1;
+ fPrecoVenda.DataSet      := (Dm.CdsPrecoVenda as TDataSet);
+
+ fPrecoPromocao           := TFloatField.Create(nil);
+ fPrecoPromocao.FieldName := 'PRECO_PROMOCAO';
+ fPrecoPromocao.FieldKind := fkData;
+ fPrecoPromocao.DisplayLabel := 'PRECO_PROMOCAO';
+ fPrecoPromocao.Visible   := True;
+ fPrecoPromocao.Name      := Dm.CdsPrecoVenda.Name + fPrecoPromocao.FieldName;
+ fPrecoPromocao.Index     := 2;
+ fPrecoPromocao.DataSet   := (Dm.CdsPrecoVenda as TDataSet);
+
+ fDtVencimentoPromocao    := TDateField.Create(nil);
+ fDtVencimentoPromocao.FieldName := 'DT_VENCIMENTO_PROMOCAO';
+ fDtVencimentoPromocao.FieldKind := fkData;
+ fDtVencimentoPromocao.DisplayLabel := 'DT_VENCIMENTO_PROMOCAO';
+ fDtVencimentoPromocao.Visible := True;
+ fDtVencimentoPromocao.Name := Dm.CdsPrecoVenda.Name + fDtVencimentoPromocao.FieldName;
+ fDtVencimentoPromocao.Index := 3;
+ fDtVencimentoPromocao.DataSet := (Dm.CdsPrecoVenda as TDataSet);
+
+ fDtReajuste              := TDateField.Create(nil);
+ fDtReajuste.FieldName    := 'DT_REAJUSTE';
+ fDtReajuste.FieldKind    := fkData;
+ fDtReajuste.DisplayLabel := 'DT_REAJUSTE';
+ fDtReajuste.Visible      := True;
+ fDtReajuste.Name         := Dm.CdsPrecoVenda.Name + fDtReajuste.FieldName;
+ fDtReajuste.Index        := 4;
+ fDtReajuste.DataSet      := (Dm.CdsPrecoVenda as TDataSet);
+
+ fUsuario              := TStringField.Create(nil);
+ fUsuario.FieldName    := 'USUARIO';
+ fUsuario.FieldKind    := fkData;
+ fUsuario.DisplayLabel := 'USUARIO';
+ fUsuario.Visible      := True;
+ fUsuario.Name         := Dm.CdsPrecoVenda.Name + fUsuario.FieldName;
+ fUsuario.Index        := 5;
+ fUsuario.DataSet      := (Dm.CdsPrecoVenda as TDataSet);
+
+ Dm.CdsPrecoVenda.FieldDefs.Update;
+
+end;
+
+procedure EnviandoConferenciaNota;
+var
+Sql : String;
+LResponse: IResponse;
+arrayConferenciaNota:TJSONArray;
+
+begin
+  //processamento e envio de Conferencia Nota
+  Try
+
+    Sql := 'SELECT CONFERENCIA_NOTA.* FROM CONFERENCIA_NOTA WHERE ENVIADO = ' + QuotedStr('9');
+
+    Dm.CdsConferenciaNota.Close;
+
+    Dm.FdConferenciaNota.sql.Text := 'ALTER TRIGGER CONFERENCIA_NOTA_BIU0 INACTIVE';
+    Dm.FdConferenciaNota.ExecSQL(True);
+
+    Dm.fdConferenciaNota.sql.Text := 'UPDATE CONFERENCIA_NOTA SET ENVIADO = ' + QuotedStr('9') + ' WHERE (ENVIADO IS NULL) OR (ENVIADO <> ' + QuotedStr('2') + ')';
+    Dm.fdConferenciaNota.ExecSql(True);
+
+    Dm.FDConferenciaNota.sql.Text := Sql;
+    Dm.CdsConferenciaNota.Open;
+
+    if Dm.CdsConferenciaNota.RecordCount <> 0 then
+     begin
+        GravaLog(TimetoStr(Time) + ' - Enviando Conferencia Nota: ' + FloatToStr(Dm.CdsConferenciaNota.RecordCount));
+
+      //  Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(67, Filial, Dm.CdsConferenciaNota.Data);
+      try
+
+        LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+        .Resource('conferencianotas')
+        .AcceptEncoding('gzip, deflate')
+        .AddBody(arrayConferenciaNota.ToString)
+        .Accept('application/json')
+        .post;
+        FreeAndNil(arrayConferenciaNota);
+
+        if lresponse.statuscode=200 then
+          begin
+            Dm.CdsConferenciaNota.Close;
+            Dm.fdConferenciaNota.sql.Text := 'UPDATE CONFERENCIA_NOTA SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+            Dm.fdConferenciaNota.ExecSQL(True);
+           end;
+       Except
+      on E:Exception do
+            begin
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de Conferencia Nota - ' + E.Message);
+              Dm.FdConferenciaNota.sql.Text := 'ALTER TRIGGER CONFERENCIA_NOTA_BIU0 ACTIVE';
+              Dm.fdConferenciaNota.ExecSQL(True);
+              Dm.CdsConferenciaNota.Close;
+              Exit;
+            end;
+      end;
+     end;
+
+  Finally
+    Dm.fdConferenciaNota.sql.Text := 'ALTER TRIGGER CONFERENCIA_NOTA_BIU0 ACTIVE';
+    Dm.fdConferenciaNota.ExecSQL(True);
+
+    Dm.fdConferenciaNota.sql.Text := Sql;
+    Dm.CdsConferenciaNota.Close;
+  End;
+
+end;
+
+procedure EnviandoUsuarios;
+var
+ Sql : String;
+ LResponse: IResponse;
+arrayUsuarios:TJSONArray;
+begin
+  //envia para a matriz os dados de Clientes
+
+   Sql := Dm.FdUsu.sql.Text;
+
+   Try
+    Dm.FdOperadores.sql.Text := 'ALTER TRIGGER USUARIOS_BIU0 INACTIVE';
+    Dm.FDOperadores.ExecSQL(True);
+   Except
+   End;
+
+   Dm.FDUsu.sql.Text := 'UPDATE USUARIOS SET ENVIADO = ' + QuotedStr('9') + ' WHERE ENVIADO IS NULL OR ENVIADO <> ' + QuotedStr('2');
+   Dm.FDUsu.ExecSQL(True);
+   Dm.FDUsu.sql.Text := Sql;
+   Dm.CdsCeUsu.Open;
+   if Dm.CdsCeUsu.RecordCount <> 0 then
+    begin
+       try
+           GravaLog(TimetoStr(Time) + ' - Enviando Usuarios: '+ FloatToStr(Dm.CdsCeUsu.RecordCount));
+
+           //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(55, Filial, Dm.CdsCeUsu.Data);
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('usuarios')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayUsuarios.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arrayUsuarios);
+
+            if lresponse.statuscode=200 then
+            begin
+              Dm.CdsCeUsu.Close;
+            end;
+
+       except
+          on E:Exception do
+            begin
+
+              GravaLog(FormatDateTime('hh:mm:ss',Time)+ ' - Falha de conexao no processo de Envio de Usuarios - '+E.Message);
+
+              Try
+               Dm.FdOperadores.sql.Text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
+               Dm.fdOperadores.ExecSQL(True);
+
+              Except
+               Dm.FdOperadores.SQL.Clear;
+               Dm.CdsCeUsu.Close;
+              End;
+
+              Exit;
+            end;
+
+       end;
+    end;
+
+   Dm.FDUsu.sql.Text := 'UPDATE USUARIOS SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+   Dm.FDUsu.ExecSQL(True);
+
+
+   Try
+
+    Dm.FDOperadores.sql.Text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
+    Dm.FDOperadores.ExecSQL(True);
+
+   Except
+    Dm.FdOperadores.SQL.Clear;
+    Dm.CdsCeUsu.Close;
+   End;
+
+
+
+end;
+
+function  EnviandoPosicaoEstoque : Boolean;
+var
+sql:string;
+LResponse: IResponse;
+arrayPosicaoEstoque:TJSONArray;
+
+
+begin
+
+   Try
+
+   Result := True;
+
+   Sql := 'SELECT * FROM POSICAOESTOQUEDATA WHERE ENVIADO = ' + QuotedStr('9');
+
+     Dm.CdsPosicaoEstoque.Close;
+     Dm.FDPosicaoEstoque.sql.Text := 'INSERT INTO TEMP_POSICAOESTOQUE2 SELECT FIRST 1000 * FROM TEMP_POSICAOESTOQUE';
+     Dm.FDPosicaoEstoque.ExecSQL(True);
+
+
+     Dm.FDPosicaoEstoque.sql.Text := 'UPDATE POSICAOESTOQUEDATA SET ENVIADO = ' + QuotedStr('9') + ' WHERE (ENVIADO IS NULL OR ENVIADO <> ' + QuotedStr('2') + ' ) AND ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_POSICAOESTOQUE2)';
+     Dm.FDPosicaoEstoque.ExecSQL(True);
+
+
+     Dm.FDPosicaoEstoque.sql.Text := Sql;
+     Dm.CdsPosicaoEstoque.FetchParams;
+     Dm.CdsPosicaoEstoque.Open;
+
+     if Dm.CdsPosicaoEstoque.RecordCount <> 0 then
+      begin
+       GravaLog(TimetoStr(Time) + ' - Enviando Posicao de Estoque: ' + FloatToStr(Dm.CdsPosicaoEstoque.RecordCount));
+       //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(63, Filial, Dm.CdsPosicaoEstoque.Data);
+
+       try
+
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('precosfilial')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayPosicaoEstoque.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arrayPosicaoEstoque);
+
+
+         if lresponse.statuscode=200 then
+           begin
+             Dm.CdsPosicaoEstoque.Close;
+             Dm.fdPosicaoEstoque.sql.Text := 'DELETE FROM TEMP_POSICAOESTOQUE WHERE ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_POSICAOESTOQUE2)';
+             Dm.FDPosicaoEstoque.ExecSQL(True);
+
+             Dm.FDPosicaoEstoque.sql.Text := 'UPDATE POSICAOESTOQUEDATA SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO = ' + QuotedStr('9');
+             Dm.FDPosicaoEstoque.ExecSQL(True);
+
+             Dm.FDPosicaoEstoque.sql.Text := 'DELETE FROM TEMP_POSICAOESTOQUE2';
+             Dm.FDPosicaoEstoque.ExecSQL(True);
+           end;
+
+        Except
+           on E:Exception do
+            begin
+              Result := False;
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de Posicao de Estoque - '+E.Message);
+              Dm.CdsPosicaoEstoque.Close;
+
+              Dm.FDPosicaoEstoque.Close;
+              Dm.FDPosicaoEstoque.sql.Text := 'DELETE FROM TEMP_POSICAOESTOQUE2';
+              Dm.FDPosicaoEstoque.ExecSQL(True);
+              Result := False;
+              Exit;
+            end;
+
+       end;
+      end
+     else
+      Result := False;
+     // VerificaConexao('');
+
+  Finally
+    Dm.CdsPosicaoEstoque.Close;
+  End;
+
+end;
+
+procedure EnviandoContasPagar;
+var
+ sql:string;
+ LResponse: IResponse;
+arrayContasPagar:TJSONArray;
+begin
+  //processamento e envio de Ceduplic.dat
+
+  Sql := Dm.FDDuplic.sql.Text;
+  Dm.FDDuplic.sql.Text := 'UPDATE CONTAS_PAGAR SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+  Dm.FDDuplic.ExecSQL;
+
+  Dm.FDDuplic.sql.Text := Sql;
+  Dm.CdsCeDuplic.Open;
+
+  if Dm.CdsCeDuplic.RecordCount <> 0 then
+   begin
+//          VerificaConexao('');
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Contas a Pagar: '+ FloatToStr(Dm.CdsCeDuplic.RecordCount));
+
+     // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(6, Filial, Dm.CdsCeDuplic.Data);
+    try
+        LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+        .Resource('contaspagar')
+        .AcceptEncoding('gzip, deflate')
+        .AddBody(arrayContasPagar.ToString)
+        .Accept('application/json')
+        .post;
+        FreeAndNil(arrayContasPagar);
+
+
+        if lresponse.statuscode=200 then
+          begin
+            Dm.CdsCeDuplic.First;
+            Dm.FDDuplic.sql.Text := 'UPDATE CONTAS_PAGAR SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDDuplic.ExecSQL;
+            Dm.FDDuplic.Close;
+          end;
+
+    Except  on E:Exception do
+        begin
+          GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Contas Pagar - ' + E.Message);
+          Dm.CdsCeDuplic.Close;
+          Exit;
+        end;
+
+
+    end;
+   end;
+
+end;
+
+procedure EnviandoCompras;
+var
+ Sql:string;
+LResponse: IResponse;
+arrayCompras:TJSONArray;
+begin
+
+    //processamento e envio de compras
+
+  Sql := Dm.FDPedid1.sql.Text;
+
+  Dm.FDPedid1.sql.Text := 'UPDATE TEMP_COMPRAS SET ENVIADO = '+QuotedStr('9')+' WHERE (ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2') + ')';
+  Dm.FDPedid1.ExecSQL;
+
+  GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Executada selecao em Temp_Compras');
+  Dm.FDPedid1.sql.Text := Sql;
+  Dm.CdsCePedid1.Open;
+
+
+    Try
+      GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando o envio de Itens Compras');
+      EnviandoItensCompras; //envia os itens desta Compra
+      GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Finalizado o envio de Itens Compras');
+    Except
+      on E:Exception do
+        begin
+          GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  ItensCompras - ' + E.Message);
+          Dm.CdsCePedid1.Close;
+          Exit;
+        end;
+    end;
+
+    if Dm.CdsCePedid1.RecordCount <> 0 then
+    begin
+     // VerificaConexao('');
+
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Compras: ' + FloatToStr(Dm.CdsCePedid1.RecordCount));
+      //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(4, Filial, Dm.CdsCePedid1.Data);
+
+      try
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+           .Resource('compras')
+           .AcceptEncoding('gzip, deflate')
+           .AddBody(arrayCompras.ToString)
+           .Accept('application/json')
+           .post;
+           FreeAndNil(arrayCompras);
+
+        if lresponse.statuscode=200 then
+          begin
+            Dm.FDPedid1.sql.Text := 'DELETE FROM TEMP_COMPRAS WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDPedid1.ExecSQL;
+          end;
+       Except
+        on E:Exception do
+          begin
+
+            GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Compras - ' + E.Message);
+            Dm.CdsCePedid1.Close;
+            Exit;
+          end;
+
+      end;
+    end;
+  Dm.CdsCePedid1.Close;
+
+end;
+
+procedure EnviandoItensCompras;
+var
+ LResponse: IResponse;
+arrayItensCompras:TJSONArray;
+begin
+   //processamento e envio de Cepedido.dat
+
+  Dm.CdsCePedido.Close;
+  Dm.CdsCePedido.Open;
+
+  if Dm.CdsCePedido.RecordCount <> 0 then
+   begin
+     // VerificaConexao('');
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando ItensCompras do Pedido ' + Dm.CdsCePedid1CD_COMPRAS.AsString);
+
+
+     // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(5, Filial, Dm.CdsCePedido.Data);
+      try
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('itenscompras')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayItensCompras.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arrayItensCompras);
+         if lresponse.statuscode=200 then
+          begin
+           Dm.CdsCePedido.Close;
+          end;
+       Except
+        on E:Exception do
+          begin
+
+            GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Itens Compras - '+E.Message);
+            Dm.CdsCePedido.Close;
+            Exit;
+          end;
+
+      end;
+   end;
+  Dm.CdsCePedido.Close;
+
+end;
+
+procedure EnviandoItensComprasLote;
+var
+ sql: string;
+ LResponse: IResponse;
+ arrayCadernoFaltas:TJSONArray;
+begin
+
+  Sql := Dm.FDLotesItensCompra.sql.Text;
+  Try
+    Dm.FDLotesItensCompra.sql.Text := 'UPDATE TEMP_ITENS_COMPRA_LOTE SET ENVIADO = ''' + '9' + ''' WHERE (ENVIADO IS NULL OR ENVIADO <> ' + QuotedStr('2') + ')';
+    Dm.FDLotesItensCompra.ExecSQL(True);
+  Except
+    Dm.FDLotesItensCompra.SQL.Clear;
+  End;
+
+  Dm.FDLotesItensCompra.sql.Text := Sql;
+  Dm.CdsLotesItensCompra.Close;
+
+  Dm.CdsLotesItensCompra.Open;
+  //GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - LotesItensCompras : ' + Sql);
+  GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Regsitros encontrados LotesItensCompras : ' + InttoStr(Dm.CdsLotesItensCompra.RecordCount));
+
+  if Dm.CdsLotesItensCompra.RecordCount <> 0 then
+   begin
+
+      try
+
+       // VerificaConexao('');
+        GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando LotesItensCompras do Pedido ' + Dm.CdsLotesItensCompraCD_COMPRAS.AsString);
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+        .Resource('precosfilial')
+        .AcceptEncoding('gzip, deflate')
+        .AddBody(arrayCadernoFaltas.ToString)
+        .Accept('application/json')
+        .post;
+        FreeAndNil(arrayCadernoFaltas);
+
+       //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(68, Filial, Dm.CdsLotesItensCompra.Data);
+
+        if lresponse.statuscode=200 then
+         begin
+            Dm.CdsLotesItensCompra.Close;
+         end;
+
+      Except
+        on E:Exception do
+          begin
+            GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Lotes Itens Compras - '+E.Message);
+            Dm.CdsLotesItensCompra.Close;
+            Exit;
+          end;
+
+      end;
+
+   end;
+
+  Sql := Dm.FDLotesItensCompra.sql.Text;
+  Try
+    Dm.FDLotesItensCompra.sql.Text := 'DELETE FROM TEMP_ITENS_COMPRA_LOTE WHERE ENVIADO = ' + QuotedStr('9');
+    Dm.FDLotesItensCompra.ExecSQL(True);
+  Except
+    Dm.FDLotesItensCompra.SQL.Clear;
+  End;
+  Dm.FDLotesItensCompra.sql.Text := Sql;
+  Dm.CdsLotesItensCompra.Close;
+
+
+end;
+
+procedure EnviandoContasPagarCompras;
+var
+ LResponse: IResponse;
+arrayContaspagarCompras:TJSONArray;
+
+begin
+ //processamento e envio de ContasPagarCompras
+
+  Dm.CdsContasPagarCompras.Close;
+  Dm.CdsContasPagarCompras.Open;
+
+  if Dm.CdsContasPagarCompras.RecordCount <> 0 then
+   begin
+     // VerificaConexao('');
+
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando ContasPagarCompras : ' + InttoStr(Dm.CdsContasPagarCompras.RecordCount));
+    try
+//       Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(71, Filial, Dm.CdsContasPagarCompras.Data);
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('contaspagarcompras')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayContaspagarCompras.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arrayContaspagarCompras);
+
+
+      if lresponse.statuscode=200 then
+       begin
+          Dm.CdsContasPagarCompras.Close;
+       end;
+     Except
+        on E:Exception do
+          begin
+            GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  ContasPagarCompras - '+E.Message);
+            Dm.CdsContasPagarCompras.Close;
+            Exit;
+          end;
+    end;
+
+   end;
+
+  Dm.CdsComprasBoletos.Close;
+
+end;
+
+procedure EnviandoSintegraNotas;
+var
+ sql:string;
+ LResponse: IResponse;
+ arrayEnviandoSintegraNotas:TJSONArray;
+
+begin
+
+   //processamento e envio de SintegraNotas
+
+
+  Sql := Dm.FDSintegraNF.sql.Text;
+  Dm.FDSintegraNF.sql.Text := 'UPDATE SINTEGRA_NF_ENTRADA SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+
+  Dm.FDSintegraNF.ExecSQL;
+  Dm.FDSintegraNF.sql.Text := Sql;
+  Dm.CdsSintegraNF.Open;
+
+  if Dm.CdsSintegraNF.RecordCount <> 0 then
+   begin
+
+      //VerificaConexao('');
+
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Sintegra Notas: '+ FloatToStr(Dm.CdsSintegraNF.RecordCount));
+
+       // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(56, Filial, Dm.CdsSintegraNF.Data);
+      try
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('sintegranf')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arrayEnviandoSintegraNotas.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arrayEnviandoSintegraNotas);
+
+        if lresponse.statuscode=200 then
+          begin
+            Dm.CdsSintegraNF.First;
+            Dm.FDSintegraNF.sql.Text := 'UPDATE SINTEGRA_NF_ENTRADA SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDSintegraNF.ExecSQL;
+            Dm.FDSintegraNF.Close;
+          end;
+
+      Except
+          on E:Exception do
+            begin
+
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Sintegra Notas - ' + E.Message);
+              Dm.CdsSintegraNF.Close;
+              Exit;
+            end;
+
+      end;
+
+   end;
+  Dm.CdsSintegraNF.Close;
+
+end;
+
+procedure EnviandoSintegraNotasItens;
+var
+ sql:string;
+ LResponse: IResponse;
+ arraySintegraNotasItens:TJSONArray;
+begin
+
+  //processamento e envio de sintegranotasitens
+
+  Sql := Dm.FDSintegraItensNF.sql.Text;
+  Dm.FDSintegraItensNF.sql.Text := 'UPDATE SINTEGRA_NF_ENTRADA_ITENS SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+  Dm.FDSintegraItensNF.ExecSQL;
+
+  Dm.FDSintegraItensNF.sql.Text := Sql;
+  Dm.CdsSintegraItensNF.Open;
+
+  if (Dm.CdsSintegraItensNF.RecordCount <> 0) and (Dm.CdsSintegraItensNF.RecordCount < 10000)  then
+   begin
+    //  VerificaConexao('');
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Sintegra Notas Itens: '+ FloatToStr(Dm.CdsSintegraItensNF.RecordCount));
+
+       // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(57, Filial, Dm.CdsSintegraItensNF.Data);
+      try
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('precosfilial')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arraySintegraNotasItens.ToString)
+         .Accept('application/json')
+         .post;
+         FreeAndNil(arraySintegraNotasItens);
+
+
+
+        if lresponse.statuscode=200 then
+          begin
+            Dm.CdsSintegraItensNF.First;
+            Dm.FDSintegraItensNF.sql.Text := 'UPDATE SINTEGRA_NF_ENTRADA_ITENS SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDSintegraItensNF.ExecSQL;
+            Dm.FDSintegraItensNF.Close;
+          end;
+
+       Except
+          on E:Exception do
+            begin
+
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Sintegra Notas Itens - ' + E.Message);
+              Dm.CdsSintegraItensNF.Close;
+              Exit;
+            end;
+
+      end;
+
+   end;
+
+  Dm.CdsSintegraItensNF.Close;
+
+
+end;
 
 end.

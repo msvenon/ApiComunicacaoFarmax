@@ -34,24 +34,24 @@ type
     function  EnviandoClientes : Boolean; //
     procedure EnviandoCRM; //
     procedure EnviandoEntregas;//
-    procedure EnviandoChequesRecebidos;
-    procedure EnviandoItensTransfer;
-    procedure EnviandoTransfer;
-    procedure EnviandoTransfer1;
-    procedure EnviandoCadernoFaltas;
-    procedure EnviandoPrecosFilial;
-    procedure EnviandoConferenciaNota;
-    procedure EnviandoUsuarios;
-    function  EnviandoPosicaoEstoque : Boolean;
-    procedure EnviandoContasPagar;
-    procedure EnviandoCompras;
-    procedure EnviandoItensCompras;
-    procedure EnviandoItensComprasLote;
-    procedure EnviandoComprasBoletos;
-    procedure EnviandoContasPagarCompras;
+    procedure EnviandoChequesRecebidos; //
+    procedure EnviandoItensTransfer;   //
+    procedure EnviandoTransfer; //
+    procedure EnviandoTransfer1; //
+    procedure EnviandoCadernoFaltas;  //
+    procedure EnviandoPrecosFilial; //
+    procedure EnviandoConferenciaNota; //
+    procedure EnviandoUsuarios;//
+    function  EnviandoPosicaoEstoque : Boolean; //
+    procedure EnviandoContasPagar; //
+    procedure EnviandoCompras; //
+    procedure EnviandoItensCompras; //
+    procedure EnviandoItensComprasLote; //
+    procedure EnviandoComprasBoletos; //
+    procedure EnviandoContasPagarCompras; //
     {  Sintegra  }
-    procedure EnviandoSintegraNotas;
-    procedure EnviandoSintegraNotasItens;
+    procedure EnviandoSintegraNotas;//
+    procedure EnviandoSintegraNotasItens; //
     procedure EnviandoSintegraPedidos;
     procedure EnviandoSintegraR60;
     procedure EnviandoSintegraR60I;
@@ -4390,6 +4390,7 @@ begin
           DmExporterQuick.CdsSintegraNF.Close;
           Exit;
         end;
+
     End;
     DmExporterQuick.CdsSintegraNF.Close;
 end;
@@ -4566,7 +4567,7 @@ begin
   Try
       Try
          Result := True;
-         
+
          Sql := 'SELECT * FROM POSICAOESTOQUEDATA WHERE ENVIADO = ' + QuotedStr('9');
 
            DmExporterQuick.CdsPosicaoEstoque.Close;
