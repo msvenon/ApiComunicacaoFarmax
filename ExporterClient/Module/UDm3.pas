@@ -1,15 +1,16 @@
-unit UDmExporterClient2;
+unit UDm3;
 
 interface
 
 uses
-  SysUtils, Classes, FMTBcd, DB, DBClient, Provider,
+  System.SysUtils, System.Classes, Data.FMTBcd, Data.DB, Datasnap.DBClient,
+  Datasnap.Provider,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.DBX.Migrate;
 
 type
-  TDmExporterClient2 = class(TDataModule)
+  TDM3 = class(TDataModule)
     SqlProdutosTotais: TFDQuery;
     DspProdutosTotais: TDataSetProvider;
     CdsProdutosTotais: TClientDataSet;
@@ -25,6 +26,7 @@ type
     QryUsuariosCAIXA: TStringField;
     QryUsuariosTX_DESCONTO_MAXIMO: TFloatField;
     QryUsuariosENVIADO: TStringField;
+    QryUsuariosCD_FILIAL: TFloatField;
     CdsUsuarios: TClientDataSet;
     CdsUsuariosCD_USUARIO: TFloatField;
     CdsUsuariosCD_PERMISSAO: TFloatField;
@@ -35,6 +37,7 @@ type
     CdsUsuariosCAIXA: TStringField;
     CdsUsuariosTX_DESCONTO_MAXIMO: TFloatField;
     CdsUsuariosENVIADO: TStringField;
+    CdsUsuariosCD_FILIAL: TFloatField;
     SqlPermissoesModulos: TFDQuery;
     DspPermissoesModulos: TDataSetProvider;
     CdsPermissoesModulos: TClientDataSet;
@@ -58,11 +61,11 @@ type
     SqlPermissoes: TFDQuery;
     DspPermissoes: TDataSetProvider;
     CdsPermissoes: TClientDataSet;
+    CdsPermissoesCD_PERMISSAO: TFloatField;
+    CdsPermissoesDESCRICAO: TStringField;
     QryPermissoes: TClientDataSet;
     QryPermissoesCD_PERMISSAO: TFloatField;
     QryPermissoesDESCRICAO: TStringField;
-    CdsPermissoesCD_PERMISSAO: TFloatField;
-    CdsPermissoesDESCRICAO: TStringField;
     SqlEncartes: TFDQuery;
     DspEncartes: TDataSetProvider;
     QryEncartes: TClientDataSet;
@@ -184,15 +187,25 @@ type
     CdsContasPagarDeletadas: TClientDataSet;
     CdsContasPagarDeletadasCAMPO1: TStringField;
     CdsContasReceberDeletados: TClientDataSet;
+    CdsContasReceberDeletadosID_PRODUTO: TFloatField;
+    CdsContasReceberDeletadosCD_FILIAL: TFloatField;
     SqlCRDeletados: TFDQuery;
     DspCRDeletados: TDataSetProvider;
     CdsCRDeletados: TClientDataSet;
     CdsCRDeletadosID_PRODUTO: TFloatField;
     CdsCRDeletadosCD_FILIAL: TFloatField;
-    CdsContasReceberDeletadosID_PRODUTO: TFloatField;
-    CdsContasReceberDeletadosCD_FILIAL: TFloatField;
     CdsLimiteSaldoClientes: TClientDataSet;
+    CdsLimiteSaldoClientesCD_CLIENTE: TFloatField;
+    CdsLimiteSaldoClientesLIMITE_CREDITO: TFloatField;
+    CdsLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField;
+    CdsLimiteSaldoClientesSALDO: TFloatField;
+    CdsLimiteSaldoClientesSTATUS: TStringField;
     SqlLimiteSaldoClientes: TFDQuery;
+    SqlLimiteSaldoClientesCD_CLIENTE: TFloatField;
+    SqlLimiteSaldoClientesLIMITE_CREDITO: TFloatField;
+    SqlLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField;
+    SqlLimiteSaldoClientesSALDO: TFloatField;
+    SqlLimiteSaldoClientesSTATUS: TStringField;
     DspLimiteSaldoClientes: TDataSetProvider;
     QryLimiteSaldoClientes: TClientDataSet;
     QryLimiteSaldoClientesCD_CLIENTE: TFloatField;
@@ -200,16 +213,6 @@ type
     QryLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField;
     QryLimiteSaldoClientesSALDO: TFloatField;
     QryLimiteSaldoClientesSTATUS: TStringField;
-    CdsLimiteSaldoClientesCD_CLIENTE: TFloatField;
-    CdsLimiteSaldoClientesLIMITE_CREDITO: TFloatField;
-    CdsLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField;
-    CdsLimiteSaldoClientesSALDO: TFloatField;
-    CdsLimiteSaldoClientesSTATUS: TStringField;
-    SqlLimiteSaldoClientesCD_CLIENTE: TFloatField;
-    SqlLimiteSaldoClientesLIMITE_CREDITO: TFloatField;
-    SqlLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField;
-    SqlLimiteSaldoClientesSALDO: TFloatField;
-    SqlLimiteSaldoClientesSTATUS: TStringField;
     SqlClasses: TFDQuery;
     DspClasses: TDataSetProvider;
     CdsClasses: TClientDataSet;
@@ -291,23 +294,21 @@ type
     SqlPerfilCliente: TFDQuery;
     DspPerfilCliente: TDataSetProvider;
     QryPerfilCliente: TClientDataSet;
-    CdsPerfilCliente: TClientDataSet;
     QryPerfilClienteID_PERFIL_CLIENTE: TFloatField;
     QryPerfilClienteDESCRICAO: TStringField;
     QryPerfilClienteENVIADO: TStringField;
+    CdsPerfilCliente: TClientDataSet;
     CdsPerfilClienteID_PERFIL_CLIENTE: TFloatField;
     CdsPerfilClienteDESCRICAO: TStringField;
     CdsPerfilClienteENVIADO: TStringField;
     SqlPrincipioAtivo: TFDQuery;
     DspPrincipioAtivo: TDataSetProvider;
     QryPrincipioAtivo: TClientDataSet;
-    CdsPrincipioAtivo: TClientDataSet;
     QryPrincipioAtivoCD_PRINCIPIO: TFloatField;
     QryPrincipioAtivoDESCRICAO: TStringField;
+    CdsPrincipioAtivo: TClientDataSet;
     CdsPrincipioAtivoCD_PRINCIPIO: TFloatField;
     CdsPrincipioAtivoDESCRICAO: TStringField;
-    QryUsuariosCD_FILIAL: TFloatField;
-    CdsUsuariosCD_FILIAL: TFloatField;
     SqlUsuariosConsistencia: TFDQuery;
     DspUsuariosConsistencia: TDataSetProvider;
     CdsUsuariosConsistencia: TClientDataSet;
@@ -441,6 +442,14 @@ type
     QryProdutosFiscoPIS_SITUACAO: TStringField;
     QryProdutosFiscoCOFINS_SITUACAO: TStringField;
     QryProdutosFiscoDT_ATUALIZACAO_FARMAX: TDateField;
+    QryProdutosFiscoCODIGOANP: TStringField;
+    QryProdutosFiscoSUBLIMITEICMS: TFMTBCDField;
+    QryProdutosFiscoSUBLIMITEFCP: TFMTBCDField;
+    QryProdutosFiscoSUBLIMITECST: TStringField;
+    QryProdutosFiscoCODBENEFICIO: TStringField;
+    QryProdutosFiscoDESONERACAOMOTIVO: TStringField;
+    QryProdutosFiscoDESONERACAOICMS: TFMTBCDField;
+    QryProdutosFiscoDESONERACAOFCP: TFMTBCDField;
     CdsProdutosFisco: TClientDataSet;
     CdsProdutosFiscoID_PRODUTO: TFloatField;
     CdsProdutosFiscoCODIGO_BARRAS: TStringField;
@@ -550,6 +559,14 @@ type
     CdsProdutosFiscoPIS_SITUACAO: TStringField;
     CdsProdutosFiscoCOFINS_SITUACAO: TStringField;
     CdsProdutosFiscoDT_ATUALIZACAO_FARMAX: TDateField;
+    CdsProdutosFiscoCODIGOANP: TStringField;
+    CdsProdutosFiscoSUBLIMITEICMS: TFMTBCDField;
+    CdsProdutosFiscoSUBLIMITEFCP: TFMTBCDField;
+    CdsProdutosFiscoSUBLIMITECST: TStringField;
+    CdsProdutosFiscoCODBENEFICIO: TStringField;
+    CdsProdutosFiscoDESONERACAOMOTIVO: TStringField;
+    CdsProdutosFiscoDESONERACAOICMS: TFMTBCDField;
+    CdsProdutosFiscoDESONERACAOFCP: TFMTBCDField;
     SqlProdutosCompostos: TFDQuery;
     DspProdutosCompostos: TDataSetProvider;
     QryProdutosCompostos: TClientDataSet;
@@ -564,22 +581,6 @@ type
     CdsProdutosCompostosDESCRICAO: TStringField;
     CdsProdutosCompostosQUANTIDADE: TFloatField;
     CdsProdutosCompostosENVIADO: TStringField;
-    QryProdutosFiscoCODIGOANP: TStringField;
-    QryProdutosFiscoSUBLIMITEICMS: TFMTBCDField;
-    QryProdutosFiscoSUBLIMITEFCP: TFMTBCDField;
-    QryProdutosFiscoSUBLIMITECST: TStringField;
-    QryProdutosFiscoCODBENEFICIO: TStringField;
-    QryProdutosFiscoDESONERACAOMOTIVO: TStringField;
-    QryProdutosFiscoDESONERACAOICMS: TFMTBCDField;
-    QryProdutosFiscoDESONERACAOFCP: TFMTBCDField;
-    CdsProdutosFiscoCODIGOANP: TStringField;
-    CdsProdutosFiscoSUBLIMITEICMS: TFMTBCDField;
-    CdsProdutosFiscoSUBLIMITEFCP: TFMTBCDField;
-    CdsProdutosFiscoSUBLIMITECST: TStringField;
-    CdsProdutosFiscoCODBENEFICIO: TStringField;
-    CdsProdutosFiscoDESONERACAOMOTIVO: TStringField;
-    CdsProdutosFiscoDESONERACAOICMS: TFMTBCDField;
-    CdsProdutosFiscoDESONERACAOFCP: TFMTBCDField;
     SqlProdutosPrecoQuantidadeConsistencia: TFDQuery;
     DspProdutosPrecoQuantidadeConsistencia: TDataSetProvider;
     CdsProdutosPrecoQuantidadeConsistencia: TClientDataSet;
@@ -592,12 +593,12 @@ type
     SqlProdutosBarras: TFDQuery;
     DspProdutosBarras: TDataSetProvider;
     QryProdutosBarras: TClientDataSet;
-    CdsProdutosBarras: TClientDataSet;
     QryProdutosBarrasID_PRODUTO: TFloatField;
     QryProdutosBarrasCODIGO_BARRAS: TStringField;
+    QryProdutosBarrasQT_EMBALAGEM: TFloatField;
+    CdsProdutosBarras: TClientDataSet;
     CdsProdutosBarrasID_PRODUTO: TFloatField;
     CdsProdutosBarrasCODIGO_BARRAS: TStringField;
-    QryProdutosBarrasQT_EMBALAGEM: TFloatField;
     CdsProdutosBarrasQT_EMBALAGEM: TFloatField;
     CdsProdutosBarrasBARRA_ANTIGA: TStringField;
   private
@@ -607,11 +608,13 @@ type
   end;
 
 var
-  DmExporterClient2: TDmExporterClient2;
+  DM3: TDM3;
 
 implementation
 
-uses uDMExporterClient;
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Udm;
 
 {$R *.dfm}
 

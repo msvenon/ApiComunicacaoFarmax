@@ -1832,8 +1832,8 @@ object DmExporterQuick: TDmExporterQuick
         ParamType = ptInput
       end>
     SQLConnection = SQLConnection1
-    Left = 32
-    Top = 320
+    Left = 40
+    Top = 328
   end
   object DspFiliais: TDataSetProvider
     DataSet = SqlFiliais

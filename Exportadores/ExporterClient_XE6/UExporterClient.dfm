@@ -2,8 +2,8 @@ object FrmExporterClient: TFrmExporterClient
   Left = 1
   Top = 2
   Caption = 'FrmExporterClient'
-  ClientHeight = 21
-  ClientWidth = 104
+  ClientHeight = 142
+  ClientWidth = 205
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,16 @@ object FrmExporterClient: TFrmExporterClient
     URL = 
       'http://farmax.ddns.com.br/ExporterServer/ExporterServer.exe/soap' +
       '/IDm'
+    HTTPWebNode.URL = 
+      'http://farmax.ddns.com.br/ExporterServer/ExporterServer.exe/soap' +
+      '/IDm'
     HTTPWebNode.Agent = 'Borland SOAP 1.2'
-    HTTPWebNode.UseUTF8InHeader = True
-    HTTPWebNode.InvokeOptions = [soIgnoreInvalidCerts, soAutoCheckAccessPointViaUDDI]
-    HTTPWebNode.WebNodeOptions = []
     Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]
     Left = 64
     Top = 6
   end
   object HTTPRIO2: THTTPRIO
     HTTPWebNode.Agent = 'Borland SOAP 1.2'
-    HTTPWebNode.UseUTF8InHeader = True
-    HTTPWebNode.InvokeOptions = [soIgnoreInvalidCerts, soAutoCheckAccessPointViaUDDI]
-    HTTPWebNode.WebNodeOptions = []
     Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]
     Left = 120
     Top = 8

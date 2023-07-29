@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, DB, DBClient, Provider, InvokeRegistry, Rio, SOAPHTTPClient,
   MidasLib, StdCtrls, FMTBcd, SqlExpr, Grids, DBGrids,
-  SOAPConn, IniFiles;
+  SOAPConn, IniFiles, System.Net.URLClient;
 
 type
   TFrmExporterClient = class(TForm)

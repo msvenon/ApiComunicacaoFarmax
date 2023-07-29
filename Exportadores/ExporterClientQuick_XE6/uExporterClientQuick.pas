@@ -52,26 +52,26 @@ type
     {  Sintegra  }
     procedure EnviandoSintegraNotas;//
     procedure EnviandoSintegraNotasItens; //
-    procedure EnviandoSintegraPedidos;
-    procedure EnviandoSintegraR60;
-    procedure EnviandoSintegraR60I;
+    procedure EnviandoSintegraPedidos; ///
+    procedure EnviandoSintegraR60; //
+    procedure EnviandoSintegraR60I;  //
 
-    procedure EnviandoVendasItensExcluidos;
+    procedure EnviandoVendasItensExcluidos; //
 
-    procedure RecebendoItensTransfer;
-    procedure RecebendoTransfer;
-    procedure RecebendoProdutosQuantidade;
-    procedure RecebendoProdutosFP;
-    procedure RecebendoProdutosFidelidade;
-    function  RecebendoCadastro : Boolean;
-    function  RecebendoEstoques : Boolean;
-    Function  RecebendoPrecos : Boolean;
-    procedure RecebendoProdutosDeletados;
-    procedure RecebendoProdutosFidelidadeDeletados;
-    procedure RecebendoProdutosQuantidadeDeletados;
+    procedure RecebendoItensTransfer;  //
+    procedure RecebendoTransfer;  //
+    procedure RecebendoProdutosQuantidade; //
+    procedure RecebendoProdutosFP; //
+    procedure RecebendoProdutosFidelidade;  //
+    function  RecebendoCadastro : Boolean;//
+    function  RecebendoEstoques : Boolean;//
+    Function  RecebendoPrecos : Boolean; //
+    procedure RecebendoProdutosDeletados;  //
+    procedure RecebendoProdutosFidelidadeDeletados;  //
+    procedure RecebendoProdutosQuantidadeDeletados; //
 
-    procedure MontaSQL_Precos(Filial : String);
-    procedure CriaCamposPrecos(sFilial : String);
+    procedure MontaSQL_Precos(Filial : String); //
+    procedure CriaCamposPrecos(sFilial : String); //
     procedure ConsistenciaDados;  //
 
 

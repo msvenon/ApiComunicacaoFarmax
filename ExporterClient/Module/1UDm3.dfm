@@ -1,11 +1,10 @@
-object DmExporterClient2: TDmExporterClient2
+object DM3: TDM3
   OldCreateOrder = False
-  Height = 639
-  Width = 1410
-  object SqlProdutosTotais: TFDQuery
-
+  Height = 736
+  Width = 1349
+  object SqlProdutosTotais: TSQLDataSet
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 40
     Top = 8
   end
@@ -21,23 +20,22 @@ object DmExporterClient2: TDmExporterClient2
     Left = 40
     Top = 104
   end
-  object SqlUsuarios: TFDQuery
+  object SqlUsuarios: TSQLDataSet
     CommandText = 'SELECT '#13#10' *'#13#10'FROM'#13#10' USUARIOS'#13#10'WHERE'#13#10' CD_USUARIO = :CD_USUARIO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'CD_USUARIO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 144
-    Top = 8
+    Left = 128
+    Top = 9
   end
   object DspUsuarios: TDataSetProvider
     DataSet = SqlUsuarios
-    Left = 144
-    Top = 56
+    Left = 128
+    Top = 57
   end
   object QryUsuarios: TClientDataSet
     Aggregates = <>
@@ -48,8 +46,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspUsuarios'
-    Left = 144
-    Top = 104
+    Left = 128
+    Top = 105
     object QryUsuariosCD_USUARIO: TFloatField
       FieldName = 'CD_USUARIO'
       Required = True
@@ -98,8 +96,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspUsuarios'
-    Left = 144
-    Top = 152
+    Left = 128
+    Top = 153
     object CdsUsuariosCD_USUARIO: TFloatField
       FieldName = 'CD_USUARIO'
       Required = True
@@ -139,11 +137,11 @@ object DmExporterClient2: TDmExporterClient2
       FieldName = 'CD_FILIAL'
     end
   end
-  object SqlPermissoesModulos: TFDQuery
+  object SqlPermissoesModulos: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' *'#13#10'FROM'#13#10' PERMISSOES_MODULOS'#13#10'WHERE'#13#10' CD_PERMISSAO = :C' +
       'D_PERMISSAO AND'#13#10' CD_MODULO = :CD_MODULO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -155,7 +153,6 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'CD_MODULO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 312
     Top = 8
   end
@@ -247,18 +244,17 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlPermissoes: TFDQuery
+  object SqlPermissoes: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' *'#13#10'FROM'#13#10' PERMISSOES'#13#10'WHERE'#13#10' CD_PERMISSAO = :CD_PERMIS' +
       'SAO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'CD_PERMISSAO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 216
     Top = 8
   end
@@ -299,22 +295,21 @@ object DmExporterClient2: TDmExporterClient2
       FieldName = 'DESCRICAO'
     end
   end
-  object SqlEncartes: TFDQuery
+  object SqlEncartes: TSQLDataSet
     CommandText = 'SELECT'#13#10' *'#13#10'FROM'#13#10' ENCARTE'#13#10'WHERE'#13#10' ID_ENCARTE = :ID_ENCARTE'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID_ENCARTE'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 649
+    Left = 681
     Top = 354
   end
   object DspEncartes: TDataSetProvider
     DataSet = SqlEncartes
-    Left = 649
+    Left = 681
     Top = 394
   end
   object QryEncartes: TClientDataSet
@@ -326,8 +321,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspEncartes'
-    Left = 649
-    Top = 434
+    Left = 681
+    Top = 442
     object QryEncartesID_ENCARTE: TFloatField
       FieldName = 'ID_ENCARTE'
       Required = True
@@ -371,8 +366,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsEncartes: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 649
-    Top = 474
+    Left = 681
+    Top = 490
     object CdsEncartesID_ENCARTE: TFloatField
       FieldName = 'ID_ENCARTE'
       Required = True
@@ -413,11 +408,11 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlItensEncartes: TFDQuery
+  object SqlItensEncartes: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' *'#13#10'FROM'#13#10' ENCARTE_ITENS'#13#10'WHERE'#13#10' ID_ENCARTE = :ID_ENCAR' +
       'TE AND'#13#10' ID_PRODUTO = :ID_PRODUTO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -429,13 +424,12 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'ID_PRODUTO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 737
+    Left = 757
     Top = 354
   end
   object DspItensEncartes: TDataSetProvider
     DataSet = SqlItensEncartes
-    Left = 737
+    Left = 757
     Top = 394
   end
   object QryItensEncartes: TClientDataSet
@@ -452,8 +446,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspItensEncartes'
-    Left = 737
-    Top = 434
+    Left = 757
+    Top = 442
     object QryItensEncartesID_ENCARTE: TFloatField
       FieldName = 'ID_ENCARTE'
       Required = True
@@ -473,8 +467,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsItensEncartes: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 737
-    Top = 474
+    Left = 757
+    Top = 498
     object CdsItensEncartesID_ENCARTE: TFloatField
       FieldName = 'ID_ENCARTE'
       Required = True
@@ -491,16 +485,15 @@ object DmExporterClient2: TDmExporterClient2
       FieldName = 'PRECO_VENDA'
     end
   end
-  object SqlRedes: TFDQuery
+  object SqlRedes: TSQLDataSet
     CommandText = 'SELECT'#13#10' *'#13#10'FROM'#13#10' REDES'#13#10'WHERE'#13#10' ID_REDE = :ID_REDE'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID_REDE'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 400
     Top = 8
   end
@@ -595,18 +588,17 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlConcorrentes: TFDQuery
+  object SqlConcorrentes: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' *'#13#10'FROM'#13#10' CONCORRENTES'#13#10'WHERE'#13#10' ID_CONCORRENTE = :ID_CO' +
       'NCORRENTE'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID_CONCORRENTE'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 480
     Top = 8
   end
@@ -695,11 +687,11 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlPrecosConcorrentes: TFDQuery
+  object SqlPrecosConcorrentes: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' *'#13#10'FROM'#13#10' PROD_CONCORRENTES'#13#10'WHERE'#13#10' ID_CONCORRENTE = :' +
       'ID_CONCORRENTE AND'#13#10' ID_PRODUTO = :ID_PRODUTO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -711,7 +703,6 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'ID_PRODUTO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 584
     Top = 8
   end
@@ -846,7 +837,7 @@ object DmExporterClient2: TDmExporterClient2
   object CdsPrecosConcorrentesDeletados: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 64
+    Left = 102
     Top = 496
     object CdsPrecosConcorrentesDeletadosID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
@@ -868,26 +859,25 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlContasPagarDeletadas: TFDQuery
+  object SqlContasPagarDeletadas: TSQLDataSet
     CommandText = 
       'SELECT '#13#10' CAMPO1'#13#10'FROM'#13#10' DELETADOS'#13#10'WHERE'#13#10' TABELA = '#39'CONTAS_PAG' +
       'AR'#39
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 804
+    Left = 863
     Top = 356
   end
   object DspContasPagarDeletadas: TDataSetProvider
     DataSet = SqlContasPagarDeletadas
-    Left = 804
+    Left = 863
     Top = 399
   end
   object CdsContasPagarDeletadas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspContasPagarDeletadas'
-    Left = 804
+    Left = 863
     Top = 438
     object CdsContasPagarDeletadasCAMPO1: TStringField
       FieldName = 'CAMPO1'
@@ -896,7 +886,7 @@ object DmExporterClient2: TDmExporterClient2
   object CdsContasReceberDeletados: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 248
+    Left = 264
     Top = 496
     object CdsContasReceberDeletadosID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
@@ -905,13 +895,12 @@ object DmExporterClient2: TDmExporterClient2
       FieldName = 'CD_FILIAL'
     end
   end
-  object SqlCRDeletados: TFDQuery
+  object SqlCRDeletados: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' ID_PRODUTO,'#13#10' CD_FILIAL'#13#10'FROM'#13#10' TEMP_PRODUTOS2'#13#10'WHERE'#13#10 +
       ' PROCESSO = 64'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 696
     Top = 8
   end
@@ -956,18 +945,17 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlLimiteSaldoClientes: TFDQuery
+  object SqlLimiteSaldoClientes: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' CD_CLIENTE,'#13#10' LIMITE_CREDITO,'#13#10' LIMITE_PERCENTUAL,'#13#10' SA' +
       'LDO,'#13#10' STATUS'#13#10'FROM'#13#10' CLIENTES'#13#10'WHERE'#13#10' CD_CLIENTE = :CD_CLIENTE'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'CD_CLIENTE'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 808
     Top = 8
     object SqlLimiteSaldoClientesCD_CLIENTE: TFloatField
@@ -1028,83 +1016,79 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlClasses: TFDQuery
+  object SqlClasses: TSQLDataSet
     CommandText = 'SELECT CD_CLASSE FROM CLASSES'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 40
-    Top = 208
+    Left = 35
+    Top = 212
   end
   object DspClasses: TDataSetProvider
     DataSet = SqlClasses
-    Left = 40
-    Top = 248
+    Left = 35
+    Top = 252
   end
   object CdsClasses: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspClasses'
-    Left = 40
-    Top = 296
+    Left = 35
+    Top = 300
     object CdsClassesCD_CLASSE: TFloatField
       FieldName = 'CD_CLASSE'
       Required = True
     end
   end
-  object SqlGrupos: TFDQuery
+  object SqlGrupos: TSQLDataSet
     CommandText = 'SELECT CD_GRUPO FROM GRUPOS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 136
-    Top = 208
+    Left = 119
+    Top = 213
   end
   object DspGrupos: TDataSetProvider
     DataSet = SqlGrupos
-    Left = 136
-    Top = 248
+    Left = 119
+    Top = 253
   end
   object CdsGrupos: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspGrupos'
-    Left = 136
-    Top = 296
+    Left = 119
+    Top = 301
     object CdsGruposCD_GRUPO: TFloatField
       FieldName = 'CD_GRUPO'
       Required = True
     end
   end
-  object SqlLaboratorios: TFDQuery
+  object SqlLaboratorios: TSQLDataSet
     CommandText = 'SELECT CD_LABORATORIO FROM LABORATORIOS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 232
-    Top = 208
+    Left = 216
+    Top = 212
   end
   object DspLaboratorios: TDataSetProvider
     DataSet = SqlLaboratorios
-    Left = 232
-    Top = 248
+    Left = 216
+    Top = 252
   end
   object CdsLaboratorios: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspLaboratorios'
-    Left = 232
-    Top = 296
+    Left = 216
+    Top = 300
     object CdsLaboratoriosCD_LABORATORIO: TFloatField
       FieldName = 'CD_LABORATORIO'
       Required = True
     end
   end
-  object SqlGruposCompras: TFDQuery
+  object SqlGruposCompras: TSQLDataSet
     CommandText = 'SELECT CD_GRUPOCOMPRA FROM GRUPOSCOMPRAS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 416
     Top = 208
   end
@@ -1124,11 +1108,10 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlGruposBalanco: TFDQuery
+  object SqlGruposBalanco: TSQLDataSet
     CommandText = 'SELECT CD_GRUPOBALANCO FROM GRUPOSBALANCO'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 520
     Top = 208
   end
@@ -1148,11 +1131,10 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlDistribuidores: TFDQuery
+  object SqlDistribuidores: TSQLDataSet
     CommandText = 'SELECT CD_DISTRIBUIDOR FROM DISTRIBUIDORES'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 616
     Top = 208
   end
@@ -1172,59 +1154,56 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlFamilias: TFDQuery
+  object SqlFamilias: TSQLDataSet
     CommandText = 'SELECT ID_FAMILIA FROM FAMILIAS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 320
-    Top = 208
+    Left = 314
+    Top = 212
   end
   object DspFamilias: TDataSetProvider
     DataSet = SqlFamilias
-    Left = 320
-    Top = 248
+    Left = 314
+    Top = 252
   end
   object CdsFamilias: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspFamilias'
-    Left = 320
-    Top = 296
+    Left = 314
+    Top = 300
     object CdsFamiliasID_FAMILIA: TFloatField
       FieldName = 'ID_FAMILIA'
       Required = True
     end
   end
-  object SqlCartoes: TFDQuery
+  object SqlCartoes: TSQLDataSet
     CommandText = 'SELECT CD_CARTAO FROM CARTOES'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 13
-    Top = 354
+    Left = 24
+    Top = 361
   end
   object DspCartoes: TDataSetProvider
     DataSet = SqlCartoes
-    Left = 13
+    Left = 19
     Top = 394
   end
   object CdsCartoes: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCartoes'
-    Left = 13
+    Left = 19
     Top = 442
     object CdsCartoesCD_CARTAO: TFloatField
       FieldName = 'CD_CARTAO'
       Required = True
     end
   end
-  object SqlPlanoContas: TFDQuery
+  object SqlPlanoContas: TSQLDataSet
     CommandText = 'SELECT CD_PLANO_CONTAS FROM PLANO_CONTAS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 109
     Top = 354
   end
@@ -1244,11 +1223,10 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlVendedores: TFDQuery
+  object SqlVendedores: TSQLDataSet
     CommandText = 'SELECT CD_VENDEDOR FROM VENDEDORES'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 205
     Top = 354
   end
@@ -1268,11 +1246,10 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlConvenios: TFDQuery
+  object SqlConvenios: TSQLDataSet
     CommandText = 'SELECT CD_CONVENIO FROM CONVENIOS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 293
     Top = 354
   end
@@ -1292,14 +1269,13 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlClientes: TFDQuery
+  object SqlClientes: TSQLDataSet
     CommandText = 
       'SELECT CD_CLIENTE FROM CLIENTES'#13#10'WHERE CD_CLIENTE IN'#13#10'(SELECT DI' +
       'STINCT CD_CLIENTE FROM CONTAS_RECEBER WHERE '#13#10'CD_FORMA_PAGAMENTO' +
       ' > 2 AND STATUS = '#39'A'#39')'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 389
     Top = 354
   end
@@ -1322,31 +1298,30 @@ object DmExporterClient2: TDmExporterClient2
   object CdsVirtualClientes: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 416
-    Top = 490
+    Left = 392
+    Top = 498
     object CdsVirtualClientesCD_CLIENTE: TFloatField
       FieldName = 'CD_CLIENTE'
       Required = True
     end
   end
-  object SqlContasReceber: TFDQuery
+  object SqlContasReceber: TSQLDataSet
     CommandText = 
       'SELECT CD_CONTAS_RECEBER FROM CONTAS_RECEBER'#13#10'WHERE CD_CONTAS_RE' +
       'CEBER = :CD_CONTAS_RECEBER'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'CD_CONTAS_RECEBER'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 493
+    Left = 468
     Top = 354
   end
   object DspContasReceber: TDataSetProvider
     DataSet = SqlContasReceber
-    Left = 493
+    Left = 468
     Top = 394
   end
   object CdsContasReceber: TClientDataSet
@@ -1358,7 +1333,7 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspContasReceber'
-    Left = 493
+    Left = 468
     Top = 442
     object CdsContasReceberCD_CONTAS_RECEBER: TFloatField
       FieldName = 'CD_CONTAS_RECEBER'
@@ -1368,44 +1343,42 @@ object DmExporterClient2: TDmExporterClient2
   object CdsVirtualContasReceber: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 520
-    Top = 490
+    Left = 496
+    Top = 498
     object CdsVirtualContasReceberCD_CONTAS_RECEBER: TFloatField
       FieldName = 'CD_CONTAS_RECEBER'
       Required = True
     end
   end
-  object SqlContasReceberTodas: TFDQuery
+  object SqlContasReceberTodas: TSQLDataSet
     CommandText = 'SELECT CD_CONTAS_RECEBER FROM CONTAS_RECEBER'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 568
+    Left = 582
     Top = 354
   end
   object DspContasReceberTodas: TDataSetProvider
     DataSet = SqlContasReceberTodas
-    Left = 568
+    Left = 582
     Top = 394
   end
   object CdsContasReceberTodas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspContasReceberTodas'
-    Left = 568
+    Left = 582
     Top = 442
     object CdsContasReceberTodasCD_CONTAS_RECEBER: TFloatField
       FieldName = 'CD_CONTAS_RECEBER'
       Required = True
     end
   end
-  object TbCeParame: TFDQuery
+  object TbCeParame: TSQLDataSet
     CommandText = 
       'SELECT'#13#10' CD_FILIAL,'#13#10' PRECIFICACAO_UNICA,'#13#10' TIPO_LOJA'#13#10'FROM'#13#10' PA' +
       'RAMETROS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 715
     Top = 205
   end
@@ -1432,11 +1405,10 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlConexao: TFDQuery
+  object SqlConexao: TSQLDataSet
     CommandText = 'SELECT'#13#10' CGC '#13#10'FROM'#13#10' PARAMETROS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 808
     Top = 205
   end
@@ -1456,29 +1428,27 @@ object DmExporterClient2: TDmExporterClient2
       Size = 18
     end
   end
-  object Sql: TFDQuery
-
+  object Sql: TSQLDataSet
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 64
+    Left = 96
     Top = 552
   end
   object CdsVirtualCD: TClientDataSet
     Aggregates = <>
     Params = <>
     Left = 248
-    Top = 544
+    Top = 552
     object CdsVirtualCDCD: TFloatField
       FieldName = 'CD'
     end
   end
-  object SqlSintegraNFEntradaDeletados: TFDQuery
+  object SqlSintegraNFEntradaDeletados: TSQLDataSet
     CommandText = 
       'SELECT '#13#10' CAMPO1, CAMPO2'#13#10'FROM'#13#10' DELETADOS'#13#10'WHERE'#13#10' TABELA = '#39'SI' +
       'NTEGRA_FN_ENTRADA'#39
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
     Left = 928
     Top = 205
   end
@@ -1500,16 +1470,15 @@ object DmExporterClient2: TDmExporterClient2
       FieldName = 'CAMPO2'
     end
   end
-  object SqlPerfilCliente: TFDQuery
+  object SqlPerfilCliente: TSQLDataSet
     CommandText = 'SELECT * FROM PERFIL_CLIENTE'#13#10'WHERE ID_PERFIL_CLIENTE = :ID'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 928
     Top = 8
   end
@@ -1560,16 +1529,15 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlPrincipioAtivo: TFDQuery
+  object SqlPrincipioAtivo: TSQLDataSet
     CommandText = 'SELECT * FROM PRINCIPIO_ATIVO'#13#10'WHERE CD_PRINCIPIO = :ID'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
     Left = 1024
     Top = 8
   end
@@ -1612,35 +1580,34 @@ object DmExporterClient2: TDmExporterClient2
       Size = 130
     end
   end
-  object SqlUsuariosConsistencia: TFDQuery
+  object SqlUsuariosConsistencia: TSQLDataSet
     CommandText = 'SELECT CD_USUARIO FROM USUARIOS'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 893
+    Left = 976
     Top = 354
   end
   object DspUsuariosConsistencia: TDataSetProvider
     DataSet = SqlUsuariosConsistencia
-    Left = 893
+    Left = 976
     Top = 394
   end
   object CdsUsuariosConsistencia: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspUsuariosConsistencia'
-    Left = 893
+    Left = 976
     Top = 442
     object CdsUsuariosConsistenciaCD_USUARIO: TFloatField
       FieldName = 'CD_USUARIO'
       Required = True
     end
   end
-  object SqlProdDistr: TFDQuery
+  object SqlProdDistr: TSQLDataSet
     CommandText = 
       'SELECT * FROM PROD_DISTR'#13#10'WHERE ID_PRODUTO = :ID_PRODUTO AND'#13#10'CD' +
       '_DISTRIBUIDOR = :CD_DISTRIBUIDOR'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -1652,14 +1619,13 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'CD_DISTRIBUIDOR'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1016
-    Top = 352
+    Left = 1071
+    Top = 355
   end
   object DspProdDistr: TDataSetProvider
     DataSet = SqlProdDistr
-    Left = 1016
-    Top = 392
+    Left = 1071
+    Top = 395
   end
   object QryProdDistr: TClientDataSet
     Aggregates = <>
@@ -1675,8 +1641,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspProdDistr'
-    Left = 1016
-    Top = 440
+    Left = 1071
+    Top = 443
     object QryProdDistrID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -1707,8 +1673,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsProdDistr: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 1016
-    Top = 488
+    Left = 1071
+    Top = 491
     object CdsProdDistrID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -1736,23 +1702,22 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlProdutosFisco: TFDQuery
+  object SqlProdutosFisco: TSQLDataSet
     CommandText = 'SELECT * FROM PRODUTOS_FISCO'#13#10'WHERE ID_PRODUTO = :ID_PRODUTO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
         Name = 'ID_PRODUTO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1112
-    Top = 352
+    Left = 1151
+    Top = 360
   end
   object DspProdutosFisco: TDataSetProvider
     DataSet = SqlProdutosFisco
-    Left = 1112
-    Top = 392
+    Left = 1151
+    Top = 400
   end
   object QryProdutosFisco: TClientDataSet
     Aggregates = <>
@@ -1763,8 +1728,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspProdutosFisco'
-    Left = 1112
-    Top = 440
+    Left = 1151
+    Top = 448
     object QryProdutosFiscoID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -2247,8 +2212,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsProdutosFisco: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 1112
-    Top = 488
+    Left = 1151
+    Top = 496
     object CdsProdutosFiscoID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -2728,12 +2693,12 @@ object DmExporterClient2: TDmExporterClient2
       Size = 2
     end
   end
-  object SqlProdutosCompostos: TFDQuery
+  object SqlProdutosCompostos: TSQLDataSet
     CommandText = 
       'SELECT * FROM PRODUTOS_COMPOSTOS'#13#10'WHERE ID_PRODUTO_PRINCIPAL = :' +
       'ID_PRODUTO_PRINCIPAL AND'#13#10'ID_PRODUTO_COMPOSICAO = :ID_PRODUTO_CO' +
       'MPOSICAO'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -2745,14 +2710,13 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'ID_PRODUTO_COMPOSICAO'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1112
-    Top = 152
+    Left = 1151
+    Top = 168
   end
   object DspProdutosCompostos: TDataSetProvider
     DataSet = SqlProdutosCompostos
-    Left = 1112
-    Top = 192
+    Left = 1151
+    Top = 200
   end
   object QryProdutosCompostos: TClientDataSet
     Aggregates = <>
@@ -2768,8 +2732,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspProdutosCompostos'
-    Left = 1112
-    Top = 240
+    Left = 1151
+    Top = 248
     object QryProdutosCompostosID_PRODUTO_PRINCIPAL: TFloatField
       FieldName = 'ID_PRODUTO_PRINCIPAL'
       Required = True
@@ -2793,8 +2757,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsProdutosCompostos: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 1112
-    Top = 288
+    Left = 1151
+    Top = 296
     object CdsProdutosCompostosID_PRODUTO_PRINCIPAL: TFloatField
       FieldName = 'ID_PRODUTO_PRINCIPAL'
       Required = True
@@ -2815,27 +2779,26 @@ object DmExporterClient2: TDmExporterClient2
       Size = 1
     end
   end
-  object SqlProdutosPrecoQuantidadeConsistencia: TFDQuery
+  object SqlProdutosPrecoQuantidadeConsistencia: TSQLDataSet
     CommandText = 
       'SELECT ID_PRODUTO, QUANTIDADEINICIAL FROM PRODUTOS_PRECO_QUANTID' +
       'ADE'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1261
-    Top = 26
+    Left = 1151
+    Top = 7
   end
   object DspProdutosPrecoQuantidadeConsistencia: TDataSetProvider
     DataSet = SqlProdutosPrecoQuantidadeConsistencia
-    Left = 1261
-    Top = 66
+    Left = 1151
+    Top = 47
   end
   object CdsProdutosPrecoQuantidadeConsistencia: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspProdutosPrecoQuantidadeConsistencia'
-    Left = 1261
-    Top = 114
+    Left = 1151
+    Top = 95
     object CdsProdutosPrecoQuantidadeConsistenciaID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -2845,35 +2808,34 @@ object DmExporterClient2: TDmExporterClient2
       Required = True
     end
   end
-  object SqlProdutosFidelidadeConsistencia: TFDQuery
+  object SqlProdutosFidelidadeConsistencia: TSQLDataSet
     CommandText = 'SELECT ID_PRODUTO FROM PRODUTOS_FIDELIDADE'
-
+    MaxBlobSize = -1
     Params = <>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1261
-    Top = 186
+    Left = 1055
+    Top = 202
   end
   object DspProdutosFidelidadeConsistencia: TDataSetProvider
     DataSet = SqlProdutosFidelidadeConsistencia
-    Left = 1261
-    Top = 226
+    Left = 1055
+    Top = 242
   end
   object CdsProdutosFidelidadeConsistencia: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspProdutosFidelidadeConsistencia'
-    Left = 1261
-    Top = 274
+    Left = 1055
+    Top = 290
     object CdsProdutosFidelidadeConsistenciaID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
     end
   end
-  object SqlProdutosBarras: TFDQuery
+  object SqlProdutosBarras: TSQLDataSet
     CommandText = 
       'SELECT * FROM PRODUTOS_BARRAS'#13#10'WHERE '#13#10' ID_PRODUTO = :ID_PRODUTO' +
       ' AND '#13#10' CODIGO_BARRAS = :CODIGO_BARRAS'
-
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftFloat
@@ -2885,14 +2847,13 @@ object DmExporterClient2: TDmExporterClient2
         Name = 'CODIGO_BARRAS'
         ParamType = ptInput
       end>
-    Connection = DmExporterClient.SQLConnection1
-    Left = 1248
-    Top = 344
+    Left = 1151
+    Top = 359
   end
   object DspProdutosBarras: TDataSetProvider
     DataSet = SqlProdutosBarras
-    Left = 1248
-    Top = 384
+    Left = 1151
+    Top = 399
   end
   object QryProdutosBarras: TClientDataSet
     Aggregates = <>
@@ -2908,8 +2869,8 @@ object DmExporterClient2: TDmExporterClient2
         ParamType = ptInput
       end>
     ProviderName = 'DspProdutosBarras'
-    Left = 1248
-    Top = 432
+    Left = 1151
+    Top = 444
     object QryProdutosBarrasID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -2926,8 +2887,8 @@ object DmExporterClient2: TDmExporterClient2
   object CdsProdutosBarras: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 1248
-    Top = 480
+    Left = 1151
+    Top = 494
     object CdsProdutosBarrasID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True

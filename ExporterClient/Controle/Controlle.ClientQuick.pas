@@ -17,17 +17,16 @@ uses
   DataSet.Serialize,
   RESTRequest4D;
 
-    Function  StrTran( cString, cProcura, cTroca : string ): string;
-    function EnviarContasReceber : Boolean;
-    function EnviarProdutosLotes : Boolean;
-    function EnviarProdutosLotesST : Boolean;
-    function BuscaMatrizProdutosIncluidos : Boolean;
-    function EnviandoEstoque : Boolean;
-    function EnviandoClientes: Boolean;
-    function EnviandoPosicaoEstoque : Boolean;
-
-    procedure EnvioLotes;
-    procedure EnvioLotesAPrazo;
+    Function StrTran( cString, cProcura, cTroca : string ): string;
+          // Envio //
+    function  EnviarContasReceber : Boolean;
+    function  EnviarProdutosLotes : Boolean;
+    function  EnviarProdutosLotesST : Boolean;
+    function  EnviandoEstoque : Boolean;
+    function  EnviandoClientes: Boolean;
+    function  EnviandoPosicaoEstoque : Boolean;
+    procedure EnvioLancamentos;
+    procedure EnvioLancamentosAPrazo;{Lancamentos a prazo}
     procedure EnvioCaixa;
     procedure EnviandoOperadoresCaixa;
     procedure EnviandoCRM;
@@ -44,36 +43,35 @@ uses
     procedure EnviandoCompras;
     procedure EnviandoItensCompras;
     procedure EnviandoItensComprasLote;
-
+    procedure EnviandoUsuarios;
+    procedure EnviandoVendasItensExcluidos;
      {  Sintegra  }
     procedure EnviandoSintegraNotas;
     procedure EnviandoSintegraNotasItens;
-//    procedure EnviandoSintegraPedidos;
-//    procedure EnviandoSintegraR60;
-//    procedure EnviandoSintegraR60I;
-//
-//
-//    procedure EnviandoVendasItensExcluidos;
-//
-//    procedure RecebendoItensTransfer;
-//    procedure RecebendoTransfer;
-//    procedure RecebendoProdutosQuantidade;
-//    procedure RecebendoProdutosFP;
-//    procedure RecebendoProdutosFidelidade;
-//    function  RecebendoCadastro : Boolean;
-//    function  RecebendoEstoques : Boolean;
-//    Function  RecebendoPrecos : Boolean;
-//    procedure RecebendoProdutosDeletados;
-//    procedure RecebendoProdutosFidelidadeDeletados;
-//    procedure RecebendoProdutosQuantidadeDeletados;
+    procedure EnviandoSintegraPedidos;
+    procedure EnviandoSintegraR60;
+    procedure EnviandoSintegraR60I;
+       //recebimento//
+    procedure RecebendoItensTransfer;
+    procedure RecebendoTransfer;
+    procedure RecebendoProdutosQuantidade;
+    procedure RecebendoProdutosFP;
+    procedure RecebendoProdutosFidelidade;
+    procedure RecebendoProdutosFidelidadeDeletados;
+    procedure RecebendoProdutosQuantidadeDeletados;
+    procedure RecebendoProdutosDeletados;
+    function  BuscaMatrizProdutosIncluidos : Boolean;
+    function  RecebendoCadastro : Boolean;
+    function  RecebendoEstoques : Boolean;
+    Function  RecebendoPrecos : Boolean;
 
 
 
-
-
+       {consistencia}
     procedure ConsistenciaDados;
     procedure MontaSQL_Precos(Filial : String);
     procedure CriaCamposPrecos(sFilial : String);
+    function  SetaEnviado9 : Boolean;
 
 
 var
@@ -90,8 +88,6 @@ var
 
   NLancamentos, NCaixa, NTransfer, NItensTransfer, NContasReceber : Integer;
   NLancamentosLoja, NCaixaLoja, NTransferLoja, NItensTransferLoja, NContasReceberLoja : Integer;
-
-
 
 
 
@@ -147,11 +143,11 @@ begin
           // Memo1.lines.SaveToFile(ExtractFilePath(Application.ExeName)+ 'testejson.txt');
 
            LResponse := TRequest.New.BaseURL(dm.BaseUrl )
-            .Resource('clientes')
-              .AddBody(arrayclientes.ToString)
-                .Accept('application/json')
-                 .Post;
-                    FreeAndNil(arrayclientes);
+           .Resource('clientes')
+           .AddBody(arrayclientes.ToString)
+           .Accept('application/json')
+           .Post;
+            FreeAndNil(arrayclientes);
 
            if LResponse.StatusCode = 200 then
            begin
@@ -167,8 +163,6 @@ begin
              dm.Query.SQL.Clear;
              dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 14');
              dm.Query.ExecSQL(false);
-
-
            end
            else
            begin
@@ -179,6 +173,7 @@ begin
          except
               on E:Exception do
                 begin
+                 GeraLog('Erro no envio de cliente:');
                  Result := False;
                 end;
 
@@ -190,7 +185,7 @@ begin
       end;
 
   finally
-
+     dm.Query.SQL.Clear;
   end;
 
 
@@ -203,87 +198,87 @@ Sql: String;
 LResponse: IResponse;
 arrayconstasreceber :TJSONArray;
 begin
-  //processamento e envio de contas receber
-  Try
 
+  //processamento e envio de contas receber
+ 
+   try
         //Result := True;
 
-        Sql := 'SELECT CONTAS_RECEBER.* FROM CONTAS_RECEBER, TEMP_PRODUTOS2 WHERE TEMP_PRODUTOS2.PROCESSO = 3 AND CONTAS_RECEBER.CD_CONTAS_RECEBER = TEMP_PRODUTOS2.ID_PRODUTO';
+      Sql := 'SELECT CONTAS_RECEBER.* FROM CONTAS_RECEBER, TEMP_PRODUTOS2 WHERE TEMP_PRODUTOS2.PROCESSO = 3 AND CONTAS_RECEBER.CD_CONTAS_RECEBER = TEMP_PRODUTOS2.ID_PRODUTO';
 
-         dm.Query.SQL.Clear;
-         dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3');
-         dm.Query.ExecSQL(false);
+       dm.Query.SQL.Clear;
+       dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3');
+       dm.Query.ExecSQL(false);
 
-         dm.Query.SQL.Clear;
-         dm.Query.SQL.Add('INSERT INTO TEMP_PRODUTOS2 SELECT FIRST 1000 * FROM TEMP_PRODUTOS WHERE PROCESSO = 3');
-         dm.Query.ExecSQL(false);
+       dm.Query.SQL.Clear;
+       dm.Query.SQL.Add('INSERT INTO TEMP_PRODUTOS2 SELECT FIRST 1000 * FROM TEMP_PRODUTOS WHERE PROCESSO = 3');
+       dm.Query.ExecSQL(false);
 
-         dm.Query.SQL.Clear;
-         dm.Query.Open(sql);
+       dm.Query.SQL.Clear;
+       dm.Query.Open(sql);
 
-         TDataSetSerializeConfig.GetInstance.Export.FormatDate :='DD/MM/YYYY';
+       TDataSetSerializeConfig.GetInstance.Export.FormatDate :='DD/MM/YYYY';
 
-        if dm.Query.RecordCount <> 0 then
-         begin
-            GravaLog(TimetoStr(Time) + ' - Enviando Contas a Receber: ' + FloatToStr(dm.Query.RecordCount));
+      if dm.Query.RecordCount <> 0 then
+       begin
+          GravaLog(TimetoStr(Time) + ' - Enviando Contas a Receber: ' + FloatToStr(dm.Query.RecordCount));
 
-            arrayconstasreceber :=TJSONArray.Create;
-            arrayconstasreceber := dm.Query.ToJSONArray();
+          arrayconstasreceber :=TJSONArray.Create;
+          arrayconstasreceber := dm.Query.ToJSONArray();
 
-               //Memo1.Text:= arrayclientes.ToString;
-              // Memo1.lines.SaveToFile(ExtractFilePath(Application.ExeName)+ 'testejson.txt');
+             //Memo1.Text:= arrayclientes.ToString;
+            // Memo1.lines.SaveToFile(ExtractFilePath(Application.ExeName)+ 'testejson.txt');
 
-           LResponse := TRequest.New.BaseURL(dm.BaseUrl )
-            .Resource('contasreceber')
-              .AddBody(arrayconstasreceber.ToString)
-                .Accept('application/json')
-                 .Post;
-                    FreeAndNil(arrayconstasreceber);
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('contasreceber')
+         .AddBody(arrayconstasreceber.ToString)
+         .Accept('application/json')
+         .Post;
+         FreeAndNil(arrayconstasreceber);
 
 
-            try
+          try
 
-              if LResponse.StatusCode = 200 then
-                 begin
-                   GeraLog(TimetoStr(Time) + ' - total: '+FloatToStr(dm.Query.RecordCount) + ' - de Contas receber enviado.' );
-                   Result:=true;
+         if LResponse.StatusCode = 200 then
+           begin
+             GeraLog(TimetoStr(Time) + ' - total: '+FloatToStr(dm.Query.RecordCount) + ' - de Contas receber enviado.' );
+             Result:=true;
 
-                   dm.Query.SQL.Clear;
-                   dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS WHERE PROCESSO = 3 AND ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3)');
-                   dm.Query.ExecSQL(false);
+             dm.Query.SQL.Clear;
+             dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS WHERE PROCESSO = 3 AND ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3)');
+             dm.Query.ExecSQL(false);
 
-                   dm.Query.SQL.Clear;
-                   dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3');
-                   dm.Query.ExecSQL(false);
+             dm.Query.SQL.Clear;
+             dm.Query.SQL.Add('DELETE FROM TEMP_PRODUTOS2 WHERE PROCESSO = 3');
+             dm.Query.ExecSQL(false);
 
-                 end
-                 else
-                 begin
-                   Result := false;
-                   exit;
-                 end;
+           end
+           else
+           begin
+             Result := false;
+             exit;
+           end;
 
-             Except
-              on E:Exception do
-                 begin
-                    GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Contas a Receber - ' +LResponse.Content );
-                   dm.Query.SQL.Clear;
-                   dm.Query.SQL.Add('ALTER TRIGGER TG_AT_DT_ALTERACAO_CR ACTIVE');
-                   dm.Query.ExecSQL(false);
+         Except  on E:Exception do
+             begin
+                GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Contas a Receber - ' +LResponse.Content );
+               dm.Query.SQL.Clear;
+               dm.Query.SQL.Add('ALTER TRIGGER TG_AT_DT_ALTERACAO_CR ACTIVE');
+               dm.Query.ExecSQL(false);
 
-                   Result := False;
-                 end;
+               Result := False;
+             end;            
 
-             end;
+         end ;
+         
+       end
+      else
+       begin
+         Result := False;
+         GravaLog(TimetoStr(Time) + ' - Não foi encontrado Contas a Receber para envio. ' );
+       end;      
 
-         end
-        else
-         begin
-           Result := False;
-           GravaLog(TimetoStr(Time) + ' - Não foi encontrado Contas a Receber para envio. ' );
-         end;
-
-  Finally
+   Finally
 
     dm.Query.SQL.Clear;
     dm.Query.SQL.Add('ALTER TRIGGER TG_AT_DT_ALTERACAO_CR ACTIVE');
@@ -292,8 +287,8 @@ begin
     dm.Query.SQL.Clear;
     dm.Query.Open(sql);
 
-  End;
-
+    End;
+ 
 end;
 
 function EnviarProdutosLotes : Boolean;
@@ -481,7 +476,7 @@ begin
 
 end;
 
-procedure EnvioLotes;
+procedure EnvioLancamentos;
 var
   Sql: String;
   LResponse: IResponse;
@@ -655,8 +650,8 @@ begin
     GravaLog(TimetoStr(Time) + ' - Consistencia de Dados - Inicio ');
     Dm.CdsControlador.Close;
     Dm.FDControlador.sql.Text :=  'SELECT COUNT(ID_PRODUTO) AS N_ITENS, ' +
-                                  'SUM(ESTOQUE_' + DM.cdfilialparametro + ') AS N_UNIDADES, ' +
-                                  'SUM(CAST(CAST(CUSTO_UNITARIO_' + DM.cdfilialparametro + ' AS NUMERIC(10,2)) AS DOUBLE PRECISION)) AS T_CUSTO, ' +
+                                  'SUM(ESTOQUE_' + FloatToStr(dM.cdfilialparametro)+ ') AS N_UNIDADES, ' +
+                                  'SUM(CAST(CAST(CUSTO_UNITARIO_' + FloatToStr(DM.cdfilialparametro) + ' AS NUMERIC(10,2)) AS DOUBLE PRECISION)) AS T_CUSTO, ' +
                                   'SUM(CAST(CAST(PRECO_VENDA AS NUMERIC(10,2)) AS DOUBLE PRECISION)) AS T_VENDA, ' +
                                   'SUM(CAST(CAST(PRECO_PROMOCAO AS NUMERIC(10,2)) AS DOUBLE PRECISION)) AS T_PROMOCAO, ' +
                                   'SUM(PRECO_VENDA) AS CLASSES, ' +
@@ -775,7 +770,7 @@ begin
 
 end;
 
-procedure EnvioLotesAPrazo;
+procedure EnvioLancamentosAPrazo;
 var
  sql:string;
  LResponse: IResponse;
@@ -811,7 +806,7 @@ begin
        Dm.FDceLotes2.Open(Sql);
        Dm.FDceLotes2.Params[0].DataType := ftFloat;
        Dm.CdsCeLotes2.FetchParams;
-       Dm.CdsCeLotes2.Params[0].AsFloat :=StrToFloat(dm.cdfilialparametro);
+       Dm.CdsCeLotes2.Params[0].AsFloat :=dm.cdfilialparametro;
        Dm.CdsCeLotes2.Open;
 
        if Dm.CdsCeLotes2.RecordCount <> 0 then
@@ -1210,7 +1205,7 @@ begin
 
                   Dm.Query.SQL.Text := 'INSERT INTO PRODUTOS (ID_PRODUTO, CD_PRODUTO, CODIGO_BARRAS_1, CODIGO_BARRAS_2, DESCRICAO, ' +
                                      ' CD_LABORATORIO, CD_GRUPO, CD_CLASSE, TIPO_PRODUTO, IDENTIFICADOR, QT_EMBALAGEM, ' +
-                                     ' COMISSAO, CUSTO_UNITARIO, CUSTO_UNITARIO_' + dm.cdfilialparametro + ', CUSTO_MEDIO, CUSTO_MEDIO_' + dm.cdfilialparametro +
+                                     ' COMISSAO, CUSTO_UNITARIO, CUSTO_UNITARIO_' + FloatToStr(dm.cdfilialparametro) + ', CUSTO_MEDIO, CUSTO_MEDIO_' + FloatToStr(dm.cdfilialparametro) +
                                      ', PRECO_VENDA, PRECO_PROMOCAO, ICMS, MARGEM, MARGEM_PROMOCAO, DT_CADASTRO, CURVA, ENTRA_PEDIDO_ELETRONICO, STATUS, ' +
                                      ' CD_LISTA, CD_PRINCIPIO, USOCONTINUO, PIS_COFINS, NCM, CD_GRUPOBALANCO, CD_GRUPOCOMPRA, ID_FAMILIA, CD_SUBGRUPO, CEST, ' +
                                      ' CD_CFOP, SITUACAOTRIBUTARIA, ORIGEM, CSOSN, IAT, IPPT, COMPRIMIDOSCAIXA, CONTROLADO, GENERICO, DT_VENCIMENTO_PROMOCAO, OBSERVACAO ) VALUES (' +
@@ -1306,12 +1301,12 @@ begin
     Dm.fdCeProdutos.ExecSql(True);
 
     Dm.fdCeProdutos.sql.Text :=
-              'SELECT PRODUTOS.ID_PRODUTO, PRODUTOS.ESTOQUE_' + dm.cdfilialparametro + ', ' +
-              '       PRODUTOS.DT_ULT_VENDA_' + dm.cdfilialparametro + ' ,' +
-              '       PRODUTOS.DT_ULT_COMPRA_' + dm.cdfilialparametro + ', ' +
-              '       CAST(PRODUTOS.CUSTO_UNITARIO_' + dm.cdfilialparametro + ' AS NUMERIC(10,2)) AS CUSTO_UNITARIO_' + dm.cdfilialparametro + ', ' +
-              '       CAST(PRODUTOS.CUSTO_MEDIO_' + dm.cdfilialparametro + ' AS NUMERIC(10,2)) AS CUSTO_MEDIO_' + dm.cdfilialparametro + ', ' +
-              '       PRODUTOS.FACE_' + dm.cdfilialparametro + ', IDENTIFICADOR FROM PRODUTOS, TEMP_PRODUTOS2 ' +
+              'SELECT PRODUTOS.ID_PRODUTO, PRODUTOS.ESTOQUE_' + FloatToStr(dm.cdfilialparametro) + ', ' +
+              '       PRODUTOS.DT_ULT_VENDA_'        + FloatToStr(dm.cdfilialparametro) + ' ,' +
+              '       PRODUTOS.DT_ULT_COMPRA_'       + FloatToStr(dm.cdfilialparametro) + ', ' +
+              '       CAST(PRODUTOS.CUSTO_UNITARIO_' + FloatToStr(dm.cdfilialparametro) + ' AS NUMERIC(10,2)) AS CUSTO_UNITARIO_' + FloatToStr(dm.cdfilialparametro) + ', ' +
+              '       CAST(PRODUTOS.CUSTO_MEDIO_'    + FloatToStr(dm.cdfilialparametro) + ' AS NUMERIC(10,2)) AS CUSTO_MEDIO_' + FloatToStr(dm.cdfilialparametro) + ', ' +
+              '       PRODUTOS.FACE_'                + FloatToStr(dm.cdfilialparametro) + ', IDENTIFICADOR FROM PRODUTOS, TEMP_PRODUTOS2 ' +
               'WHERE  TEMP_PRODUTOS2.PROCESSO = 7 AND PRODUTOS.ID_PRODUTO = TEMP_PRODUTOS2.ID_PRODUTO';
 
     Dm.CdsCeProdutos.Params.Clear;
@@ -1671,7 +1666,7 @@ end;
 
 procedure EnviandoItensTransfer;
 var
-  sql:string;
+
 LResponse: IResponse;
 arrayItensTransfer:TJSONArray;
 begin
@@ -1913,7 +1908,7 @@ end;
 
 procedure EnviandoCadernoFaltas;
 var
-sql:String;
+
 LResponse: IResponse;
 arrayCadernoFaltas:TJSONArray;
 begin
@@ -1966,14 +1961,13 @@ end;
 
 Procedure EnviandoPrecosFilial;
 var
-sql:String;
 LResponse: IResponse;
 arrayCadernoFaltas:TJSONArray;
 begin
 
    Try
      Dm.CdsPrecoVenda.Close;
-     MontaSQL_Precos(dm.cdfilialparametro);
+     MontaSQL_Precos(FloatToStr(dm.cdfilialparametro));
      Dm.CdsPrecoVenda.Open;
 
      if Dm.CdsPrecoVenda.RecordCount <> 0 then
@@ -2054,7 +2048,7 @@ begin
                 ' TEMP_PRODUTOS.PROCESSO = 52 AND TEMP_PRODUTOS.ENVIADO = ' + QuotedStr('9');
   Dm.FDPrecoVenda.sql.Text := ComandoSQL;
   Dm.FDPrecoVenda.Params.Clear;
-  CriaCamposPrecos(dm.cdfilialparametro);
+  CriaCamposPrecos(FloatToStr(dm.cdfilialparametro));
 
 end;
 
@@ -2328,7 +2322,6 @@ begin
         Except
            on E:Exception do
             begin
-              Result := False;
               GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de Posicao de Estoque - '+E.Message);
               Dm.CdsPosicaoEstoque.Close;
 
@@ -2745,7 +2738,1790 @@ begin
 
   Dm.CdsSintegraItensNF.Close;
 
+end;
+
+procedure EnviandoSintegraPedidos;
+var
+  sql:string;
+   LResponse: IResponse;
+   arraySintegraPedidos:TJSONArray;
+begin
+
+ Sql := Dm.FDSintegraPedidos.sql.Text;
+  Dm.FDSintegraPedidos.sql.Text := 'UPDATE SINTEGRA_PEDIDOS_ITENS SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+ Dm.FDSintegraPedidos.ExecSQL;
+
+  Dm.FDSintegraPedidos.sql.Text := Sql;
+  Dm.CdsSintegraPedidos.Open;
+
+  if Dm.CdsSintegraPedidos.RecordCount <> 0 then
+   begin
+     // VerificaConexao('');
+      //Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(58, Filial, Dm.CdsSintegraPedidos.Data);
+
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Sintegra Pedidos: '+ FloatToStr(Dm.CdsSintegraPedidos.RecordCount));
+
+      try
+
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('sintegrapedidos')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arraySintegraPedidos.ToString)
+       .Accept('application/json')
+       .post;
+        FreeAndNil(arraySintegrapedidos);
+
+        if LResponse.StatusCode=200  then
+          begin
+            Dm.CdsSintegraPedidos.First;
+            Dm.FDSintegraPedidos.sql.Text := 'UPDATE SINTEGRA_PEDIDOS_ITENS SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDSintegraPedidos.ExecSQL;
+            Dm.FDSintegraPedidos.Close;
+          end;
+      Except  on E:Exception do
+              begin
+                GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Sintegra Pedidos - ' + E.Message);
+                Dm.CdsSintegraPedidos.Close;
+                Exit;
+              end;
+
+      end;
+   end;
+
+ Dm.CdsSintegraPedidos.Close;
 
 end;
+
+procedure EnviandoSintegraR60;
+var
+sql :string;
+LResponse: IResponse;
+arraySintegraR60:TJSONArray;
+begin
+
+  Sql := Dm.FDSintegraR60.sql.Text;
+  Dm.FDSintegraR60.sql.Text := 'UPDATE SINTEGRA_R60 SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+
+  Dm.FDSintegraR60.ExecSQL;
+  Dm.FDSintegraR60.sql.Text := Sql;
+  Dm.CdsSintegraR60.Open;
+
+  if Dm.CdsSintegraR60.RecordCount <> 0 then
+   begin
+     // VerificaConexao('');
+     // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(59, Filial, Dm.CdsSintegraR60.Data);
+
+     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Sintegra R60: '+ FloatToStr(Dm.CdsSintegraR60.RecordCount));
+      try
+        LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('precosfilial')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arraySintegraR60.ToString)
+       .Accept('application/json')
+       .post;
+       FreeAndNil(arraySintegraR60);
+
+        if LResponse.StatusCode=200 then
+          begin
+            Dm.CdsSintegraR60.First;
+            Dm.FDSintegraR60.sql.Text := 'UPDATE SINTEGRA_R60 SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDSintegraR60.ExecSQL;
+            Dm.FDSintegraR60.Close;
+          end;
+      Except  on E:Exception do
+            begin
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Sintegra R60 - ' + E.Message);
+              Dm.CdsSintegraR60.Close;
+              Exit;
+            end;
+
+      end;
+   end;
+  Dm.CdsSintegraR60.Close;
+
+end;
+
+procedure EnviandoSintegraR60I;
+var
+sql :string;
+ LResponse: IResponse;
+ arraySintegraR60I:TJSONArray;
+begin
+  Sql := Dm.FDSintegraR60I.sql.Text;
+  Dm.FDSintegraR60I.sql.Text := 'UPDATE SINTEGRA_R60I SET ENVIADO = '+QuotedStr('9')+' WHERE ENVIADO IS NULL OR ENVIADO <> '+QuotedStr('2');
+  Dm.FDSintegraR60I.ExecSQL;
+  Dm.FDSintegraR60I.sql.Text := Sql;
+  Dm.CdsSintegraR60I.Open;
+
+  if Dm.CdsSintegraR60I.RecordCount <> 0 then
+   begin
+    //  VerificaConexao('');
+    //  Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(60, Filial, Dm.CdsSintegraR60I.Data);
+     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Sintegra R60I: '+ FloatToStr(Dm.CdsSintegraR60I.RecordCount));
+      try
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('precosfilial')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arraySintegraR60I.ToString)
+       .Accept('application/json')
+       .post;
+       FreeAndNil(arraySintegraR60I);
+
+        if LResponse.StatusCode=200 then
+          begin
+            Dm.CdsSintegraR60I.First;
+            Dm.FDSintegraR60I.sql.Text := 'UPDATE SINTEGRA_R60I SET ENVIADO = '+QuotedStr('2')+' WHERE ENVIADO = '+QuotedStr('9');
+            Dm.FDSintegraR60I.ExecSQL;
+            Dm.FDSintegraR60I.Close;
+          end;
+      Except on E:Exception do
+              begin
+                GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Sintegra R60I - ' + E.Message);
+                Dm.CdsSintegraR60I.Close;
+                Exit;
+              end;
+
+
+      end;
+
+   end;
+
+Dm.CdsSintegraR60I.Close;
+
+end;
+
+procedure EnviandoVendasItensExcluidos;
+var
+sql :string;
+LResponse: IResponse;
+arrayEnvioVendasItensExcluidos:TJSONArray;
+begin
+
+  Dm.CdsVendasItensExcluidos.Close;
+  Sql := Dm.FDVendasItensExcluidos.sql.Text;
+  Dm.FDConferenciaNota.sql.Text := 'ALTER TRIGGER VENDAS_ITENS_EXCLUIDOS_BI0 INACTIVE';
+  Dm.FDConferenciaNota.ExecSQL(True);
+
+  Dm.FDVendasItensExcluidos.sql.Text := 'UPDATE VENDAS_ITENS_EXCLUIDOS SET ENVIADO = ' + QuotedStr('9') + ' WHERE ENVIADO IS NULL OR ENVIADO <> ' + QuotedStr('2');
+  Dm.FDVendasItensExcluidos.ExecSQL(True);
+  Dm.FDVendasItensExcluidos.sql.Text := Sql;
+  Dm.CdsVendasItensExcluidos.Open;
+
+  if Dm.CdsVendasItensExcluidos.RecordCount <> 0 then
+   begin
+     // VerificaConexao('');
+      GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando VendasItensExcluidos : ' + InttoStr(Dm.CdsVendasItensExcluidos.RecordCount));
+     // Dados := (Dm.HTTPRIO1 as IDmProcessa).Processa(72, Filial, Dm.CdsVendasItensExcluidos.Data);
+
+     try
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+      .Resource('precosfilial')
+      .AcceptEncoding('gzip, deflate')
+      .AddBody(arrayEnvioVendasItensExcluidos.ToString)
+      .Accept('application/json')
+      .post;
+       FreeAndNil(arrayEnvioVendasItensExcluidos);
+
+
+      if LResponse.StatusCode=200 then
+      begin
+          Dm.CdsVendasItensExcluidos.Close;
+      end;
+
+     Except   on E:Exception do
+            begin
+             Dm.FDConferenciaNota.sql.Text := 'ALTER TRIGGER VENDAS_ITENS_EXCLUIDOS_BI0 ACTIVE';
+             Dm.FDConferenciaNota.ExecSQL(True);
+
+             GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  VendasItensExcluidos - '+E.Message);
+             Dm.CdsVendasItensExcluidos.Close;
+              Exit;
+            end;
+
+     end;
+   end;
+
+  Dm.CdsVendasItensExcluidos.Close;
+  Sql := Dm.FDVendasItensExcluidos.sql.Text;
+  Dm.FDVendasItensExcluidos.sql.Text := 'UPDATE VENDAS_ITENS_EXCLUIDOS SET ENVIADO = ' + QuotedStr('2') + ' WHERE ENVIADO <> ' + QuotedStr('9');
+  Dm.FDVendasItensExcluidos.ExecSQL(True);
+
+  Dm.FDConferenciaNota.sql.Text := 'ALTER TRIGGER VENDAS_ITENS_EXCLUIDOS_BI0 ACTIVE';
+  Dm.FDConferenciaNota.ExecSQL(True);
+  Dm.CdsVendasItensExcluidos.Close;
+
+end;
+
+function SetaEnviado9 : Boolean;
+begin
+
+  Result := True;
+  Try
+    Dm.CdsCeProdutos.Close;
+    Dm.FDCeProdutos.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO INACTIVE';
+    Dm.CdsCeProdutos.Params.Clear;
+    Dm.FDCeProdutos.ExecSQL(True);
+  Except
+    GravaLog(TimetoStr(Time) + ' - Não foi possível desativar a trigger TG_AT_DT_ALTERACAO_PRODUTO.');
+    Result := False;
+  End;
+
+  if not Result then
+    Exit;
+
+  Try
+      Dm.CdsCeProdutos.Close;
+      Dm.FDCeProdutos.sql.Text := 'INSERT INTO TEMP_PRODUTOS2 SELECT FIRST 1000 ID_PRODUTO, ID_PRODUTO, ID_PRODUTO, STATUS FROM PRODUTOS ' +
+                                                  'WHERE ((ENVIADO <> '+ QuotedStr('2') +') OR (ENVIADO IS NULL))';
+      Dm.FDCeProdutos.ExecSQL(True);
+
+      Dm.CdsCeProdutos.Close;
+      Dm.FDCeProdutos.sql.Text := 'UPDATE PRODUTOS SET ENVIADO = '+''''+'9'+''''+' WHERE ID_PRODUTO IN (SELECT ID_PRODUTO FROM TEMP_PRODUTOS2)';
+
+      GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Seta Enviado 9  - ' + InttoStr(Dm.FDCeProdutos.ExecSQL(True)));
+      Dm.CdsCeProdutos.Close;
+      Dm.FDCeProdutos.sql.Text := 'DELETE FROM TEMP_PRODUTOS2';
+      Dm.FDCeProdutos.ExecSQL(True);
+
+  Except
+      on E:Exception do
+       begin
+        GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - SetaEnviado9 - '+ E.Message);
+        Result := False;
+       end;
+  End;
+
+  if not Result then
+     Exit;
+
+  //Habilita a TRIGGER de alteracao de produtos
+  Try
+    Dm.CdsCeProdutos.Close;
+    Dm.FDCeProdutos.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+    Dm.CdsCeProdutos.Params.Clear;
+    Dm.FDCeProdutos.ExecSQL(True);
+  Except
+    GravaLog(TimetoStr(Time) + ' - Não foi possível ativar a trigger TG_AT_DT_ALTERACAO_PRODUTO.');
+    Result := False;
+  End;
+
+
+end;
+
+procedure RecebendoItensTransfer;
+var
+ i : integer;
+LResponse: IResponse;
+arraItensTrasnfer:TJSONArray;
+begin
+
+  //Busca na matriz ItensTransfer
+
+   Try
+     Dm.CdsItensTransfer.Close;
+     Dm.CdsItensTransfer.CreateDataSet;
+
+     //DAdos := (Dm.HTTPRIO1 AS IDmProcessa).Processa(118, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('itensTransfer')
+     .AcceptEncoding('gzip, deflate')
+     .AddBody(arraItensTrasnfer.ToString)
+     .Accept('application/json')
+     .get;
+     FreeAndNil(arraItensTrasnfer);
+
+     if LResponse.StatusCode<>200 then
+      begin   Exit;
+      end
+      else
+      begin
+
+       Dm.CdsItensTransfer.Data := LResponse.Content;
+       Dm.CdsItensTransfer.Open; // virtual
+       Dm.CdsItensTransfer.First;
+       if Dm.CdsItensTransfer.RecordCount > 0 then
+          begin
+             GravaLog(TimetoStr(Time) + ' - Itens_Transfer Recebidos: ' + FloatToStr(Dm.CdsItensTransfer.RecordCount));
+
+             while not Dm.CdsItensTransfer.Eof do
+              begin
+                 Dm.QryItensTransfer.Close;
+                 Dm.QryItensTransfer.Params[0].AsFloat := Dm.CdsItensTransferCD_TRANSFER.AsFloat;
+                 Dm.QryItensTransfer.Params[1].AsFloat := Dm.CdsItensTransferID_PRODUTO.AsFloat;
+                 Dm.QryItensTransfer.Open;
+
+                 if Dm.QryItensTransfer.RecordCount = 0 then
+                    Dm.QryItensTransfer.Append
+                 else
+                  begin
+                     if Dm.QryItensTransferSTATUS.AsString = 'G' then
+                      begin
+                        if Dm.CdsItensTransferSTATUS.AsString <> 'G' then
+                           Dm.QryItensTransfer.Edit;
+                      end
+                     else
+                     if Dm.QryItensTransferSTATUS.AsString = 'E' then
+                      begin
+                        if (Dm.CdsItensTransferSTATUS.AsString = 'C') or (Dm.CdsItensTransferSTATUS.AsString = 'X') then
+                           Dm.QryItensTransfer.Edit;
+                      end;
+                  end;
+                 if Dm.QryItensTransfer.State in [dsInsert, dsEdit] then
+                  begin
+                     for i := 0 to Dm.QryItensTransfer.FieldCount - 1 do
+                       Dm.QryItensTransfer.Fields[i].Value := Dm.CdsItensTransfer.Fields[i].Value;
+                       Dm.QryItensTransfer.ApplyUpdates(0);
+
+                  end;
+                 Dm.CdsItensTransfer.Next;
+              end;
+
+             Dm.CdsItensTransfer.Close;
+             Dm.QryItensTransfer.Close;
+          end;
+
+      end;
+
+   Except
+      on E:Exception do
+       begin
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebendo Itens Transferencias - '+ E.Message);
+         Dm.CdsItensTransfer.Close;
+         Dm.CdsItensTransfer.Close;
+         Exit;
+       end;
+   end;
+end;
+
+procedure RecebendoTransfer;
+var
+   i : integer;
+LResponse: IResponse;
+arrayTransfer:TJSONArray;
+
+begin   
+
+  //Busca na matriz Transfer
+   Try
+   
+     Dm.CdsTransfer.Close;
+     Dm.CdsTransfer.CreateDataSet;  
+          
+    // Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(117, Filial, 'A');    
+         
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('transfer')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arrayTransfer.ToString)
+       .Accept('application/json')
+       .get;
+        FreeAndNil(arrayTransfer);
+
+       if LResponse.StatusCode<>200 then
+        begin         
+          Exit;
+      
+        end
+        else
+        begin  
+    
+        
+           Dm.CdsTransfer.Data := LResponse.Content;
+           Dm.CdsTransfer.Open; 
+
+           if Dm.CdsTransfer.RecordCount <> 0 then
+            begin
+               GravaLog(TimetoStr(Time) + ' - Transferencias Recebidas: ' + FloatToStr(Dm.CdsTransfer.RecordCount));
+               Dm.CdsTransfer.First;
+               while not Dm.CdsTransfer.Eof do
+                begin
+                   Dm.QryTransfer.Close;
+                   Dm.QryTransfer.Params[0].AsFloat := Dm.CdsTransferCD_TRANSFER.AsFloat;                
+                   Dm.QryTransfer.Open;                  
+
+                   if Dm.QryTransfer.RecordCount = 0 then
+                      Dm.QryTransfer.Append
+                   else
+                    begin
+                      if Dm.QryTransferSTATUS.AsString = 'G' then
+                       begin
+                         if Dm.CdsTransferSTATUS.AsString <> 'G' then
+                            Dm.QryTransfer.Edit;
+                       end
+                      else
+                      if Dm.QryTransferSTATUS.AsString = 'E' then
+                       begin
+                         if (Dm.CdsTransferSTATUS.AsString = 'C') or (Dm.CdsTransferSTATUS.AsString = 'X') then
+                            Dm.QryTransfer.Edit;
+                       end;
+                    end;
+                   if Dm.QryTransfer.State in [dsEdit, dsInsert] then
+                    begin
+                       for i := 0 to Dm.QryTransfer.FieldCount - 1 do
+                           Dm.QryTransfer.Fields[i].Value := Dm.CdsTransfer.Fields[i].Value;
+                       Dm.QryTransfer.Post; 
+                       Dm.QryTransfer.ApplyUpdates(0);                
+                    end;
+                
+                   Dm.CdsTransfer.Next;
+                end;
+            end;
+      
+        end;
+  
+    
+     
+   Except
+      on E:Exception do
+       begin         
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebendo Transferencias - '+ E.Message);
+         Dm.CdsTransfer.Close;
+         Dm.QryTransfer.Close;
+
+         Try
+           Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_ENVIADO_TRANSFER ACTIVE';        
+           Dm.query.ExecSQL(True);       
+         Except
+           Dm.query.sql.clear;
+         End;
+
+         Exit;
+       end;
+   end;
+  Dm.CdsTransfer.Close;
+  Dm.QryTransfer.Close;
+
+
+end;
+
+procedure RecebendoProdutosQuantidade;
+var
+  LResponse: IResponse;
+  arraySintegraNotasItens:TJSONArray;
+begin
+
+   Try
+     // Atualização dos Produtos Quantidade
+     
+     Dm.CdsProdutosQuantidade.Close;
+     Dm.CdsProdutosQuantidade.CreateDataSet;
+    // Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(154, Filial, 'A');
+
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('produtoquantidade')
+     .AcceptEncoding('gzip, deflate')
+     .AddBody(arraySintegraNotasItens.ToString)
+     .Accept('application/json')
+     .get;
+     FreeAndNil(arraySintegraNotasItens);
+
+     if LResponse.StatusCode<>200 then
+      begin          
+       Exit;         
+      end
+      else
+      begin     
+    
+       Dm.CdsProdutosQuantidade.Data := LResponse.Content;
+       Dm.CdsProdutosQuantidade.Open; // virtual
+       Dm.CdsProdutosQuantidade.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Quantidade: '+ FloatToStr(Dm.CdsProdutosQuantidade.RecordCount));
+       while not Dm.CdsProdutosQuantidade.Eof do
+        begin
+            Dm.FDAtualizaProdutosQuantidade.Params[0].AsFloat := Dm.CdsProdutosQuantidadeID_PRODUTO.AsFloat;
+            Dm.FDAtualizaProdutosQuantidade.Params[1].AsFloat := Dm.CdsProdutosQuantidadeQUANTIDADEINICIAL.AsFloat;
+            Dm.FDAtualizaProdutosQuantidade.Params[2].AsFloat := Dm.CdsProdutosQuantidadePRECO_VENDA.AsFloat;
+          
+            Try
+              Dm.FDAtualizaProdutosQuantidade.ExecSQL(False);
+          
+            Except
+               on E:Exception do
+                begin                  
+                  GravaLog(TimetoStr(Time) + ' - Falha no processo de produtos preço quantidade - '+E.Message);
+                end;
+            End;
+
+            Dm.CdsProdutosQuantidade.Next;
+        end;
+      end;
+     Dm.CdsProdutosQuantidade.Close;
+   Except
+      on E:Exception do
+       begin          
+         GravaLog(TimetoStr(Time) + ' - ' + E.Message);
+         GravaLog(TimetoStr(Time) + ' - Erro ocorrido no processo de Produtos Quantidade');
+         Dm.CdsProdutosQuantidade.Close;
+         Exit;
+       end;
+   end;
+
+end;
+
+procedure RecebendoProdutosFP;
+var
+LResponse: IResponse;
+ arraySintegraNotasItens:TJSONArray;
+begin
+
+   Try
+       // Atualização dos Produtos Farmacia Popular
+       Dm.CdsProdutosFP.Close;
+       Dm.CdsProdutosFP.CreateDataSet;
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('produtosfp')
+       .AcceptEncoding('gzip, deflate')
+       .AddBody(arraySintegraNotasItens.ToString)
+       .Accept('application/json')
+       .get;
+       FreeAndNil(arraySintegraNotasItens);
+
+
+      // Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(155, Filial, 'A');
+       if LResponse.StatusCode=200 then
+        begin
+
+           Dm.CdsProdutosFP.Data := LResponse.Content;
+           Dm.CdsProdutosFP.Open; // virtual
+
+           Dm.CdsProdutosFP.First;
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Farmacia Popular : '+ FloatToStr(Dm.CdsProdutosFP.RecordCount));
+           while not Dm.CdsProdutosFP.Eof do
+            begin
+                Dm.FdAtualizaProdutosFP.Params[0].AsFloat := Dm.CdsProdutosFPID_PRODUTO.AsFloat;
+                Dm.FdAtualizaProdutosFP.Params[1].AsString := Dm.CdsProdutosFPCD_PRODUTO.AsString;
+                Dm.FdAtualizaProdutosFP.Params[2].AsFloat := Dm.CdsProdutosFPCD_LABORATORIO.AsFloat;
+                Dm.FdAtualizaProdutosFP.Params[3].AsString := Dm.CdsProdutosFPDESCRICAO.AsString;
+                Dm.FdAtualizaProdutosFP.Params[4].AsFloat := Dm.CdsProdutosFPPRECO.AsFloat;
+                Dm.FdAtualizaProdutosFP.Params[5].AsString := Dm.CdsProdutosFPUSAPRECOLOJA.AsString;
+                Try
+                  Dm.FdAtualizaProdutosFP.ExecSQL(False);
+                Except
+                   on E:Exception do
+                    begin
+                      GravaLog(TimetoStr(Time) + ' - Falha no processo de produtos farmacia popular - '+E.Message);
+                    end;
+                End;
+
+                Dm.CdsProdutosFP.Next;
+            end;
+
+        end
+        else
+        begin
+         Exit;
+        end;
+
+    Dm.CdsProdutosFP.Close;
+     Except
+        on E:Exception do
+         begin
+
+           GravaLog(TimetoStr(Time) + ' - ' + E.Message);
+           GravaLog(TimetoStr(Time) + ' - Erro ocorrido no processo de Produtos Farmacia Popular');
+           Dm.CdsProdutosFP.Close;
+           Exit;
+         end;
+    end;
+end;
+
+procedure RecebendoProdutosFidelidade;
+var
+LResponse: IResponse;
+ arrayprodutosfidelidade:TJSONArray;
+begin
+  Try
+     // Atualização dos Produtos Fidelidade
+     Dm.CdsProdutosFidelidade.Close;
+     Dm.CdsProdutosFidelidade.CreateDataSet;
+
+    // Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(158, Filial, 'A');
+
+    LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+    .Resource('produtosfidelidade')
+    .AcceptEncoding('gzip, deflate')
+    .AddBody(arrayprodutosfidelidade.ToString)
+    .Accept('application/json')
+    .get;
+    FreeAndNil(arrayprodutosfidelidade);
+    if LResponse.StatusCode =200 then
+    begin
+     Dm.CdsProdutosFidelidade.LoadFromJSON(LResponse.Content) ;
+     Dm.CdsProdutosFidelidade.Open; // virtual
+     Dm.CdsProdutosFidelidade.First;
+     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Fidelidade : '+ FloatToStr(Dm.CdsProdutosFidelidade.RecordCount));
+     while not Dm.CdsProdutosFidelidade.Eof do
+      begin
+          Dm.FDAtualizaProdutosFidelidade.Params[0].AsFloat := Dm.CdsProdutosFidelidadeID_PRODUTO.AsFloat;
+          Dm.FDAtualizaProdutosFidelidade.Params[1].AsString := Dm.CdsProdutosFidelidadeCD_PRODUTO.AsString;
+          Dm.FDAtualizaProdutosFidelidade.Params[2].AsFloat := Dm.CdsProdutosFidelidadeCD_LABORATORIO.AsFloat;
+          Dm.FDAtualizaProdutosFidelidade.Params[3].AsString := Dm.CdsProdutosFidelidadeDESCRICAO.AsString;
+          Dm.FDAtualizaProdutosFidelidade.Params[4].AsFloat := Dm.CdsProdutosFidelidadePRECO.AsFloat;
+          Dm.FDAtualizaProdutosFidelidade.Params[5].AsFloat := Dm.CdsProdutosFidelidadeCD_GRUPO.AsFloat;
+          Dm.FDAtualizaProdutosFidelidade.Params[6].AsDateTime := Dm.CdsProdutosFidelidadeDT_ALTERACAO.AsDateTime;
+          Try
+            Dm.FDAtualizaProdutosFidelidade.ExecSQL(False);
+          Except
+             on E:Exception do
+              begin
+                //;
+                GravaLog(TimetoStr(Time) + ' - Falha no processo de produtos fidelidade - '+E.Message);
+              end;
+          End;
+
+          Dm.CdsProdutosFidelidade.Next;
+      end;
+
+     Dm.CdsProdutosFidelidade.Close;
+    end
+    else
+    begin
+     Exit;
+    end;
+
+   Except
+      on E:Exception do
+       begin
+         GravaLog(TimetoStr(Time) + ' - ' + E.Message);
+         GravaLog(TimetoStr(Time) + ' - Erro ocorrido no processo de Produtos Fidelidade');
+         Dm.CdsProdutosFidelidade.Close;
+         Exit;
+       end;
+   end;
+
+end;
+
+function RecebendoCadastro : Boolean;
+var
+LResponse: IResponse;
+arrayFiliais:TJSONArray;
+begin
+     //busca cadastro na matriz
+
+    Try
+     // Atualiza produtos
+     Result := True;
+     Dm.CdsFiliais.Close;
+     Dm.CdsFiliais.Params[0].AsFloat :=dm.cdfilialparametro;
+     Dm.CdsFiliais.Open;
+     Dm.CdsFiliais.First;
+     Dm.CdsCadastro.Close;
+
+    // Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(119, cdfilialparametro, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .AddBody(arrayFiliais.ToString)
+     .Accept('application/json')
+     .get;
+     FreeAndNil(arrayFiliais);
+
+     if LResponse.StatusCode=200 then
+      begin
+         Dm.CdsCadastro.Data := LResponse.Content;
+         Dm.CdsCadastro.Open; // virtual
+         if Dm.CdsCadastro.RecordCount > 0 then
+          begin
+             Try
+               GravaLog(TimetoStr(Time) + ' - ' + IntToStr(Dm.CdsCadastro.RecordCount) + ' cadastros recebidos.');
+               Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO INACTIVE';
+               Dm.query.ExecSQL(True);
+             Except
+               Dm.query.sql.Clear;
+             End;
+
+             Dm.CdsCadastro.First;
+             while not Dm.CdsCadastro.Eof do
+              begin
+                 //GravaLog(TimetoStr(Time) + ' - ' + (Dm.CdsCadastro.RecordCount) + ' cadastro recebido - Processado item: '+ FloatToStr(Dm.CdsCadastro.RecNo));
+                 Dm.query.sql.Text := 'UPDATE PRODUTOS SET ' +
+                                     ' CD_PRODUTO = '      + QuotedStr(Dm.CdsCadastro.FieldByName('CD_PRODUTO').AsString) + ' , ' +
+                                     ' CD_LABORATORIO = '  + Dm.CdsCadastro.FieldByName('CD_LABORATORIO').AsString + ' , ' +
+                                     ' CD_GRUPO = '        + Dm.CdsCadastro.FieldByName('CD_GRUPO').AsString + ' , ' +
+                                     ' CD_CLASSE = '       + Dm.CdsCadastro.FieldByName('CD_CLASSE').AsString + ' , ' +
+                                     ' CD_GRUPOBALANCO = ' + Dm.CdsCadastro.FieldByName('CD_GRUPOBALANCO').AsString + ' , ' +
+                                     ' CD_GRUPOCOMPRA = '  + Dm.CdsCadastro.FieldByName('CD_GRUPOCOMPRA').AsString + ' , ' +
+                                     ' CODIGO_BARRAS_1 = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CODIGO_BARRAS_1').AsString) + ' , ' +
+                                     ' DESCRICAO = '       + QuotedStr(Dm.CdsCadastro.FieldByName('DESCRICAO').AsString) + ' , ' +
+                                     ' TIPO_PRODUTO = '    + QuotedStr(Dm.CdsCadastro.FieldByName('TIPO_PRODUTO').AsString) + ' , ' +
+                                     ' UNIDADE = '         + QuotedStr(Dm.CdsCadastro.FieldByName('UNIDADE').AsString) + ' , ' +
+                                     ' STATUS = '          + QuotedStr(Dm.CdsCadastro.FieldByName('STATUS').asString) + ' , ' +
+                                     ' ESTOQUE_MINIMO_'    + FloatToStr(dm.cdfilialparametro) + ' = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('ESTOQUE_MINIMO').asString, '.', ''), ',', '.') + ' , ' +
+                                     ' ESTOQUE_MAXIMO_'    + FloatToStr(dm.cdfilialparametro) + ' = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('ESTOQUE_MAXIMO').asString, '.', ''), ',', '.') + ' , ' +
+                                     ' MEDIAF_'            + FloatToStr(dm.cdfilialparametro) + ' = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('MEDIAF').asString, '.', ''), ',', '.') + ' , ' +
+                                     ' CURVA_UNITARIA_'    + FloatToStr(dm.cdfilialparametro) + ' = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CURVA_UNITARIA').asString) + ' , ' +
+                                     ' CURVA_FINANCEIRA_'  + FloatToStr(dm.cdfilialparametro) + ' = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CURVA_FINANCEIRA').asString);
+
+
+                 //gravacao dos estoques das demais filiais...
+                 while not (Dm.CdsFiliais.Eof) do
+                  begin
+                    try
+                      Dm.query.sql.Text := Dm.query.sql.Text + ', ' +
+                                          EstoqueFiliais[Dm.CdsFiliais.FieldByName('CD_FILIAL').AsInteger] + ' = ' +
+                                          StrTran(StrTran(Dm.CdsCadastro.FieldByName(EstoqueFiliais[Dm.CdsFiliais.FieldByName('CD_FILIAL').AsInteger]).AsString, '.', ''), ',', '.');
+                    except
+                     Dm.query.sql.Clear;
+                    end;
+                    Dm.CdsFiliais.Next;
+                    if Dm.CdsFiliais.FieldByName('CD_FILIAL').AsInteger > 30 then
+                       Break;
+                  end;
+                 Dm.CdsFiliais.First;
+                 if not Dm.CdsCadastro.FieldByName('PRINCIPIOATIVO').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +  ' ,PRINCIPIOATIVO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('PRINCIPIOATIVO').AsString);
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,PRINCIPIOATIVO = ' + QuotedStr('');
+                  end;
+                 if not Dm.CdsCadastro.FieldByName('IDENTIFICADOR').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text + ' ,IDENTIFICADOR = ' + QuotedStr(Dm.CdsCadastro.FieldByName('IDENTIFICADOR').AsString);
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text + ' ,IDENTIFICADOR = ' + QuotedStr('');
+                  end;
+                 if not Dm.CdsCadastro.FieldByName('ID_FAMILIA').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text + ' ,ID_FAMILIA = ' + Dm.CdsCadastro.FieldByName('ID_FAMILIA').AsString;
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,ID_FAMILIA = NULL';
+                  end;
+                 if not Dm.CdsCadastro.FieldByName('CD_LISTA').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_LISTA = ' + Dm.CdsCadastro.FieldByName('CD_LISTA').AsString;
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_LISTA = NULL';
+                  end;
+                 if not Dm.CdsCadastro.FieldByName('CD_SUBGRUPO').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_SUBGRUPO = ' + Dm.CdsCadastro.FieldByName('CD_SUBGRUPO').AsString;
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_SUBGRUPO = NULL';
+                  end;
+                 if not Dm.CdsCadastro.FieldByName('CD_PRINCIPIO').IsNull then
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_PRINCIPIO = ' + Dm.CdsCadastro.FieldByName('CD_PRINCIPIO').AsString;
+                  end
+                 else
+                  begin
+                    Dm.query.sql.Text := Dm.query.sql.Text +' ,CD_PRINCIPIO = NULL';
+                  end;
+                 if not (Dm.CdsCadastro.FieldByName('QT_EMBALAGEM').IsNull) and (Dm.CdsCadastro.FieldByName('QT_EMBALAGEM').AsFloat > 0) then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,QT_EMBALAGEM = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('QT_EMBALAGEM').AsString, '.', ''), ',', '.')
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,QT_EMBALAGEM = 1';
+
+                 if not (Dm.CdsCadastro.FieldByName('CODIGO_BARRAS_2').IsNull) and (Dm.CdsCadastro.FieldByName('CODIGO_BARRAS_2').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CODIGO_BARRAS_2 = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CODIGO_BARRAS_2').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,CODIGO_BARRAS_2 = '''+''+'''';
+
+                 if not (Dm.CdsCadastro.FieldByName('MARGEM_PROMOCAO').IsNull) and (Dm.CdsCadastro.FieldByName('MARGEM_PROMOCAO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,MARGEM_PROMOCAO = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('MARGEM_PROMOCAO').AsString, '.', ''), ',', '.')
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,MARGEM_PROMOCAO = 0';
+
+                 if not (Dm.CdsCadastro.FieldByName('MARGEM').IsNull) and (Dm.CdsCadastro.FieldByName('MARGEM').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,MARGEM = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('MARGEM').AsString, '.', ''), ',', '.')
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text + ' ,MARGEM = 0';
+
+                 if not (Dm.CdsCadastro.FieldByName('COMISSAO').IsNull) and (Dm.CdsCadastro.FieldByName('COMISSAO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,COMISSAO = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('COMISSAO').AsString, '.', ''), ',', '.')
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,COMISSAO = 0';
+
+                 if not (Dm.CdsCadastro.FieldByName('USOCONTINUO').IsNull) and (Dm.CdsCadastro.FieldByName('USOCONTINUO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,USOCONTINUO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('USOCONTINUO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,USOCONTINUO = ''' + 'N' + ''' ';
+
+                 if not (Dm.CdsCadastro.FieldByName('COMPRIMIDOSCAIXA').IsNull) and (Dm.CdsCadastro.FieldByName('COMPRIMIDOSCAIXA').AsFloat > 0) then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,COMPRIMIDOSCAIXA = ' + Dm.CdsCadastro.FieldByName('COMPRIMIDOSCAIXA').AsString
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,COMPRIMIDOSCAIXA = 0';
+
+                 if not (Dm.CdsCadastro.FieldByName('TX_DESCONTO').IsNull) and (Dm.CdsCadastro.FieldByName('TX_DESCONTO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,TX_DESCONTO = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('TX_DESCONTO').AsString, '.', ''), ',', '.')
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,TX_DESCONTO = 0';
+
+                 if not (Dm.CdsCadastro.FieldByName('CONTROLADO').IsNull) and (Dm.CdsCadastro.FieldByName('CONTROLADO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CONTROLADO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CONTROLADO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,CONTROLADO = ' + QuotedStr('N');
+
+                 if not (Dm.CdsCadastro.FieldByName('PIS_COFINS').IsNull) and (Dm.CdsCadastro.FieldByName('PIS_COFINS').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,PIS_COFINS = ' + QuotedStr(Dm.CdsCadastro.FieldByName('PIS_COFINS').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,PIS_COFINS = ' + QuotedStr('N');
+
+                 if not (Dm.CdsCadastro.FieldByName('OBSERVACAO').IsNull) and (Dm.CdsCadastro.FieldByName('OBSERVACAO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,OBSERVACAO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('OBSERVACAO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,OBSERVACAO = ' + QuotedStr('');
+
+                 {if not (Dm.CdsCadastro.FieldByName('NCM').IsNull) and (Dm.CdsCadastro.FieldByName('NCM').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,NCM = ' + QuotedStr(Dm.CdsCadastro.FieldByName('NCM').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,NCM = ' + QuotedStr('');
+
+                 if not (Dm.CdsCadastro.FieldByName('CEST').IsNull) and (Dm.CdsCadastro.FieldByName('CEST').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CEST = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CEST').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CEST = ' + QuotedStr('');
+
+                 if not (Dm.CdsCadastro.FieldByName('ICMS').IsNull) and (Dm.CdsCadastro.FieldByName('ICMS').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,ICMS = ' + QuotedStr(Dm.CdsCadastro.FieldByName('ICMS').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,ICMS = ' + QuotedStr('FF');}
+
+                 if not (Dm.CdsCadastro.FieldByName('GENERICO').IsNull) and (Dm.CdsCadastro.FieldByName('GENERICO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,GENERICO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('GENERICO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text + ' ,GENERICO = ' + QuotedStr('N');
+
+                 if not (Dm.CdsCadastro.FieldByName('ENTRA_PEDIDO_ELETRONICO').IsNull) and (Dm.CdsCadastro.FieldByName('ENTRA_PEDIDO_ELETRONICO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,ENTRA_PEDIDO_ELETRONICO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('ENTRA_PEDIDO_ELETRONICO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,ENTRA_PEDIDO_ELETRONICO = ' + QuotedStr('N');
+
+                 if not (Dm.CdsCadastro.FieldByName('BALANCA').IsNull) and (Dm.CdsCadastro.FieldByName('BALANCA').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,BALANCA = ' + QuotedStr(Dm.CdsCadastro.FieldByName('BALANCA').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,BALANCA = ' + QuotedStr('N');
+
+                 if not (Dm.CdsCadastro.FieldByName('IPPT').IsNull) and (Dm.CdsCadastro.FieldByName('IPPT').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,IPPT = ' + QuotedStr(Dm.CdsCadastro.FieldByName('IPPT').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,IPPT = ' + QuotedStr('T');
+
+                 if not (Dm.CdsCadastro.FieldByName('IAT').IsNull) and (Dm.CdsCadastro.FieldByName('IAT').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,IAT = ' + QuotedStr(Dm.CdsCadastro.FieldByName('IAT').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text + ' ,IAT = ' + QuotedStr('T');
+
+                 {if not (Dm.CdsCadastro.FieldByName('CD_CFOP').IsNull) and (Dm.CdsCadastro.FieldByName('CD_CFOP').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CD_CFOP = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CD_CFOP').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CD_CFOP = NULL';}
+
+                 if not (Dm.CdsCadastro.FieldByName('REGISTROMS').IsNull) and (Dm.CdsCadastro.FieldByName('REGISTROMS').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,REGISTROMS = ' + QuotedStr(Dm.CdsCadastro.FieldByName('REGISTROMS').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,REGISTROMS = ' + QuotedStr('');
+
+                 if not (Dm.CdsCadastro.FieldByName('COMPOSTO').IsNull) and (Dm.CdsCadastro.FieldByName('COMPOSTO').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,COMPOSTO = ' + QuotedStr(Dm.CdsCadastro.FieldByName('COMPOSTO').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +' ,COMPOSTO = ' + QuotedStr('');
+
+                 {if not (Dm.CdsCadastro.FieldByName('ORIGEM').IsNull) and (Dm.CdsCadastro.FieldByName('ORIGEM').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,ORIGEM = ' + QuotedStr(Dm.CdsCadastro.FieldByName('ORIGEM').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,ORIGEM = ' + QuotedStr('0');
+
+                 if not (Dm.CdsCadastro.FieldByName('CSOSN').IsNull) and (Dm.CdsCadastro.FieldByName('CSOSN').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CSOSN = ' + QuotedStr(Dm.CdsCadastro.FieldByName('CSOSN').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,CSOSN = ' + QuotedStr('');
+
+                 if not (Dm.CdsCadastro.FieldByName('SITUACAOTRIBUTARIA').IsNull) and (Dm.CdsCadastro.FieldByName('SITUACAOTRIBUTARIA').AsString <> '') then
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,SITUACAOTRIBUTARIA = ' + QuotedStr(Dm.CdsCadastro.FieldByName('SITUACAOTRIBUTARIA').AsString)
+                 else
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                   ' ,SITUACAOTRIBUTARIA = ' + QuotedStr('60');}
+
+                   Dm.query.sql.Text := Dm.query.sql.Text +
+                 ' WHERE ID_PRODUTO = ' + StrTran(StrTran(Dm.CdsCadastro.FieldByName('ID_PRODUTO').AsString, '.' , ''), ',', '.');
+
+                 try
+                   Dm.query.ExecSQL(True);
+                 except
+                  GravaLog(TimetoStr(Time) + ' - ' + Dm.query.sql.Text);
+                 end;
+                 Dm.CdsCadastro.Next;
+              end;
+          end;
+         Dm.CdsCadastro.Close;
+      end
+      else
+      begin
+       exit;
+      end;
+   Except
+      on E:Exception do
+       begin
+         Result := False;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebimento de Cadastro de Produtos - '+ E.Message);
+         Dm.CdsCadastro.Close;
+         Try
+           Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+           Dm.query.ExecSQL(True);
+         Except
+           Result := False;
+         End;
+       end;
+   end;
+
+
+   Try
+     Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+     Dm.query.ExecSQL(True);
+   Except
+    Result := False;
+   End;
+
+end;
+
+function RecebendoEstoques : Boolean;
+var
+ i : Integer;
+ Sql : String;
+ ParamsFloat : Array of Real;
+ ParamsString : Array of String;
+ LResponse: IResponse;
+arrayRecebendoEstoque:TJSONArray;
+begin
+ //busca na matriz os estoques
+   Try
+      // Atualiza produtos
+      Result := True;
+      Dm.CdsCadastro.Close;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+      .Resource('produtoestoque')
+      .AcceptEncoding('gzip, deflate')
+      .AddBody(arrayRecebendoEstoque.ToString)
+      .Accept('application/json')
+      .get;
+       FreeAndNil(arrayRecebendoEstoque);
+        //     Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(1191, Filial, 'A');
+
+       if LResponse.StatusCode=200 then
+        begin
+         SetLength(ParamsString, 30);
+         SetLength(ParamsFloat, 32);
+         Dm.CdsCadastro.Data := LResponse.Content;
+         Dm.CdsCadastro.Open; // virtual
+         if Dm.CdsCadastro.RecordCount > 0 then
+          begin
+             Try
+               GravaLog(TimetoStr(Time) + ' - ' + InttoStr(Dm.CdsCadastro.RecordCount) + ' estoques recebidos.');
+               Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO INACTIVE';
+               Dm.query.ExecSQL(True);
+             Except
+               Result := False;
+             End;
+
+             Dm.CdsCadastro.First;
+             while not Dm.CdsCadastro.Eof do
+              begin
+                  ParamsFloat[0] :=dm.cdfilialparametro;
+                  ParamsFloat[1] := Dm.CdsCadastro.FieldByName('ID_PRODUTO').AsFloat;
+
+                  ParamsFloat[2] := 0;
+                  ParamsFloat[3] := 0;
+                  ParamsFloat[4] := 0;
+                  ParamsFloat[5] := 0;
+                  ParamsFloat[6] := 0;
+                  ParamsFloat[7] := 0;
+                  ParamsFloat[8] := 0;
+                  ParamsFloat[9] := 0;
+                  ParamsFloat[10] := 0;
+                  ParamsFloat[11] := 0;
+                  ParamsFloat[12] := 0;
+                  ParamsFloat[13] := 0;
+                  ParamsFloat[14] := 0;
+                  ParamsFloat[15] := 0;
+                  ParamsFloat[16] := 0;
+                  ParamsFloat[17] := 0;
+                  ParamsFloat[18] := 0;
+                  ParamsFloat[19] := 0;
+                  ParamsFloat[20] := 0;
+                  ParamsFloat[21] := 0;
+                  ParamsFloat[22] := 0;
+                  ParamsFloat[23] := 0;
+                  ParamsFloat[24] := 0;
+                  ParamsFloat[25] := 0;
+                  ParamsFloat[26] := 0;
+                  ParamsFloat[27] := 0;
+                  ParamsFloat[28] := 0;
+                  ParamsFloat[29] := 0;
+                  ParamsFloat[30] := 0;
+                  ParamsFloat[31] := 0;
+                  ParamsString[0]  := '';
+                  ParamsString[1]  := '';
+                  ParamsString[2]  := '';
+                  ParamsString[3]  := '';
+                  ParamsString[4]  := '';
+                  ParamsString[5]  := '';
+                  ParamsString[6]  := '';
+                  ParamsString[7]  := '';
+                  ParamsString[8]  := '';
+                  ParamsString[9]  := '';
+                  ParamsString[10] := '';
+                  ParamsString[11] := '';
+                  ParamsString[12] := '';
+                  ParamsString[13] := '';
+                  ParamsString[14] := '';
+                  ParamsString[15] := '';
+                  ParamsString[16] := '';
+                  ParamsString[17] := '';
+                  ParamsString[18] := '';
+                  ParamsString[19] := '';
+                  ParamsString[20] := '';
+                  ParamsString[21] := '';
+                  ParamsString[22] := '';
+                  ParamsString[23] := '';
+                  ParamsString[24] := '';
+                  ParamsString[25] := '';
+                  ParamsString[26] := '';
+                  ParamsString[27] := '';
+                  ParamsString[28] := '';
+                  ParamsString[29] := '';
+
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_1').IsNull) then
+                      ParamsFloat[2] := Dm.CdsCadastro.FieldByName('ESTOQUE_1').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_2').IsNull) then
+                      ParamsFloat[3] := Dm.CdsCadastro.FieldByName('ESTOQUE_2').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_3').IsNull) then
+                      ParamsFloat[4] := Dm.CdsCadastro.FieldByName('ESTOQUE_3').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_4').IsNull) then
+                      ParamsFloat[5] := Dm.CdsCadastro.FieldByName('ESTOQUE_4').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_5').IsNull) then
+                      ParamsFloat[6] := Dm.CdsCadastro.FieldByName('ESTOQUE_5').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_6').IsNull) then
+                      ParamsFloat[7] := Dm.CdsCadastro.FieldByName('ESTOQUE_6').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_7').IsNull) then
+                      ParamsFloat[8] := Dm.CdsCadastro.FieldByName('ESTOQUE_7').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_8').IsNull) then
+                      ParamsFloat[9] := Dm.CdsCadastro.FieldByName('ESTOQUE_8').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_9').IsNull) then
+                      ParamsFloat[10] := Dm.CdsCadastro.FieldByName('ESTOQUE_9').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_10').IsNull) then
+                      ParamsFloat[11] := Dm.CdsCadastro.FieldByName('ESTOQUE_10').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_11').IsNull) then
+                      ParamsFloat[12] := Dm.CdsCadastro.FieldByName('ESTOQUE_11').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_12').IsNull) then
+                      ParamsFloat[13] := Dm.CdsCadastro.FieldByName('ESTOQUE_12').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_13').IsNull) then
+                      ParamsFloat[14] := Dm.CdsCadastro.FieldByName('ESTOQUE_13').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_14').IsNull) then
+                      ParamsFloat[15] := Dm.CdsCadastro.FieldByName('ESTOQUE_14').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_15').IsNull) then
+                      ParamsFloat[16] := Dm.CdsCadastro.FieldByName('ESTOQUE_15').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_16').IsNull) then
+                      ParamsFloat[17] := Dm.CdsCadastro.FieldByName('ESTOQUE_16').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_17').IsNull) then
+                      ParamsFloat[18] := Dm.CdsCadastro.FieldByName('ESTOQUE_17').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_18').IsNull) then
+                      ParamsFloat[19] := Dm.CdsCadastro.FieldByName('ESTOQUE_18').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_19').IsNull) then
+                      ParamsFloat[20] := Dm.CdsCadastro.FieldByName('ESTOQUE_19').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_20').IsNull) then
+                      ParamsFloat[21] := Dm.CdsCadastro.FieldByName('ESTOQUE_20').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_21').IsNull) then
+                      ParamsFloat[22] := Dm.CdsCadastro.FieldByName('ESTOQUE_21').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_22').IsNull) then
+                      ParamsFloat[23] := Dm.CdsCadastro.FieldByName('ESTOQUE_22').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_23').IsNull) then
+                      ParamsFloat[24] := Dm.CdsCadastro.FieldByName('ESTOQUE_23').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_24').IsNull) then
+                      ParamsFloat[25] := Dm.CdsCadastro.FieldByName('ESTOQUE_24').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_25').IsNull) then
+                      ParamsFloat[26] := Dm.CdsCadastro.FieldByName('ESTOQUE_25').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_26').IsNull) then
+                      ParamsFloat[27] := Dm.CdsCadastro.FieldByName('ESTOQUE_26').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_27').IsNull) then
+                      ParamsFloat[28] := Dm.CdsCadastro.FieldByName('ESTOQUE_27').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_28').IsNull) then
+                      ParamsFloat[29] := Dm.CdsCadastro.FieldByName('ESTOQUE_28').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_29').IsNull) then
+                      ParamsFloat[30] := Dm.CdsCadastro.FieldByName('ESTOQUE_29').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('ESTOQUE_30').IsNull) then
+                      ParamsFloat[31] := Dm.CdsCadastro.FieldByName('ESTOQUE_30').AsFloat;
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_1').IsNull) then
+                      ParamsString[0]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_1').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_2').IsNull) then
+                      ParamsString[1]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_2').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_3').IsNull) then
+                      ParamsString[2]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_3').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_4').IsNull) then
+                      ParamsString[3]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_4').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_5').IsNull) then
+                      ParamsString[4]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_5').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_6').IsNull) then
+                      ParamsString[5]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_6').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_7').IsNull) then
+                      ParamsString[6]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_7').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_8').IsNull) then
+                      ParamsString[7]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_8').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_9').IsNull) then
+                      ParamsString[8]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_9').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_10').IsNull) then
+                      ParamsString[9]  := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_10').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_11').IsNull) then
+                      ParamsString[10] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_11').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_12').IsNull) then
+                      ParamsString[11] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_12').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_13').IsNull) then
+                      ParamsString[12] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_13').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_14').IsNull) then
+                      ParamsString[13] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_14').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_15').IsNull) then
+                      ParamsString[14] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_15').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_16').IsNull) then
+                      ParamsString[15] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_16').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_17').IsNull) then
+                      ParamsString[16] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_17').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_18').IsNull) then
+                      ParamsString[17] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_18').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_19').IsNull) then
+                      ParamsString[18] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_19').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_20').IsNull) then
+                      ParamsString[19] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_20').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_21').IsNull) then
+                      ParamsString[20] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_21').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_22').IsNull) then
+                      ParamsString[21] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_22').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_23').IsNull) then
+                      ParamsString[22] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_23').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_24').IsNull) then
+                      ParamsString[23] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_24').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_25').IsNull) then
+                      ParamsString[24] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_25').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_26').IsNull) then
+                      ParamsString[25] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_26').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_27').IsNull) then
+                      ParamsString[26] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_27').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_28').IsNull) then
+                      ParamsString[27] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_28').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_29').IsNull) then
+                      ParamsString[28] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_29').AsDateTime);
+                  if not (Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_30').IsNull) then
+                      ParamsString[29] := FormatDateTime('mm/dd/yyyy', Dm.CdsCadastro.FieldByName('DT_ULT_VENDA_30').AsDateTime);
+
+                  Sql := 'EXECUTE PROCEDURE SP_ATUALIZA_ESTOQUE( ' +
+                  StrTran(FloattoStr(ParamsFloat[0]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[1]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[2]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[3]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[4]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[5]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[6]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[7]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[8]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[9]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[10]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[11]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[12]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[13]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[14]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[15]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[16]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[17]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[18]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[19]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[20]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[21]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[22]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[23]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[24]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[25]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[26]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[27]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[28]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[29]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[30]), ',', '.') + ',' +
+                  StrTran(FloattoStr(ParamsFloat[31]), ',', '.') + ',' +
+                  QuotedStr(ParamsString[0])  + ',' +
+                  QuotedStr(ParamsString[1])  + ',' +
+                  QuotedStr(ParamsString[2])  + ',' +
+                  QuotedStr(ParamsString[3])  + ',' +
+                  QuotedStr(ParamsString[4])  + ',' +
+                  QuotedStr(ParamsString[5])  + ',' +
+                  QuotedStr(ParamsString[6])  + ',' +
+                  QuotedStr(ParamsString[7])  + ',' +
+                  QuotedStr(ParamsString[8])  + ',' +
+                  QuotedStr(ParamsString[9])  + ',' +
+                  QuotedStr(ParamsString[10])  + ',' +
+                  QuotedStr(ParamsString[11])  + ',' +
+                  QuotedStr(ParamsString[12])  + ',' +
+                  QuotedStr(ParamsString[13])  + ',' +
+                  QuotedStr(ParamsString[14])  + ',' +
+                  QuotedStr(ParamsString[15])  + ',' +
+                  QuotedStr(ParamsString[16])  + ',' +
+                  QuotedStr(ParamsString[17])  + ',' +
+                  QuotedStr(ParamsString[18])  + ',' +
+                  QuotedStr(ParamsString[19])  + ',' +
+                  QuotedStr(ParamsString[20])  + ',' +
+                  QuotedStr(ParamsString[21])  + ',' +
+                  QuotedStr(ParamsString[22])  + ',' +
+                  QuotedStr(ParamsString[23])  + ',' +
+                  QuotedStr(ParamsString[24])  + ',' +
+                  QuotedStr(ParamsString[25])  + ',' +
+                  QuotedStr(ParamsString[26])  + ',' +
+                  QuotedStr(ParamsString[27])  + ',' +
+                  QuotedStr(ParamsString[28])  + ',' +
+                  QuotedStr(ParamsString[29]) + ')';
+
+                  Dm.FdAtualizaEstoque.sql.Text := Sql;
+                  Try
+                    Dm.FdAtualizaEstoque.ExecSQL(False);
+                  Except
+                    Dm.FdAtualizaEstoque.sql.Clear;
+                  End;
+                 Dm.CdsCadastro.Next;
+              end;
+          end;
+         Dm.CdsCadastro.Close;
+        end
+        else
+        begin
+         Result := False;
+        Exit;
+        end;
+
+     Try
+       Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+       Dm.query.ExecSQL(True);
+     Except
+       Result := False;
+     End;
+
+   Except
+       on E:Exception do
+       begin
+         Result := False;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebimento de Estoques - '+ E.Message);
+         Dm.CdsCadastro.Close;
+         Try
+           Dm.query.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+           Dm.query.ExecSQL(True);
+         Except
+           Result := False;
+         End;
+       end;
+   end;
+
+
+end;
+
+Function RecebendoPrecos : Boolean;
+var
+LResponse: IResponse;
+arraySintegraNotasItens:TJSONArray;
+begin
+
+  Result := False;
+
+  //busca na matriz os preço de Venda dos Produtos
+
+  if dm.AtualizaPrecoVenda = 'S' then
+   begin
+
+       Try
+         // Atualiza produtos
+         Result := True;
+
+         // Verificando a existencia de precos a serem enviados para a gestão
+         // Caso existam forçar o envio e não receber os da gestão no mesmo processo
+
+         Dm.Cds1.Close;
+         Dm.FDcds1.sql.Text := 'SELECT COUNT(*) FROM TEMP_PRODUTOS WHERE PROCESSO = 52';
+         Dm.Cds1.Params.Clear;
+         Dm.Cds1.Open;
+
+         if Dm.Cds1.Fields[0].Value > 0 then
+          begin
+             Dm.Cds1.Close;
+             try
+               GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Precos na Filial através do processo de Recebimento de Preços da gestão');
+               EnviandoPrecosFilial;
+             except
+              Dm.Cds1.Close;
+             end;
+             Result := False;
+             Exit;
+          end;
+         Dm.Cds1.Close;
+
+         Dm.CdsFiliais.Close;
+         Dm.CdsFiliais.Params[0].AsFloat := dm.cdfilialparametro;
+         Dm.CdsFiliais.Open;
+         Dm.CdsFiliais.First;
+         Dm.CdsPrecos.Close;
+
+         //Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(125, Filial, 'A');
+
+         LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+         .Resource('recebendopreco')
+         .AcceptEncoding('gzip, deflate')
+         .AddBody(arraySintegraNotasItens.ToString)
+         .Accept('application/json')
+         .get;
+         FreeAndNil(arraySintegraNotasItens);
+
+         if  LResponse.StatusCode =200 then
+          begin
+
+           Dm.CdsPrecos.Data := LResponse.Content;
+           Dm.CdsPrecos.Open; // virtual
+           if Dm.CdsPrecos.RecordCount > 0 then
+            begin
+              Try
+
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO INACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO2 INACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO INACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+
+              Except on E:Exception do
+                  begin
+                    GravaLog('erro ao inativar as triggers de alteracao de produto - '+E.Message) ;
+                   Dm.FDcds1.SQL.Clear;
+                  end;
+               End;
+
+               Dm.CdsPrecos.First;
+               GravaLog(TimetoStr(Time) + ' - ' + InttoStr(Dm.CdsPrecos.RecordCount) + ' precos recebidos.');
+               while not Dm.CdsPrecos.Eof do
+                begin
+                   if (Dm.CdsPrecos.FieldByName('DATA_REAJUSTE').AsDateTime >= Date) then
+                    begin
+                       Dm.FDcds1.sql.Text := 'INSERT INTO REAJUSTE VALUES (' +
+                                       Dm.CdsPrecos.FieldByName('CD_FILIAL').AsString + ', ' +
+                                       Dm.CdsPrecos.FieldByName('ID_PRODUTO').AsString + ', ' +
+                                       QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('DATA').AsDateTime)) + ', ' +
+                                       QuotedStr(FormatDateTime('hh:mm:ss', Dm.CdsPrecos.FieldByName('HORA').AsDateTime)) + ', ' +
+                                       StrTran(Dm.CdsPrecos.FieldByName('PRECO_ANTERIOR').AsString, ',', '.') + ', ' +
+                                       StrTran(Dm.CdsPrecos.FieldByName('PRECO_NOVO').AsString, ',', '.') + ', ' +
+                                       StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_ANTERIOR').AsString, ',', '.') + ', ' +
+                                       StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').AsString, ',', '.') + ', ';
+                       if not Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_ANTERIOR').IsNull then
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                       QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_ANTERIOR').AsDateTime)) + ', '
+                       else
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ' NULL, ';
+                       if not Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').IsNull then
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                       QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').AsDateTime)) + ', '
+                       else
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ' NULL, ';
+                       Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                           QuotedStr('N') + ', ';
+                       if not Dm.CdsPrecos.FieldByName('DATA_REAJUSTE').IsNull then
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                              QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('DATA_REAJUSTE').AsDateTime))
+                       else
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                              ' NULL ';
+
+                       if Dm.CdsPrecos.FieldByName('USUARIO').AsString = 'SP' then
+                        begin
+                           Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ', ' +
+                                                               QuotedStr('ExporterClientQuick') + ', ' + QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr('2') + ')';
+                        end
+                       else
+                        begin
+                           Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ', ' +
+                                                               QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr('2') + ')';
+                        end;
+
+                    end
+                   else
+                    begin
+                          //para nao incluir os reajustes em caso de reexportacao de precos
+                      if Dm.CdsPrecos.FieldByName('USUARIO').AsString <> 'SP' then
+                        begin
+                           Dm.FDcds1.sql.Text := 'INSERT INTO REAJUSTE VALUES (' +
+                                           Dm.CdsPrecos.FieldByName('CD_FILIAL').AsString + ', ' +
+                                           Dm.CdsPrecos.FieldByName('ID_PRODUTO').AsString + ', ' +
+                                           QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('DATA').AsDateTime)) + ', ' +
+                                           QuotedStr(FormatDateTime('hh:mm:ss', Dm.CdsPrecos.FieldByName('HORA').AsDateTime)) + ', ';
+                           if not (Dm.CdsPrecos.FieldByName('PRECO_ANTERIOR').IsNull) then
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                    StrTran(Dm.CdsPrecos.FieldByName('PRECO_ANTERIOR').AsString, ',', '.') + ', '
+                           else
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + 'NULL, ';
+
+                           Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + StrTran(Dm.CdsPrecos.FieldByName('PRECO_NOVO').AsString, ',', '.') + ', ';
+
+                           if not (Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_ANTERIOR').IsNull) then
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                  StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_ANTERIOR').AsString, ',', '.') + ', '
+                           else
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + 'NULL, ';
+
+                           if not (Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').IsNull) then
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                 StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').AsString, ',', '.') + ', '
+                           else
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + 'NULL, ';
+
+                           if not Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_ANTERIOR').IsNull then
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                           QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_ANTERIOR').AsDateTime)) + ', '
+                           else
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ' NULL, ';
+                           if not Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').IsNull then
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                           QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').AsDateTime)) + ', '
+                           else
+                              Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text + ' NULL, ';
+                           Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                               QuotedStr('S') + ', ' + QuotedStr(FormatDateTime('mm/dd/yyyy', Date)) + ' , ';
+
+                           if Dm.CdsPrecos.FieldByName('USUARIO').AsString = 'SP' then
+                            begin
+                               Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                                   QuotedStr('ExporterClientQuick') + ', ' + QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr('2') + ')';
+                            end
+                           else
+                            begin
+                               Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                                                                   QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr(Dm.CdsPrecos.FieldByName('USUARIO').AsString) + ', ' + QuotedStr('2') + ')';
+                            end;
+
+                           try
+                             Dm.FDcds1.ExecSQL(True);
+                           except
+                             GravaLog(TimetoStr(Time) + ' - ' + Dm.FDcds1.sql.Text);
+                           end;
+                        end;
+
+                       Dm.FDcds1.sql.Text := 'UPDATE PRODUTOS SET ' +
+                           ' PRECO_VENDA  = ' + StrTran(Dm.CdsPrecos.FieldByName('PRECO_NOVO').AsString, ',', '.') + ', '+
+                           ' PRECO_VENDA_' + FloatToStr(dm.cdfilialparametro) + ' = ' + StrTran(Dm.CdsPrecos.FieldByName('PRECO_NOVO').AsString, ',', '.');
+
+                       if not Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').IsNull then
+                        begin
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                          ' ,DT_VENCIMENTO_PROMOCAO = ' + QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').AsDateTime)) +
+                          ' ,DT_VENCIMENTO_PROMOCAO_' + FloatToStr(dm.cdfilialparametro) + ' = ' + QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('VENCIMENTO_PROMOCAO_NOVO').AsDateTime));
+                        end
+                       else
+                        begin
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                          ' ,DT_VENCIMENTO_PROMOCAO = NULL ' +
+                          ' ,DT_VENCIMENTO_PROMOCAO_' + FloatToStr(dm.cdfilialparametro) + ' = NULL ';
+                        end;
+
+                       if not Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').IsNull then
+                        begin
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                          ' ,PRECO_PROMOCAO = ' + StrTran(StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').AsString, '.', ''), ',', '.') +
+                          ' ,PRECO_PROMOCAO_' + FloatToStr(dm.cdfilialparametro) + ' = ' + StrTran(StrTran(Dm.CdsPrecos.FieldByName('PRECO_PROMOCAO_NOVO').AsString, '.', ''), ',', '.')
+                        end
+                       else
+                        begin
+                           Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                           ' ,PRECO_PROMOCAO = 0, PRECO_PROMOCAO_' + FloatToStr(dm.cdfilialparametro) + ' = 0 ';
+                        end;
+
+
+                       if not Dm.CdsPrecos.FieldByName('DATA').IsNull then
+                          Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                          ' ,DT_REAJUSTE = ' + QuotedStr(FormatDateTime('mm/dd/yyyy', Dm.CdsPrecos.FieldByName('DATA').AsDateTime));
+
+                       Dm.FDcds1.sql.Text := Dm.FDcds1.sql.Text +
+                         ' WHERE ID_PRODUTO = ' + StrTran(StrTran(Dm.CdsPrecos.FieldByName('ID_PRODUTO').AsString, '.' , ''), ',', '.');
+                    end;
+
+                   try
+                     Dm.FDcds1.ExecSQL(True);
+                   except
+                     GravaLog(TimetoStr(Time) + ' - ' + Dm.FDcds1.sql.Text);
+                   end;
+                   Dm.CdsPrecos.Next;
+                end;
+            end;
+           Dm.CdsPrecos.Close;
+
+         end
+         else
+         begin
+          exit ;
+         end;
+
+       Except
+          on E:Exception do
+           begin
+             Result := False;
+             GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebendo Preco de Venda - '+ E.Message +' -' +LResponse.Content);
+             Dm.CdsPrecos.Close;
+             Try
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO ACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO2 ACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+
+             Except on E:exception do
+                begin
+                  GravaLog('Erro na ativacao das trigger de alteracao de precos - ' +E.Message);
+                  Dm.FDcds1.SQL.Clear;
+                  Result := False;
+                end;
+             End;
+
+             Try
+               Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+               Dm.FDcds1.ExecSQL(True);
+             Except
+               Dm.FDcds1.SQL.Clear;
+             End;
+           end;
+       end;
+
+       Try
+
+         Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO ACTIVE';
+         Dm.FDcds1.ExecSQL(True);
+
+         Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRECO2 ACTIVE';
+         Dm.FDcds1.ExecSQL(True);
+
+       Except
+
+         Result := False;
+       End;
+
+       Try
+         Dm.FDcds1.sql.Text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_PRODUTO ACTIVE';
+         Dm.FDcds1.ExecSQL(True);
+
+       Except
+
+       End;
+   end;
+
+end;
+
+procedure RecebendoProdutosDeletados;
+ var
+LResponse: IResponse;
+arrayProdutosDeletados:TJSONArray;
+begin
+  //busca na matriz os produtos deletados
+   Try
+     // Atualiza produtos
+     Dm.CdsDeletados.Close;
+     Dm.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('produtosdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .AddBody(arrayProdutosDeletados.ToString)
+     .Accept('application/json')
+     .post;
+     FreeAndNil(arrayProdutosDeletados);
+
+     //Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'PRODUTOS');
+
+     if LResponse.StatusCode = 200  then
+      begin
+         Dm.CdsDeletados.Data := LResponse.Content;
+         Dm.CdsDeletados.Open; // virtual
+         Dm.CdsDeletados.IndexFieldNames := 'CAMPO2';
+
+         if Dm.CdsDeletados.RecordCount > 0 then
+          begin
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Produtos Deletados recebidos: ' + FloatToStr(Dm.CdsDeletados.RecordCount));
+             Dm.CdsDeletados.First;
+             while not Dm.CdsDeletados.Eof do
+              begin
+                 Dm.query.sql.Text := 'DELETE FROM PRODUTOS WHERE ID_PRODUTO = ' + Dm.CdsDeletadosCAMPO2.AsString;
+                 Dm.query.ExecSQL(True);
+                 Dm.CdsDeletados.Next;
+              end;
+          end;
+         Dm.CdsDeletados.Close;
+      end
+      else
+      begin
+        Exit;
+      end;
+   Except
+      on E:Exception do
+       begin
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Falha de conexao no processo de Recebendo Produtos Deletados - '+ E.Message +' - '+ LResponse.Content);
+         Dm.CdsDeletados.Close;
+         Exit;
+       end;
+   end;
+
+end;
+
+procedure RecebendoProdutosFidelidadeDeletados;
+var
+ LResponse: IResponse;
+arrayDados:TJSONArray;
+begin
+   //busca na matriz os Produtos Fidelidade Deletados
+   Try
+     Dm.CdsDeletados.Close;
+     Dm.CdsDeletados.CreateDataSet;
+
+    LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+    .Resource('produtofidelidadedeletados')
+    .AcceptEncoding('gzip, deflate')
+    .AddBody(arrayDados.ToString)
+    .Accept('application/json')
+    .get;
+    FreeAndNil(arrayDados);
+
+     if LResponse.StatusCode=200 then
+     begin
+      //Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'FILIAIS_FIDELIDADE');
+
+     Dm.CdsDeletados.Data := LResponse.Content;
+     Dm.CdsDeletados.Open; // virtual
+
+     if Dm.CdsDeletados.RecordCount > 0 then
+      begin
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Fidelidade Deletados - ' + FloatToStr(Dm.CdsDeletados.RecordCount));
+
+         Dm.CdsDeletados.First;
+         while not Dm.CdsDeletados.Eof do
+          begin
+            Dm.query.sql.Text := 'DELETE FROM PRODUTOS_FIDELIDADE WHERE ID_PRODUTO = ' + Dm.CdsDeletadosCAMPO1.AsString;
+            Try
+              Dm.query.ExecSQL(True);
+            Except
+             Dm.query.SQL.Clear;
+            End;
+
+            Dm.CdsDeletados.Next;
+          end;
+      end;
+
+     Dm.CdsDeletados.Close;
+     end
+     else
+     begin
+       exit
+     end;
+   Except
+      on E:Exception do
+       begin
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Produtos Farmacia Fidelidade Deletados');
+         Dm.CdsDeletados.Close;
+         Exit;
+       end;
+   end;
+
+end;
+
+procedure RecebendoProdutosQuantidadeDeletados;
+var
+ LResponse: IResponse;
+ arrayDados:TJSONArray;
+begin
+   //busca na matriz os Produtos Quantidade Deletados
+   Try
+
+
+     Dm.CdsDeletados.Close;
+     Dm.CdsDeletados.CreateDataSet;
+
+    //  Dados := (Dm.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'PRODUTOS_PRECO_QUANTIDADE');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .AddBody(arrayDados.ToString)
+     .Accept('application/json')
+     .post;
+     FreeAndNil(arrayDados);
+
+     if LResponse.StatusCode=200 then
+     begin
+
+      Dm.CdsDeletados.Data := LResponse.Content;
+      Dm.CdsDeletados.Open; // virtual
+
+     if Dm.CdsDeletados.RecordCount > 0 then
+      begin
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Quantidade Deletados - ' + FloatToStr(Dm.CdsDeletados.RecordCount));
+
+         Dm.CdsDeletados.First;
+         while not Dm.CdsDeletados.Eof do
+          begin
+            Dm.query.sql.Text:= 'DELETE FROM PRODUTOS_PRECO_QUANTIDADE WHERE ID_PRODUTO = ' + Dm.CdsDeletadosCAMPO1.AsString +
+                                ' AND QUANTIDADEINICIAL = ' + Dm.CdsDeletadosCAMPO2.AsString;
+            Try
+              Dm.query.ExecSQL(True);
+            Except
+            End;
+
+            Dm.CdsDeletados.Next;
+          end;
+      end;
+
+     Dm.CdsDeletados.Close;
+     end;
+   Except
+      on E:Exception do
+       begin
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Produtos Quantidade Deletados');
+         Dm.CdsDeletados.Close;
+         Exit;
+       end;
+   end;
+
+end;
+
 
 end.

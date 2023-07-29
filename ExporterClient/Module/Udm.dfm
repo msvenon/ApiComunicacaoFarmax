@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 590
-  Width = 1507
+  Height = 733
+  Width = 1577
   object FDConn: TFDConnection
     Params.Strings = (
       'User_Name=sysdba'
@@ -44,7 +44,7 @@ object DM: TDM
     SQL.Strings = (
       ' SELECT * FROM CONTROLE  WHERE CAMPO=:CAMPO')
     Left = 32
-    Top = 80
+    Top = 141
     ParamData = <
       item
         Position = 1
@@ -57,7 +57,7 @@ object DM: TDM
   object dspControle: TDataSetProvider
     DataSet = FDConstrole
     Left = 29
-    Top = 122
+    Top = 183
   end
   object cdsControle: TClientDataSet
     Aggregates = <>
@@ -70,7 +70,7 @@ object DM: TDM
       end>
     ProviderName = 'dspControle'
     Left = 29
-    Top = 166
+    Top = 227
     object cdsControleCAMPO: TStringField
       FieldName = 'CAMPO'
       Required = True
@@ -83,11 +83,11 @@ object DM: TDM
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
     Left = 416
-    Top = 16
+    Top = 7
   end
   object FDPhysFBDriverLink1: TFDPhysFBDriverLink
     Left = 520
-    Top = 16
+    Top = 7
   end
   object FDCeCadFin: TFDQuery
     Connection = FDConn
@@ -100,19 +100,19 @@ object DM: TDM
       'WHERE'
       ' CONTAS_RECEBER.CD_CONTAS_RECEBER = TEMP_PRODUTOS2.ID_PRODUTO')
     Left = 192
-    Top = 81
+    Top = 142
   end
   object dspCeCadFin: TDataSetProvider
     DataSet = FDCeCadFin
     Left = 190
-    Top = 123
+    Top = 184
   end
   object cdsCeCadFin: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCeCadFin'
     Left = 184
-    Top = 169
+    Top = 230
   end
   object FDCeLotes: TFDQuery
     Connection = FDConn
@@ -196,7 +196,7 @@ object DM: TDM
       'WHERE'
       ' LANCAMENTOS.CD_LANCAMENTO = TEMP_LANCAMENTOS2.CD_LANCAMENTO')
     Left = 272
-    Top = 82
+    Top = 140
   end
   object FdqNumeroLancamentosLoja: TFDQuery
     Connection = FDConn
@@ -205,19 +205,19 @@ object DM: TDM
         'SELECT  COUNT(*) FROM LANCAMENTOS WHERE DATA_LANCAMENTO >= CURRE' +
         'NT_DATE - 1')
     Left = 371
-    Top = 80
+    Top = 138
   end
   object dspNUmeroLancamentosLoja: TDataSetProvider
     DataSet = FdqNumeroLancamentosLoja
     Left = 372
-    Top = 127
+    Top = 185
   end
   object cdsNumeroLancamentosLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspNUmeroLancamentosLoja'
     Left = 371
-    Top = 169
+    Top = 227
     object cdsNumeroLancamentosLojaCOUNT: TIntegerField
       FieldName = 'COUNT'
       ReadOnly = True
@@ -226,8 +226,8 @@ object DM: TDM
   object cdsCdLancamento: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 368
-    Top = 187
+    Left = 371
+    Top = 253
   end
   object FdLancamentosLoja: TFDQuery
     Connection = FDConn
@@ -236,19 +236,19 @@ object DM: TDM
         'SELECT  CD_LANCAMENTO FROM LANCAMENTOS WHERE  DATA_LANCAMENTO >=' +
         ' CURRENT_DATE - 1')
     Left = 494
-    Top = 81
+    Top = 139
   end
   object dspLancamentosLoja: TDataSetProvider
     DataSet = FdLancamentosLoja
     Left = 496
-    Top = 126
+    Top = 184
   end
   object cdsLancamentosLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspLancamentosLoja'
     Left = 496
-    Top = 173
+    Top = 231
     object cdsLancamentosLojaCD_LANCAMENTO: TFloatField
       FieldName = 'CD_LANCAMENTO'
     end
@@ -256,14 +256,14 @@ object DM: TDM
   object dspCeLotes: TDataSetProvider
     DataSet = FDCeLotes
     Left = 272
-    Top = 124
+    Top = 182
   end
   object cdsCelotes: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCeLotes'
     Left = 268
-    Top = 168
+    Top = 226
     object cdsCelotesID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -527,19 +527,19 @@ object DM: TDM
     SQL.Strings = (
       'SELECT * FROM PARAMETROS')
     Left = 115
-    Top = 86
+    Top = 147
   end
   object dpParametros: TDataSetProvider
     DataSet = FdParametros
     Left = 114
-    Top = 124
+    Top = 185
   end
   object cdsParametros: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dpParametros'
     Left = 109
-    Top = 168
+    Top = 229
     object cdsParametrosCD_FILIAL: TFloatField
       FieldName = 'CD_FILIAL'
       Required = True
@@ -1832,19 +1832,19 @@ object DM: TDM
       'FROM'
       ' PRODUTOS')
     Left = 593
-    Top = 81
+    Top = 139
   end
   object dspControlador: TDataSetProvider
     DataSet = FDControlador
     Left = 596
-    Top = 127
+    Top = 185
   end
   object cdsControlador: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspControlador'
     Left = 599
-    Top = 172
+    Top = 230
     object cdsControladorN_ITENS: TIntegerField
       FieldName = 'N_ITENS'
       ReadOnly = True
@@ -1910,7 +1910,7 @@ object DM: TDM
       ReadOnly = True
     end
   end
-  object FDSql1: TFDQuery
+  object fdSql1: TFDQuery
     Connection = FDConn
     SQL.Strings = (
       'SELECT'
@@ -1932,20 +1932,20 @@ object DM: TDM
       ' SUM(PRECO_VENDA) AS CONTASRECEBER'
       'FROM'
       ' PRODUTOS')
-    Left = 625
-    Top = 10
+    Left = 185
+    Top = 493
   end
   object dspSql1: TDataSetProvider
-    DataSet = FDSql1
-    Left = 668
-    Top = 12
+    DataSet = fdSql1
+    Left = 185
+    Top = 534
   end
   object cdsSql1: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspSql1'
-    Left = 731
-    Top = 13
+    Left = 187
+    Top = 571
     object IntegerField1: TIntegerField
       FieldName = 'N_ITENS'
       ReadOnly = True
@@ -2076,7 +2076,7 @@ object DM: TDM
         ' LANCAMENTOS_APRAZO.CD_LANCAMENTO = TEMP_LANCAMENTOS_APRAZO2.CD_' +
         'LANCAMENTO')
     Left = 674
-    Top = 83
+    Top = 141
     ParamData = <
       item
         Position = 1
@@ -2089,7 +2089,7 @@ object DM: TDM
   object dspCelotes2: TDataSetProvider
     DataSet = FDceLotes2
     Left = 674
-    Top = 126
+    Top = 186
   end
   object cdsCelotes2: TClientDataSet
     Aggregates = <>
@@ -2102,7 +2102,7 @@ object DM: TDM
       end>
     ProviderName = 'dspCelotes2'
     Left = 674
-    Top = 167
+    Top = 228
     object cdsCelotes2ID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
     end
@@ -2290,19 +2290,19 @@ object DM: TDM
       'WHERE'
       ' DATA >= CURRENT_DATE - 1')
     Left = 754
-    Top = 82
+    Top = 140
   end
   object dspNUmeroCaixaLoja: TDataSetProvider
     DataSet = FDNumeroCaixaLoja
     Left = 757
-    Top = 125
+    Top = 185
   end
   object cdsNumeroCaixaLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspNUmeroCaixaLoja'
     Left = 757
-    Top = 169
+    Top = 229
     object cdsNumeroCaixaLojaCOUNT: TIntegerField
       FieldName = 'COUNT'
       ReadOnly = True
@@ -2318,19 +2318,19 @@ object DM: TDM
       'WHERE'
       ' DATA >= CURRENT_DATE - 1')
     Left = 841
-    Top = 82
+    Top = 140
   end
   object dspCaixaLoja: TDataSetProvider
     DataSet = FDCaixaLoja
     Left = 844
-    Top = 125
+    Top = 185
   end
   object cdsCaixaLoja: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCaixaLoja'
     Left = 844
-    Top = 169
+    Top = 228
     object cdsCaixaLojaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
       Required = True
@@ -2345,7 +2345,7 @@ object DM: TDM
         ParamType = ptInput
       end>
     Left = 848
-    Top = 199
+    Top = 257
     object CdsCdCaixaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
       Required = True
@@ -2361,19 +2361,19 @@ object DM: TDM
       'WHERE'
       ' ENVIADO = '#39'9'#39)
     Left = 913
-    Top = 82
+    Top = 140
   end
   object dspCeCaixa: TDataSetProvider
     DataSet = FDCeCaixa
     Left = 916
-    Top = 125
+    Top = 186
   end
   object cdsCeCaixa: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCeCaixa'
     Left = 916
-    Top = 169
+    Top = 229
     object cdsCeCaixaCD_CAIXA: TFloatField
       FieldName = 'CD_CAIXA'
       Required = True
@@ -2540,8 +2540,8 @@ object DM: TDM
   object CdsIncluiProdutos: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 800
-    Top = 16
+    Left = 768
+    Top = 8
     object CdsIncluiProdutosID_PRODUTO: TFloatField
       FieldName = 'ID_PRODUTO'
       Required = True
@@ -2711,31 +2711,31 @@ object DM: TDM
   object DspCeProdutos: TDataSetProvider
     DataSet = FDCeProdutos
     Left = 985
-    Top = 130
+    Top = 189
   end
   object CdsCeProdutos: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeProdutos'
     Left = 985
-    Top = 169
+    Top = 230
   end
   object FDCeProdutos: TFDQuery
     Connection = FDConn
     Left = 982
-    Top = 82
+    Top = 140
   end
   object dspOperadores: TDataSetProvider
     DataSet = FDOperadores
     Left = 1065
-    Top = 130
+    Top = 190
   end
   object cdsOperadores: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspOperadores'
     Left = 1065
-    Top = 169
+    Top = 231
     object cdsOperadoresID_OPERADORCAIXA: TFloatField
       FieldName = 'ID_OPERADORCAIXA'
     end
@@ -2807,19 +2807,19 @@ object DM: TDM
       'WHERE '
       ' STATUS <> '#39'C'#39' AND (ENVIADO <> '#39'2'#39' OR ENVIADO IS NULL)')
     Left = 1062
-    Top = 82
+    Top = 140
   end
   object dspCrm: TDataSetProvider
     DataSet = FDCrm
     Left = 1124
-    Top = 132
+    Top = 192
   end
   object cdsCRM: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCrm'
     Left = 1124
-    Top = 171
+    Top = 234
     object cdsCRMID_CRM: TFloatField
       FieldName = 'ID_CRM'
     end
@@ -2918,19 +2918,19 @@ object DM: TDM
       'WHERE'
       ' ENVIADO = '#39'9'#39)
     Left = 1121
-    Top = 84
+    Top = 143
   end
   object dspEntregas: TDataSetProvider
     DataSet = FdEntregas
     Left = 1180
-    Top = 132
+    Top = 193
   end
   object cdsEntregas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspEntregas'
     Left = 1180
-    Top = 171
+    Top = 235
     object cdsEntregasCD_FILIAL: TFloatField
       FieldName = 'CD_FILIAL'
     end
@@ -3003,7 +3003,7 @@ object DM: TDM
       'WHERE'
       ' ENVIADO = '#39'9'#39)
     Left = 1177
-    Top = 83
+    Top = 142
   end
   object FDItensTransfer: TFDQuery
     Connection = FDConn
@@ -3016,7 +3016,7 @@ object DM: TDM
       ' ITENS_TRANSFER.CD_TRANSFER = :CD_TRANSFER AND'
       ' ITENS_TRANSFER.ID_PRODUTO = :ID_PRODUTO')
     Left = 28
-    Top = 224
+    Top = 285
     ParamData = <
       item
         Position = 1
@@ -3034,7 +3034,7 @@ object DM: TDM
   object DspItensTransfer: TDataSetProvider
     DataSet = FDItensTransfer
     Left = 28
-    Top = 269
+    Top = 335
   end
   object QryItensTransfer: TClientDataSet
     Active = True
@@ -3052,7 +3052,7 @@ object DM: TDM
       end>
     ProviderName = 'DspItensTransfer'
     Left = 31
-    Top = 315
+    Top = 380
     object QryItensTransferCD_TRANSFER: TFloatField
       FieldName = 'CD_TRANSFER'
       Origin = 'CD_TRANSFER'
@@ -3113,7 +3113,7 @@ object DM: TDM
     Aggregates = <>
     Params = <>
     Left = 31
-    Top = 361
+    Top = 426
     object CdsItensTransferCD_TRANSFER: TFloatField
       FieldName = 'CD_TRANSFER'
       ProviderFlags = [pfInWhere, pfInKey]
@@ -3173,14 +3173,14 @@ object DM: TDM
   object DspCeItensTransfer: TDataSetProvider
     DataSet = TbItensTransfer
     Left = 112
-    Top = 267
+    Top = 334
   end
   object CdsCeItensTransfer: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeItensTransfer'
     Left = 112
-    Top = 313
+    Top = 380
     object CdsCeItensTransferCD_TRANSFER: TFloatField
       FieldName = 'CD_TRANSFER'
     end
@@ -3237,14 +3237,14 @@ object DM: TDM
       ' ITENS_TRANSFER.STATUS <> '#39'A'#39' AND'
       ' TRANSFER.ENVIADO = '#39'9'#39)
     Left = 113
-    Top = 224
+    Top = 285
   end
   object CdsCeTransfer: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeTransfer'
     Left = 191
-    Top = 311
+    Top = 379
     object CdsCeTransferCD_TRANSFER: TFloatField
       FieldName = 'CD_TRANSFER'
     end
@@ -3297,7 +3297,7 @@ object DM: TDM
   object DspCeTransfer: TDataSetProvider
     DataSet = FDTransfer
     Left = 191
-    Top = 269
+    Top = 335
   end
   object FDTransfer: TFDQuery
     Connection = FDConn
@@ -3310,12 +3310,12 @@ object DM: TDM
       ' STATUS <> '#39'A'#39' AND'
       ' ENVIADO = '#39'9'#39)
     Left = 191
-    Top = 226
+    Top = 287
   end
   object DspCadernoFaltas: TDataSetProvider
     DataSet = FDCardenoFaltas
     Left = 276
-    Top = 268
+    Top = 330
   end
   object CdsCadernoFaltas: TClientDataSet
     Active = True
@@ -3323,7 +3323,7 @@ object DM: TDM
     Params = <>
     ProviderName = 'DspCadernoFaltas'
     Left = 276
-    Top = 309
+    Top = 375
     object CdsCadernoFaltasCD_FILIAL: TFloatField
       FieldName = 'CD_FILIAL'
       Origin = 'CD_FILIAL'
@@ -3400,19 +3400,19 @@ object DM: TDM
       'WHERE'
       ' (STATUS <> '#39'E'#39') OR (STATUS IS NULL)')
     Left = 272
-    Top = 227
+    Top = 285
   end
   object DspPrecoVenda: TDataSetProvider
     DataSet = FDPrecoVenda
     Left = 365
-    Top = 270
+    Top = 331
   end
   object CdsPrecoVenda: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspPrecoVenda'
     Left = 365
-    Top = 310
+    Top = 373
   end
   object FDPrecoVenda: TFDQuery
     Connection = FDConn
@@ -3432,7 +3432,7 @@ object DM: TDM
       ' TEMP_PRODUTOS.CD_FILIAL = :FILIAL AND '
       ' TEMP_PRODUTOS.PROCESSO = 125')
     Left = 365
-    Top = 230
+    Top = 288
     ParamData = <
       item
         Name = 'FILIAL'
@@ -3445,14 +3445,14 @@ object DM: TDM
   object DspConferenciaNota: TDataSetProvider
     DataSet = FdConferenciaNota
     Left = 458
-    Top = 271
+    Top = 333
   end
   object CdsConferenciaNota: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspConferenciaNota'
     Left = 458
-    Top = 310
+    Top = 373
     object CdsConferenciaNotaID_CONFERENCIANOTA: TFloatField
       FieldName = 'ID_CONFERENCIANOTA'
       Required = True
@@ -3546,19 +3546,19 @@ object DM: TDM
       'SELECT * FROM CONFERENCIA_NOTA '
       'WHERE ENVIADO = '#39'9'#39)
     Left = 456
-    Top = 232
+    Top = 290
   end
   object DspCeUsu: TDataSetProvider
     DataSet = FDUsu
     Left = 538
-    Top = 272
+    Top = 334
   end
   object CdsCeUsu: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeUsu'
     Left = 538
-    Top = 311
+    Top = 373
     object CdsCeUsuCD_USUARIO: TFloatField
       FieldName = 'CD_USUARIO'
       Required = True
@@ -3579,19 +3579,19 @@ object DM: TDM
       'WHERE'
       ' ENVIADO = '#39'9'#39)
     Left = 536
-    Top = 232
+    Top = 290
   end
   object DspPosicaoEstoque: TDataSetProvider
     DataSet = FDPosicaoEstoque
     Left = 608
-    Top = 272
+    Top = 334
   end
   object CdsPosicaoEstoque: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspPosicaoEstoque'
     Left = 608
-    Top = 310
+    Top = 374
     object CdsPosicaoEstoqueDATA: TDateField
       FieldName = 'DATA'
       Required = True
@@ -3629,19 +3629,19 @@ object DM: TDM
       'WHERE'
       ' POSICAOESTOQUEDATA.ID_PRODUTO = TEMP_POSICAOESTOQUE2.ID_PRODUTO')
     Left = 608
-    Top = 233
+    Top = 291
   end
   object DspCeDuplic: TDataSetProvider
     DataSet = FDDuplic
     Left = 688
-    Top = 272
+    Top = 336
   end
   object CdsCeDuplic: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCeDuplic'
     Left = 688
-    Top = 310
+    Top = 374
     object CdsCeDuplicCD_CONTAS_PAGAR: TFloatField
       FieldName = 'CD_CONTAS_PAGAR'
       Required = True
@@ -3769,19 +3769,19 @@ object DM: TDM
       'WHERE'
       ' ENVIADO = '#39'9'#39)
     Left = 688
-    Top = 232
+    Top = 290
   end
   object DspCePedid1: TDataSetProvider
     DataSet = FDPedid1
     Left = 756
-    Top = 275
+    Top = 337
   end
   object CdsCePedid1: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCePedid1'
     Left = 757
-    Top = 312
+    Top = 375
     object CdsCePedid1CD_COMPRAS: TFloatField
       FieldName = 'CD_COMPRAS'
       Required = True
@@ -4050,19 +4050,19 @@ object DM: TDM
         ' CD_COMPRAS IN (SELECT CD_COMPRAS FROM TEMP_COMPRAS WHERE ENVIAD' +
         'O = '#39'9'#39' AND PROCESSO = '#39'4'#39')')
     Left = 758
-    Top = 234
+    Top = 292
   end
   object DspCePedido: TDataSetProvider
     DataSet = FDPedido
     Left = 822
-    Top = 275
+    Top = 338
   end
   object CdsCePedido: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspCePedido'
     Left = 822
-    Top = 314
+    Top = 376
     object CdsCePedidoCD_COMPRAS: TFloatField
       FieldName = 'CD_COMPRAS'
       Required = True
@@ -4470,12 +4470,12 @@ object DM: TDM
       ' TEMP_COMPRAS.PROCESSO = '#39'5'#39' AND'
       ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
     Left = 822
-    Top = 237
+    Top = 295
   end
   object DspLotesItensCompra: TDataSetProvider
     DataSet = FDLotesItensCompra
     Left = 899
-    Top = 276
+    Top = 336
   end
   object CdsLotesItensCompra: TClientDataSet
     Active = True
@@ -4483,7 +4483,7 @@ object DM: TDM
     Params = <>
     ProviderName = 'DspLotesItensCompra'
     Left = 899
-    Top = 316
+    Top = 377
     object CdsLotesItensCompraCD_COMPRAS: TFloatField
       FieldName = 'CD_COMPRAS'
       Origin = 'CD_COMPRAS'
@@ -4550,7 +4550,7 @@ object DM: TDM
       ' ITENS_COMPRA_LOTE.LOTE = TEMP_ITENS_COMPRA_LOTE.LOTE AND'
       ' TEMP_ITENS_COMPRA_LOTE.ENVIADO = '#39'9'#39)
     Left = 896
-    Top = 237
+    Top = 295
   end
   object CdsContasPagarCompras: TClientDataSet
     Active = True
@@ -4558,7 +4558,7 @@ object DM: TDM
     Params = <>
     ProviderName = 'DspContasPagarCompras'
     Left = 1012
-    Top = 317
+    Top = 378
     object CdsContasPagarComprasCD_FILIAL: TFloatField
       FieldName = 'CD_FILIAL'
       Origin = 'CD_FILIAL'
@@ -4590,7 +4590,7 @@ object DM: TDM
   object DspContasPagarCompras: TDataSetProvider
     DataSet = FDContasPagarCompras
     Left = 1012
-    Top = 277
+    Top = 337
   end
   object FDContasPagarCompras: TFDQuery
     Connection = FDConn
@@ -4607,19 +4607,19 @@ object DM: TDM
       ' TEMP_COMPRAS.PROCESSO = '#39'71'#39' AND'
       ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
     Left = 1011
-    Top = 236
+    Top = 294
   end
   object DspComprasBoletos: TDataSetProvider
     DataSet = FDComprasBoletos
     Left = 1258
-    Top = 130
+    Top = 195
   end
   object CdsComprasBoletos: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspComprasBoletos'
     Left = 1258
-    Top = 170
+    Top = 235
     object CdsComprasBoletosCD_COMPRAS: TFloatField
       FieldName = 'CD_COMPRAS'
       Required = True
@@ -4669,19 +4669,19 @@ object DM: TDM
       ' TEMP_COMPRAS.PROCESSO = '#39'17'#39' AND'
       ' TEMP_COMPRAS.ENVIADO = '#39'9'#39)
     Left = 1257
-    Top = 88
+    Top = 147
   end
   object DspSintegraNF: TDataSetProvider
     DataSet = FDSintegraNF
     Left = 1348
-    Top = 133
+    Top = 197
   end
   object CdsSintegraNF: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspSintegraNF'
     Left = 1351
-    Top = 170
+    Top = 236
     object CdsSintegraNFCOD_NF_ENTRADA: TIntegerField
       FieldName = 'COD_NF_ENTRADA'
       Required = True
@@ -5046,7 +5046,6 @@ object DM: TDM
     end
   end
   object FDSintegraNF: TFDQuery
-    Active = True
     Connection = FDConn
     SQL.Strings = (
       'SELECT'
@@ -5056,19 +5055,19 @@ object DM: TDM
       'WHERE'
       ' ENVIADO= '#39'9'#39)
     Left = 1348
-    Top = 92
+    Top = 151
   end
   object DspSintegraItensNF: TDataSetProvider
     DataSet = FDSintegraItensNF
-    Left = 1436
-    Top = 134
+    Left = 1448
+    Top = 196
   end
   object CdsSintegraItensNF: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DspSintegraItensNF'
-    Left = 1438
-    Top = 170
+    Left = 1450
+    Top = 237
     object CdsSintegraItensNFCOD_NF_ENTRADA_ITENS: TIntegerField
       FieldName = 'COD_NF_ENTRADA_ITENS'
       Required = True
@@ -5382,7 +5381,914 @@ object DM: TDM
       ' SINTEGRA_NF_ENTRADA_ITENS'
       'WHERE'
       ' ENVIADO = '#39'9'#39)
-    Left = 1432
-    Top = 88
+    Left = 1444
+    Top = 146
+  end
+  object DspSintegraR60: TDataSetProvider
+    DataSet = FDSintegraR60
+    Left = 1113
+    Top = 343
+  end
+  object CdsSintegraR60: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspSintegraR60'
+    Left = 1119
+    Top = 383
+    object CdsSintegraR60COD_SINTEGRA_R60: TIntegerField
+      FieldName = 'COD_SINTEGRA_R60'
+      Required = True
+    end
+    object CdsSintegraR60CD_FILIAL: TIntegerField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsSintegraR60NRO_SERIE_EQP: TStringField
+      FieldName = 'NRO_SERIE_EQP'
+    end
+    object CdsSintegraR60NRO_ORDEM_EQP: TStringField
+      FieldName = 'NRO_ORDEM_EQP'
+      Size = 3
+    end
+    object CdsSintegraR60MODELO_DOC: TStringField
+      FieldName = 'MODELO_DOC'
+      FixedChar = True
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60M: TStringField
+      FieldName = 'BRANCOS_60M'
+      Size = 37
+    end
+    object CdsSintegraR60R60M: TStringField
+      FieldName = 'R60M'
+      Size = 256
+    end
+    object CdsSintegraR60DATA_EMISSAO: TSQLTimeStampField
+      FieldName = 'DATA_EMISSAO'
+    end
+    object CdsSintegraR60CANCELAMENTO: TFMTBCDField
+      FieldName = 'CANCELAMENTO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60DESCONTO: TFMTBCDField
+      FieldName = 'DESCONTO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60SUBSTITUICAO_TRIBUTARIA: TFMTBCDField
+      FieldName = 'SUBSTITUICAO_TRIBUTARIA'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60ISENTO: TFMTBCDField
+      FieldName = 'ISENTO'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60NAO_INCIDENCIA: TFMTBCDField
+      FieldName = 'NAO_INCIDENCIA'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60ISSQN: TFMTBCDField
+      FieldName = 'ISSQN'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60ALIQUOTA01: TFMTBCDField
+      FieldName = 'ALIQUOTA01'
+      Precision = 5
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_TPARCIAL01: TFMTBCDField
+      FieldName = 'VALOR_TPARCIAL01'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60A01: TStringField
+      FieldName = 'BRANCOS_60A01'
+      Size = 79
+    end
+    object CdsSintegraR60R60A01: TStringField
+      FieldName = 'R60A01'
+      Size = 256
+    end
+    object CdsSintegraR60ALIQUOTA02: TFMTBCDField
+      FieldName = 'ALIQUOTA02'
+      Precision = 5
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_TPARCIAL02: TFMTBCDField
+      FieldName = 'VALOR_TPARCIAL02'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60A02: TStringField
+      FieldName = 'BRANCOS_60A02'
+      Size = 79
+    end
+    object CdsSintegraR60R60A02: TStringField
+      FieldName = 'R60A02'
+      Size = 256
+    end
+    object CdsSintegraR60ALIQUOTA03: TFMTBCDField
+      FieldName = 'ALIQUOTA03'
+      Precision = 5
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_TPARCIAL03: TFMTBCDField
+      FieldName = 'VALOR_TPARCIAL03'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60A03: TStringField
+      FieldName = 'BRANCOS_60A03'
+      Size = 79
+    end
+    object CdsSintegraR60R60A03: TStringField
+      FieldName = 'R60A03'
+      Size = 256
+    end
+    object CdsSintegraR60ALIQUOTA04: TFMTBCDField
+      FieldName = 'ALIQUOTA04'
+      Precision = 5
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_TPARCIAL04: TFMTBCDField
+      FieldName = 'VALOR_TPARCIAL04'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60A04: TStringField
+      FieldName = 'BRANCOS_60A04'
+      Size = 79
+    end
+    object CdsSintegraR60R60A04: TStringField
+      FieldName = 'R60A04'
+      Size = 256
+    end
+    object CdsSintegraR60ALIQUOTA05: TFMTBCDField
+      FieldName = 'ALIQUOTA05'
+      Precision = 5
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_TPARCIAL05: TFMTBCDField
+      FieldName = 'VALOR_TPARCIAL05'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS_60A05: TStringField
+      FieldName = 'BRANCOS_60A05'
+      Size = 79
+    end
+    object CdsSintegraR60R60A05: TStringField
+      FieldName = 'R60A05'
+      Size = 256
+    end
+    object CdsSintegraR60DATAHORA: TSQLTimeStampField
+      FieldName = 'DATAHORA'
+    end
+    object CdsSintegraR60ULTATUAL: TSQLTimeStampField
+      FieldName = 'ULTATUAL'
+    end
+    object CdsSintegraR60ULTATUALCODSETORUSER: TIntegerField
+      FieldName = 'ULTATUALCODSETORUSER'
+    end
+    object CdsSintegraR60ULTATUALCODSETOR: TIntegerField
+      FieldName = 'ULTATUALCODSETOR'
+    end
+    object CdsSintegraR60NRO_CONTADOR_INICIO: TIntegerField
+      FieldName = 'NRO_CONTADOR_INICIO'
+    end
+    object CdsSintegraR60NRO_CONTADOR_FIM: TIntegerField
+      FieldName = 'NRO_CONTADOR_FIM'
+    end
+    object CdsSintegraR60NRO_CONTADOR_Z: TIntegerField
+      FieldName = 'NRO_CONTADOR_Z'
+    end
+    object CdsSintegraR60CONTADOR_REINICIO: TIntegerField
+      FieldName = 'CONTADOR_REINICIO'
+    end
+    object CdsSintegraR60VALOR_TOTAL_GERAL: TFMTBCDField
+      FieldName = 'VALOR_TOTAL_GERAL'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60VALOR_VENDA_BRUTA: TFMTBCDField
+      FieldName = 'VALOR_VENDA_BRUTA'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60BRANCOS: TStringField
+      FieldName = 'BRANCOS'
+    end
+    object CdsSintegraR60ENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+  end
+  object FDSintegraR60: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' SINTEGRA_R60'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 1112
+    Top = 296
+  end
+  object DspSintegraPedidos: TDataSetProvider
+    DataSet = FDSintegraPedidos
+    Left = 1208
+    Top = 343
+  end
+  object CdsSintegraPedidos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspSintegraPedidos'
+    Left = 1208
+    Top = 383
+    object CdsSintegraPedidosCOD_PEDIDOS_ITENS: TIntegerField
+      FieldName = 'COD_PEDIDOS_ITENS'
+    end
+    object CdsSintegraPedidosCD_FILIAL: TIntegerField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsSintegraPedidosREF_PRODUTOS: TStringField
+      FieldName = 'REF_PRODUTOS'
+      Size = 30
+    end
+    object CdsSintegraPedidosCL_FIS: TStringField
+      FieldName = 'CL_FIS'
+      Size = 15
+    end
+    object CdsSintegraPedidosPRODUTO: TStringField
+      FieldName = 'PRODUTO'
+      Size = 50
+    end
+    object CdsSintegraPedidosAPR_UND: TStringField
+      FieldName = 'APR_UND'
+      Required = True
+      Size = 6
+    end
+    object CdsSintegraPedidosS_TRIB: TStringField
+      FieldName = 'S_TRIB'
+      Size = 15
+    end
+    object CdsSintegraPedidosALIQUOTA_IPI: TFMTBCDField
+      FieldName = 'ALIQUOTA_IPI'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraPedidosALIQUOTA_ICMS: TFMTBCDField
+      FieldName = 'ALIQUOTA_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraPedidosREDUCAO_BASE_ICMS: TFMTBCDField
+      FieldName = 'REDUCAO_BASE_ICMS'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraPedidosBASE_ICMS_SUBST: TFMTBCDField
+      FieldName = 'BASE_ICMS_SUBST'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraPedidosDATAHORA: TSQLTimeStampField
+      FieldName = 'DATAHORA'
+    end
+    object CdsSintegraPedidosENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsSintegraPedidosNRO_SERIE_EQP: TStringField
+      FieldName = 'NRO_SERIE_EQP'
+    end
+  end
+  object FDSintegraPedidos: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' SINTEGRA_PEDIDOS_ITENS'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 1208
+    Top = 296
+  end
+  object DspSintegraR60I: TDataSetProvider
+    DataSet = FDSintegraR60I
+    Left = 1291
+    Top = 343
+  end
+  object CdsSintegraR60I: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspSintegraR60I'
+    Left = 1292
+    Top = 385
+    object CdsSintegraR60ICOD_SINTEGRA_R60I: TIntegerField
+      FieldName = 'COD_SINTEGRA_R60I'
+      Required = True
+    end
+    object CdsSintegraR60ICD_FILIAL: TIntegerField
+      FieldName = 'CD_FILIAL'
+    end
+    object CdsSintegraR60IDATAHORA: TSQLTimeStampField
+      FieldName = 'DATAHORA'
+    end
+    object CdsSintegraR60INRO_SERIE_EQP: TStringField
+      FieldName = 'NRO_SERIE_EQP'
+    end
+    object CdsSintegraR60IMODELO_DOC: TStringField
+      FieldName = 'MODELO_DOC'
+      FixedChar = True
+      Size = 2
+    end
+    object CdsSintegraR60ICOO: TIntegerField
+      FieldName = 'COO'
+    end
+    object CdsSintegraR60INRO_ORDEM_ITEM: TIntegerField
+      FieldName = 'NRO_ORDEM_ITEM'
+    end
+    object CdsSintegraR60IREF_PRODUTOS: TStringField
+      FieldName = 'REF_PRODUTOS'
+      Size = 14
+    end
+    object CdsSintegraR60IQUANTIDADE: TFMTBCDField
+      FieldName = 'QUANTIDADE'
+      Precision = 19
+      Size = 3
+    end
+    object CdsSintegraR60IVALOR_MERCADORIA: TFMTBCDField
+      FieldName = 'VALOR_MERCADORIA'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60IBASECALCULO_ICMS: TFMTBCDField
+      FieldName = 'BASECALCULO_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60IVALOR_ICMS: TFMTBCDField
+      FieldName = 'VALOR_ICMS'
+      Precision = 19
+      Size = 2
+    end
+    object CdsSintegraR60IALIQUOTA_ICMS: TStringField
+      FieldName = 'ALIQUOTA_ICMS'
+      Size = 4
+    end
+    object CdsSintegraR60IBRANCOS: TStringField
+      FieldName = 'BRANCOS'
+      Size = 16
+    end
+    object CdsSintegraR60IENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+  end
+  object FDSintegraR60I: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' SINTEGRA_R60I'
+      'WHERE'
+      ' ENVIADO = '#39'9'#39)
+    Left = 1290
+    Top = 297
+  end
+  object DspVendasItensExcluidos: TDataSetProvider
+    DataSet = FDVendasItensExcluidos
+    Left = 1384
+    Top = 343
+  end
+  object CdsVendasItensExcluidos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspVendasItensExcluidos'
+    Left = 1384
+    Top = 384
+    object CdsVendasItensExcluidosID_ITEM_EXCLUIDO: TFloatField
+      FieldName = 'ID_ITEM_EXCLUIDO'
+      Required = True
+    end
+    object CdsVendasItensExcluidosCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Required = True
+    end
+    object CdsVendasItensExcluidosDATA: TDateField
+      FieldName = 'DATA'
+    end
+    object CdsVendasItensExcluidosHORA: TTimeField
+      FieldName = 'HORA'
+    end
+    object CdsVendasItensExcluidosTERMINAL: TFloatField
+      FieldName = 'TERMINAL'
+    end
+    object CdsVendasItensExcluidosCD_USUARIO: TFloatField
+      FieldName = 'CD_USUARIO'
+    end
+    object CdsVendasItensExcluidosUSUARIO: TStringField
+      FieldName = 'USUARIO'
+      Size = 100
+    end
+    object CdsVendasItensExcluidosID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+    end
+    object CdsVendasItensExcluidosPRODUTO: TStringField
+      FieldName = 'PRODUTO'
+      Size = 100
+    end
+    object CdsVendasItensExcluidosQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+    end
+    object CdsVendasItensExcluidosVALOR: TFMTBCDField
+      FieldName = 'VALOR'
+      Precision = 18
+      Size = 2
+    end
+    object CdsVendasItensExcluidosENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsVendasItensExcluidosID_OPERADOR_CAIXA: TFloatField
+      FieldName = 'ID_OPERADOR_CAIXA'
+    end
+  end
+  object FDVendasItensExcluidos: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT * FROM VENDAS_ITENS_EXCLUIDOS'
+      'WHERE ENVIADO = '#39'9'#39)
+    Left = 1378
+    Top = 297
+  end
+  object DspTransfer: TDataSetProvider
+    DataSet = FDConstransfer
+    UpdateMode = upWhereKeyOnly
+    Left = 32
+    Top = 527
+  end
+  object QryTransfer: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftInteger
+        Precision = 16
+        Name = 'CD_TRANSFER'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DspTransfer'
+    Left = 32
+    Top = 571
+    object QryTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+    end
+    object QryTransferDATA_GERACAO: TDateField
+      FieldName = 'DATA_GERACAO'
+    end
+    object QryTransferHORA_GERACAO: TTimeField
+      FieldName = 'HORA_GERACAO'
+    end
+    object QryTransferDATA_ENVIO: TDateField
+      FieldName = 'DATA_ENVIO'
+    end
+    object QryTransferHORA_ENVIO: TTimeField
+      FieldName = 'HORA_ENVIO'
+    end
+    object QryTransferDATA_CONCLUSAO: TDateField
+      FieldName = 'DATA_CONCLUSAO'
+    end
+    object QryTransferHORA_CONCLUSAO: TTimeField
+      FieldName = 'HORA_CONCLUSAO'
+    end
+    object QryTransferCD_FILIAL_ORIGEM: TFloatField
+      FieldName = 'CD_FILIAL_ORIGEM'
+    end
+    object QryTransferCD_FILIAL_DESTINO: TFloatField
+      FieldName = 'CD_FILIAL_DESTINO'
+    end
+    object QryTransferCD_USUARIO_ORIGEM: TFloatField
+      FieldName = 'CD_USUARIO_ORIGEM'
+    end
+    object QryTransferCD_USUARIO_DESTINO: TFloatField
+      FieldName = 'CD_USUARIO_DESTINO'
+    end
+    object QryTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      Size = 255
+    end
+    object QryTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object QryTransferENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object QryTransferCD_VENDEDOR: TFloatField
+      FieldName = 'CD_VENDEDOR'
+      ProviderFlags = [pfInUpdate]
+    end
+  end
+  object CdsTransfer: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 32
+    Top = 609
+    object CdsTransferCD_TRANSFER: TFloatField
+      FieldName = 'CD_TRANSFER'
+    end
+    object CdsTransferDATA_GERACAO: TDateField
+      FieldName = 'DATA_GERACAO'
+    end
+    object CdsTransferHORA_GERACAO: TTimeField
+      FieldName = 'HORA_GERACAO'
+    end
+    object CdsTransferDATA_ENVIO: TDateField
+      FieldName = 'DATA_ENVIO'
+    end
+    object CdsTransferHORA_ENVIO: TTimeField
+      FieldName = 'HORA_ENVIO'
+    end
+    object CdsTransferDATA_CONCLUSAO: TDateField
+      FieldName = 'DATA_CONCLUSAO'
+    end
+    object CdsTransferHORA_CONCLUSAO: TTimeField
+      FieldName = 'HORA_CONCLUSAO'
+    end
+    object CdsTransferCD_FILIAL_ORIGEM: TFloatField
+      FieldName = 'CD_FILIAL_ORIGEM'
+    end
+    object CdsTransferCD_FILIAL_DESTINO: TFloatField
+      FieldName = 'CD_FILIAL_DESTINO'
+    end
+    object CdsTransferCD_USUARIO_ORIGEM: TFloatField
+      FieldName = 'CD_USUARIO_ORIGEM'
+    end
+    object CdsTransferCD_USUARIO_DESTINO: TFloatField
+      FieldName = 'CD_USUARIO_DESTINO'
+    end
+    object CdsTransferOBSERVACOES: TStringField
+      FieldName = 'OBSERVACOES'
+      Size = 255
+    end
+    object CdsTransferSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsTransferENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
+    end
+    object CdsTransferCD_VENDEDOR: TFloatField
+      FieldName = 'CD_VENDEDOR'
+    end
+  end
+  object FDConstransfer: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' *'
+      'FROM'
+      ' TRANSFER'
+      'WHERE'
+      ' CD_TRANSFER = :CD_TRANSFER')
+    Left = 31
+    Top = 489
+    ParamData = <
+      item
+        Position = 1
+        Name = 'CD_TRANSFER'
+        DataType = ftInteger
+        Precision = 16
+        ParamType = ptInput
+      end>
+  end
+  object CdsProdutosQuantidade: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 971
+    Top = 51
+    object CdsProdutosQuantidadeID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+    end
+    object CdsProdutosQuantidadeQUANTIDADEINICIAL: TFloatField
+      FieldName = 'QUANTIDADEINICIAL'
+    end
+    object CdsProdutosQuantidadePRECO_VENDA: TFloatField
+      FieldName = 'PRECO_VENDA'
+    end
+  end
+  object FDAtualizaProdutosQuantidade: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      
+        'EXECUTE PROCEDURE SP_ATUALIZA_PRODUTOS_QUANTIDADE(:ID_PRODUTO, :' +
+        'QUANTIDADEINICIAL, :PRECO_VENDA)')
+    Left = 970
+    Top = 3
+    ParamData = <
+      item
+        Name = 'ID_PRODUTO'
+        DataType = ftInteger
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'QUANTIDADEINICIAL'
+        DataType = ftFloat
+        Precision = 16
+        ParamType = ptInput
+      end
+      item
+        Name = 'PRECO_VENDA'
+        DataType = ftFloat
+        Precision = 16
+        ParamType = ptInput
+      end>
+  end
+  object CdsProdutosFP: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 1092
+    Top = 49
+    object CdsProdutosFPID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+    end
+    object CdsProdutosFPCD_PRODUTO: TStringField
+      FieldName = 'CD_PRODUTO'
+      Size = 6
+    end
+    object CdsProdutosFPCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+    end
+    object CdsProdutosFPDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 60
+    end
+    object CdsProdutosFPPRECO: TFloatField
+      FieldName = 'PRECO'
+    end
+    object CdsProdutosFPUSAPRECOLOJA: TStringField
+      FieldName = 'USAPRECOLOJA'
+      Size = 1
+    end
+  end
+  object CdsProdutosFidelidade: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 1200
+    Top = 43
+    object CdsProdutosFidelidadeID_PRODUTO: TFloatField
+      FieldName = 'ID_PRODUTO'
+      Required = True
+    end
+    object CdsProdutosFidelidadeCD_PRODUTO: TStringField
+      FieldName = 'CD_PRODUTO'
+      Size = 6
+    end
+    object CdsProdutosFidelidadeCD_LABORATORIO: TFloatField
+      FieldName = 'CD_LABORATORIO'
+    end
+    object CdsProdutosFidelidadeCD_GRUPO: TFloatField
+      FieldName = 'CD_GRUPO'
+    end
+    object CdsProdutosFidelidadeDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 60
+    end
+    object CdsProdutosFidelidadePRECO: TFloatField
+      FieldName = 'PRECO'
+    end
+    object CdsProdutosFidelidadeDT_ALTERACAO: TDateField
+      FieldName = 'DT_ALTERACAO'
+    end
+  end
+  object FDAtualizaProdutosFP: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      
+        'EXECUTE PROCEDURE SP_ATUALIZA_PRODUTOS_FP(:ID_PRODUTO, :CD_PRODU' +
+        'TO, :CD_LABORATORIO, :DESCRICAO, :PRECO, :USAPRECOLOJA)')
+    Left = 1090
+    ParamData = <
+      item
+        Name = 'ID_PRODUTO'
+        DataType = ftInteger
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'CD_PRODUTO'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'CD_LABORATORIO'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'PRECO'
+        DataType = ftFloat
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'USAPRECOLOJA'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 1
+      end>
+  end
+  object FDAtualizaProdutosFidelidade: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      
+        'EXECUTE PROCEDURE SP_ATUALIZA_PRODUTOS_FIDELIDADE(:ID_PRODUTO, :' +
+        'CD_PRODUTO, :CD_LABORATORIO, :DESCRICAO, :PRECO, :CD_GRUPO, :DT_' +
+        'ALTERACAO)')
+    Left = 1195
+    Top = 65535
+    ParamData = <
+      item
+        Name = 'ID_PRODUTO'
+        DataType = ftInteger
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'CD_PRODUTO'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'CD_LABORATORIO'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'PRECO'
+        DataType = ftFloat
+        Precision = 16
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'CD_GRUPO'
+        DataType = ftFloat
+        Precision = 16
+        ParamType = ptInput
+      end
+      item
+        Name = 'DT_ALTERACAO'
+        DataType = ftDate
+        ParamType = ptInput
+      end>
+  end
+  object CdsCadastro: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 849
+    Top = 8
+  end
+  object DspFiliais: TDataSetProvider
+    DataSet = FDFiliais
+    Left = 104
+    Top = 535
+  end
+  object CdsFiliais: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftFloat
+        Name = 'FILIAL'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DspFiliais'
+    Left = 104
+    Top = 583
+    object CdsFiliaisCD_FILIAL: TFloatField
+      FieldName = 'CD_FILIAL'
+      Required = True
+    end
+  end
+  object FDFiliais: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' CD_FILIAL'
+      'FROM'
+      ' FILIAIS'
+      'WHERE'
+      ' CD_FILIAL <> :FILIAL')
+    Left = 111
+    Top = 489
+    ParamData = <
+      item
+        Position = 1
+        Name = 'FILIAL'
+        DataType = ftFloat
+        ParamType = ptInput
+      end>
+  end
+  object FdAtualizaEstoque: TFDQuery
+    Connection = FDConn
+    Left = 1336
+    Top = 8
+  end
+  object Dsp1: TDataSetProvider
+    Left = 236
+    Top = 535
+  end
+  object Cds1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'Dsp1'
+    Left = 232
+    Top = 576
+  end
+  object FDcds1: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'SELECT'
+      ' COUNT(ID_PRODUTO) AS N_ITENS,'
+      ' SUM(ESTOQUE_0) AS N_UNIDADES,'
+      ' SUM(CUSTO_UNITARIO) AS T_CUSTO,'
+      ' SUM(PRECO_VENDA) AS T_VENDA,'
+      ' SUM(PRECO_PROMOCAO) AS T_PROMOCAO,'
+      ' SUM(PRECO_VENDA) AS CLASSES,'
+      ' SUM(PRECO_VENDA) AS GRUPOS,'
+      ' SUM(PRECO_VENDA) AS LABORATORIOS,'
+      ' SUM(PRECO_VENDA) AS DISTRIBUIDORES,'
+      ' SUM(PRECO_VENDA) AS FAMILIAS,'
+      ' SUM(PRECO_VENDA) AS GRUPOSBALANCO,'
+      ' SUM(PRECO_VENDA) AS GRUPOSCOMPRAS,'
+      ' SUM(PRECO_VENDA) AS CARTOES,'
+      ' SUM(PRECO_VENDA) AS LANCAMENTOS,'
+      ' SUM(PRECO_VENDA) AS CAIXAS,'
+      ' SUM(PRECO_VENDA) AS CONTASRECEBER'
+      'FROM'
+      ' PRODUTOS')
+    Left = 238
+    Top = 493
+  end
+  object CdsPrecos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 424
+    Top = 64
+  end
+  object CdsDeletados: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 512
+    Top = 64
+    object CdsDeletadosTABELA: TStringField
+      FieldName = 'TABELA'
+    end
+    object CdsDeletadosCAMPO1: TStringField
+      FieldName = 'CAMPO1'
+    end
+    object CdsDeletadosCAMPO2: TStringField
+      FieldName = 'CAMPO2'
+    end
+    object CdsDeletadosDATA: TDateField
+      FieldName = 'DATA'
+    end
+    object CdsDeletadosHORA: TTimeField
+      FieldName = 'HORA'
+    end
+    object CdsDeletadosUSUARIO: TStringField
+      FieldName = 'USUARIO'
+    end
   end
 end

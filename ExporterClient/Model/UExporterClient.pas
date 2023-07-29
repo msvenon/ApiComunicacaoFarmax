@@ -27,7 +27,8 @@ type
     { Private declarations }
   public
 
-    procedure Delay(Tempo: Word);
+  var
+   procedure Delay(Tempo: Word);
     procedure processar;
 
 
@@ -63,7 +64,7 @@ begin
  dm.cdsParametros.Close;
  dm.cdsParametros.open;
 
- dm.cdfilialparametro:=FloatToStr(dm.cdsParametrosCD_FILIAL.Value);
+ dm.cdfilialparametro:=dm.cdsParametrosCD_FILIAL.Value;
 end;
 
 procedure TFrmPrincipal.processar;
