@@ -32,7 +32,7 @@ type
   private
     { Private declarations }
   public
-   procedure ValidaBd;
+   function ValidaBd:boolean;
    function  Crypt(Action, Src: String): String;
 
   end;
@@ -43,6 +43,8 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Funcoes;
 
 {$R *.dfm}
 
@@ -105,10 +107,10 @@ end;
 
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
- ValidaBd;
+ //ValidaBd;
 end;
 
-procedure TDM.ValidaBd;
+function TDM.ValidaBd:boolean;
 
 var
  Servidor, CaminhoBD,NOmeServidor, Aux1 : String;
@@ -143,10 +145,13 @@ begin
          Fdconn.Params.Values['Protocol']  :='TCPIP';
          Fdconn.Connected;
          Fdconn.Connected:=true;
+         Result:=true;
 
        except on E: Exception do
-
-         showmessage('Erro ao conectar no servidor :'+E.Message);
+          begin
+            GeraLog('Erro ao conectar no servidor :'+E.Message);
+           Result:=false;
+          end;
         end;
 
 

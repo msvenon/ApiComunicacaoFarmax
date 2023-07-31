@@ -45,7 +45,8 @@ uses Controlle.Filial, Udm, Funcoes, Controlle.ClientQuick;
 
 procedure TFrmPrincipal.Button1Click(Sender: TObject);
 begin
- EnviandoClientes;
+ //EnviandoClientes;
+ processar;
 
 end;
 

@@ -1,6 +1,0 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 03032020 as 11:56:58 horas
-03/03/2020 11:56:58 - Encerrando o processo. 
-03/03/2020 11:56:58 - Processo concluido Rodando como Aplicacao. 
-03/03/2020 12:00:08===============================================================
-03/03/2020 12:00:14 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Produtos_01_20200302180301.xml
-03/03/2020 12:00:36 - Estoques / Custos : 8

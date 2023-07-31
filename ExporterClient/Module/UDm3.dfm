@@ -2,13 +2,13 @@ object DM3: TDM3
   OldCreateOrder = False
   Height = 736
   Width = 1349
-  object SqlProdutosTotais: TFDQuery
+  object FDProdutosTotais: TFDQuery
     Connection = DM.FDConn
     Left = 40
     Top = 8
   end
   object DspProdutosTotais: TDataSetProvider
-    DataSet = SqlProdutosTotais
+    DataSet = FDProdutosTotais
     Left = 40
     Top = 56
   end
@@ -19,7 +19,7 @@ object DM3: TDM3
     Left = 40
     Top = 104
   end
-  object SqlUsuarios: TFDQuery
+  object FDUsuarios: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT '
@@ -38,7 +38,7 @@ object DM3: TDM3
       end>
   end
   object DspUsuarios: TDataSetProvider
-    DataSet = SqlUsuarios
+    DataSet = FDUsuarios
     Left = 128
     Top = 57
   end
@@ -142,7 +142,7 @@ object DM3: TDM3
       FieldName = 'CD_FILIAL'
     end
   end
-  object SqlPermissoesModulos: TFDQuery
+  object FDPermissoesModulos: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -167,7 +167,7 @@ object DM3: TDM3
       end>
   end
   object DspPermissoesModulos: TDataSetProvider
-    DataSet = SqlPermissoesModulos
+    DataSet = FDPermissoesModulos
     Left = 312
     Top = 56
   end
@@ -254,7 +254,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlPermissoes: TFDQuery
+  object FDPermissoes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -273,7 +273,7 @@ object DM3: TDM3
       end>
   end
   object DspPermissoes: TDataSetProvider
-    DataSet = SqlPermissoes
+    DataSet = FDPermissoes
     Left = 216
     Top = 56
   end
@@ -309,7 +309,7 @@ object DM3: TDM3
       FieldName = 'DESCRICAO'
     end
   end
-  object SqlEncartes: TFDQuery
+  object FDEncartes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -328,7 +328,7 @@ object DM3: TDM3
       end>
   end
   object DspEncartes: TDataSetProvider
-    DataSet = SqlEncartes
+    DataSet = FDEncartes
     Left = 681
     Top = 394
   end
@@ -428,7 +428,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlItensEncartes: TFDQuery
+  object FdItensEncartes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -453,7 +453,7 @@ object DM3: TDM3
       end>
   end
   object DspItensEncartes: TDataSetProvider
-    DataSet = SqlItensEncartes
+    DataSet = FdItensEncartes
     Left = 757
     Top = 394
   end
@@ -492,8 +492,8 @@ object DM3: TDM3
   object CdsItensEncartes: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 757
-    Top = 498
+    Left = 765
+    Top = 482
     object CdsItensEncartesID_ENCARTE: TFloatField
       FieldName = 'ID_ENCARTE'
       Required = True
@@ -510,7 +510,7 @@ object DM3: TDM3
       FieldName = 'PRECO_VENDA'
     end
   end
-  object SqlRedes: TFDQuery
+  object FDRedes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -529,7 +529,7 @@ object DM3: TDM3
       end>
   end
   object DspRedes: TDataSetProvider
-    DataSet = SqlRedes
+    DataSet = FDRedes
     Left = 400
     Top = 56
   end
@@ -619,7 +619,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlConcorrentes: TFDQuery
+  object FDConcorrentes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -638,7 +638,7 @@ object DM3: TDM3
       end>
   end
   object DspConcorrentes: TDataSetProvider
-    DataSet = SqlConcorrentes
+    DataSet = FDConcorrentes
     Left = 480
     Top = 56
   end
@@ -722,7 +722,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlPrecosConcorrentes: TFDQuery
+  object FDPrecosConcorrentes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -747,7 +747,7 @@ object DM3: TDM3
       end>
   end
   object DspPrecosConcorrentes: TDataSetProvider
-    DataSet = SqlPrecosConcorrentes
+    DataSet = FDPrecosConcorrentes
     Left = 584
     Top = 56
   end
@@ -899,7 +899,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlContasPagarDeletadas: TFDQuery
+  object FDContasPagarDeletadas: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT '
@@ -912,7 +912,7 @@ object DM3: TDM3
     Top = 356
   end
   object DspContasPagarDeletadas: TDataSetProvider
-    DataSet = SqlContasPagarDeletadas
+    DataSet = FDContasPagarDeletadas
     Left = 863
     Top = 399
   end
@@ -938,7 +938,7 @@ object DM3: TDM3
       FieldName = 'CD_FILIAL'
     end
   end
-  object SqlCRDeletados: TFDQuery
+  object FDCRDeletados: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -952,7 +952,7 @@ object DM3: TDM3
     Top = 8
   end
   object DspCRDeletados: TDataSetProvider
-    DataSet = SqlCRDeletados
+    DataSet = FDCRDeletados
     Left = 696
     Top = 56
   end
@@ -992,7 +992,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlLimiteSaldoClientes: TFDQuery
+  object FDLimiteSaldoClientes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -1013,31 +1013,31 @@ object DM3: TDM3
         DataType = ftFloat
         ParamType = ptInput
       end>
-    object SqlLimiteSaldoClientesCD_CLIENTE: TFloatField
+    object FDLimiteSaldoClientesCD_CLIENTE: TFloatField
       FieldName = 'CD_CLIENTE'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object SqlLimiteSaldoClientesLIMITE_CREDITO: TFloatField
+    object FDLimiteSaldoClientesLIMITE_CREDITO: TFloatField
       FieldName = 'LIMITE_CREDITO'
       ProviderFlags = [pfInUpdate]
     end
-    object SqlLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField
+    object FDLimiteSaldoClientesLIMITE_PERCENTUAL: TFloatField
       FieldName = 'LIMITE_PERCENTUAL'
       ProviderFlags = [pfInUpdate]
     end
-    object SqlLimiteSaldoClientesSALDO: TFloatField
+    object FDLimiteSaldoClientesSALDO: TFloatField
       FieldName = 'SALDO'
       ProviderFlags = [pfInUpdate]
     end
-    object SqlLimiteSaldoClientesSTATUS: TStringField
+    object FDLimiteSaldoClientesSTATUS: TStringField
       FieldName = 'STATUS'
       ProviderFlags = [pfInUpdate]
       Size = 1
     end
   end
   object DspLimiteSaldoClientes: TDataSetProvider
-    DataSet = SqlLimiteSaldoClientes
+    DataSet = FDLimiteSaldoClientes
     UpdateMode = upWhereKeyOnly
     Left = 808
     Top = 48
@@ -1071,7 +1071,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlClasses: TFDQuery
+  object FDClasses: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CLASSE FROM CLASSES')
@@ -1079,7 +1079,7 @@ object DM3: TDM3
     Top = 212
   end
   object DspClasses: TDataSetProvider
-    DataSet = SqlClasses
+    DataSet = FDClasses
     Left = 35
     Top = 252
   end
@@ -1094,7 +1094,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlGrupos: TFDQuery
+  object FDGrupos: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_GRUPO FROM GRUPOS')
@@ -1102,7 +1102,7 @@ object DM3: TDM3
     Top = 213
   end
   object DspGrupos: TDataSetProvider
-    DataSet = SqlGrupos
+    DataSet = FDGrupos
     Left = 119
     Top = 253
   end
@@ -1117,7 +1117,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlLaboratorios: TFDQuery
+  object FDLaboratorios: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_LABORATORIO FROM LABORATORIOS')
@@ -1125,7 +1125,7 @@ object DM3: TDM3
     Top = 212
   end
   object DspLaboratorios: TDataSetProvider
-    DataSet = SqlLaboratorios
+    DataSet = FDLaboratorios
     Left = 216
     Top = 252
   end
@@ -1140,7 +1140,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlGruposCompras: TFDQuery
+  object FDGruposCompras: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_GRUPOCOMPRA FROM GRUPOSCOMPRAS')
@@ -1148,7 +1148,7 @@ object DM3: TDM3
     Top = 208
   end
   object DspGruposCompras: TDataSetProvider
-    DataSet = SqlGruposCompras
+    DataSet = FDGruposCompras
     Left = 416
     Top = 248
   end
@@ -1163,7 +1163,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlGruposBalanco: TFDQuery
+  object FDGruposBalanco: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_GRUPOBALANCO FROM GRUPOSBALANCO')
@@ -1171,7 +1171,7 @@ object DM3: TDM3
     Top = 208
   end
   object DspGruposBalanco: TDataSetProvider
-    DataSet = SqlGruposBalanco
+    DataSet = FDGruposBalanco
     Left = 520
     Top = 248
   end
@@ -1186,7 +1186,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlDistribuidores: TFDQuery
+  object FDDistribuidores: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_DISTRIBUIDOR FROM DISTRIBUIDORES')
@@ -1194,7 +1194,7 @@ object DM3: TDM3
     Top = 208
   end
   object DspDistribuidores: TDataSetProvider
-    DataSet = SqlDistribuidores
+    DataSet = FDDistribuidores
     Left = 616
     Top = 248
   end
@@ -1209,7 +1209,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlFamilias: TFDQuery
+  object FDFamilias: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT ID_FAMILIA FROM FAMILIAS')
@@ -1217,7 +1217,7 @@ object DM3: TDM3
     Top = 212
   end
   object DspFamilias: TDataSetProvider
-    DataSet = SqlFamilias
+    DataSet = FDFamilias
     Left = 314
     Top = 252
   end
@@ -1232,7 +1232,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlCartoes: TFDQuery
+  object FDCartoes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CARTAO FROM CARTOES')
@@ -1240,7 +1240,7 @@ object DM3: TDM3
     Top = 361
   end
   object DspCartoes: TDataSetProvider
-    DataSet = SqlCartoes
+    DataSet = FDCartoes
     Left = 19
     Top = 394
   end
@@ -1255,7 +1255,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlPlanoContas: TFDQuery
+  object FDPlanoContas: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_PLANO_CONTAS FROM PLANO_CONTAS')
@@ -1263,7 +1263,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspPlanoConras: TDataSetProvider
-    DataSet = SqlPlanoContas
+    DataSet = FDPlanoContas
     Left = 109
     Top = 394
   end
@@ -1278,7 +1278,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlVendedores: TFDQuery
+  object FdVendedores: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_VENDEDOR FROM VENDEDORES')
@@ -1286,7 +1286,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspVendedores: TDataSetProvider
-    DataSet = SqlVendedores
+    DataSet = FdVendedores
     Left = 205
     Top = 394
   end
@@ -1301,7 +1301,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlConvenios: TFDQuery
+  object FDConvenios: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CONVENIO FROM CONVENIOS')
@@ -1309,7 +1309,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspConvenios: TDataSetProvider
-    DataSet = SqlConvenios
+    DataSet = FDConvenios
     Left = 293
     Top = 394
   end
@@ -1324,7 +1324,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlClientes: TFDQuery
+  object FdClientes: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CLIENTE FROM CLIENTES'
@@ -1335,7 +1335,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspClientes: TDataSetProvider
-    DataSet = SqlClientes
+    DataSet = FdClientes
     Left = 389
     Top = 394
   end
@@ -1360,7 +1360,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlContasReceber: TFDQuery
+  object FDContasReceber: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CONTAS_RECEBER FROM CONTAS_RECEBER'
@@ -1375,7 +1375,7 @@ object DM3: TDM3
       end>
   end
   object DspContasReceber: TDataSetProvider
-    DataSet = SqlContasReceber
+    DataSet = FDContasReceber
     Left = 468
     Top = 394
   end
@@ -1405,7 +1405,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlContasReceberTodas: TFDQuery
+  object FDContasReceberTodas: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_CONTAS_RECEBER FROM CONTAS_RECEBER')
@@ -1413,7 +1413,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspContasReceberTodas: TDataSetProvider
-    DataSet = SqlContasReceberTodas
+    DataSet = FDContasReceberTodas
     Left = 582
     Top = 394
   end
@@ -1428,7 +1428,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object TbCeParame: TFDQuery
+  object FDCeParame: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -1441,7 +1441,7 @@ object DM3: TDM3
     Top = 205
   end
   object DspParametros: TDataSetProvider
-    DataSet = TbCeParame
+    DataSet = FDCeParame
     Left = 715
     Top = 248
   end
@@ -1463,7 +1463,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlConexao: TFDQuery
+  object FdConexao: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT'
@@ -1474,7 +1474,7 @@ object DM3: TDM3
     Top = 205
   end
   object DspConexao: TDataSetProvider
-    DataSet = SqlConexao
+    DataSet = FdConexao
     Left = 808
     Top = 248
   end
@@ -1489,7 +1489,7 @@ object DM3: TDM3
       Size = 18
     end
   end
-  object Sql: TFDQuery
+  object FDSql: TFDQuery
     Connection = DM.FDConn
     Left = 96
     Top = 552
@@ -1503,7 +1503,7 @@ object DM3: TDM3
       FieldName = 'CD'
     end
   end
-  object SqlSintegraNFEntradaDeletados: TFDQuery
+  object FDSintegraNFEntradaDeletados: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT '
@@ -1516,7 +1516,7 @@ object DM3: TDM3
     Top = 205
   end
   object DspSintegraNFEntradaDeletados: TDataSetProvider
-    DataSet = SqlSintegraNFEntradaDeletados
+    DataSet = FDSintegraNFEntradaDeletados
     Left = 928
     Top = 240
   end
@@ -1533,7 +1533,7 @@ object DM3: TDM3
       FieldName = 'CAMPO2'
     end
   end
-  object SqlPerfilCliente: TFDQuery
+  object FDPerfilCliente: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT * FROM PERFIL_CLIENTE'
@@ -1548,7 +1548,7 @@ object DM3: TDM3
       end>
   end
   object DspPerfilCliente: TDataSetProvider
-    DataSet = SqlPerfilCliente
+    DataSet = FDPerfilCliente
     Left = 928
     Top = 48
   end
@@ -1594,7 +1594,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlPrincipioAtivo: TFDQuery
+  object FDPrincipioAtivo: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT * FROM PRINCIPIO_ATIVO'
@@ -1609,7 +1609,7 @@ object DM3: TDM3
       end>
   end
   object DspPrincipioAtivo: TDataSetProvider
-    DataSet = SqlPrincipioAtivo
+    DataSet = FDPrincipioAtivo
     Left = 1024
     Top = 48
   end
@@ -1647,7 +1647,7 @@ object DM3: TDM3
       Size = 130
     end
   end
-  object SqlUsuariosConsistencia: TFDQuery
+  object FdUsuariosConsistencia: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT CD_USUARIO FROM USUARIOS')
@@ -1655,7 +1655,7 @@ object DM3: TDM3
     Top = 354
   end
   object DspUsuariosConsistencia: TDataSetProvider
-    DataSet = SqlUsuariosConsistencia
+    DataSet = FdUsuariosConsistencia
     Left = 976
     Top = 394
   end
@@ -1670,7 +1670,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlProdDistr: TFDQuery
+  object FDProdDistr: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT * FROM PROD_DISTR'
@@ -1691,7 +1691,7 @@ object DM3: TDM3
       end>
   end
   object DspProdDistr: TDataSetProvider
-    DataSet = SqlProdDistr
+    DataSet = FDProdDistr
     Left = 1071
     Top = 395
   end
@@ -2763,7 +2763,7 @@ object DM3: TDM3
       Size = 2
     end
   end
-  object SqlProdutosCompostos: TFDQuery
+  object FDProdutosCompostos: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT * FROM PRODUTOS_COMPOSTOS'
@@ -2784,7 +2784,7 @@ object DM3: TDM3
       end>
   end
   object DspProdutosCompostos: TDataSetProvider
-    DataSet = SqlProdutosCompostos
+    DataSet = FDProdutosCompostos
     Left = 1151
     Top = 200
   end
@@ -2849,7 +2849,7 @@ object DM3: TDM3
       Size = 1
     end
   end
-  object SqlProdutosPrecoQuantidadeConsistencia: TFDQuery
+  object FDProdutosPrecoQuantidadeConsistencia: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       
@@ -2859,7 +2859,7 @@ object DM3: TDM3
     Top = 7
   end
   object DspProdutosPrecoQuantidadeConsistencia: TDataSetProvider
-    DataSet = SqlProdutosPrecoQuantidadeConsistencia
+    DataSet = FDProdutosPrecoQuantidadeConsistencia
     Left = 1151
     Top = 47
   end
@@ -2878,7 +2878,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlProdutosFidelidadeConsistencia: TFDQuery
+  object FDProdutosFidelidadeConsistencia: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT ID_PRODUTO FROM PRODUTOS_FIDELIDADE')
@@ -2886,7 +2886,7 @@ object DM3: TDM3
     Top = 202
   end
   object DspProdutosFidelidadeConsistencia: TDataSetProvider
-    DataSet = SqlProdutosFidelidadeConsistencia
+    DataSet = FDProdutosFidelidadeConsistencia
     Left = 1055
     Top = 242
   end
@@ -2901,7 +2901,7 @@ object DM3: TDM3
       Required = True
     end
   end
-  object SqlProdutosBarras: TFDQuery
+  object FDProdutosBarras: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'SELECT * FROM PRODUTOS_BARRAS'
@@ -2923,7 +2923,7 @@ object DM3: TDM3
       end>
   end
   object DspProdutosBarras: TDataSetProvider
-    DataSet = SqlProdutosBarras
+    DataSet = FDProdutosBarras
     Left = 1151
     Top = 399
   end

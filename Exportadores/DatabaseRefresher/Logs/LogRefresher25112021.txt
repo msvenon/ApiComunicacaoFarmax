@@ -1,3 +1,0 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 25112021 as 15:49:56 horas
-25/11/2021 15:49:56===============================================================
-25/11/2021 15:50:05 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\PrecoVendaFilial_3_20211125154040.xml

@@ -1,9 +1,0 @@
->>>>>>>>>>>>>>>Iniciando o Dia 30082022 as 18:08:16 horas
-Sem conexão com o banco no caminho: LOCALHOST:C:\FARMAXWIN\Farmax.fdb
- 
-18:09:46 - ======== Iniciando novo processo de exportacao do Client ========
- 
-18:10:53 - ======== Iniciando novo processo de Consistencia de Dados entre Loja e Gestao ========
- 
-18:12:20 - ======== Iniciando novo processo de Consistencia de Dados entre Loja e Gestao ========
-18:14:45 - Falha de conexao na verificacao de internet - Uma conexão com o servidor não pôde ser estabelecida - URL:http://138.99.68.58:81/ExporterServer/ExporterServer.exe/soap/IDm - SOAPAction:urn:UDm-IDm#Processa

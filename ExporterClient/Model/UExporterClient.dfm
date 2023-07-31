@@ -2,8 +2,8 @@ object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
   Caption = 'ExporterClientPrincipal'
-  ClientHeight = 181
-  ClientWidth = 486
+  ClientHeight = 225
+  ClientWidth = 553
   Color = clInactiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

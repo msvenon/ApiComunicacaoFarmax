@@ -1,4 +1,0 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 24082021 as 14:44:51 horas
-24/08/2021 14:44:51===============================================================
-24/08/2021 14:44:52 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\PrecoVendaFilial_21_20210824143730.xml
-24/08/2021 14:45:06 - Preco Venda Filial: 1

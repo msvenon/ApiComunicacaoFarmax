@@ -21,6 +21,7 @@ uses
 
 
 function validafilial:boolean;
+function ValidaConexao:Boolean;
 
 
 implementation
@@ -60,13 +61,13 @@ begin
 
          if LResponse.StatusCode = 200 then
          begin
-           geralog('Conexao da Filial validada na matriz cnpj:'+cnpjloja);
+          // geralog('Conexao da Filial validada na matriz cnpj:'+cnpjloja);
            Result:=true;
          end
          else
          begin
 
-           GeraLog('Erro ao Validar Cnpj da filial na matriz :[ '+ cnpjloja +' ] erro:' +LResponse.Content);
+          // GeraLog('Erro ao Validar Cnpj da filial na matriz :[ '+ cnpjloja +' ] erro:' +LResponse.Content);
 
            Result:=false;
          end;
@@ -82,6 +83,33 @@ begin
 
    end;
 
+
+
+end;
+
+
+function ValidaConexao:Boolean;
+var
+   LResponse: IResponse;
+  TJsonConexao :TJSONObject;
+
+begin
+
+ TJsonConexao:=TJSONObject.Create;
+ LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+   .Resource('matrizonline')
+    .Accept('application/json')
+      .Get;
+
+
+   if lresponse.statusCode=200 then
+   begin
+     Result:=True;
+   end
+   else
+   begin
+     Result:=False;
+   end;
 
 
 end;

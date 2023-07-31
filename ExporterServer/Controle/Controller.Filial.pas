@@ -7,6 +7,7 @@ uses Horse,System.Json,System.SysUtils,DataSet.Serialize,Data.DB,FireDac.Comp.Cl
 procedure registry;
 procedure Listarloglinteligacao(Req: THorseRequest; Res: THorseResponse; Next: TProc);
 procedure ValidaFilialcnpj(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure matrizonline(Req: THorseRequest; Res: THorseResponse; Next: TProc);
 
 
 implementation
@@ -19,6 +20,7 @@ begin
 
   THorse.Get('/interligacao', Listarloglinteligacao);
   THorse.Get('/filial/:cnpj', ValidaFilialcnpj);
+  THorse.Get('/matrizonline', matrizonline);
 
 end;
 
@@ -82,6 +84,33 @@ begin
      end;
 
   end;
+
+
+end;
+
+procedure matrizonline(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+begin
+
+  try
+    if dm.ValidaBd then
+    begin
+     res.Send<TJSONObject>(TJSONObject.Create.AddPair('msg','matrizonline')).Status(200);
+    end
+    else
+    begin
+      res.Send<TJSONObject>(TJSONObject.Create.AddPair('msg','Falha ao conectar ao banco')).Status(500);
+
+    end;
+
+  Except  on  E:Exception do
+
+     begin
+      res.Send<TJSONObject>(TJSONObject.Create.AddPair('msg','Internal Server Error')).Status(500);
+     end;
+
+  end;
+
 
 
 end;

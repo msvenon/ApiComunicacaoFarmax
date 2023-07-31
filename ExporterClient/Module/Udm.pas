@@ -1440,7 +1440,7 @@ type
        BaseUrl,AtualizaPrecoVenda :String;
        cdfilialparametro :Double;
 
-      procedure ValidaBd;
+      function ValidaBd:boolean;
       function  Crypt(Action, Src: String): String;
 
 
@@ -1460,7 +1460,7 @@ uses Funcoes;
 
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
-   ValidaBd;
+  // ValidaBd;
    BaseUrl:='http://localhost:9000';
 end;
 
@@ -1525,49 +1525,45 @@ begin
 
 end;
 
-procedure TDM.ValidaBd;
+function TDM.ValidaBd:boolean;
 
 var
  CaminhoBD,NOmeServidor : String;
  ini:TInifile;
 begin
+   //Result:=true;
 
 
-    if not FileExists(extractFilePath(ParamStr(0))+'CaminhoBD.ini') then
-    begin
-      showmessage(' Instalar na Pasta do Farmax'+#13+ 'para pegar as configurações do servidor.');
-                 exit;
-    end;
 
-    ini := TiniFile.Create(ExtractFilePath(Application.ExeName)+'CaminhoBD.ini');
-    CaminhoBD    := Crypt('D', ini.ReadString('CAMINHO','CAMINHO','Caminho'));
-    NomeServidor := Crypt('D', ini.ReadString('NOME','NOME','NomedoServidorDB'));
-    ini.Free;
+  ini := TiniFile.Create(ExtractFilePath(Application.ExeName)+'CaminhoBD.ini');
+  CaminhoBD    := Crypt('D', ini.ReadString('CAMINHO','CAMINHO','Caminho'));
+  NomeServidor := Crypt('D', ini.ReadString('NOME','NOME','NomedoServidorDB'));
+  ini.Free;
 
-     begin
+   begin
 
-       try
-         dm.FDConn.Connected:=false;
-         dm.Fdconn.Close;
-         dm.Fdconn.Params.Values['DriverID']  :='FB';
-         dm.Fdconn.Params.Values['Server']    := NomeServidor;
-         dm.Fdconn.Params.Values['Database']  := CaminhoBD;
-         dm.Fdconn.Params.Values['User_Name'] :='sysdba';
-         dm.Fdconn.Params.Values['Password']  :='masterkey';
-         dm.Fdconn.Params.Values['Port']      :='3050';
-         dm.Fdconn.Params.Values['Protocol']  :='TCPIP';
-         dm.Fdconn.Connected;
-         dm.Fdconn.Connected:=true;
+     try
+       dm.FDConn.Connected:=false;
+       dm.Fdconn.Close;
+       dm.Fdconn.Params.Values['DriverID']  :='FB';
+       dm.Fdconn.Params.Values['Server']    := NomeServidor;
+       dm.Fdconn.Params.Values['Database']  := CaminhoBD;
+       dm.Fdconn.Params.Values['User_Name'] :='sysdba';
+       dm.Fdconn.Params.Values['Password']  :='masterkey';
+       dm.Fdconn.Params.Values['Port']      :='3050';
+       dm.Fdconn.Params.Values['Protocol']  :='TCPIP';
+       dm.Fdconn.Connected;
+       dm.Fdconn.Connected:=true;
+       Result:=true;
 
-       except on E: Exception do
+     except on E: Exception do
+            begin
+             GeraLog('Erro ao conectar no servidor :'+E.Message);
+              Result:=false;
+            end;
+      end;
 
-         GeraLog('Erro ao conectar no servidor :'+E.Message);
-        end;
-
-
-     end;
-
-
+   end;
 
 
 end;

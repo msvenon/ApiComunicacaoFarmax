@@ -1,9 +1,0 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 07112018 as 11:41:27 horas
-07/11/2018 11:41:27===============================================================
-07/11/2018 11:41:27 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_8_20181107113638.xml
-07/11/2018 11:41:32 - Itens Compras: 162
-07/11/2018 11:45:26===============================================================
-07/11/2018 11:45:26 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Itens_Compra_8_20181107113638.xml
-07/11/2018 11:45:27 - Itens Compras: 162
-07/11/2018 11:46:13 - Encerrando o processo. 
-07/11/2018 11:46:13 - Processo concluido Rodando como Aplicacao. 

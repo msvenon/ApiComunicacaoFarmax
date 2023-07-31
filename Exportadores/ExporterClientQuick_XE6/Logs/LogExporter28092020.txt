@@ -1,7 +1,0 @@
- - Iniciando o Dia 28/09/2020 as 16:59:47 horas
-16:59:47ParamStr : Consistencia
- 
-16:59:48 - ======== Iniciando novo processo de exportacao do ClientQuick ========
-16:59:49 - Iniciando Envio de Lancamentos
-17:00:03 - Iniciando processo de Conferência de Lancamentos.
-17:00:33 - Lancamentos Loja : 0 - Lancamentos Matriz : 2337

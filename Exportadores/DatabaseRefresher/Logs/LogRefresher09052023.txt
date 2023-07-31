@@ -1,8 +1,0 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Iniciando o Dia 09052023 as 11:07:04 horas
-09/05/2023 11:07:04===============================================================
-09/05/2023 11:07:04 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\PrecoVendaFilial_3_20211125154040.xml
-09/05/2023 11:10:22===============================================================
-09/05/2023 11:10:22 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Caixa_1_20230509102204.xml
-09/05/2023 11:15:44===============================================================
-09/05/2023 11:15:44 - D:\_Sistemas\FarmaxSolucoesWebService\DatabaseRefresher\Importacao\Caixa_1_20230509102204.xml
-09/05/2023 11:15:49 - Caixa: 4
