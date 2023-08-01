@@ -1702,8 +1702,8 @@ type
     FDAtualizaConvenios: TFDQuery;
     FDQuery1: TFDQuery;
     FDAtualizaConveniosPBM: TFDQuery;
-    FDSqlAtualizaFiliais: TFDQuery;
-    FDSqlAtualizaFamilias: TFDQuery;
+    FDAtualizaFiliais: TFDQuery;
+    FDAtualizaFamilias: TFDQuery;
     FDNumeroLancamentosLoja: TFDQuery;
     FDCdContasReceberLoja: TFDQuery;
     FDAtualizaGrupos: TFDQuery;
@@ -1745,6 +1745,7 @@ type
     FDConvenios_Grupos: TFDQuery;
     FDIdProduto: TFDQuery;
     FDBalancosFilial: TFDQuery;
+    FDSql: TFDQuery;
   private
     { Private declarations }
   public

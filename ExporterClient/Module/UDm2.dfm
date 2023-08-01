@@ -5899,6 +5899,7 @@ object DM2: TDM2
     end
   end
   object Dsp1: TDataSetProvider
+    DataSet = FDSql
     Left = 312
     Top = 8
   end
@@ -8691,7 +8692,7 @@ object DM2: TDM2
         Value = Null
       end>
   end
-  object FDSqlAtualizaFiliais: TFDQuery
+  object FDAtualizaFiliais: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'EXECUTE PROCEDURE SP_ATUALIZA_FILIAIS('
@@ -8957,7 +8958,7 @@ object DM2: TDM2
         ParamType = ptInput
       end>
   end
-  object FDSqlAtualizaFamilias: TFDQuery
+  object FDAtualizaFamilias: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
       'EXECUTE PROCEDURE SP_ATUALIZA_FAMILIAS('
@@ -12421,5 +12422,10 @@ object DM2: TDM2
       ' ENVIADO = '#39'9'#39)
     Left = 624
     Top = 541
+  end
+  object FDSql: TFDQuery
+    Connection = DM.FDConn
+    Left = 272
+    Top = 8
   end
 end

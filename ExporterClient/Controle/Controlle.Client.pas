@@ -446,297 +446,297 @@ begin
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Classes... ');
     dm.fdconn.Open;
-    RecebendoClasses;
+    RecebendoClasses;  //
     dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Familias... ');
-   dm.fdconn.Open;
-    RecebendoFamilias;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoFamilias; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Ditribuidores... ');
-   dm.fdconn.Open;
-    RecebendoDistribuidores;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoDistribuidores; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Grupos de Balanco... ');
-   dm.fdconn.Open;
-    RecebendoGruposBalanco; // fazer
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposBalanco; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Grupos de Compra... ');
-   dm.fdconn.Open;
-    RecebendoGruposCompra; // fazer
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposCompra;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo GruposCurvas... ');
-   dm.fdconn.Open;
-    RecebendoGruposCurvas; // fazer
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposCurvas;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Grupos... ');
-   dm.fdconn.Open;
-    RecebendoGrupos;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGrupos; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo SubGrupos... ');
-   dm.fdconn.Open;
-    RecebendoSubGrupos;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoSubGrupos; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Laboratorios... ');
     RegistraHoraInicio;
-   dm.fdconn.Open;
-    RecebendoLaboratorios;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoLaboratorios;  //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Vendedores... ');
-   dm.fdconn.Open;
-    RecebendoVendedores;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoVendedores; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo VendedoresClasses... ');
-   dm.fdconn.Open;
-    RecebendoVendedoresClasses;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoVendedoresClasses; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ConveniosClasses... ');
-   dm.fdconn.Open;
-    RecebendoConveniosClasses;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConveniosClasses; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ConveniosGrupos... ');
-   dm.fdconn.Open;
-    RecebendoConveniosGrupos;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConveniosGrupos;  //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ContasPagarCompras... ');
-   dm.fdconn.Open;
-    RecebendoContasPagarCompras;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoContasPagarCompras; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo PlanoContas... ');
-   dm.fdconn.Open;
-    RecebendoPlanosContas;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoPlanosContas; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Convenios... ');
-   dm.fdconn.Open;
-    RecebendoConvenios;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConvenios;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Transportadores... ');
     RegistraHoraInicio;
-   dm.fdconn.Open;
-    RecebendoTransportadoras;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoTransportadoras; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Cartoes... ');
-   dm.fdconn.Open;
-    RecebendoCartoes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoCartoes; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Filiais... ');
-   dm.fdconn.Open;
-    RecebendoFiliais;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoFiliais; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Balancos... ');
-   dm.fdconn.Open;
-    RecebendoBalancos;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoBalancos; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo MetasFiliais... ');
-   dm.fdconn.Open;
-    RecebendoMetasFiliais; // fazer
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoMetasFiliais; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo MetasVendedores... ');
-   dm.fdconn.Open;
-    RecebendoMetasVendedores; // fazer
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoMetasVendedores;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ProdutosDeletados... ');
-   dm.fdconn.Open;
-    RecebendoProdutosDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoProdutosDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ClassesDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoClassesDeletadas;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoClassesDeletadas; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ContasPagarDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoContasPagarDeletadas;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoContasPagarDeletadas; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ContasPagarComprasDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoContasPagarComprasDeletadas;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoContasPagarComprasDeletadas;  //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo FamiliasDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoFamiliasDeletadas;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoFamiliasDeletadas;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo GruposBalancoDeletados... ');
     RegistraHoraInicio;
-   dm.fdconn.Open;
-    RecebendoGruposBalancoDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposBalancoDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo GruposCompraDeletados... ');
-   dm.fdconn.Open;
-    RecebendoGruposCompraDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposCompraDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo GruposDeletados... ');
-   dm.fdconn.Open;
-    RecebendoGruposDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ConveniosPBMDeletados... ');
-   dm.fdconn.Open;
-    RecebendoConveniosPBMDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConveniosPBMDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ConveniosPBMDeletados... ');
-   dm.fdconn.Open;
-    RecebendoProdutosConvenioPBMDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoProdutosConvenioPBMDeletados;  //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo GruposCurvasDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoGruposCurvasDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoGruposCurvasDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo LaboratoriosDeletados... ');
-   dm.fdconn.Open;
-    RecebendoLaboratoriosDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoLaboratoriosDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo VendedoresDeletados... ');
-   dm.fdconn.Open;
-    RecebendoVendedoresDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoVendedoresDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo PlanoContasDeletados... ');
-   dm.fdconn.Open;
-    RecebendoPlanosContasDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoPlanosContasDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ClientesDeletados... ');
-   dm.fdconn.Open;
-    RecebendoClientesDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoClientesDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ConveniosDeletados... ');
-   dm.fdconn.Open;
-    RecebendoConveniosDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConveniosDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo TransportadoresDeletados... ');
-   dm.fdconn.Open;
-    RecebendoTransportadorasDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoTransportadorasDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo CartoesDeletados... ');
-   dm.fdconn.Open;
-    RecebendoCartoesDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoCartoesDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo DistribuidoresDeletados... ');
-   dm.fdconn.Open;
-    RecebendoDistribuidoresDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoDistribuidoresDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo FiliaisDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoFiliaisDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoFiliaisDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo FormasPagamentoDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoFormasPagamentoDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoFormasPagamentoDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo BalancosDeletados... ');
-   dm.fdconn.Open;
-    RecebendoBalancosDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoBalancosDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ComprasDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoComprasDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoComprasDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ItesnCompraDeletados... ');
-   dm.fdconn.Open;
-    RecebendoItensComprasDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoItensComprasDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo MetasFiliaisDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoMetasFiliaisDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoMetasFiliaisDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo MetasVendedoresDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoMetasVendedoresDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoMetasVendedoresDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Usuarios.. ');
     RegistraHoraInicio;
-   dm.fdconn.Open;
-    RecebendoUsuarios;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoUsuarios;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo UsuariosDeletados... ');
-   dm.fdconn.Open;
-    RecebendoUsuariosDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoUsuariosDeletados;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Permissoes... ');
-   dm.fdconn.Open;
-    RecebendoPermissoes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoPermissoes; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo PermissoesModulos... ');
-   dm.fdconn.Open;
-    RecebendoPermissoesModulos;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoPermissoesModulos; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo EncartesDeletadas... ');
-   dm.fdconn.Open;
-    RecebendoEncartesDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoEncartesDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo EncarteItensDeletados... ');
-   dm.fdconn.Open;
-    RecebendoItensEncartesDeletados;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoItensEncartesDeletados; //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Encartes... ');
-   dm.fdconn.Open;
-    RecebendoEncartes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoEncartes;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ItensEncartes... ');
-   dm.fdconn.Open;
-    RecebendoItensEncartes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoItensEncartes;//
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Redes... ');
-   dm.fdconn.Open;
-    RecebendoRedes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoRedes;  //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo Concorrentes... ');
-   dm.fdconn.Open;
-    RecebendoConcorrentes;
-   dm.fdconn.Close;
+    dm.fdconn.Open;
+    RecebendoConcorrentes;   //
+    dm.fdconn.Close;
 
     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ProjetosPharmalink... ');
    dm.fdconn.Open;
@@ -2144,64 +2144,74 @@ end;
 procedure RecebendoGrupos;
 var
   i : integer;
-  Dados : Variant;
+  LResponse: IResponse;
 begin
    Try
      // Atualização dos grupos na filial
      Try
        dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_GRUPOS INACTIVE';
 
-       dm3.FDSql.ExecFD(True);
+       dm3.FDSql.ExecSql(True);
 
      Except
        on E:Exception do
         begin
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
         end;
      End;
 
      dm3.CdsGrupos.Close;
      dm3.CdsGrupos.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(100, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsGrupos.Data := Dados;
-     dm3.CdsGrupos.Open; // virtual
+     //Processa(100, Filial, 'A');
 
-     dm3.CdsGrupos.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos: '+ FloatToStr(dm3.CdsGrupos.RecordCount));
-     while not dm3.CdsGrupos.Eof do
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('grupos')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
       begin
-          dm3.FDAtualizaGrupos.Params[0].AsFloat := dm3.CdsGruposCD_GRUPO.AsFloat;
-          dm3.FDAtualizaGrupos.Params[1].AsString := dm3.CdsGruposDESCRICAO.AsString;
-          dm3.FDAtualizaGrupos.Params[2].AsFloat := dm3.CdsGruposTX_MARCACAO.AsFloat;
-          dm3.FDAtualizaGrupos.Params[3].AsString := dm3.CdsGruposDESCONTO.AsString;
-          dm3.FDAtualizaGrupos.Params[4].AsFloat := dm3.CdsGruposTX_DESCONTO.AsFloat;
-          dm3.FDAtualizaGrupos.Params[5].AsFloat := dm3.CdsGruposTX_DESCONTO_MAXIMO.AsFloat;
-          dm3.FDAtualizaGrupos.Params[6].AsFloat := dm3.CdsGruposTX_COMISSAO.AsFloat;
-          dm3.FDAtualizaGrupos.Params[7].AsFloat := dm3.CdsGruposDIAS_EST_MIN.AsFloat;
-          dm3.FDAtualizaGrupos.Params[8].AsString := dm3.CdsGruposTIPO.AsString;
-          dm3.FDAtualizaGrupos.Params[9].AsDateTime := dm3.CdsGruposDT_ALTERACAO.AsDateTime;
-          dm3.FDAtualizaGrupos.Params[10].AsFloat := dm3.CdsGruposNPRODUTOS.AsFloat;
-          dm3.FDAtualizaGrupos.Params[11].AsFloat := dm3.CdsGruposNITENS.AsFloat;
-          dm3.FDAtualizaGrupos.Params[12].AsFloat := dm3.CdsGruposVPRODUTOS.AsFloat;
-          dm3.FDAtualizaGrupos.Params[13].AsFloat := dm3.CdsGruposCPRODUTOS.AsFloat;
-          dm3.FDAtualizaGrupos.Params[14].AsString := dm3.CdsGruposEXIGERECEITA.AsString;
-          dm3.FDAtualizaGrupos.Params[15].AsString := dm3.CdsGruposVENDEESTOQUENEGATIVO.AsString;
-          dm3.FDAtualizaGrupos.Params[16].AsString := dm3.CdsGruposPEDECRM.AsString;
-          dm3.FDAtualizaGrupos.Params[17].AsFloat := dm3.CdsGruposMETA.AsFloat;
-          dm3.FDAtualizaGrupos.Params[18].AsString := dm3.CdsGruposENVIADO.AsString;
-          Try
-            dm3.FDAtualizaGrupos.ExecFD(False);
-          Except
-            GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos - Execução da Procedure');
-          End;
+        Exit;
+      end
+      else
+      begin
+       dm2.CdsGrupos.LoadFromJSON(LResponse.Content);
+       dm2.CdsGrupos.Open; // virtual
 
-          dm3.CdsGrupos.Next;
+       dm2.CdsGrupos.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos: '+ FloatToStr(dm2.CdsGrupos.RecordCount));
+       while not dm2.CdsGrupos.Eof do
+        begin
+            dm2.FDAtualizaGrupos.Params[0].AsFloat  := dm2.CdsGruposCD_GRUPO.AsFloat;
+            dm2.FDAtualizaGrupos.Params[1].AsString := dm2.CdsGruposDESCRICAO.AsString;
+            dm2.FDAtualizaGrupos.Params[2].AsFloat  := dm2.CdsGruposTX_MARCACAO.AsFloat;
+            dm2.FDAtualizaGrupos.Params[3].AsString := dm2.CdsGruposDESCONTO.AsString;
+            dm2.FDAtualizaGrupos.Params[4].AsFloat  := dm2.CdsGruposTX_DESCONTO.AsFloat;
+            dm2.FDAtualizaGrupos.Params[5].AsFloat  := dm2.CdsGruposTX_DESCONTO_MAXIMO.AsFloat;
+            dm2.FDAtualizaGrupos.Params[6].AsFloat  := dm2.CdsGruposTX_COMISSAO.AsFloat;
+            dm2.FDAtualizaGrupos.Params[7].AsFloat  := dm2.CdsGruposDIAS_EST_MIN.AsFloat;
+            dm2.FDAtualizaGrupos.Params[8].AsString := dm2.CdsGruposTIPO.AsString;
+            dm2.FDAtualizaGrupos.Params[9].AsDateTime := dm2.CdsGruposDT_ALTERACAO.AsDateTime;
+            dm2.FDAtualizaGrupos.Params[10].AsFloat  := dm2.CdsGruposNPRODUTOS.AsFloat;
+            dm2.FDAtualizaGrupos.Params[11].AsFloat  := dm2.CdsGruposNITENS.AsFloat;
+            dm2.FDAtualizaGrupos.Params[12].AsFloat  := dm2.CdsGruposVPRODUTOS.AsFloat;
+            dm2.FDAtualizaGrupos.Params[13].AsFloat  := dm2.CdsGruposCPRODUTOS.AsFloat;
+            dm2.FDAtualizaGrupos.Params[14].AsString := dm2.CdsGruposEXIGERECEITA.AsString;
+            dm2.FDAtualizaGrupos.Params[15].AsString := dm2.CdsGruposVENDEESTOQUENEGATIVO.AsString;
+            dm2.FDAtualizaGrupos.Params[16].AsString := dm2.CdsGruposPEDECRM.AsString;
+            dm2.FDAtualizaGrupos.Params[17].AsFloat  := dm2.CdsGruposMETA.AsFloat;
+            dm2.FDAtualizaGrupos.Params[18].AsString := dm2.CdsGruposENVIADO.AsString;
+            Try
+              dm2.FDAtualizaGrupos.ExecSql(False);
+            Except
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos - Execução da Procedure');
+            End;
+
+            dm2.CdsGrupos.Next;
+        end;
+
+       dm2.CdsGrupos.Close;
       end;
-
-     dm3.CdsGrupos.Close;
    Except
       on E:Exception do
        begin
@@ -2213,99 +2223,102 @@ begin
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_GRUPOS ACTIVE';
 
-           dm3.FDSql.ExecFD(True);
+           dm3.FDSql.ExecSql(True);
 
          Except
            on E:Exception do
             begin
              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
             end;
          End;
 
          Exit;
        end;
    end;
-  Try
-    dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_GRUPOS ACTIVE';
 
-    dm3.FDSql.ExecFD(True);
-
-  Except
-    on E:Exception do
-     begin
-      GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
-     end;
-  End;
+    Try
+      dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_ALTERACAO_GRUPOS ACTIVE';
+      dm3.FDSql.ExecSql(True);
+    Except
+      on E:Exception do
+       begin
+        GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+       end;
+    End;
 end;
 
 
 procedure RecebendoSubGrupos;
 var
   i : integer;
-  Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
      // Atualização dos subgrupos na filial
      Try
        dm3.FDSql.sql.text := 'ALTER TRIGGER SUBGRUPOS_BI0 INACTIVE';
-
-       dm3.FDSql.ExecFD(True);
+       dm3.FDSql.ExecSql(True);
 
      Except
        on E:Exception do
         begin
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
         end;
      End;
 
-     dm3.CdsSubGrupos.Close;
-     dm3.CdsSubGrupos.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(135, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsSubGrupos.Close;
+     dm2.CdsSubGrupos.CreateDataSet;
+     //Processa(135, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('subgrupos')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsSubGrupos.Data := Dados;
-     dm3.CdsSubGrupos.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsSubGrupos.LoadFromJSON(LResponse.Content);
+         dm2.CdsSubGrupos.Open; // virtual
 
-     dm3.CdsSubGrupos.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo SubGrupos: '+ FloatToStr(dm3.CdsSubGrupos.RecordCount));
-     while not dm3.CdsSubGrupos.Eof do
-      begin
-          dm3.FDAtualizaSubGrupos.Params[0].AsFloat := dm3.CdsSubGruposCD_SUBGRUPO.AsFloat;
-          dm3.FDAtualizaSubGrupos.Params[1].AsFloat := dm3.CdsSubGruposCD_GRUPO.AsFloat;
-          dm3.FDAtualizaSubGrupos.Params[2].AsString := dm3.CdsSubGruposDESCRICAO.AsString;
-          dm3.FDAtualizaSubGrupos.Params[3].AsDateTime := dm3.CdsSubGruposDT_ALTERACAO.AsDateTime;
-          dm3.FDAtualizaSubGrupos.Params[4].AsString := dm3.CdsSubGruposENVIADO.AsString;
-          Try
-            dm3.FDAtualizaSubGrupos.ExecFD(False);
-          Except
-            GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de SubGrupos - Execução da Procedure');
-          End;
+         dm2.CdsSubGrupos.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo SubGrupos: '+ FloatToStr(dm2.CdsSubGrupos.RecordCount));
+         while not dm2.CdsSubGrupos.Eof do
+          begin
+              dm2.FDAtualizaSubGrupos.Params[0].AsFloat    := dm2.CdsSubGruposCD_SUBGRUPO.AsFloat;
+              dm2.FDAtualizaSubGrupos.Params[1].AsFloat    := dm2.CdsSubGruposCD_GRUPO.AsFloat;
+              dm2.FDAtualizaSubGrupos.Params[2].AsString   := dm2.CdsSubGruposDESCRICAO.AsString;
+              dm2.FDAtualizaSubGrupos.Params[3].AsDateTime := dm2.CdsSubGruposDT_ALTERACAO.AsDateTime;
+              dm2.FDAtualizaSubGrupos.Params[4].AsString   := dm2.CdsSubGruposENVIADO.AsString;
+              Try
+                dm2.FDAtualizaSubGrupos.ExecSql(False);
+              Except
+                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de SubGrupos - Execução da Procedure');
+              End;
 
-          dm3.CdsSubGrupos.Next;
-      end;
+              dm2.CdsSubGrupos.Next;
+          end;
 
-     dm3.CdsSubGrupos.Close;
+         dm2.CdsSubGrupos.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de SubGrupos');
-         dm3.CdsSubGrupos.Close;
+         dm2.CdsSubGrupos.Close;
 
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER SUBGRUPOS_BI0 ACTIVE';
-
-           dm3.FDSql.ExecFD(True);
-
+           dm3.FDSql.ExecSql(True);
          Except
            on E:Exception do
             begin
              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
             end;
          End;
 
@@ -2314,67 +2327,75 @@ begin
    end;
   Try
     dm3.FDSql.sql.text := 'ALTER TRIGGER SUBGRUPOS_BI0 ACTIVE';
-
-    dm3.FDSql.ExecFD(True);
-
+    dm3.FDSql.ExecSql(True);
   Except
     on E:Exception do
      begin
       GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
      end;
   End;
 end;
 
 procedure RecebendoLaboratorios;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
-     // Atualização dos laboratorios na filial
+     // Atualização dos laboratorios
+
      dm3.CdsLaboratorios.Close;
      dm3.CdsLaboratorios.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(101, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsLaboratorios.Data := Dados;
-     dm3.CdsLaboratorios.Open; // virtual
+         //Processa(101, Filial, 'A');
 
-     dm3.CdsLaboratorios.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Laboratorios: '+ FloatToStr(dm3.CdsLaboratorios.RecordCount));
-     while not dm3.CdsLaboratorios.Eof do
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('laboratorios')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
-        dm3.FDAtualizaLaboratorios.Params[0].AsFloat := dm3.CdsLaboratoriosCD_LABORATORIO.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[1].AsFloat := dm3.CdsLaboratoriosID_AREA.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[2].AsString := dm3.CdsLaboratoriosNOME.AsString;
-        dm3.FDAtualizaLaboratorios.Params[3].AsString := dm3.CdsLaboratoriosRAZAO.AsString;
-        dm3.FDAtualizaLaboratorios.Params[4].AsString := dm3.CdsLaboratoriosCNPJ.AsString;
-        dm3.FDAtualizaLaboratorios.Params[5].AsString := dm3.CdsLaboratoriosENDERECO.AsString;
-        dm3.FDAtualizaLaboratorios.Params[6].AsString := dm3.CdsLaboratoriosCIDADE.AsString;
-        dm3.FDAtualizaLaboratorios.Params[7].AsString := dm3.CdsLaboratoriosFONE.AsString;
-        dm3.FDAtualizaLaboratorios.Params[8].AsString := dm3.CdsLaboratoriosCONTATO.AsString;
-        dm3.FDAtualizaLaboratorios.Params[9].AsFloat := dm3.CdsLaboratoriosTX_DESCONTO.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[10].AsString := dm3.CdsLaboratoriosCONTROLE.AsString;
-        dm3.FDAtualizaLaboratorios.Params[11].AsDate := dm3.CdsLaboratoriosDT_ALTERACAO.AsDateTime;
-        dm3.FDAtualizaLaboratorios.Params[12].AsFloat := dm3.CdsLaboratoriosNPRODUTOS.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[13].AsFloat := dm3.CdsLaboratoriosNITENS.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[14].AsFloat := dm3.CdsLaboratoriosVPRODUTOS.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[15].AsFloat := dm3.CdsLaboratoriosCPRODUTOS.AsFloat;
-        dm3.FDAtualizaLaboratorios.Params[16].AsString := dm3.CdsLaboratoriosENVIADO.AsString;
-        Try
-          dm3.FDAtualizaLaboratorios.ExecFD(False);
-        Except
-          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Laboratorios - Execução da Procedure');
-        End;
+        Exit;
+      end
+      else
+      begin
+         dm2.CdsLaboratorios.LoadFromJson(LResponse.Content);
+         dm2.CdsLaboratorios.Open;
+         dm2.CdsLaboratorios.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Laboratorios: '+ FloatToStr(dm2.CdsLaboratorios.RecordCount));
+         while not dm2.CdsLaboratorios.Eof do
+          begin
+            dm2.FDAtualizaLaboratorios.Params[0].AsFloat   := dm2.CdsLaboratoriosCD_LABORATORIO.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[1].AsFloat   := dm2.CdsLaboratoriosID_AREA.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[2].AsString  := dm2.CdsLaboratoriosNOME.AsString;
+            dm2.FDAtualizaLaboratorios.Params[3].AsString  := dm2.CdsLaboratoriosRAZAO.AsString;
+            dm2.FDAtualizaLaboratorios.Params[4].AsString  := dm2.CdsLaboratoriosCNPJ.AsString;
+            dm2.FDAtualizaLaboratorios.Params[5].AsString  := dm2.CdsLaboratoriosENDERECO.AsString;
+            dm2.FDAtualizaLaboratorios.Params[6].AsString  := dm2.CdsLaboratoriosCIDADE.AsString;
+            dm2.FDAtualizaLaboratorios.Params[7].AsString  := dm2.CdsLaboratoriosFONE.AsString;
+            dm2.FDAtualizaLaboratorios.Params[8].AsString  := dm2.CdsLaboratoriosCONTATO.AsString;
+            dm2.FDAtualizaLaboratorios.Params[9].AsFloat   := dm2.CdsLaboratoriosTX_DESCONTO.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[10].AsString := dm2.CdsLaboratoriosCONTROLE.AsString;
+            dm2.FDAtualizaLaboratorios.Params[11].AsDate   := dm2.CdsLaboratoriosDT_ALTERACAO.AsDateTime;
+            dm2.FDAtualizaLaboratorios.Params[12].AsFloat  := dm2.CdsLaboratoriosNPRODUTOS.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[13].AsFloat  := dm2.CdsLaboratoriosNITENS.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[14].AsFloat  := dm2.CdsLaboratoriosVPRODUTOS.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[15].AsFloat  := dm2.CdsLaboratoriosCPRODUTOS.AsFloat;
+            dm2.FDAtualizaLaboratorios.Params[16].AsString := dm2.CdsLaboratoriosENVIADO.AsString;
+            Try
+              dm2.FDAtualizaLaboratorios.ExecSql(False);
+            Except
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Laboratorios - Execução da Procedure');
+            End;
 
-        dm3.CdsLaboratorios.Next;
+            dm2.CdsLaboratorios.Next;
+          end;
       end;
 
      dm3.CdsLaboratorios.Close;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Laboratorios');
          dm3.CdsLaboratorios.Close;
@@ -2385,87 +2406,96 @@ end;
 
 procedure RecebendoVendedores;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    dm3.CdsVendedores.Close;
    dm3.CdsVendedores.CreateDataSet;
    Try
      // Atualiza vendedores
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(104, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsVendedores.Data := Dados;
-     dm3.CdsVendedores.Open; // virtual
+      //Processa(104, Filial, 'A');
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('vendedores')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
 
-     dm3.CdsVendedores.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Vendedores: '+ FloatToStr(dm3.CdsVendedores.RecordCount));
-     while not dm3.CdsVendedores.Eof do
+     if LResponse.StatusCode<>200 then
       begin
-        dm3.FDAtualizaVendedores.Params[0].AsFloat   := dm3.CdsVendedoresCD_VENDEDOR.AsFloat;
-        dm3.FDAtualizaVendedores.Params[1].AsFloat   := dm3.CdsVendedoresCD_FILIAL.AsFloat;
-        dm3.FDAtualizaVendedores.Params[2].AsDate    := dm3.CdsVendedoresDT_ADMISSAO.AsDateTime;
-        dm3.FDAtualizaVendedores.Params[3].AsDate    := dm3.CdsVendedoresDT_NASCIMENTO.AsDateTime;
-        dm3.FDAtualizaVendedores.Params[4].AsString  := dm3.CdsVendedoresTIPO_FUNCIONARIO.AsString;
-        dm3.FDAtualizaVendedores.Params[5].AsString  := dm3.CdsVendedoresCODIGO_BARRAS.AsString;
-        dm3.FDAtualizaVendedores.Params[6].AsString  := dm3.CdsVendedoresNOME.AsString;
-        dm3.FDAtualizaVendedores.Params[7].AsString  := dm3.CdsVendedoresRUA.AsString;
-        dm3.FDAtualizaVendedores.Params[8].AsString  := dm3.CdsVendedoresBAIRRO.AsString;
-        dm3.FDAtualizaVendedores.Params[9].AsString  := dm3.CdsVendedoresCIDADE.AsString;
-        dm3.FDAtualizaVendedores.Params[10].AsString := dm3.CdsVendedoresUF.AsString;
-        dm3.FDAtualizaVendedores.Params[11].AsString := dm3.CdsVendedoresCEP.AsString;
-        dm3.FDAtualizaVendedores.Params[12].AsString := dm3.CdsVendedoresFONE.AsString;
-        dm3.FDAtualizaVendedores.Params[13].AsString := dm3.CdsVendedoresREFERENCIA.AsString;
-        dm3.FDAtualizaVendedores.Params[14].AsString := dm3.CdsVendedoresRG.AsString;
-        dm3.FDAtualizaVendedores.Params[15].AsString := dm3.CdsVendedoresCPF.AsString;
-        dm3.FDAtualizaVendedores.Params[16].AsString := dm3.CdsVendedoresJORNADA.AsString;
-        dm3.FDAtualizaVendedores.Params[17].AsString := dm3.CdsVendedoresINTERVALO.AsString;
-        dm3.FDAtualizaVendedores.Params[18].AsString := dm3.CdsVendedoresREPOUSO.AsString;
-        dm3.FDAtualizaVendedores.Params[19].AsString := dm3.CdsVendedoresNR_REGISTRO.AsString;
-        dm3.FDAtualizaVendedores.Params[20].AsString := dm3.CdsVendedoresCTPS.AsString;
-        dm3.FDAtualizaVendedores.Params[21].AsString := dm3.CdsVendedoresFUNCAO.AsString;
-        dm3.FDAtualizaVendedores.Params[22].AsFloat  := dm3.CdsVendedoresSALARIO.AsFloat;
-        dm3.FDAtualizaVendedores.Params[23].AsFloat  := dm3.CdsVendedoresTX_COMISSAO.AsFloat;
-        dm3.FDAtualizaVendedores.Params[24].AsFloat  := dm3.CdsVendedoresCOMISSAO.AsFloat;
-        dm3.FDAtualizaVendedores.Params[25].AsFloat  := dm3.CdsVendedoresVENDA.AsFloat;
-        dm3.FDAtualizaVendedores.Params[26].AsString := dm3.CdsVendedoresENVIADO.AsString;
-        dm3.FDAtualizaVendedores.Params[27].AsString := dm3.CdsVendedoresSEXO.AsString;
-        dm3.FDAtualizaVendedores.Params[28].AsString := dm3.CdsVendedoresESTADO_CIVIL.AsString;
-        dm3.FDAtualizaVendedores.Params[29].AsString := dm3.CdsVendedoresNATURALIDADE.AsString;
-        dm3.FDAtualizaVendedores.Params[30].AsString := dm3.CdsVendedoresCONJUGE.AsString;
-        dm3.FDAtualizaVendedores.Params[31].AsDate   := dm3.CdsVendedoresDT_NASC_CONJUGE.AsDateTime;
-        dm3.FDAtualizaVendedores.Params[32].AsFloat  := dm3.CdsVendedoresNUM_DEPEND.AsFloat;
-        dm3.FDAtualizaVendedores.Params[33].AsString := dm3.CdsVendedoresNOMEMAE.AsString;
-        dm3.FDAtualizaVendedores.Params[34].AsString := dm3.CdsVendedoresNOMEPAI.AsString;
-        dm3.FDAtualizaVendedores.Params[35].AsString := dm3.CdsVendedoresEMPRESA_ANTERIOR.AsString;
-        dm3.FDAtualizaVendedores.Params[36].AsString := dm3.CdsVendedoresTEMPO_SERVICO.AsString;
-        dm3.FDAtualizaVendedores.Params[37].AsString := dm3.CdsVendedoresREFERENCIA_COMERCIAL.AsString;
-        dm3.FDAtualizaVendedores.Params[38].AsString := dm3.CdsVendedoresREFERENCIA_BANCARIA.AsString;
-        dm3.FDAtualizaVendedores.Params[39].AsString := dm3.CdsVendedoresDESCONTO.AsString;
-        dm3.FDAtualizaVendedores.Params[40].AsString := dm3.CdsVendedoresCOMISSAO_MEDICAMENTOS.AsString;
-        dm3.FDAtualizaVendedores.Params[41].AsString := dm3.CdsVendedoresCOMISSAO_BONIFICADOS.AsString;
-        dm3.FDAtualizaVendedores.Params[42].AsString := dm3.CdsVendedoresCOMISSAO_PERFUMARIA.AsString;
-        dm3.FDAtualizaVendedores.Params[43].AsString := dm3.CdsVendedoresCOMISSAO_OUTROS.AsString;
-        dm3.FDAtualizaVendedores.Params[44].AsFloat  := dm3.CdsVendedoresCOTA.AsFloat;
-        dm3.FDAtualizaVendedores.Params[45].AsString := dm3.CdsVendedoresSENHA.AsString;
-        dm3.FDAtualizaVendedores.Params[46].AsDate   := dm3.CdsVendedoresDT_ALTERACAO.AsDateTime;
-        dm3.FDAtualizaVendedores.Params[47].AsString := dm3.CdsVendedoresSTATUS.AsString;
-        dm3.FDAtualizaVendedores.Params[48].AsString := dm3.CdsVendedoresVENDEOUTRALOJA.AsString;
-        dm3.FDAtualizaVendedores.Params[49].AsString := dm3.CdsVendedoresUSUARIOFARMACIAPOPULAR.AsString;
-        dm3.FDAtualizaVendedores.Params[50].AsString := dm3.CdsVendedoresSENHAFARMACIAPOPULAR.AsString;
-        Try
-          dm3.FDAtualizaVendedores.ExecFD(False);
-        Except
-          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Vendedores - Execução da Procedure');
-        End;
+        Exit;
+      end
+      else
+      begin
+         dm2.CdsVendedores.LoadFromJSON(LResponse.Content);
+         dm2.CdsVendedores.Open;
+         dm2.CdsVendedores.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Vendedores: '+ FloatToStr(dm2.CdsVendedores.RecordCount));
+         while not dm2.CdsVendedores.Eof do
+          begin
+            dm2.FDAtualizaVendedores.Params[0].AsFloat   := dm2.CdsVendedoresCD_VENDEDOR.AsFloat;
+            dm2.FDAtualizaVendedores.Params[1].AsFloat   := dm2.CdsVendedoresCD_FILIAL.AsFloat;
+            dm2.FDAtualizaVendedores.Params[2].AsDate    := dm2.CdsVendedoresDT_ADMISSAO.AsDateTime;
+            dm2.FDAtualizaVendedores.Params[3].AsDate    := dm2.CdsVendedoresDT_NASCIMENTO.AsDateTime;
+            dm2.FDAtualizaVendedores.Params[4].AsString  := dm2.CdsVendedoresTIPO_FUNCIONARIO.AsString;
+            dm2.FDAtualizaVendedores.Params[5].AsString  := dm2.CdsVendedoresCODIGO_BARRAS.AsString;
+            dm2.FDAtualizaVendedores.Params[6].AsString  := dm2.CdsVendedoresNOME.AsString;
+            dm2.FDAtualizaVendedores.Params[7].AsString  := dm2.CdsVendedoresRUA.AsString;
+            dm2.FDAtualizaVendedores.Params[8].AsString  := dm2.CdsVendedoresBAIRRO.AsString;
+            dm2.FDAtualizaVendedores.Params[9].AsString  := dm2.CdsVendedoresCIDADE.AsString;
+            dm2.FDAtualizaVendedores.Params[10].AsString := dm2.CdsVendedoresUF.AsString;
+            dm2.FDAtualizaVendedores.Params[11].AsString := dm2.CdsVendedoresCEP.AsString;
+            dm2.FDAtualizaVendedores.Params[12].AsString := dm2.CdsVendedoresFONE.AsString;
+            dm2.FDAtualizaVendedores.Params[13].AsString := dm2.CdsVendedoresREFERENCIA.AsString;
+            dm2.FDAtualizaVendedores.Params[14].AsString := dm2.CdsVendedoresRG.AsString;
+            dm2.FDAtualizaVendedores.Params[15].AsString := dm2.CdsVendedoresCPF.AsString;
+            dm2.FDAtualizaVendedores.Params[16].AsString := dm2.CdsVendedoresJORNADA.AsString;
+            dm2.FDAtualizaVendedores.Params[17].AsString := dm2.CdsVendedoresINTERVALO.AsString;
+            dm2.FDAtualizaVendedores.Params[18].AsString := dm2.CdsVendedoresREPOUSO.AsString;
+            dm2.FDAtualizaVendedores.Params[19].AsString := dm2.CdsVendedoresNR_REGISTRO.AsString;
+            dm2.FDAtualizaVendedores.Params[20].AsString := dm2.CdsVendedoresCTPS.AsString;
+            dm2.FDAtualizaVendedores.Params[21].AsString := dm2.CdsVendedoresFUNCAO.AsString;
+            dm2.FDAtualizaVendedores.Params[22].AsFloat  := dm2.CdsVendedoresSALARIO.AsFloat;
+            dm2.FDAtualizaVendedores.Params[23].AsFloat  := dm2.CdsVendedoresTX_COMISSAO.AsFloat;
+            dm2.FDAtualizaVendedores.Params[24].AsFloat  := dm2.CdsVendedoresCOMISSAO.AsFloat;
+            dm2.FDAtualizaVendedores.Params[25].AsFloat  := dm2.CdsVendedoresVENDA.AsFloat;
+            dm2.FDAtualizaVendedores.Params[26].AsString := dm2.CdsVendedoresENVIADO.AsString;
+            dm2.FDAtualizaVendedores.Params[27].AsString := dm2.CdsVendedoresSEXO.AsString;
+            dm2.FDAtualizaVendedores.Params[28].AsString := dm2.CdsVendedoresESTADO_CIVIL.AsString;
+            dm2.FDAtualizaVendedores.Params[29].AsString := dm2.CdsVendedoresNATURALIDADE.AsString;
+            dm2.FDAtualizaVendedores.Params[30].AsString := dm2.CdsVendedoresCONJUGE.AsString;
+            dm2.FDAtualizaVendedores.Params[31].AsDate   := dm2.CdsVendedoresDT_NASC_CONJUGE.AsDateTime;
+            dm2.FDAtualizaVendedores.Params[32].AsFloat  := dm2.CdsVendedoresNUM_DEPEND.AsFloat;
+            dm2.FDAtualizaVendedores.Params[33].AsString := dm2.CdsVendedoresNOMEMAE.AsString;
+            dm2.FDAtualizaVendedores.Params[34].AsString := dm2.CdsVendedoresNOMEPAI.AsString;
+            dm2.FDAtualizaVendedores.Params[35].AsString := dm2.CdsVendedoresEMPRESA_ANTERIOR.AsString;
+            dm2.FDAtualizaVendedores.Params[36].AsString := dm2.CdsVendedoresTEMPO_SERVICO.AsString;
+            dm2.FDAtualizaVendedores.Params[37].AsString := dm2.CdsVendedoresREFERENCIA_COMERCIAL.AsString;
+            dm2.FDAtualizaVendedores.Params[38].AsString := dm2.CdsVendedoresREFERENCIA_BANCARIA.AsString;
+            dm2.FDAtualizaVendedores.Params[39].AsString := dm2.CdsVendedoresDESCONTO.AsString;
+            dm2.FDAtualizaVendedores.Params[40].AsString := dm2.CdsVendedoresCOMISSAO_MEDICAMENTOS.AsString;
+            dm2.FDAtualizaVendedores.Params[41].AsString := dm2.CdsVendedoresCOMISSAO_BONIFICADOS.AsString;
+            dm2.FDAtualizaVendedores.Params[42].AsString := dm2.CdsVendedoresCOMISSAO_PERFUMARIA.AsString;
+            dm2.FDAtualizaVendedores.Params[43].AsString := dm2.CdsVendedoresCOMISSAO_OUTROS.AsString;
+            dm2.FDAtualizaVendedores.Params[44].AsFloat  := dm2.CdsVendedoresCOTA.AsFloat;
+            dm2.FDAtualizaVendedores.Params[45].AsString := dm2.CdsVendedoresSENHA.AsString;
+            dm2.FDAtualizaVendedores.Params[46].AsDate   := dm2.CdsVendedoresDT_ALTERACAO.AsDateTime;
+            dm2.FDAtualizaVendedores.Params[47].AsString := dm2.CdsVendedoresSTATUS.AsString;
+            dm2.FDAtualizaVendedores.Params[48].AsString := dm2.CdsVendedoresVENDEOUTRALOJA.AsString;
+            dm2.FDAtualizaVendedores.Params[49].AsString := dm2.CdsVendedoresUSUARIOFARMACIAPOPULAR.AsString;
+            dm2.FDAtualizaVendedores.Params[50].AsString := dm2.CdsVendedoresSENHAFARMACIAPOPULAR.AsString;
+            Try
+              dm2.FDAtualizaVendedores.ExecSql(False);
+            Except
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Vendedores - Execução da Procedure');
+            End;
 
-        dm3.CdsVendedores.Next;
+            dm2.CdsVendedores.Next;
+          end;
+
+         dm2.CdsVendedores.Close;
       end;
-
-     dm3.CdsVendedores.Close;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Vendedores');
          dm3.CdsVendedores.Close;
@@ -2477,48 +2507,60 @@ end;
 
 procedure RecebendoVendedoresClasses;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
      // Atualiza  Vendedores_Classes
-     dm3.CdsVendedores_Classes.Close;
-     dm3.CdsVendedores_Classes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(123, Filial, 'A');
-     if (Dados = null) then
+
+     dm2.CdsVendedores_Classes.Close;
+     dm2.CdsVendedores_Classes.CreateDataSet;
+     //Processa(123, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('vendedoresclasses')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .post;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsVendedores_Classes.Data := Dados;
-     dm3.CdsVendedores_Classes.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsVendedores_Classes.LoadFromJSON(LResponse.Content);
+         dm2.CdsVendedores_Classes.Open;
+         dm2.CdsVendedores_Classes.First;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Vendedores_Classes: '+ FloatToStr(dm2.CdsVendedores_Classes.RecordCount));
+         while not dm2.CdsVendedores_Classes.Eof do
+          begin
+            dm2.QryVendedoresClasses.Close;
+            dm2.QryVendedoresClasses.Params[0].AsFloat := dm2.CdsVendedores_ClassesCD_VENDEDOR.AsFloat;
+            dm2.QryVendedoresClasses.Params[1].AsFloat := dm2.CdsVendedores_ClassesCD_CLASSE.AsFloat;
+            dm2.QryVendedoresClasses.Open;
+            if dm2.QryVendedoresClasses.RecordCount = 0 then
+               dm2.QryVendedoresClasses.Append
+            else
+               dm2.QryVendedoresClasses.Edit;
+            for i := 0 to dm2.QryVendedoresClasses.FieldCount - 1 do
+               dm2.QryVendedoresClasses.Fields[i].Value := dm2.CdsVendedores_Classes.Fields[i].Value;
+            dm2.QryVendedoresClasses.Post;
+            dm2.QryVendedoresClasses.ApplyUpdates(0);
 
-     dm3.CdsVendedores_Classes.First;
-     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Vendedores_Classes: '+ FloatToStr(dm3.CdsVendedores_Classes.RecordCount));
-     while not dm3.CdsVendedores_Classes.Eof do
-      begin
-        dm3.QryVendedoresClasses.Close;
-        dm3.QryVendedoresClasses.Params[0].AsFloat := dm3.CdsVendedores_ClassesCD_VENDEDOR.AsFloat;
-        dm3.QryVendedoresClasses.Params[1].AsFloat := dm3.CdsVendedores_ClassesCD_CLASSE.AsFloat;
-        dm3.QryVendedoresClasses.Open;
-        if dm3.QryVendedoresClasses.RecordCount = 0 then
-           dm3.QryVendedoresClasses.Append
-        else
-           dm3.QryVendedoresClasses.Edit;
-        for i := 0 to dm3.QryVendedoresClasses.FieldCount - 1 do
-           dm3.QryVendedoresClasses.Fields[i].Value := dm3.CdsVendedores_Classes.Fields[i].Value;
-        dm3.QryVendedoresClasses.Post;
+            dm2.CdsVendedores_Classes.Next;
+          end;
 
-        dm3.QryVendedoresClasses.ApplyUpdates(0);
-
-        dm3.CdsVendedores_Classes.Next;
-      end;
-     dm3.CdsVendedores_Classes.Close;
-     dm3.QryVendedoresClasses.Close;
+         dm2.CdsVendedores_Classes.Close;
+         dm2.QryVendedoresClasses.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Vendedores Classes');
-         dm3.CdsVendedores_Classes.Close;
-         dm3.QryVendedoresClasses.Close;
+         dm2.CdsVendedores_Classes.Close;
+         dm2.QryVendedoresClasses.Close;
          Exit;
        end;
    end;
@@ -2526,51 +2568,59 @@ end;
 
 procedure RecebendoConveniosClasses;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
+
      // Atualiza  Convenios_Classes
-     dm3.CdsConvenios_Classes.Close;
-     dm3.CdsConvenios_Classes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(124, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsConvenios_Classes.Close;
+     dm2.CdsConvenios_Classes.CreateDataSet;
+     //Processa(124, Filial, 'A');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsConvenios_Classes.Data := Dados;
-     dm3.CdsConvenios_Classes.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsConvenios_Classes.LoadFromJSON(LResponse.Content);
+         dm2.CdsConvenios_Classes.Open;
+         dm2.QryConveniosClasses.Open;
+         dm2.CdsConvenios_Classes.First;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Convenios_Classes: '+ FloatToStr(dm2.CdsConvenios_Classes.RecordCount));
+         while not dm2.CdsConvenios_Classes.Eof do
+          begin
+            dm2.QryConveniosClasses.Close;
+            dm2.QryConveniosClasses.Params[0].AsFloat := dm2.CdsConvenios_ClassesCD_CONVENIO.AsFloat;
+            dm2.QryConveniosClasses.Params[1].AsFloat := dm2.CdsConvenios_ClassesCD_CLASSE.AsFloat;
+            dm2.QryConveniosClasses.Open;
+            if dm2.QryConveniosClasses.RecordCount = 0 then
+               dm2.QryConveniosClasses.Append
+            else
+               dm2.QryConveniosClasses.Edit;
+             for i := 0 to dm2.QryConveniosClasses.FieldCount - 1 do
+                dm2.QryConveniosClasses.Fields[i].Value := dm2.CdsConvenios_Classes.Fields[i].Value;
 
+             dm2.QryConveniosClasses.ApplyUpdates(0);
 
-     dm3.QryConveniosClasses.Open;
-
-
-     dm3.CdsConvenios_Classes.First;
-     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Convenios_Classes: '+ FloatToStr(dm3.CdsConvenios_Classes.RecordCount));
-     while not dm3.CdsConvenios_Classes.Eof do
-      begin
-        dm3.QryConveniosClasses.Close;
-        dm3.QryConveniosClasses.Params[0].AsFloat := dm3.CdsConvenios_ClassesCD_CONVENIO.AsFloat;
-        dm3.QryConveniosClasses.Params[1].AsFloat := dm3.CdsConvenios_ClassesCD_CLASSE.AsFloat;
-        dm3.QryConveniosClasses.Open;
-        if dm3.QryConveniosClasses.RecordCount = 0 then
-           dm3.QryConveniosClasses.Append
-        else
-           dm3.QryConveniosClasses.Edit;
-         for i := 0 to dm3.QryConveniosClasses.FieldCount - 1 do
-            dm3.QryConveniosClasses.Fields[i].Value := dm3.CdsConvenios_Classes.Fields[i].Value;
-
-         dm3.QryConveniosClasses.ApplyUpdates(0);
-
-         dm3.CdsConvenios_Classes.Next;
-      end;
-     dm3.CdsConvenios_Classes.Close;
-     dm3.QryConveniosClasses.Close;
+             dm2.CdsConvenios_Classes.Next;
+          end;
+         dm2.CdsConvenios_Classes.Close;
+         dm2.QryConveniosClasses.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios Classes');
-         dm3.CdsConvenios_Classes.Close;
-         dm3.QryConveniosClasses.Close;
+         dm2.CdsConvenios_Classes.Close;
+         dm2.QryConveniosClasses.Close;
          Exit;
        end;
    end;
@@ -2578,51 +2628,58 @@ end;
 
 procedure RecebendoConveniosGrupos;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
      // Atualiza  Convenios_Grupos
-     dm3.CdsConvenios_Grupos.Close;
-     dm3.CdsConvenios_Grupos.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(136, Filial, 'A');
-     if (Dados = null) then
+
+     dm2.CdsConvenios_Grupos.Close;
+     dm2.CdsConvenios_Grupos.CreateDataSet;
+     //Processa(136, Filial, 'A');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+      .Resource('precosfilial')
+      .AcceptEncoding('gzip, deflate')
+      .Accept('application/json')
+      .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsConvenios_Grupos.Data := Dados;
-     dm3.CdsConvenios_Grupos.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsConvenios_Grupos.LoadFromJSON(LResponse.Content);
+         dm2.CdsConvenios_Grupos.Open;
+         dm2.QryConveniosGrupos.Open;
+         dm2.CdsConvenios_Grupos.First;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Convenios_Grupos: '+ FloatToStr(dm2.CdsConvenios_Grupos.RecordCount));
+         while not dm2.CdsConvenios_Grupos.Eof do
+          begin
+            dm2.QryConveniosGrupos.Close;
+            dm2.QryConveniosGrupos.Params[0].AsFloat := dm2.CdsConvenios_GruposCD_CONVENIO.AsFloat;
+            dm2.QryConveniosGrupos.Params[1].AsFloat := dm2.CdsConvenios_GruposCD_GRUPO.AsFloat;
+            dm2.QryConveniosGrupos.Open;
+            if dm2.QryConveniosGrupos.RecordCount = 0 then
+               dm2.QryConveniosGrupos.Append
+            else
+               dm2.QryConveniosGrupos.Edit;
+             for i := 0 to dm2.QryConveniosGrupos.FieldCount - 1 do
+                dm2.QryConveniosGrupos.Fields[i].Value := dm2.CdsConvenios_Grupos.Fields[i].Value;
 
-
-     dm3.QryConveniosGrupos.Open;
-
-
-     dm3.CdsConvenios_Grupos.First;
-     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo Convenios_Grupos: '+ FloatToStr(dm3.CdsConvenios_Grupos.RecordCount));
-     while not dm3.CdsConvenios_Grupos.Eof do
-      begin
-        dm3.QryConveniosGrupos.Close;
-        dm3.QryConveniosGrupos.Params[0].AsFloat := dm3.CdsConvenios_GruposCD_CONVENIO.AsFloat;
-        dm3.QryConveniosGrupos.Params[1].AsFloat := dm3.CdsConvenios_GruposCD_GRUPO.AsFloat;
-        dm3.QryConveniosGrupos.Open;
-        if dm3.QryConveniosGrupos.RecordCount = 0 then
-           dm3.QryConveniosGrupos.Append
-        else
-           dm3.QryConveniosGrupos.Edit;
-         for i := 0 to dm3.QryConveniosGrupos.FieldCount - 1 do
-            dm3.QryConveniosGrupos.Fields[i].Value := dm3.CdsConvenios_Grupos.Fields[i].Value;
-
-         dm3.QryConveniosGrupos.ApplyUpdates(0);
-
-         dm3.CdsConvenios_Grupos.Next;
-      end;
-     dm3.CdsConvenios_Grupos.Close;
-     dm3.QryConveniosGrupos.Close;
+             dm2.QryConveniosGrupos.ApplyUpdates(0);
+             dm2.CdsConvenios_Grupos.Next;
+          end;
+         dm2.CdsConvenios_Grupos.Close;
+         dm2.QryConveniosGrupos.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios Grupos');
-         dm3.CdsConvenios_Grupos.Close;
-         dm3.QryConveniosGrupos.Close;
+         dm2.CdsConvenios_Grupos.Close;
+         dm2.QryConveniosGrupos.Close;
          Exit;
        end;
    end;
@@ -2630,51 +2687,57 @@ end;
 
 procedure RecebendoContasPagarCompras;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
      // Atualiza  Convenios_Grupos
-     dm3.CdsContasPagarCompras.Close;
-     dm3.CdsContasPagarCompras.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(137, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsContasPagarCompras.Close;
+     dm2.CdsContasPagarCompras.CreateDataSet;
+      //Processa(137, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('contasapagarcompras/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsContasPagarCompras.Data := Dados;
-     dm3.CdsContasPagarCompras.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsContasPagarCompras.LoadFromJSON(LResponse.Content);
+         dm2.CdsContasPagarCompras.Open;
+         dm2.QryContasPagarCompras.Open;
+         dm2.CdsContasPagarCompras.First;
+         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo ContasPagarCompras: '+ FloatToStr(dm2.CdsContasPagarCompras.RecordCount));
+         while not dm2.CdsContasPagarCompras.Eof do
+          begin
+            dm2.QryContasPagarCompras.Close;
+            dm2.QryContasPagarCompras.Params[0].AsFloat := dm2.CdsContasPagarComprasCD_CONTAS_PAGAR.AsFloat;
+            dm2.QryContasPagarCompras.Params[1].AsFloat := dm2.CdsContasPagarComprasCD_COMPRAS.AsFloat;
+            dm2.QryContasPagarCompras.Open;
+            if dm2.QryContasPagarCompras.RecordCount = 0 then
+               dm2.QryContasPagarCompras.Append
+            else
+               dm2.QryContasPagarCompras.Edit;
+             for i := 0 to dm2.QryContasPagarCompras.FieldCount - 1 do
+                dm2.QryContasPagarCompras.Fields[i].Value := dm2.CdsContasPagarCompras.Fields[i].Value;
 
-
-     dm3.QryContasPagarCompras.Open;
-
-
-     dm3.CdsContasPagarCompras.First;
-     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Recebendo ContasPagarCompras: '+ FloatToStr(dm3.CdsContasPagarCompras.RecordCount));
-     while not dm3.CdsContasPagarCompras.Eof do
-      begin
-        dm3.QryContasPagarCompras.Close;
-        dm3.QryContasPagarCompras.Params[0].AsFloat := dm3.CdsContasPagarComprasCD_CONTAS_PAGAR.AsFloat;
-        dm3.QryContasPagarCompras.Params[1].AsFloat := dm3.CdsContasPagarComprasCD_COMPRAS.AsFloat;
-        dm3.QryContasPagarCompras.Open;
-        if dm3.QryContasPagarCompras.RecordCount = 0 then
-           dm3.QryContasPagarCompras.Append
-        else
-           dm3.QryContasPagarCompras.Edit;
-         for i := 0 to dm3.QryContasPagarCompras.FieldCount - 1 do
-            dm3.QryContasPagarCompras.Fields[i].Value := dm3.CdsContasPagarCompras.Fields[i].Value;
-
-         dm3.QryContasPagarCompras.ApplyUpdates(0);
-
-         dm3.CdsContasPagarCompras.Next;
-      end;
-     dm3.CdsContasPagarCompras.Close;
-     dm3.QryContasPagarCompras.Close;
+             dm2.QryContasPagarCompras.ApplyUpdates(0);
+             dm2.CdsContasPagarCompras.Next;
+          end;
+         dm2.CdsContasPagarCompras.Close;
+         dm2.QryContasPagarCompras.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de ContasPagarCompras');
-         dm3.CdsContasPagarCompras.Close;
-         dm3.QryContasPagarCompras.Close;
+         dm2.CdsContasPagarCompras.Close;
+         dm2.QryContasPagarCompras.Close;
          Exit;
        end;
    end;
@@ -2727,50 +2790,60 @@ end;
 
 procedure RecebendoMetasFiliais;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
-     // Atualiza Cepedid1.dat
-     dm3.CdsMetasFiliais.Close;
-     dm3.CdsMetasFiliais.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(127, Filial, 'A');
-     if (Dados = null) then
+     // Atualiza recebe metas filiais
+     dm2.CdsMetasFiliais.Close;
+     dm2.CdsMetasFiliais.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )    //Processa(127, Filial, 'A');
+     .Resource('metasfiliais/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsMetasFiliais.Data := Dados;
-     dm3.CdsMetasFiliais.Open; // virtual
-     dm3.CdsMetasFiliais.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasFiliais: '+ FloatToStr(dm3.CdsMetasFiliais.RecordCount));
-     while not dm3.CdsMetasFiliais.Eof do
-      begin
-        dm3.QryMetasFiliais.Close;
-        dm3.QryMetasFiliais.Params[0].AsFloat := dm3.CdsMetasFiliaisID_META.AsFloat;
-        dm3.QryMetasFiliais.Open;
-        if dm3.QryMetasFiliais.RecordCount = 0 then
-           dm3.QryMetasFiliais.Append
-        else
-           dm3.QryMetasFiliais.Edit;
-        if dm3.QryMetasFiliais.State in [dsInsert, dsedit] then
+     end
+     else
+     begin
+         dm2.CdsMetasFiliais.LoadFromJSON(LResponse.Content);
+         dm2.CdsMetasFiliais.Open;
+         dm2.CdsMetasFiliais.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasFiliais: '+ FloatToStr(dm2.CdsMetasFiliais.RecordCount));
+         while not dm2.CdsMetasFiliais.Eof do
           begin
-           for i := 0 to dm3.QryMetasFiliais.FieldCount - 1 do
-               dm3.QryMetasFiliais.Fields[i].Value := dm3.CdsMetasFiliais.Fields[i].Value;
+            dm2.QryMetasFiliais.Close;
+            dm2.QryMetasFiliais.Params[0].AsFloat := dm2.CdsMetasFiliaisID_META.AsFloat;
+            dm2.QryMetasFiliais.Open;
+            if dm2.QryMetasFiliais.RecordCount = 0 then
+               dm2.QryMetasFiliais.Append
+            else
+               dm2.QryMetasFiliais.Edit;
+            if dm2.QryMetasFiliais.State in [dsInsert, dsedit] then
+              begin
+               for i := 0 to dm2.QryMetasFiliais.FieldCount - 1 do
+                   dm2.QryMetasFiliais.Fields[i].Value := dm2.CdsMetasFiliais.Fields[i].Value;
 
-           dm3.QryMetasFiliais.Post;
+               dm2.QryMetasFiliais.Post;
 
-           dm3.QryMetasFiliais.ApplyUpdates(0);
+               dm2.QryMetasFiliais.ApplyUpdates(0);
 
-         end;
-        dm3.CdsMetasFiliais.Next;
-      end;
-     dm3.CdsMetasFiliais.Close;
-     dm3.QryMetasFiliais.Close;
+             end;
+            dm2.CdsMetasFiliais.Next;
+          end;
+         dm2.CdsMetasFiliais.Close;
+         dm2.QryMetasFiliais.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Metas Filiais');
-         dm3.CdsMetasFiliais.Close;
-         dm3.QryMetasFiliais.Close;
+         dm2.CdsMetasFiliais.Close;
+         dm2.QryMetasFiliais.Close;
          Exit;
        end;
    end;
@@ -2778,50 +2851,59 @@ end;
 
 procedure RecebendoMetasVendedores;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
-     dm3.CdsMetasVendedores.Close;
-     dm3.CdsMetasVendedores.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(128, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsMetasVendedores.Close;
+     dm2.CdsMetasVendedores.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(128, Filial, 'A');
+     .Resource('metasvendedores/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsMetasVendedores.Data := Dados;
-     dm3.CdsMetasVendedores.Open; // virtual
-     dm3.CdsMetasVendedores.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasVendedores: ' + FloatToStr(dm3.CdsMetasVendedores.RecordCount));
-     while not dm3.CdsMetasVendedores.Eof do
-      begin
-        dm3.QryMetasVendedores.Close;
-        dm3.QryMetasVendedores.Params[0].AsFloat := dm3.CdsMetasVendedoresID_META.AsFloat;
-        dm3.QryMetasVendedores.Params[1].AsFloat := dm3.CdsMetasVendedoresCD_VENDEDOR.AsFloat;
-        dm3.QryMetasVendedores.Open;
-        if dm3.QryMetasVendedores.RecordCount = 0 then
-           dm3.QryMetasVendedores.Append
-        else
-           dm3.QryMetasVendedores.Edit;
-        if dm3.QryMetasVendedores.State in [dsInsert, dsedit] then
+     end
+     else
+     begin
+         dm2.CdsMetasVendedores.LoadFromJSON(LResponse.Content);
+         dm2.CdsMetasVendedores.Open;
+         dm2.CdsMetasVendedores.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasVendedores: ' + FloatToStr(dm2.CdsMetasVendedores.RecordCount));
+         while not dm2.CdsMetasVendedores.Eof do
           begin
-           for i := 0 to dm3.QryMetasVendedores.FieldCount - 1 do
-               dm3.QryMetasVendedores.Fields[i].Value := dm3.CdsMetasVendedores.Fields[i].Value;
+            dm2.QryMetasVendedores.Close;
+            dm2.QryMetasVendedores.Params[0].AsFloat := dm2.CdsMetasVendedoresID_META.AsFloat;
+            dm2.QryMetasVendedores.Params[1].AsFloat := dm2.CdsMetasVendedoresCD_VENDEDOR.AsFloat;
+            dm2.QryMetasVendedores.Open;
+            if dm2.QryMetasVendedores.RecordCount = 0 then
+               dm2.QryMetasVendedores.Append
+            else
+               dm2.QryMetasVendedores.Edit;
+            if dm2.QryMetasVendedores.State in [dsInsert, dsedit] then
+              begin
+               for i := 0 to dm2.QryMetasVendedores.FieldCount - 1 do
+                   dm2.QryMetasVendedores.Fields[i].Value := dm2.CdsMetasVendedores.Fields[i].Value;
 
-           dm3.QryMetasVendedores.Post;
+               dm2.QryMetasVendedores.Post;
 
-           dm3.QryMetasVendedores.ApplyUpdates(0);
+               dm2.QryMetasVendedores.ApplyUpdates(0);
 
-         end;
-        dm3.CdsMetasVendedores.Next;
-      end;
-     dm3.CdsMetasVendedores.Close;
-     dm3.QryMetasVendedores.Close;
+             end;
+            dm2.CdsMetasVendedores.Next;
+          end;
+         dm2.CdsMetasVendedores.Close;
+         dm2.QryMetasVendedores.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Metas Vendedores');
-         dm3.CdsMetasVendedores.Close;
-         dm3.QryMetasVendedores.Close;
+         dm2.CdsMetasVendedores.Close;
+         dm2.QryMetasVendedores.Close;
          Exit;
        end;
    end;
@@ -2830,97 +2912,124 @@ end;
 
 procedure RecebendoClasses;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
+ arrayClasses:TJSONArray;
+
 begin
    Try
      dm3.CdsClasses.Close;
      dm3.CdsClasses.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(120, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsClasses.Data := Dados;
-     dm3.CdsClasses.Open; // virtual
 
-     dm3.CdsClasses.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Classes: '+ FloatToStr(dm3.CdsClasses.RecordCount));
-     while not dm3.CdsClasses.Eof do
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )     //Processa(120, Filial, 'A');
+     .Resource('classes/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .get;
+
+
+     if LResponse.StatusCode<>200 then
       begin
-        dm3.FDAtualizaClasses.Params[0].AsFloat := dm3.CdsClassesCD_CLASSE.AsFloat;
-        dm3.FDAtualizaClasses.Params[1].AsString := dm3.CdsClassesDESCRICAO.AsString;
-        dm3.FDAtualizaClasses.Params[2].AsString := dm3.CdsClassesTIPO.AsString;
-        dm3.FDAtualizaClasses.Params[3].AsString := dm3.CdsClassesVENDEESTOQUENEGATIVO.AsString;
-        dm3.FDAtualizaClasses.Params[4].AsDate := dm3.CdsClassesDT_CALCULOCURVA.AsDateTime;
-        dm3.FDAtualizaClasses.Params[5].AsInteger := dm3.CdsClassesFREQUENCIA.AsInteger;
-        dm3.FDAtualizaClasses.Params[6].AsFloat := dm3.CdsClassesNPRODUTOS.AsFloat;
-        dm3.FDAtualizaClasses.Params[7].AsFloat := dm3.CdsClassesNITENS.AsFloat;
-        dm3.FDAtualizaClasses.Params[8].AsFloat := dm3.CdsClassesVPRODUTOS.AsFloat;
-        dm3.FDAtualizaClasses.Params[9].AsFloat := dm3.CdsClassesCPRODUTOS.AsFloat;
-        dm3.FDAtualizaClasses.Params[10].AsString := dm3.CdsClassesCONTROLALOTES.AsString;
-        dm3.FDAtualizaClasses.Params[11].AsString := dm3.CdsClassesENVIADO.AsString;
-        Try
-          dm3.FDAtualizaClasses.ExecFD(False);
-        Except
-          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Classes - Execução da Procedure');
-        End;
+        exit;
+      end
+      else
+      begin
 
-        dm3.CdsClasses.Next;
+         dm3.CdsClasses.LoadFromJSON(LResponse.Content);
+         dm3.CdsClasses.Open;
+
+         dm3.CdsClasses.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Classes: '+ FloatToStr(dm3.CdsClasses.RecordCount));
+         while not dm3.CdsClasses.Eof do
+          begin
+            dm2.FDAtualizaClasses.Params[0].AsFloat := dm2.CdsClassesCD_CLASSE.AsFloat;
+            dm2.FDAtualizaClasses.Params[1].AsString := dm2.CdsClassesDESCRICAO.AsString;
+            dm2.FDAtualizaClasses.Params[2].AsString := dm2.CdsClassesTIPO.AsString;
+            dm2.FDAtualizaClasses.Params[3].AsString := dm2.CdsClassesVENDEESTOQUENEGATIVO.AsString;
+            dm2.FDAtualizaClasses.Params[4].AsDate := dm2.CdsClassesDT_CALCULOCURVA.AsDateTime;
+            dm2.FDAtualizaClasses.Params[5].AsInteger := dm2.CdsClassesFREQUENCIA.AsInteger;
+            dm2.FDAtualizaClasses.Params[6].AsFloat := dm2.CdsClassesNPRODUTOS.AsFloat;
+            dm2.FDAtualizaClasses.Params[7].AsFloat := dm2.CdsClassesNITENS.AsFloat;
+            dm2.FDAtualizaClasses.Params[8].AsFloat := dm2.CdsClassesVPRODUTOS.AsFloat;
+            dm2.FDAtualizaClasses.Params[9].AsFloat := dm2.CdsClassesCPRODUTOS.AsFloat;
+            dm2.FDAtualizaClasses.Params[10].AsString := dm2.CdsClassesCONTROLALOTES.AsString;
+            dm2.FDAtualizaClasses.Params[11].AsString := dm2.CdsClassesENVIADO.AsString;
+            Try
+              dm2.FDAtualizaClasses.Execsql(False);
+            Except
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Classes - Execução da Procedure');
+            End;
+
+            dm2.CdsClasses.Next;
+          end;
+
+         dm2.CdsClasses.Close;
       end;
-
-     dm3.CdsClasses.Close;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Classes');
-         dm3.CdsClasses.Close;
+         dm2.CdsClasses.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoClassesDeletadas;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz as classes deletadas
+  //busca  classes deletadas
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CLASSES');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'CLASSES');
+     .Resource('classesdeletadas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open; // virtual
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Classes Deletadas - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CLASSES';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CLASSE';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Classes Deletadas - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CLASSES';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CLASSE';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Classes Deletadas');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -2928,43 +3037,53 @@ end;
 
 
 procedure RecebendoContasPagarComprasDeletadas;
-var Dados : Variant;
+var
+LResponse: IResponse;
 begin
   //busca na matriz as ContasPagarCompras deletadas
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CONTAS_PAGAR_COMPRAS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'CONTAS_PAGAR_COMPRAS');
+     .Resource('contasapagarcomprasdeletadas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ContasPagarCompras Deletadas - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDSql.sql.text := 'DELETE FROM COMTAS_PAGAR_COMPRAS WHERE CD_CONTAS_PAGAR = ' + dm3.CdsDeletadosCAMPO1.AsString +
-                                                 ' AND CD_COMPRAS = ' + dm3.CdsDeletadosCAMPO2.AsString;
-            dm3.FDSql.ExecFD(True);
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ContasPagarCompras Deletadas - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm3.FDSql.sql.text := 'DELETE FROM COMTAS_PAGAR_COMPRAS WHERE CD_CONTAS_PAGAR = ' + dm2.CdsDeletadosCAMPO1.AsString +
+                                                     ' AND CD_COMPRAS = ' + dm2.CdsDeletadosCAMPO2.AsString;
+                dm3.FDSql.ExecSql(True);
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de ContasPagarCompras Deletadas');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -2972,47 +3091,60 @@ end;
 
 
 procedure RecebendoContasPagarDeletadas;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz as Contas a Pagar deletadas
    Try
-     // Atualiza Contas a Pagar Deletadas
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CONTAS_PAGAR');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     //Processa(108, Filial, 'CONTAS_PAGAR');
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('contaspagardeletadas/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Contas a Pagar Deletadas - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CONTAS_PAGAR';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CONTAS_PAGAR';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Contas a Pagar Deletadas - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CONTAS_PAGAR';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CONTAS_PAGAR';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Contas a Pagar Deletadas');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3020,55 +3152,66 @@ end;
 
 
 procedure RecebendoUsuariosDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz as usuarios deletados
    Try
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'USUARIOS');
-     if (Dados = null) then
+     dm.CdsDeletados.Close;
+     dm.CdsDeletados.CreateDataSet;
+     //Processa(108, Filial, 'USUARIOS');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('usuariosdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Usuarios Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Usuarios Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
 
+              dm2.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS';
+              dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_USUARIO';
+              dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+              Try
+                dm2.FDAtualizaDeletados.ExecSql(False);
+              Except on E:Exception do
+                GeraLog('Erro as deletar usarios '+E.Message);
+              End;
 
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_USUARIO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
-
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS_GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_USUARIO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
-
-
-            dm3.CdsDeletados.Next;
-          end;
-      end;
-     dm3.CdsDeletados.Close;
+              dm2.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS_GRUPOS';
+              dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_USUARIO';
+              dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+              Try
+                dm2.FDAtualizaDeletados.ExecSql(False);
+              Except on E:Exception do
+                GeraLog('Erro as deletar usarios grupos '+E.Message);
+              End;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+       dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Usuarios Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3076,92 +3219,118 @@ end;
 
 procedure RecebendoFamilias;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
+
 begin
    Try
      // Atualiza Classes
      dm3.CdsFamilias.Close;
      dm3.CdsFamilias.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(129, Filial, 'A');
-     if (Dados = null) then
+      //Processa(129, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('familia/filial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsFamilias.Data := Dados;
-     dm3.CdsFamilias.Open; // virtual
+     end
+     else
+     begin
+       dm3.CdsFamilias.loadFromJSON(LResponse.Content);
+       dm3.CdsFamilias.Open; // virtual
 
-     dm3.CdsFamilias.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Familias - ' + FloattoStr(dm3.CdsFamilias.RecordCount));
-     while not dm3.CdsFamilias.Eof do
-      begin
-         dm3.FDAtualizaFamilias.Params[0].AsFloat := dm3.CdsFamiliasID_FAMILIA.AsFloat;
-         dm3.FDAtualizaFamilias.Params[1].AsString := dm3.CdsFamiliasDESCRICAO.AsString;
-         dm3.FDAtualizaFamilias.Params[2].AsString := dm3.CdsFamiliasSTATUS.AsString;
-         dm3.FDAtualizaFamilias.Params[3].AsDate := dm3.CdsFamiliasDT_ALTERACAO.AsDateTime;
-         dm3.FDAtualizaFamilias.Params[4].AsString := dm3.CdsFamiliasALTERAPRECOFAMILIA.AsString;
-         dm3.FDAtualizaFamilias.Params[5].AsString := dm3.CdsFamiliasENVIADO.AsString;
-         Try
-           dm3.FDAtualizaFamilias.ExecFD(False);
-         Except
-           GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Familias - Execução da Procedure');
-         End;
+       dm3.CdsFamilias.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Familias - ' + FloattoStr(dm3.CdsFamilias.RecordCount));
+       while not dm3.CdsFamilias.Eof do
+        begin
+           dm2.FDAtualizaFamilias.Params[0].AsFloat  := dm3.CdsFamiliasID_FAMILIA.AsFloat;
+           dm2.FDAtualizaFamilias.Params[1].AsString := dm3.CdsFamiliasDESCRICAO.AsString;
+           dm2.FDAtualizaFamilias.Params[2].AsString := dm3.CdsFamiliasSTATUS.AsString;
+           dm2.FDAtualizaFamilias.Params[3].AsDate   := dm3.CdsFamiliasDT_ALTERACAO.AsDateTime;
+           dm2.FDAtualizaFamilias.Params[4].AsString := dm3.CdsFamiliasALTERAPRECOFAMILIA.AsString;
+           dm2.FDAtualizaFamilias.Params[5].AsString := dm3.CdsFamiliasENVIADO.AsString;
+           Try
+             dm2.FDAtualizaFamilias.Execsql(False);
+           Except
+             GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Familias - Execução da Procedure');
+           End;
 
-         dm3.CdsFamilias.Next;
-      end;
+           dm2.CdsFamilias.Next;
+        end;
 
-     dm3.CdsFamilias.Close;
+       dm2.CdsFamilias.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Familias');
-         dm3.CdsFamilias.Close;
+         dm2.CdsFamilias.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoFamiliasDeletadas;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz as famílias deletadas
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'FAMILIAS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+      //Processa(108, Filial, 'FAMILIAS');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('familiasdeletadas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Familias Deletadas - ' + FloatToStr( dm3.CdsDeletados.RecordCount));
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open; // virtual
+       dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'FAMILIAS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'ID_FAMILIA';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Familias Deletadas - ' + FloatToStr( dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDAtualizaDeletados.Params[0].AsString := 'FAMILIAS';
+              dm2.FDAtualizaDeletados.Params[1].AsString := 'ID_FAMILIA';
+              dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+              Try
+                dm2.FDAtualizaDeletados.ExecSql(False);
+              Except
+              End;
 
-     dm3.CdsDeletados.Close;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+        dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Familias Deletadas');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3170,37 +3339,49 @@ end;
 
 procedure RecebendoGruposBalanco;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
      // Atualiza Grupos
      dm3.CdsGruposBalanco.Close;
      dm3.CdsGruposBalanco.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(130, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsGruposBalanco.Data := Dados;
-     dm3.CdsGruposBalanco.Open; // virtual
+    //Processa(130, Filial, 'A');
 
-     dm3.CdsGruposBalanco.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Balanco - ' + FloattoStr(dm3.CdsGruposBalanco.RecordCount));
-     while not dm3.CdsGruposBalanco.Eof do
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('gruposbalanco')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
-         dm3.FDAtualizaGruposBalanco.Params[0].AsFloat := dm3.CdsGruposBalancoCD_GRUPOBALANCO.AsFloat;
-         dm3.FDAtualizaGruposBalanco.Params[1].AsString := dm3.CdsGruposBalancoDESCRICAO.AsString;
-         dm3.FDAtualizaGruposBalanco.Params[2].AsString := dm3.CdsGruposBalancoSTATUS.AsString;
-         dm3.FDAtualizaGruposBalanco.Params[3].AsDate := dm3.CdsGruposBalancoDT_ALTERACAO.AsDateTime;
-         dm3.FDAtualizaGruposBalanco.Params[4].AsString := dm3.CdsGruposBalancoENVIADO.AsString;
-         Try
-           dm3.FDAtualizaGruposBalanco.ExecFD(False);
-         Except
-           GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Balanco - Execução da Procedure');
-         End;
+        Exit;
+      end
+      else
+      begin
+         dm3.CdsGruposBalanco.LoadFromJson(LResponse.Content);
+         dm3.CdsGruposBalanco.Open;
 
-         dm3.CdsGruposBalanco.Next;
+         dm3.CdsGruposBalanco.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Balanco - ' + FloattoStr(dm3.CdsGruposBalanco.RecordCount));
+         while not dm3.CdsGruposBalanco.Eof do
+          begin
+             dm2.FDAtualizaGruposBalanco.Params[0].AsFloat  := dm2.CdsGruposBalancoCD_GRUPOBALANCO.AsFloat;
+             dm2.FDAtualizaGruposBalanco.Params[1].AsString := dm2.CdsGruposBalancoDESCRICAO.AsString;
+             dm2.FDAtualizaGruposBalanco.Params[2].AsString := dm2.CdsGruposBalancoSTATUS.AsString;
+             dm2.FDAtualizaGruposBalanco.Params[3].AsDate   := dm2.CdsGruposBalancoDT_ALTERACAO.AsDateTime;
+             dm2.FDAtualizaGruposBalanco.Params[4].AsString := dm2.CdsGruposBalancoENVIADO.AsString;
+             Try
+               dm2.FDAtualizaGruposBalanco.Execsql(False);
+             Except
+               GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Balanco - Execução da Procedure');
+             End;
+
+             dm3.CdsGruposBalanco.Next;
+          end;
+
+         dm3.CdsGruposBalanco.Close;
       end;
-
-     dm3.CdsGruposBalanco.Close;
    Except
       on E:Exception do
        begin
@@ -3214,94 +3395,119 @@ begin
 end;
 
 procedure RecebendoGruposBalancoDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz as famílias deletadas
+  //busca na matriz as balancos deletadas
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'GRUPOSBALANCO');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(108, Filial, 'GRUPOSBALANCO');
+     .Resource('gruposbalancodeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Balancos Deletados: '+ FloatToStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open; // virtual
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Balancos Deletados: '+ FloatToStr(dm2.CdsDeletados.RecordCount));
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'GRUPOSBALANCO';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPOBALANCO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'GRUPOSBALANCO';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPOBALANCO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos de Balanco Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoGruposCurvasDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz as famílias deletadas
+  //busca na matriz gruos curvas deletadas
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'GRUPOSCURVAS');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+     //Processa(108, Filial, 'GRUPOSCURVAS');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('gruposcurvasdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Curvas Deletados: '+ FloatToStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open; // virtual
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Curvas Deletados: '+ FloatToStr(dm2.CdsDeletados.RecordCount));
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'GRUPOS_CURVAS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'GRUPOS_CURVAS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Curvas Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3309,89 +3515,113 @@ end;
 
 procedure RecebendoGruposCompra;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
-     // Atualiza Grupos
-     dm3.CdsGruposCompra.Close;
-     dm3.CdsGruposCompra.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(131, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsGruposCompra.Data := Dados;
-     dm3.CdsGruposCompra.Open; // virtual
-     dm3.CdsGruposCompra.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Compra: ' + FloatToStr(dm3.CdsGruposCompra.RecordCount));
-     while not dm3.CdsGruposCompra.Eof do
-      begin
-          dm3.FDAtualizaGruposCompras.Params[0].AsFloat := dm3.CdsGruposCompraCD_GRUPOCOMPRA.AsFloat;
-          dm3.FDAtualizaGruposCompras.Params[1].AsString := dm3.CdsGruposCompraDESCRICAO.AsString;
-          dm3.FDAtualizaGruposCompras.Params[2].AsString := dm3.CdsGruposCompraSTATUS.AsString;
-          dm3.FDAtualizaGruposCompras.Params[3].AsDate := dm3.CdsGruposCompraDT_ALTERACAO.AsDateTime;
-          dm3.FDAtualizaGruposCompras.Params[4].AsString := dm3.CdsGruposCompraENVIADO.AsString;
-          Try
-            dm3.FDAtualizaGruposCompras.ExecFD(False);
-          Except
-            GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Compras - Execução da Procedure');
-          End;
+     // Atualiza Gruposcompra
+     dm2.CdsGruposCompra.Close;
+     dm2.CdsGruposCompra.CreateDataSet;
+     //Processa(131, Filial, 'A');
 
-          dm3.CdsGruposCompra.Next;
-      end;
-     dm3.CdsGruposCompra.Close;
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('gruposcompra')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
+        Exit;
+     end
+     else
+     begin
+       dm2.CdsGruposCompra.LoadFromJson(LResponse.Content);
+       dm2.CdsGruposCompra.Open;
+       dm2.CdsGruposCompra.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Compra: ' + FloatToStr(dm2.CdsGruposCompra.RecordCount));
+       while not dm2.CdsGruposCompra.Eof do
+        begin
+            dm2.FDAtualizaGruposCompras.Params[0].AsFloat  := dm2.CdsGruposCompraCD_GRUPOCOMPRA.AsFloat;
+            dm2.FDAtualizaGruposCompras.Params[1].AsString := dm2.CdsGruposCompraDESCRICAO.AsString;
+            dm2.FDAtualizaGruposCompras.Params[2].AsString := dm2.CdsGruposCompraSTATUS.AsString;
+            dm2.FDAtualizaGruposCompras.Params[3].AsDate   := dm2.CdsGruposCompraDT_ALTERACAO.AsDateTime;
+            dm2.FDAtualizaGruposCompras.Params[4].AsString := dm2.CdsGruposCompraENVIADO.AsString;
+            Try
+              dm2.FDAtualizaGruposCompras.Execsql(False);
+            Except
+              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Compras - Execução da Procedure');
+            End;
+
+            dm2.CdsGruposCompra.Next;
+        end;
+       dm2.CdsGruposCompra.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos de Compra');
-         dm3.CdsGruposCompra.Close;
+         dm2.CdsGruposCompra.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoGruposCompraDeletados;
-var Dados : Variant;
+var
+   LResponse: IResponse;
 begin
-  //busca na matriz as famílias deletadas
+  //busca na matriz grupos compras  deletadas
    Try
      // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'GRUPOSCOMPRAS');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )    //Processa(108, Filial, 'GRUPO
+     .Resource('gruposcomprasdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Compras Deletados: ' + FloatToStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos de Compras Deletados: ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'GRUPOSCOMPRAS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPOCOMPRA';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'GRUPOSCOMPRAS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPOCOMPRA';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos de Compra Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3400,52 +3630,65 @@ end;
 
 procedure RecebendoGruposCurvas;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
-     // Atualiza Grupos
-     dm3.CdsGruposCurvas.Close;
-     dm3.CdsGruposCurvas.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(132, Filial, 'A');
-     if (Dados = null) then
+     // Atualiza Grupos curvas
+     dm2.CdsGruposCurvas.Close;
+     dm2.CdsGruposCurvas.CreateDataSet;
+     //Processa(132, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('gruposcurvas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsGruposCurvas.Data := Dados;
-     dm3.CdsGruposCurvas.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsGruposCurvas.LoadFromJSON(LResponse.Content);
+         dm2.CdsGruposCurvas.Open; // virtual
 
-     dm3.CdsGruposCurvas.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Curvas: ' + FloatToStr(dm3.CdsGruposCurvas.RecordCount));
-     while not dm3.CdsGruposCurvas.Eof do
-      begin
-           dm3.FDAtualizaGruposCurva.Params[0].AsFloat := dm3.CdsGruposCurvasCD_FILIAL.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[1].AsFloat := dm3.CdsGruposCurvasCD_GRUPO.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[2].AsString := dm3.CdsGruposCurvasGRUPO.AsString;
-          dm3.FDAtualizaGruposCurva.Params[3].AsFloat := dm3.CdsGruposCurvasCD_CURVA.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[4].AsString := dm3.CdsGruposCurvasCURVA.AsString;
-          dm3.FDAtualizaGruposCurva.Params[5].AsString := dm3.CdsGruposCurvasSIGLA.AsString;
-          dm3.FDAtualizaGruposCurva.Params[6].AsFloat := dm3.CdsGruposCurvasDIASESTOQUE.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[7].AsFloat := dm3.CdsGruposCurvasESEG.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[8].AsFloat := dm3.CdsGruposCurvasP1.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[9].AsFloat := dm3.CdsGruposCurvasP2.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[10].AsFloat := dm3.CdsGruposCurvasP1SAZ.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[11].AsFloat := dm3.CdsGruposCurvasP2SAZ.AsFloat;
-          dm3.FDAtualizaGruposCurva.Params[12].AsDate := dm3.CdsGruposCurvasDT_ALTERACAO.AsDateTime;
-          Try
-            dm3.FDAtualizaGruposCurva.ExecFD(False);
-          Except
-            GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Curva - Execução da Procedure');
-          End;
+         dm2.CdsGruposCurvas.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Curvas: ' + FloatToStr(dm2.CdsGruposCurvas.RecordCount));
+         while not dm2.CdsGruposCurvas.Eof do
+          begin
+              dm2.FDAtualizaGruposCurva.Params[0].AsFloat  := dm2.CdsGruposCurvasCD_FILIAL.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[1].AsFloat  := dm2.CdsGruposCurvasCD_GRUPO.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[2].AsString := dm2.CdsGruposCurvasGRUPO.AsString;
+              dm2.FDAtualizaGruposCurva.Params[3].AsFloat  := dm2.CdsGruposCurvasCD_CURVA.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[4].AsString := dm2.CdsGruposCurvasCURVA.AsString;
+              dm2.FDAtualizaGruposCurva.Params[5].AsString := dm2.CdsGruposCurvasSIGLA.AsString;
+              dm2.FDAtualizaGruposCurva.Params[6].AsFloat  := dm2.CdsGruposCurvasDIASESTOQUE.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[7].AsFloat  := dm2.CdsGruposCurvasESEG.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[8].AsFloat  := dm2.CdsGruposCurvasP1.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[9].AsFloat  := dm2.CdsGruposCurvasP2.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[10].AsFloat := dm2.CdsGruposCurvasP1SAZ.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[11].AsFloat := dm2.CdsGruposCurvasP2SAZ.AsFloat;
+              dm2.FDAtualizaGruposCurva.Params[12].AsDate  := dm2.CdsGruposCurvasDT_ALTERACAO.AsDateTime;
+              Try
+                dm2.FDAtualizaGruposCurva.ExecSql(False);
+              Except
+                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Curva - Execução da Procedure');
+              End;
 
-          dm3.CdsGruposCurvas.Next;
-      end;
+              dm2.CdsGruposCurvas.Next;
+          end;
 
-     dm3.CdsGruposCurvas.Close;
+         dm2.CdsGruposCurvas.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Curvas');
-         dm3.CdsGruposCurvas.Close;
+         dm2.CdsGruposCurvas.Close;
          Exit;
        end;
    end;
@@ -3454,96 +3697,109 @@ end;
 
 procedure RecebendoDistribuidores;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
+
 begin
    Try
      // Atualiza Distribuidores
      dm3.CdsDistribuidores.Close;
      dm3.CdsDistribuidores.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(114, Filial, 'A');
-     if (Dados = null) then
+      //Processa(114, Filial, 'A');
+
+
+        LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('distribuidores')
+       .AcceptEncoding('gzip, deflate')
+       .Accept('application/json')
+       .get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDistribuidores.Data := Dados;
-     dm3.CdsDistribuidores.Open; // virtual
+     end
+     else
+     begin
+         dm2.CdsDistribuidores.LoadFromJSON(LResponse.Content);
+         dm2.CdsDistribuidores.Open;
+         dm2.CdsDistribuidores.First;
+         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Distribuidores: ' + FloatToStr(dm2.CdsDistribuidores.RecordCount));
+         while not dm2.CdsDistribuidores.Eof do
+          begin
+              dm2.FDAtualizaDistribuidores.Params[0].AsFloat  := dm2.CdsDistribuidoresCD_DISTRIBUIDOR.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[1].AsString := dm2.CdsDistribuidoresNOME.AsString;
+              dm2.FDAtualizaDistribuidores.Params[2].AsString := dm2.CdsDistribuidoresAPELIDO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[3].AsString := dm2.CdsDistribuidoresENDERECO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[4].AsString := dm2.CdsDistribuidoresBAIRRO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[5].AsString := dm2.CdsDistribuidoresCIDADE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[6].AsString := dm2.CdsDistribuidoresUF.AsString;
+              dm2.FDAtualizaDistribuidores.Params[7].AsString := dm2.CdsDistribuidoresCEP.AsString;
+              dm2.FDAtualizaDistribuidores.Params[8].AsString := dm2.CdsDistribuidoresCAIXA_POSTAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[9].AsString := dm2.CdsDistribuidoresFONE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[10].AsString := dm2.CdsDistribuidoresFAX.AsString;
+              dm2.FDAtualizaDistribuidores.Params[11].AsString := dm2.CdsDistribuidoresCONTATO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[12].AsString := dm2.CdsDistribuidoresCNPJ.AsString;
+              dm2.FDAtualizaDistribuidores.Params[13].AsString := dm2.CdsDistribuidoresIE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[14].AsString := dm2.CdsDistribuidoresPRACA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[15].AsDateTime := dm2.CdsDistribuidoresDT_FICHA.AsDateTime;
+              dm2.FDAtualizaDistribuidores.Params[16].AsString := dm2.CdsDistribuidoresRG.AsString;
+              dm2.FDAtualizaDistribuidores.Params[17].AsString := dm2.CdsDistribuidoresCPF.AsString;
+              dm2.FDAtualizaDistribuidores.Params[18].AsString := dm2.CdsDistribuidoresEMPRESA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[19].AsString := dm2.CdsDistribuidoresFONE_COMERCIAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[20].AsString := dm2.CdsDistribuidoresCEP_COMERCIAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[21].AsString := dm2.CdsDistribuidoresCIDADE_COMERCIAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[22].AsString := dm2.CdsDistribuidoresUF_COMERCIAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[23].AsString := dm2.CdsDistribuidoresREFERENCIA_COMERCIAL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[24].AsString := dm2.CdsDistribuidoresREFERENCIA_BANCARIA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[25].AsDateTime := dm2.CdsDistribuidoresDT_CONSULTA_SPC.AsDateTime;
+              dm2.FDAtualizaDistribuidores.Params[26].AsString := dm2.CdsDistribuidoresOBS_SPC.AsString;
+              dm2.FDAtualizaDistribuidores.Params[27].AsString := dm2.CdsDistribuidoresTIPO_ATIVIDADE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[28].AsString := dm2.CdsDistribuidoresVENDEDOR.AsString;
+              dm2.FDAtualizaDistribuidores.Params[29].AsString := dm2.CdsDistribuidoresENDERECO_COBRANCA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[30].AsString := dm2.CdsDistribuidoresBAIRRO_COBRANCA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[31].AsString := dm2.CdsDistribuidoresCIDADE_COBRANCA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[32].AsString := dm2.CdsDistribuidoresUF_COBRANCA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[33].AsString := dm2.CdsDistribuidoresCEP_COBRANCA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[34].AsFloat := dm2.CdsDistribuidoresICM_IPI.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[35].AsFloat := dm2.CdsDistribuidoresLIMITE_CREDITO.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[36].AsString := dm2.CdsDistribuidoresEMAIL.AsString;
+              dm2.FDAtualizaDistribuidores.Params[37].AsString := dm2.CdsDistribuidoresHOMEPAGE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[38].AsFloat := dm2.CdsDistribuidoresCD_PLANO_CONTAS.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[39].AsString := dm2.CdsDistribuidoresRAZAO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[40].AsDateTime := dm2.CdsDistribuidoresDT_ALTERACAO.AsDateTime;
+              dm2.FDAtualizaDistribuidores.Params[41].AsString := dm2.CdsDistribuidoresARQUIVO_ENVIO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[42].AsString := dm2.CdsDistribuidoresARQUIVO_RETORNO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[43].AsString := dm2.CdsDistribuidoresPROGRAMAENVIO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[44].AsFloat := dm2.CdsDistribuidoresCODIGODICIONARIO.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[45].AsString := dm2.CdsDistribuidoresCODIGOFATURAMENTO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[46].AsFloat := dm2.CdsDistribuidoresCFOP.AsFloat;
 
-     dm3.CdsDistribuidores.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Distribuidores: ' + FloatToStr(dm3.CdsDistribuidores.RecordCount));
-     while not dm3.CdsDistribuidores.Eof do
-      begin
-          dm3.FDAtualizaDistribuidores.Params[0].AsFloat := dm3.CdsDistribuidoresCD_DISTRIBUIDOR.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[1].AsString := dm3.CdsDistribuidoresNOME.AsString;
-          dm3.FDAtualizaDistribuidores.Params[2].AsString := dm3.CdsDistribuidoresAPELIDO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[3].AsString := dm3.CdsDistribuidoresENDERECO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[4].AsString := dm3.CdsDistribuidoresBAIRRO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[5].AsString := dm3.CdsDistribuidoresCIDADE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[6].AsString := dm3.CdsDistribuidoresUF.AsString;
-          dm3.FDAtualizaDistribuidores.Params[7].AsString := dm3.CdsDistribuidoresCEP.AsString;
-          dm3.FDAtualizaDistribuidores.Params[8].AsString := dm3.CdsDistribuidoresCAIXA_POSTAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[9].AsString := dm3.CdsDistribuidoresFONE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[10].AsString := dm3.CdsDistribuidoresFAX.AsString;
-          dm3.FDAtualizaDistribuidores.Params[11].AsString := dm3.CdsDistribuidoresCONTATO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[12].AsString := dm3.CdsDistribuidoresCNPJ.AsString;
-          dm3.FDAtualizaDistribuidores.Params[13].AsString := dm3.CdsDistribuidoresIE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[14].AsString := dm3.CdsDistribuidoresPRACA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[15].AsDateTime := dm3.CdsDistribuidoresDT_FICHA.AsDateTime;
-          dm3.FDAtualizaDistribuidores.Params[16].AsString := dm3.CdsDistribuidoresRG.AsString;
-          dm3.FDAtualizaDistribuidores.Params[17].AsString := dm3.CdsDistribuidoresCPF.AsString;
-          dm3.FDAtualizaDistribuidores.Params[18].AsString := dm3.CdsDistribuidoresEMPRESA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[19].AsString := dm3.CdsDistribuidoresFONE_COMERCIAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[20].AsString := dm3.CdsDistribuidoresCEP_COMERCIAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[21].AsString := dm3.CdsDistribuidoresCIDADE_COMERCIAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[22].AsString := dm3.CdsDistribuidoresUF_COMERCIAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[23].AsString := dm3.CdsDistribuidoresREFERENCIA_COMERCIAL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[24].AsString := dm3.CdsDistribuidoresREFERENCIA_BANCARIA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[25].AsDateTime := dm3.CdsDistribuidoresDT_CONSULTA_SPC.AsDateTime;
-          dm3.FDAtualizaDistribuidores.Params[26].AsString := dm3.CdsDistribuidoresOBS_SPC.AsString;
-          dm3.FDAtualizaDistribuidores.Params[27].AsString := dm3.CdsDistribuidoresTIPO_ATIVIDADE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[28].AsString := dm3.CdsDistribuidoresVENDEDOR.AsString;
-          dm3.FDAtualizaDistribuidores.Params[29].AsString := dm3.CdsDistribuidoresENDERECO_COBRANCA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[30].AsString := dm3.CdsDistribuidoresBAIRRO_COBRANCA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[31].AsString := dm3.CdsDistribuidoresCIDADE_COBRANCA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[32].AsString := dm3.CdsDistribuidoresUF_COBRANCA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[33].AsString := dm3.CdsDistribuidoresCEP_COBRANCA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[34].AsFloat := dm3.CdsDistribuidoresICM_IPI.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[35].AsFloat := dm3.CdsDistribuidoresLIMITE_CREDITO.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[36].AsString := dm3.CdsDistribuidoresEMAIL.AsString;
-          dm3.FDAtualizaDistribuidores.Params[37].AsString := dm3.CdsDistribuidoresHOMEPAGE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[38].AsFloat := dm3.CdsDistribuidoresCD_PLANO_CONTAS.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[39].AsString := dm3.CdsDistribuidoresRAZAO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[40].AsDateTime := dm3.CdsDistribuidoresDT_ALTERACAO.AsDateTime;
-          dm3.FDAtualizaDistribuidores.Params[41].AsString := dm3.CdsDistribuidoresARQUIVO_ENVIO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[42].AsString := dm3.CdsDistribuidoresARQUIVO_RETORNO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[43].AsString := dm3.CdsDistribuidoresPROGRAMAENVIO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[44].AsFloat := dm3.CdsDistribuidoresCODIGODICIONARIO.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[45].AsString := dm3.CdsDistribuidoresCODIGOFATURAMENTO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[46].AsFloat := dm3.CdsDistribuidoresCFOP.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[47].AsFloat := dm2.CdsDistribuidoresCD_MUNICIPIO.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[48].AsFloat := dm2.CdsDistribuidoresCD_PAIS.AsFloat;
+              dm2.FDAtualizaDistribuidores.Params[49].AsString := dm2.CdsDistribuidoresCOMPLEMENTO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[50].AsString := dm2.CdsDistribuidoresNUMERO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[51].AsString := dm2.CdsDistribuidoresSOMAICMSSUBSTITUICAO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[52].AsString := dm2.CdsDistribuidoresSOMAIPI.AsString;
+              dm2.FDAtualizaDistribuidores.Params[53].AsString := dm2.CdsDistribuidoresSOMAFRETE.AsString;
+              dm2.FDAtualizaDistribuidores.Params[54].AsString := dm2.CdsDistribuidoresSOMASEGURO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[55].AsString := dm2.CdsDistribuidoresSOMAOUTRASDESPESAS.AsString;
 
-          dm3.FDAtualizaDistribuidores.Params[47].AsFloat := dm3.CdsDistribuidoresCD_MUNICIPIO.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[48].AsFloat := dm3.CdsDistribuidoresCD_PAIS.AsFloat;
-          dm3.FDAtualizaDistribuidores.Params[49].AsString := dm3.CdsDistribuidoresCOMPLEMENTO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[50].AsString := dm3.CdsDistribuidoresNUMERO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[51].AsString := dm3.CdsDistribuidoresSOMAICMSSUBSTITUICAO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[52].AsString := dm3.CdsDistribuidoresSOMAIPI.AsString;
-          dm3.FDAtualizaDistribuidores.Params[53].AsString := dm3.CdsDistribuidoresSOMAFRETE.AsString;
-          dm3.FDAtualizaDistribuidores.Params[54].AsString := dm3.CdsDistribuidoresSOMASEGURO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[55].AsString := dm3.CdsDistribuidoresSOMAOUTRASDESPESAS.AsString;
+              dm2.FDAtualizaDistribuidores.Params[56].AsString := dm2.CdsDistribuidoresUSAFTP.AsString;
+              dm2.FDAtualizaDistribuidores.Params[57].AsString := dm2.CdsDistribuidoresFTPHOST.AsString;
+              dm2.FDAtualizaDistribuidores.Params[58].AsString := dm2.CdsDistribuidoresFTPUSUARIO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[59].AsString := dm2.CdsDistribuidoresFTPSENHA.AsString;
+              dm2.FDAtualizaDistribuidores.Params[60].AsString := dm2.CdsDistribuidoresFTPDIRETORIOENVIO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[61].AsString := dm2.CdsDistribuidoresFTPDIRETORIORETORNO.AsString;
 
-          dm3.FDAtualizaDistribuidores.Params[56].AsString := dm3.CdsDistribuidoresUSAFTP.AsString;
-          dm3.FDAtualizaDistribuidores.Params[57].AsString := dm3.CdsDistribuidoresFTPHOST.AsString;
-          dm3.FDAtualizaDistribuidores.Params[58].AsString := dm3.CdsDistribuidoresFTPUSUARIO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[59].AsString := dm3.CdsDistribuidoresFTPSENHA.AsString;
-          dm3.FDAtualizaDistribuidores.Params[60].AsString := dm3.CdsDistribuidoresFTPDIRETORIOENVIO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[61].AsString := dm3.CdsDistribuidoresFTPDIRETORIORETORNO.AsString;
-
-          dm3.FDAtualizaDistribuidores.Params[62].AsString := dm3.CdsDistribuidoresCONCLUSAONFSEMBOLETO.AsString;
-          dm3.FDAtualizaDistribuidores.Params[63].AsFloat := dm3.CdsDistribuidoresTAXABOLETO.AsFloat;
-          Try
-            dm3.FDAtualizaDistribuidores.ExecFD(False);
-          Except
-            GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Distribuidores - Execução da Procedure');
-          End;
-
-          dm3.CdsDistribuidores.Next;
+              dm2.FDAtualizaDistribuidores.Params[62].AsString := dm2.CdsDistribuidoresCONCLUSAONFSEMBOLETO.AsString;
+              dm2.FDAtualizaDistribuidores.Params[63].AsFloat := dm2.CdsDistribuidoresTAXABOLETO.AsFloat;
+              Try
+                dm2.FDAtualizaDistribuidores.Execsql(False);
+              Except
+                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Distribuidores - Execução da Procedure');
+              End;
+              dm2.CdsDistribuidores.Next;
+          end;
       end;
 
      dm3.CdsDistribuidores.Close;
@@ -3562,112 +3818,135 @@ end;
 
 
 procedure RecebendoProdutosDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz os produtos deletados
    Try
-     // Atualiza produtos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'PRODUTOS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+    //Processa(108, Filial, 'PRODUTOS');
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('produtosdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO2';
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open; // virtual
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO2';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-             dm3.FDSql.sql.text := 'DELETE FROM PRODUTOS WHERE ID_PRODUTO = ' + dm3.CdsDeletadosCAMPO2.AsString;
-
-             dm3.FDSql.ExecFD(True);
-
-             dm3.CdsDeletados.Next;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Produtos Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                 dm3.FDSql.sql.text := 'DELETE FROM PRODUTOS WHERE ID_PRODUTO = ' + dm2.CdsDeletadosCAMPO2.AsString;
+                 dm3.FDSql.ExecSql(True);
+                 dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Produtos Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoGruposDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os grupos deletados
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'GRUPOS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )      //Processa(108, Filial, 'GRUPOS');
+     .Resource('gruposdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Grupos Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS_GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'GRUPOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
 
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'FILIAIS_GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'USUARIOS_GRUPOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
 
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'FILIAIS_GRUPOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
 
-            dm3.CdsDeletados.Next;
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_GRUPOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_GRUPO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Grupos Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3675,47 +3954,61 @@ end;
 
 
 procedure RecebendoConveniosPBMDeletados;
-var Dados : Variant;
+var
+LResponse: IResponse;
 begin
-  //busca na matriz os grupos deletados
+  //busca na matriz convenios pbm deletados
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CONVENIOS_PBM');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )   //Processa(108, Filial, 'CONVENIOS_PBM');
+     .Resource('conveniospbmdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode <> 200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
+     end
+     else
+     begin
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ConveniosPBM Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_PBM';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'ID_CONVENIOPBM';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ConveniosPBM Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_PBM';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'ID_CONVENIOPBM';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except on E:Exception do
+                   GravaLog(' Erro - Recebendo ConveniosPBM Deletados  - '+ E.Message);
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
+
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de ConveniosPBM Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3723,47 +4016,57 @@ end;
 
 
 procedure RecebendoProdutosConvenioPBMDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
-  //busca na matriz os grupos deletados
+  //busca na matriz produtos convenios pbm deletados
    Try
-     // Atualiza grupos
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'PRODUTOS_CONVENIOS_PBM');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-     if dm3.CdsDeletados.RecordCount > 0 then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(108, Filial, 'PRODUTOS_CONVENIOS_PBM');
+     .Resource('produtosconveniospbmdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <> 200 then
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ProdutosConveniosPBM Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
+        Exit;
+      end
+      else
+      begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'PRODUTOS_CONVENIOS_PBM';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'ID_PRODUTOSCONVENIOPBM';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ProdutosConveniosPBM Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'PRODUTOS_CONVENIOS_PBM';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'ID_PRODUTOSCONVENIOPBM';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
+         dm2.CdsDeletados.Close;
       end;
-
-     dm3.CdsDeletados.Close;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de ProdutosConveniosPBM Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3771,138 +4074,179 @@ end;
 
 
 procedure RecebendoLaboratoriosDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os laboratorios deletados
    Try
-     // Atualiza laboratorios
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'LABORATORIOS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'LABORATORIOS');
+     .Resource('laboratoriodeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode <>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Laboratorios Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Laboratorios Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'LABORATORIOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_LABORATORIO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDAtualizaDeletados.Params[0].AsString := 'LABORATORIOS';
+              dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_LABORATORIO';
+              dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+              Try
+                dm2.FDAtualizaDeletados.ExecSql(False);
+              Except
+              End;
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
 
-     dm3.CdsDeletados.Close;
+        dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Laboratorios');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoVendedoresDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Vendedores deletados
    Try
-     // Atualiza vendedores
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'VENDEDORES');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+     //Processa(108, Filial, 'VENDEDORES');
+
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('vendedoresdeletados')
+       .AcceptEncoding('gzip, deflate')
+       .Accept('application/json')
+       .Get;
+
+
+     if LResponse.StatusCode<>200 then
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Vendedores Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
+        Exit;
+      end
+      else
+      begin
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'VENDEDORES';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_VENDEDOR';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Vendedores Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'VENDEDORES';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_VENDEDOR';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+      end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Vendedores');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoPlanosContasDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Plano de Contas deletados
    Try
-     // Atualiza Plano de Contas
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'PLANO_CONTAS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )     //Processa(108, Filial, 'PLANO_CONTAS');
+     .Resource('planocontasdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Planos de Contas Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'PLANO_CONTAS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_PLANO_CONTAS';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-             dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Planos de Contas Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'PLANO_CONTAS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_PLANO_CONTAS';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                 dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Plano de Contas Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -3910,237 +4254,241 @@ end;
 
 
 procedure RecebendoClientesDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Clientes deletados
   Try
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CLIENTES');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+    LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(108, Filial, 'CLIENTES');
+   .Resource('clientesdeletados/filial')
+   .AcceptEncoding('gzip, deflate')
+   .Accept('application/json')
+   .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Clientes Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
+           dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+           dm2.CdsDeletados.Open;
+           dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+           if dm2.CdsDeletados.RecordCount > 0 then
+            begin
+               GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Clientes Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CLIENTES';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CLIENTE';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-             dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+               dm2.CdsDeletados.First;
+               while not dm2.CdsDeletados.Eof do
+                begin
+                  dm2.FDAtualizaDeletados.Params[0].AsString := 'CLIENTES';
+                  dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CLIENTE';
+                  dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                  Try
+                   dm2.FDAtualizaDeletados.ExecSql(False);
+                  Except
+                  End;
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
+                  dm2.CdsDeletados.Next;
+                end;
+            end;
 
-     dm3.CdsDeletados.Close;
+           dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Clientes Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 
-{   Try
-     // Atualiza Clientes
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CLIENTES');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Clientes Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.QryClientes.Close;
-            dm3.QryClientes.Params[0].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            dm3.QryClientes.Open;
-            if dm3.QryClientes.RecordCount <> 0 then
-             begin
-               dm3.QryClientes.Delete;
-
-               dm3.QryClientes.ApplyUpdates(0);
-
-             end;
-            dm3.CdsDeletados.Next;
-          end;
-      end;
-     dm3.QryClientes.Close;
-     dm3.CdsDeletados.Close;
-   Except
-      on E:Exception do
-       begin
-
-         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Clientes Deletados');
-         dm3.QryClientes.Close;
-         dm3.CdsDeletados.Close;
-         Exit;
-       end;
-   end;}
 end;
 
 
 
 procedure RecebendoConveniosDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz os Convênios deletados
    Try
-     // Atualiza Convenios
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CONVENIOS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'CONVENIOS');
+     .Resource('conveniosdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <> 200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Convenios Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CONVENIO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-             dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Convenios Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_GRUPOS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CONVENIO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-             dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CONVENIO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                 dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
 
-            dm3.CdsDeletados.Next;
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'CONVENIOS_GRUPOS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CONVENIO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                 dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoTransportadorasDeletados;
-var Dados : Variant;
+var
+LResponse: IResponse;
 begin
   //busca na matriz os Transportadoras deletados
    Try
-     // Atualiza Transportadoras
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'TRANSPORTADORAS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl)  //Processa(108, Filial, 'TRANSPORTADORAS');
+     .Resource('transportadorasdeletadas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <> 200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Transportadoras Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'TRANSPORTADORAS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_TRANSPORTADORA';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Transportadoras Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'TRANSPORTADORAS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_TRANSPORTADORA';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Transportadoras Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoCartoesDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz os Cartões deletados
    Try
-     // Atualiza Cartões
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'CARTOES');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+      //Processa(108, Filial, 'CARTOES');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('cartoesdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Cartoes Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
+     end
+     else
+     begin
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Cartoes Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'CARTOES';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_CARTAO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDAtualizaDeletados.Params[0].AsString := 'CARTOES';
+              dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_CARTAO';
+              dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
 
-            Try
-             dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+              Try
+               dm2.FDAtualizaDeletados.ExecSql(False);
+              Except
+              End;
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
 
-     dm3.CdsDeletados.Close;
+       dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Cartoes Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -4148,190 +4496,233 @@ end;
 
 
 procedure RecebendoDistribuidoresDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Distribuidores deletados
    Try
-     // Atualiza Distribuidores
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados :=(dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'DISTRIBUIDORES');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )      //Processa(108, Filial, 'DISTRIBUIDORES');
+     .Resource('distribuidoresdeletetados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Distribuidores Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'DISTRIBUIDORES';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_DISTRIBUIDOR';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Distribuidores Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'DISTRIBUIDORES';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_DISTRIBUIDOR';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Distribuidores Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoFiliaisDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Filiais deletados
    Try
-     // Atualiza Filiais
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'FILIAIS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )   //Processa(108, Filial, 'FILIAIS');
+     .Resource('filiaisdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Filiais Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'FILIAIS';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_FILIAL';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Filiais Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'FILIAIS';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_FILIAL';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except on E:Exception do
+                 GeraLog('Erro ao receber filiais deletados');
+                End;
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+        dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Filiais Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoFormasPagamentoDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz os Formas de Pagamento deletados
    Try
-     // Atualiza Formas de Pagamento
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'FORMAS_PAGAMENTO');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(108, Filial, 'FORMAS_PAGAMENTO');
+     .Resource('formaspagamentodeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Formas de Pagamento Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.FDAtualizaDeletados.Params[0].AsString := 'FORMAS_PAGAMENTO';
-            dm3.FDAtualizaDeletados.Params[1].AsString := 'CD_FORMA_PAGAMENTO';
-            dm3.FDAtualizaDeletados.Params[2].AsString := dm3.CdsDeletadosCAMPO1.AsString;
-            Try
-              dm3.FDAtualizaDeletados.ExecFD(False);
-            Except
-            End;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Formas de Pagamento Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
 
-            dm3.CdsDeletados.Next;
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.FDAtualizaDeletados.Params[0].AsString := 'FORMAS_PAGAMENTO';
+                dm2.FDAtualizaDeletados.Params[1].AsString := 'CD_FORMA_PAGAMENTO';
+                dm2.FDAtualizaDeletados.Params[2].AsString := dm2.CdsDeletadosCAMPO1.AsString;
+                Try
+                  dm2.FDAtualizaDeletados.ExecSql(False);
+                Except
+                End;
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
 
-     dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Formas Pagamento Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoBalancosDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz os Balancox deletados
+  //busca na matriz os Balanco deletados
    Try
-     // Atualiza Balanços
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'BALANCO');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(108, Filial, 'BALANCO');
+      .Resource('precosfilial')
+      .AcceptEncoding('gzip, deflate')
+      .Accept('application/json')
+      .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     dm3.CdsDeletados.IndexFieldNames := 'CAMPO1';
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Balanços Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
+     end
+     else
+     begin
+         dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+         dm2.CdsDeletados.Open;
+         dm2.CdsDeletados.IndexFieldNames := 'CAMPO1';
+         if dm2.CdsDeletados.RecordCount > 0 then
           begin
-            dm3.QryBalancos.Close;
-            dm3.QryBalancos.Params[0].AsFloat := dm3.CdsDeletadosCAMPO1.AsFloat;
-            dm3.QryBalancos.Open;
-            if dm3.QryBalancos.RecordCount <> 0 then
-             begin
-               if dm3.QryBalancosSTATUS.AsString = 'G' then
-                begin
-                  while not dm3.QryBalancos.Eof do
-                     dm3.QryBalancos.Delete;
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Balanços Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
+             dm2.CdsDeletados.First;
+             while not dm2.CdsDeletados.Eof do
+              begin
+                dm2.QryBalancos.Close;
+                dm2.QryBalancos.Params[0].AsFloat := dm2.CdsDeletadosCAMPO1.AsFloat;
+                dm2.QryBalancos.Open;
+                if dm2.QryBalancos.RecordCount <> 0 then
+                 begin
+                   if dm2.QryBalancosSTATUS.AsString = 'G' then
+                    begin
+                      while not dm2.QryBalancos.Eof do
+                         dm2.QryBalancos.Delete;
 
-                  dm3.QryBalancos.ApplyUpdates(0);
+                      dm2.QryBalancos.ApplyUpdates(0);
 
-                end;
-             end;
-            dm3.CdsDeletados.Next;
+                    end;
+                 end;
+                dm2.CdsDeletados.Next;
+              end;
           end;
-      end;
-     dm3.QryBalancos.Close;
-     dm3.CdsDeletados.Close;
+         dm2.QryBalancos.Close;
+         dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Balancos Deletados');
-         dm3.QryBalancos.Close;
-         dm3.CdsDeletados.Close;
+         dm2.QryBalancos.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -4339,99 +4730,98 @@ end;
 
 
 procedure RecebendoComprasDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz as Compras deletados
    Try
-     // Atualiza Compras
+
      Try
        dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_COMPRAS INACTIVE';
-
-       dm3.FDSql.ExecFD(True);
+       dm3.FDSql.ExecSql(True);
 
      Except
        on E:Exception do
         begin
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
         end;
      End;
 
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'COMPRAS');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'COMPRAS');
+     .Resource('comprasdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
         Try
           dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_COMPRAS ACTIVE';
-
-          dm3.FDSql.ExecFD(True);
-
+          dm3.FDSql.ExecSql(True);
         Except
           on E:Exception do
            begin
             GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
            end;
         End;
         Exit;
-      end;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
+      end
+      else
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Compras Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.Cds1.Close;
-            dm3.FDSql.sql.text := 'SELECT STATUS FROM COMPRAS WHERE CD_COMPRAS = ' + dm3.CdsDeletadosCAMPO1.AsString;
-            dm3.Cds1.Params.Clear;
-            dm3.Cds1.Open;
-            if (dm3.Cds1.Fields[0].AsString = 'M') or (dm3.Cds1.Fields[0].AsString = 'G') or (dm3.Cds1.Fields[0].AsString = 'E') then
-             begin
-                dm3.Cds1.Close;
-                dm3.FDSql.sql.text := 'DELETE FROM COMPRAS WHERE CD_COMPRAS = ' + dm3.CdsDeletadosCAMPO1.AsString;
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Compras Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.Cds1.Close;
+              dm2.FDSql.sql.text := 'SELECT STATUS FROM COMPRAS WHERE CD_COMPRAS = ' + dm2.CdsDeletadosCAMPO1.AsString;
+              dm2.Cds1.Params.Clear;
+              dm2.Cds1.Open;
+              if (dm2.Cds1.Fields[0].AsString = 'M') or (dm2.Cds1.Fields[0].AsString = 'G') or (dm2.Cds1.Fields[0].AsString = 'E') then
+               begin
+                  dm2.Cds1.Close;
+                  dm2.FDSql.sql.text := 'DELETE FROM COMPRAS WHERE CD_COMPRAS = ' + dm2.CdsDeletadosCAMPO1.AsString;
+                  dm2.FDSql.ExecSql(True);
 
-                dm3.FDSql.ExecFD(True);
-
-                dm3.FDSql.sql.text := 'DELETE FROM ITENS_COMPRA WHERE CD_COMPRAS = ' + dm3.CdsDeletadosCAMPO1.AsString;
-
-                dm3.FDSql.ExecFD(True);
-
-             end;
-            dm3.Cds1.Close;
-            dm3.CdsDeletados.Next;
-          end;
+                  dm2.FDSql.sql.text := 'DELETE FROM ITENS_COMPRA WHERE CD_COMPRAS = ' + dm2.CdsDeletadosCAMPO1.AsString;
+                  dm2.FDSql.ExecSql(True);
+               end;
+              dm2.Cds1.Close;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+       dm2.CdsDeletados.Close;
       end;
-     dm3.CdsDeletados.Close;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Compras Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_COMPRAS ACTIVE';
-
-           dm3.FDSql.ExecFD(True);
+           dm3.FDSql.ExecSql(True);
 
          Except
            on E:Exception do
             begin
              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
             end;
          End;
          Exit;
        end;
    end;
+
   Try
     dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_COMPRAS ACTIVE';
-
-    dm3.FDSql.ExecFD(True);
-
+    dm3.FDSql.ExecSql(True);
   Except
     on E:Exception do
      begin
@@ -4442,62 +4832,69 @@ begin
 end;
 
 procedure RecebendoItensComprasDeletados;
-var Dados : Variant;
+var
+  LResponse: IResponse;
 begin
   //busca na matriz as Itens Compra deletados
    Try
     Try
       dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ITENS_COMPRA INACTIVE';
-
-      dm3.FDSql.ExecFD(True);
-
+      dm3.FDSql.ExecSql(True);
     Except
       on E:Exception do
        begin
         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
        end;
     End;
+
      // Atualiza Compras
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'ITENS_COMPRA');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+     //Processa(108, Filial, 'ITENS_COMPRA');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('itenscomprasdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
         Try
           dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ITENS_COMPRA ACTIVE';
-
-          dm3.FDSql.ExecFD(True);
-
+          dm3.FDSql.ExecSql(True);
         Except
           on E:Exception do
            begin
             GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
            end;
         End;
         Exit;
-      end;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
+      end
+      else
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ItensCompras Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open; // virtual
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo ItensCompras Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
 
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDSql.sql.text := 'DELETE FROM ITENS_COMPRA WHERE CD_COMPRAS = ' + dm3.CdsDeletadosCAMPO1.AsString +
-                                ' AND ID_PRODUTO = ' + dm3.CdsDeletadosCAMPO2.AsString;
-            Try
-              dm3.FDSql.ExecFD(True);
-            Except
-            End;
-            dm3.CdsDeletados.Next;
-          end;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDSql.sql.text := 'DELETE FROM ITENS_COMPRA WHERE CD_COMPRAS = ' + dm2.CdsDeletadosCAMPO1.AsString +
+                                  ' AND ID_PRODUTO = ' + dm2.CdsDeletadosCAMPO2.AsString;
+              Try
+                dm2.FDSql.ExecSql(True);
+              Except on E:Exception do
+                GravaLog('Erro ao deletar itens compras '+ E.message);
+              End;
+              dm2.CdsDeletados.Next;
+            end;
 
+        end;
+       dm2.CdsDeletados.Close;
       end;
-     dm3.CdsDeletados.Close;
    Except
       on E:Exception do
        begin
@@ -4506,115 +4903,138 @@ begin
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Itens Compra Deletados');
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ITENS_COMPRA ACTIVE';
-
-           dm3.FDSql.ExecFD(True);
+           dm3.FDSql.ExecSql(True);
 
          Except
            on E:Exception do
             begin
              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
             end;
          End;
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
-  Try
-    dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ITENS_COMPRA ACTIVE';
 
-    dm3.FDSql.ExecFD(True);
-
-  Except
-    on E:Exception do
-     begin
-      GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
-     end;
-  End;
+    Try
+      dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ITENS_COMPRA ACTIVE';
+      dm3.FDSql.ExecSql(True);
+    Except
+      on E:Exception do
+       begin
+        GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+       end;
+    End;
 end;
 
 
 procedure RecebendoMetasFiliaisDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz as Compras deletados
+  //busca na matriz as metas deletadass
    Try
-     // Atualiza Compras
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'METAS_FILIAIS');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'METAS_FILIAIS');
+     .Resource('metasfiliaisdeletadas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasFiliais Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDSql.sql.text := 'DELETE FROM METAS_FILIAIS WHERE ID_META = ' + dm3.CdsDeletadosCAMPO1.AsString;
+     end
+     else
+     begin
 
-            Try
-              dm3.FDSql.ExecFD(True);
-            Except
-            End;
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasFiliais Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDSql.sql.text := 'DELETE FROM METAS_FILIAIS WHERE ID_META = ' + dm2.CdsDeletadosCAMPO1.AsString;
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
-     dm3.CdsDeletados.Close;
+              Try
+                dm2.FDSql.ExecSql(True);
+              Except
+              End;
+
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+       dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Metas Filiais Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
 end;
 
 procedure RecebendoMetasVendedoresDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
-  //busca na matriz as Compras deletados
+  //busca na matriz as metas de vendedores deletadas
    Try
-     // Atualiza Compras
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'METAS_VENDEDORES');
-     if (Dados = null) then
+
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+    //Processa(108, Filial, 'METAS_VENDEDORES');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
-      begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasVendedores Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDSql.sql.text := 'DELETE FROM METAS_VENDEDORES WHERE ID_META = ' + dm3.CdsDeletadosCAMPO1.AsString  +
-            ' AND CD_VENDEDOR = ' + dm3.CdsDeletadosCAMPO2.AsString;
+     end
+     else
+     begin
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo MetasVendedores Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDSql.sql.text := 'DELETE FROM METAS_VENDEDORES WHERE ID_META = ' + dm2.CdsDeletadosCAMPO1.AsString  +
+              ' AND CD_VENDEDOR = ' + dm2.CdsDeletadosCAMPO2.AsString;
 
-            Try
-              dm3.FDSql.ExecFD(True);
-            Except
-            End;
+              Try
+                dm2.FDSql.ExecSQL(True);
+              Except on E:Exception do
+                GeraLog('Erro ao atualizar metas'+e.Message);
+              End;
 
-            dm3.CdsDeletados.Next;
-          end;
-      end;
-     dm3.CdsDeletados.Close;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+       dm2.CdsDeletados.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Metas Vendedores Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
@@ -4623,47 +5043,57 @@ end;
 
 procedure RecebendoPlanosContas;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
   //Busca na matriz os Planos de Contas incluidos
    Try
      dm3.CdsPlanoContas.Close;
      dm3.CdsPlanoContas.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(109, Filial, 'A');
-     if (Dados = null) then
+     //Processa(109, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('planocontas')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsPlanoContas.Data := Dados;
-     dm3.CdsPlanoContas.Open; // virtual
-     if dm3.CdsPlanoContas.RecordCount > 0 then
-        begin
-           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Planos de Contas - ' + FloattoStr(dm3.CdsPlanoContas.RecordCount));
-
-           dm3.CdsPlanoContas.First;
-           while not dm3.CdsPlanoContas.Eof do
+     end
+     else
+     begin
+         dm2.CdsPlanoContas.LoadFromJSON(LResponse.Content);
+         dm2.CdsPlanoContas.Open;
+         if dm2.CdsPlanoContas.RecordCount > 0 then
             begin
-              dm3.FDAtualizaPlanoContas.Params[0].AsFloat := dm3.CdsPlanoContasCD_PLANO_CONTAS.AsFloat;
-              dm3.FDAtualizaPlanoContas.Params[1].AsString := dm3.CdsPlanoContasCD_HISTORICO.AsString;
-              dm3.FDAtualizaPlanoContas.Params[2].AsString := dm3.CdsPlanoContasHISTORICO.AsString;
-              dm3.FDAtualizaPlanoContas.Params[3].AsString := dm3.CdsPlanoContasGRAU.AsString;
-              dm3.FDAtualizaPlanoContas.Params[4].AsString := dm3.CdsPlanoContasSISTEMA.AsString;
-              dm3.FDAtualizaPlanoContas.Params[5].AsString := dm3.CdsPlanoContasTIPO_CONTA.AsString;
-              dm3.FDAtualizaPlanoContas.Params[6].AsInteger := dm3.CdsPlanoContasAPURACAO.AsInteger;
-              dm3.FDAtualizaPlanoContas.Params[7].AsString := dm3.CdsPlanoContasENVIADO.AsString;
-              Try
-                dm3.FDAtualizaPlanoContas.ExecFD(False);
-              Except
-                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Plano Contas - Execução da Procedure');
-              End;
+               GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Planos de Contas - ' + FloattoStr(dm2.CdsPlanoContas.RecordCount));
 
-              dm3.CdsPlanoContas.Next;
+               dm2.CdsPlanoContas.First;
+               while not dm2.CdsPlanoContas.Eof do
+                begin
+                  dm2.FDAtualizaPlanoContas.Params[0].AsFloat := dm2.CdsPlanoContasCD_PLANO_CONTAS.AsFloat;
+                  dm2.FDAtualizaPlanoContas.Params[1].AsString := dm2.CdsPlanoContasCD_HISTORICO.AsString;
+                  dm2.FDAtualizaPlanoContas.Params[2].AsString := dm2.CdsPlanoContasHISTORICO.AsString;
+                  dm2.FDAtualizaPlanoContas.Params[3].AsString := dm2.CdsPlanoContasGRAU.AsString;
+                  dm2.FDAtualizaPlanoContas.Params[4].AsString := dm2.CdsPlanoContasSISTEMA.AsString;
+                  dm2.FDAtualizaPlanoContas.Params[5].AsString := dm2.CdsPlanoContasTIPO_CONTA.AsString;
+                  dm2.FDAtualizaPlanoContas.Params[6].AsInteger := dm2.CdsPlanoContasAPURACAO.AsInteger;
+                  dm2.FDAtualizaPlanoContas.Params[7].AsString := dm2.CdsPlanoContasENVIADO.AsString;
+                  Try
+                    dm2.FDAtualizaPlanoContas.ExecSql(False);
+                  Except
+                    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Plano Contas - Execução da Procedure');
+                  End;
+
+                  dm2.CdsPlanoContas.Next;
+                end;
+
+               dm2.CdsPlanoContas.Close;
             end;
-
-           dm3.CdsPlanoContas.Close;
-        end;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Plano de Contas');
          dm3.CdsPlanoContas.Close;
@@ -4674,107 +5104,118 @@ end;
 
 procedure RecebendoConvenios;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
   //Busca na matriz os Convenios
    Try
      dm3.CdsConvenios.Close;
      dm3.CdsConvenios.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(111, Filial, 'A');
-     if (Dados = null) then
+     //Processa(111, Filial, 'A');
+
+       LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+       .Resource('convenios')
+       .AcceptEncoding('gzip, deflate')
+       .Accept('application/json')
+       .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsConvenios.Data := Dados;
-     dm3.CdsConvenios.Open; // virtual
-     if dm3.CdsConvenios.RecordCount > 0 then
-       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Convenios - ' + FloatToStr(dm3.CdsConvenios.RecordCount));
+     end
+     else
+     begin
 
-         dm3.CdsConvenios.First;
-         while not dm3.CdsConvenios.Eof do
-          begin
-            dm3.FDAtualizaConvenios.Params[0].AsFloat := dm3.CdsConveniosCD_CONVENIO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[1].AsString := dm3.CdsConveniosNOME.AsString;
-            dm3.FDAtualizaConvenios.Params[2].AsString := dm3.CdsConveniosRAZAO.AsString;
-            dm3.FDAtualizaConvenios.Params[3].AsString := dm3.CdsConveniosENDERECO.AsString;
-            dm3.FDAtualizaConvenios.Params[4].AsString := dm3.CdsConveniosBAIRRO.AsString;
-            dm3.FDAtualizaConvenios.Params[5].AsString := dm3.CdsConveniosCIDADE.AsString;
-            dm3.FDAtualizaConvenios.Params[6].AsString := dm3.CdsConveniosUF.AsString;
-            dm3.FDAtualizaConvenios.Params[7].AsString := dm3.CdsConveniosCEP.AsString;
-            dm3.FDAtualizaConvenios.Params[8].AsString := dm3.CdsConveniosCAIXA_POSTAL.AsString;
-            dm3.FDAtualizaConvenios.Params[9].AsString := dm3.CdsConveniosFONE.AsString;
-            dm3.FDAtualizaConvenios.Params[10].AsString := dm3.CdsConveniosFAX.AsString;
-            dm3.FDAtualizaConvenios.Params[11].AsString := dm3.CdsConveniosCONTATO.AsString;
-            dm3.FDAtualizaConvenios.Params[12].AsString := dm3.CdsConveniosCNPJ.AsString;
-            dm3.FDAtualizaConvenios.Params[13].AsString := dm3.CdsConveniosIE.AsString;
-            dm3.FDAtualizaConvenios.Params[14].AsString := dm3.CdsConveniosPRACA.AsString;
-            dm3.FDAtualizaConvenios.Params[15].AsDate := dm3.CdsConveniosDT_FICHA.AsDateTime;
-            dm3.FDAtualizaConvenios.Params[16].AsString := dm3.CdsConveniosRG.AsString;
-            dm3.FDAtualizaConvenios.Params[17].AsString := dm3.CdsConveniosCPF.AsString;
-            dm3.FDAtualizaConvenios.Params[18].AsString := dm3.CdsConveniosEMPRESA.AsString;
-            dm3.FDAtualizaConvenios.Params[19].AsString := dm3.CdsConveniosFONE_COMERCIAL.AsString;
-            dm3.FDAtualizaConvenios.Params[20].AsString := dm3.CdsConveniosCEP_COMERCIAL.AsString;
-            dm3.FDAtualizaConvenios.Params[21].AsString := dm3.CdsConveniosCIDADE_COMERCIAL.AsString;
-            dm3.FDAtualizaConvenios.Params[22].AsString := dm3.CdsConveniosUF_COMERCIAL.AsString;
-            dm3.FDAtualizaConvenios.Params[23].AsString := dm3.CdsConveniosREFERENCIA_COMERCIAL.AsString;
-            dm3.FDAtualizaConvenios.Params[24].AsString := dm3.CdsConveniosREFERENCIA_BANCARIA.AsString;
-            dm3.FDAtualizaConvenios.Params[25].AsDate := dm3.CdsConveniosDT_CONSULTA_SPC.AsDateTime;
-            dm3.FDAtualizaConvenios.Params[26].AsString := dm3.CdsConveniosOBS_SPC.AsString;
-            dm3.FDAtualizaConvenios.Params[27].AsString := dm3.CdsConveniosTIPO_ATIVIDADE.AsString;
-            dm3.FDAtualizaConvenios.Params[28].AsFloat := dm3.CdsConveniosCD_VENDEDOR.AsFloat;
-            dm3.FDAtualizaConvenios.Params[29].AsString := dm3.CdsConveniosENDERECO_COBRANCA.AsString;
-            dm3.FDAtualizaConvenios.Params[30].AsString := dm3.CdsConveniosBAIRRO_COBRANCA.AsString;
-            dm3.FDAtualizaConvenios.Params[31].AsString := dm3.CdsConveniosCIDADE_COBRANCA.AsString;
-            dm3.FDAtualizaConvenios.Params[32].AsString := dm3.CdsConveniosUF_COBRANCA.AsString;
-            dm3.FDAtualizaConvenios.Params[33].AsString := dm3.CdsConveniosCEP_COBRANCA.AsString;
-            dm3.FDAtualizaConvenios.Params[34].AsFloat := dm3.CdsConveniosICM_IPI.AsFloat;
-            dm3.FDAtualizaConvenios.Params[35].AsFloat := dm3.CdsConveniosLIMITE_CREDITO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[36].AsString := dm3.CdsConveniosEMAIL.AsString;
-            dm3.FDAtualizaConvenios.Params[37].AsString := dm3.CdsConveniosHOMEPAGE.AsString;
-            dm3.FDAtualizaConvenios.Params[38].AsString := dm3.CdsConveniosMULTI.AsString;
-            dm3.FDAtualizaConvenios.Params[39].AsFloat := dm3.CdsConveniosTX_DESCONTO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[40].AsFloat := dm3.CdsConveniosDT_VENCIMENTO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[41].AsFloat := dm3.CdsConveniosDT_FECHAMENTO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[42].AsFloat := dm3.CdsConveniosSALDO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[43].AsFloat := dm3.CdsConveniosJAN.AsFloat;
-            dm3.FDAtualizaConvenios.Params[44].AsFloat := dm3.CdsConveniosFEV.AsFloat;
-            dm3.FDAtualizaConvenios.Params[45].AsFloat := dm3.CdsConveniosMAR.AsFloat;
-            dm3.FDAtualizaConvenios.Params[46].AsFloat := dm3.CdsConveniosABR.AsFloat;
-            dm3.FDAtualizaConvenios.Params[47].AsFloat := dm3.CdsConveniosMAI.AsFloat;
-            dm3.FDAtualizaConvenios.Params[48].AsFloat := dm3.CdsConveniosJUN.AsFloat;
-            dm3.FDAtualizaConvenios.Params[49].AsFloat := dm3.CdsConveniosJUL.AsFloat;
-            dm3.FDAtualizaConvenios.Params[50].AsFloat := dm3.CdsConveniosAGO.AsFloat;
-            dm3.FDAtualizaConvenios.Params[51].AsFloat := dm3.CdsConveniosSET_.AsFloat;
-            dm3.FDAtualizaConvenios.Params[52].AsFloat := dm3.CdsConveniosOUT.AsFloat;
-            dm3.FDAtualizaConvenios.Params[53].AsFloat := dm3.CdsConveniosNOV.AsFloat;
-            dm3.FDAtualizaConvenios.Params[54].AsFloat := dm3.CdsConveniosDEZ.AsFloat;
-            dm3.FDAtualizaConvenios.Params[55].AsDate := dm3.CdsConveniosDT_ALTERACAO.AsDateTime;
-            dm3.FDAtualizaConvenios.Params[56].AsString := dm3.CdsConveniosUSUARIOSITE.AsString;
-            dm3.FDAtualizaConvenios.Params[57].AsString := dm3.CdsConveniosSENHASITE.AsString;
-            dm3.FDAtualizaConvenios.Params[58].AsString := dm3.CdsConveniosPERMITEPARCELAMENTO.AsString;
-            dm3.FDAtualizaConvenios.Params[59].AsString := dm3.CdsConveniosPAGACOMISSAO.AsString;
-            dm3.FDAtualizaConvenios.Params[60].AsString := dm3.CdsConveniosPAGAAVISTA.AsString;
-            dm3.FDAtualizaConvenios.Params[61].AsString := dm3.CdsConveniosSTATUS.AsString;
-            dm3.FDAtualizaConvenios.Params[62].AsString := dm3.CdsConveniosCD_MUNICIPIO.AsString;
-            dm3.FDAtualizaConvenios.Params[63].AsString := dm3.CdsConveniosCD_PAIS.AsString;
-            dm3.FDAtualizaConvenios.Params[64].AsString := dm3.CdsConveniosCOMPLEMENTO.AsString;
-            dm3.FDAtualizaConvenios.Params[65].AsString := dm3.CdsConveniosNUMERO.AsString;
-            dm3.FDAtualizaConvenios.Params[66].AsString := dm3.CdsConveniosFATURAFECHADA.AsString;
-            dm3.FDAtualizaConvenios.Params[67].AsString := dm3.CdsConveniosEXIBIRDADOSCLIENTECOMPROVANTE.AsString;
-            Try
-              dm3.FDAtualizaConvenios.ExecFD(False);
-            Except
-              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios - Execução da Procedure');
-            End;
+         dm2.CdsConvenios.LoadFromJSON(LResponse.Content);
+         dm2.CdsConvenios.Open; // virtual
+         if dm2.CdsConvenios.RecordCount > 0 then
+           begin
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Convenios - ' + FloatToStr(dm2.CdsConvenios.RecordCount));
 
-            dm3.CdsConvenios.Next;
-          end;
-       end;
+             dm2.CdsConvenios.First;
+             while not dm2.CdsConvenios.Eof do
+              begin
+                dm2.FDAtualizaConvenios.Params[0].AsFloat := dm2.CdsConveniosCD_CONVENIO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[1].AsString := dm2.CdsConveniosNOME.AsString;
+                dm2.FDAtualizaConvenios.Params[2].AsString := dm2.CdsConveniosRAZAO.AsString;
+                dm2.FDAtualizaConvenios.Params[3].AsString := dm2.CdsConveniosENDERECO.AsString;
+                dm2.FDAtualizaConvenios.Params[4].AsString := dm2.CdsConveniosBAIRRO.AsString;
+                dm2.FDAtualizaConvenios.Params[5].AsString := dm2.CdsConveniosCIDADE.AsString;
+                dm2.FDAtualizaConvenios.Params[6].AsString := dm2.CdsConveniosUF.AsString;
+                dm2.FDAtualizaConvenios.Params[7].AsString := dm2.CdsConveniosCEP.AsString;
+                dm2.FDAtualizaConvenios.Params[8].AsString := dm2.CdsConveniosCAIXA_POSTAL.AsString;
+                dm2.FDAtualizaConvenios.Params[9].AsString := dm2.CdsConveniosFONE.AsString;
+                dm2.FDAtualizaConvenios.Params[10].AsString := dm2.CdsConveniosFAX.AsString;
+                dm2.FDAtualizaConvenios.Params[11].AsString := dm2.CdsConveniosCONTATO.AsString;
+                dm2.FDAtualizaConvenios.Params[12].AsString := dm2.CdsConveniosCNPJ.AsString;
+                dm2.FDAtualizaConvenios.Params[13].AsString := dm2.CdsConveniosIE.AsString;
+                dm2.FDAtualizaConvenios.Params[14].AsString := dm2.CdsConveniosPRACA.AsString;
+                dm2.FDAtualizaConvenios.Params[15].AsDate := dm2.CdsConveniosDT_FICHA.AsDateTime;
+                dm2.FDAtualizaConvenios.Params[16].AsString := dm2.CdsConveniosRG.AsString;
+                dm2.FDAtualizaConvenios.Params[17].AsString := dm2.CdsConveniosCPF.AsString;
+                dm2.FDAtualizaConvenios.Params[18].AsString := dm2.CdsConveniosEMPRESA.AsString;
+                dm2.FDAtualizaConvenios.Params[19].AsString := dm2.CdsConveniosFONE_COMERCIAL.AsString;
+                dm2.FDAtualizaConvenios.Params[20].AsString := dm2.CdsConveniosCEP_COMERCIAL.AsString;
+                dm2.FDAtualizaConvenios.Params[21].AsString := dm2.CdsConveniosCIDADE_COMERCIAL.AsString;
+                dm2.FDAtualizaConvenios.Params[22].AsString := dm2.CdsConveniosUF_COMERCIAL.AsString;
+                dm2.FDAtualizaConvenios.Params[23].AsString := dm2.CdsConveniosREFERENCIA_COMERCIAL.AsString;
+                dm2.FDAtualizaConvenios.Params[24].AsString := dm2.CdsConveniosREFERENCIA_BANCARIA.AsString;
+                dm2.FDAtualizaConvenios.Params[25].AsDate := dm2.CdsConveniosDT_CONSULTA_SPC.AsDateTime;
+                dm2.FDAtualizaConvenios.Params[26].AsString := dm2.CdsConveniosOBS_SPC.AsString;
+                dm2.FDAtualizaConvenios.Params[27].AsString := dm2.CdsConveniosTIPO_ATIVIDADE.AsString;
+                dm2.FDAtualizaConvenios.Params[28].AsFloat := dm2.CdsConveniosCD_VENDEDOR.AsFloat;
+                dm2.FDAtualizaConvenios.Params[29].AsString := dm2.CdsConveniosENDERECO_COBRANCA.AsString;
+                dm2.FDAtualizaConvenios.Params[30].AsString := dm2.CdsConveniosBAIRRO_COBRANCA.AsString;
+                dm2.FDAtualizaConvenios.Params[31].AsString := dm2.CdsConveniosCIDADE_COBRANCA.AsString;
+                dm2.FDAtualizaConvenios.Params[32].AsString := dm2.CdsConveniosUF_COBRANCA.AsString;
+                dm2.FDAtualizaConvenios.Params[33].AsString := dm2.CdsConveniosCEP_COBRANCA.AsString;
+                dm2.FDAtualizaConvenios.Params[34].AsFloat := dm2.CdsConveniosICM_IPI.AsFloat;
+                dm2.FDAtualizaConvenios.Params[35].AsFloat := dm2.CdsConveniosLIMITE_CREDITO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[36].AsString := dm2.CdsConveniosEMAIL.AsString;
+                dm2.FDAtualizaConvenios.Params[37].AsString := dm2.CdsConveniosHOMEPAGE.AsString;
+                dm2.FDAtualizaConvenios.Params[38].AsString := dm2.CdsConveniosMULTI.AsString;
+                dm2.FDAtualizaConvenios.Params[39].AsFloat := dm2.CdsConveniosTX_DESCONTO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[40].AsFloat := dm2.CdsConveniosDT_VENCIMENTO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[41].AsFloat := dm2.CdsConveniosDT_FECHAMENTO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[42].AsFloat := dm2.CdsConveniosSALDO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[43].AsFloat := dm2.CdsConveniosJAN.AsFloat;
+                dm2.FDAtualizaConvenios.Params[44].AsFloat := dm2.CdsConveniosFEV.AsFloat;
+                dm2.FDAtualizaConvenios.Params[45].AsFloat := dm2.CdsConveniosMAR.AsFloat;
+                dm2.FDAtualizaConvenios.Params[46].AsFloat := dm2.CdsConveniosABR.AsFloat;
+                dm2.FDAtualizaConvenios.Params[47].AsFloat := dm2.CdsConveniosMAI.AsFloat;
+                dm2.FDAtualizaConvenios.Params[48].AsFloat := dm2.CdsConveniosJUN.AsFloat;
+                dm2.FDAtualizaConvenios.Params[49].AsFloat := dm2.CdsConveniosJUL.AsFloat;
+                dm2.FDAtualizaConvenios.Params[50].AsFloat := dm2.CdsConveniosAGO.AsFloat;
+                dm2.FDAtualizaConvenios.Params[51].AsFloat := dm2.CdsConveniosSET_.AsFloat;
+                dm2.FDAtualizaConvenios.Params[52].AsFloat := dm2.CdsConveniosOUT.AsFloat;
+                dm2.FDAtualizaConvenios.Params[53].AsFloat := dm2.CdsConveniosNOV.AsFloat;
+                dm2.FDAtualizaConvenios.Params[54].AsFloat := dm2.CdsConveniosDEZ.AsFloat;
+                dm2.FDAtualizaConvenios.Params[55].AsDate := dm2.CdsConveniosDT_ALTERACAO.AsDateTime;
+                dm2.FDAtualizaConvenios.Params[56].AsString := dm2.CdsConveniosUSUARIOSITE.AsString;
+                dm2.FDAtualizaConvenios.Params[57].AsString := dm2.CdsConveniosSENHASITE.AsString;
+                dm2.FDAtualizaConvenios.Params[58].AsString := dm2.CdsConveniosPERMITEPARCELAMENTO.AsString;
+                dm2.FDAtualizaConvenios.Params[59].AsString := dm2.CdsConveniosPAGACOMISSAO.AsString;
+                dm2.FDAtualizaConvenios.Params[60].AsString := dm2.CdsConveniosPAGAAVISTA.AsString;
+                dm2.FDAtualizaConvenios.Params[61].AsString := dm2.CdsConveniosSTATUS.AsString;
+                dm2.FDAtualizaConvenios.Params[62].AsString := dm2.CdsConveniosCD_MUNICIPIO.AsString;
+                dm2.FDAtualizaConvenios.Params[63].AsString := dm2.CdsConveniosCD_PAIS.AsString;
+                dm2.FDAtualizaConvenios.Params[64].AsString := dm2.CdsConveniosCOMPLEMENTO.AsString;
+                dm2.FDAtualizaConvenios.Params[65].AsString := dm2.CdsConveniosNUMERO.AsString;
+                dm2.FDAtualizaConvenios.Params[66].AsString := dm2.CdsConveniosFATURAFECHADA.AsString;
+                dm2.FDAtualizaConvenios.Params[67].AsString := dm2.CdsConveniosEXIBIRDADOSCLIENTECOMPROVANTE.AsString;
+                Try
+                  dm2.FDAtualizaConvenios.ExecSql(False);
+                Except
+                  GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios - Execução da Procedure');
+                End;
+                dm2.CdsConvenios.Next;
+              end;
+           end;
 
-     dm3.CdsConvenios.Close;
+         dm2.CdsConvenios.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Convenios');
          dm3.CdsConvenios.Close;
@@ -4785,65 +5226,76 @@ end;
 
 procedure RecebendoTransportadoras;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
   //Busca na matriz os Transportadoras
    Try
-     dm3.CdsTransportadoras.Close;
-     dm3.CdsTransportadoras.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(112, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsTransportadoras.Close;
+     dm2.CdsTransportadoras.CreateDataSet;
+    //Processa(112, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('transportadoras')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsTransportadoras.Data := Dados;
-     dm3.CdsTransportadoras.Open; // virtual
-     if dm3.CdsTransportadoras.RecordCount > 0 then
-        begin
-           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Transportadoras - ' + FloattoStr(dm3.CdsTransportadoras.RecordCount));
-
-           dm3.CdsTransportadoras.First;
-           while not dm3.CdsTransportadoras.Eof do
+     end
+     else
+     begin
+         dm2.CdsTransportadoras.LoadFromJSON(LResponse.Content);
+         dm2.CdsTransportadoras.Open;
+         if dm2.CdsTransportadoras.RecordCount > 0 then
             begin
-              dm3.FDAtualizaTransportadoras.Params[0].AsFloat := dm3.CdsTransportadorasCD_TRANSPORTADORA.AsFloat;
-              dm3.FDAtualizaTransportadoras.Params[1].AsString := dm3.CdsTransportadorasNOME.AsString;
-              dm3.FDAtualizaTransportadoras.Params[2].AsString := dm3.CdsTransportadorasRAZAO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[3].AsString := dm3.CdsTransportadorasCNPJ.AsString;
-              dm3.FDAtualizaTransportadoras.Params[4].AsString := dm3.CdsTransportadorasINSCRICAO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[5].AsString := dm3.CdsTransportadorasENDERECO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[6].AsString := dm3.CdsTransportadorasNUMERO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[7].AsString := dm3.CdsTransportadorasCOMPLEMENTO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[8].AsString := dm3.CdsTransportadorasBAIRRO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[9].AsString := dm3.CdsTransportadorasCIDADE.AsString;
-              dm3.FDAtualizaTransportadoras.Params[10].AsString := dm3.CdsTransportadorasUF.AsString;
-              dm3.FDAtualizaTransportadoras.Params[11].AsString := dm3.CdsTransportadorasCEP.AsString;
-              dm3.FDAtualizaTransportadoras.Params[12].AsString := dm3.CdsTransportadorasCD_MUNICIPIO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[13].AsString := dm3.CdsTransportadorasFONE.AsString;
-              dm3.FDAtualizaTransportadoras.Params[14].AsString := dm3.CdsTransportadorasFAX.AsString;
-              dm3.FDAtualizaTransportadoras.Params[15].AsString := dm3.CdsTransportadorasCAIXA_POSTAL.AsString;
-              dm3.FDAtualizaTransportadoras.Params[16].AsString := dm3.CdsTransportadorasCONTATO.AsString;
-              dm3.FDAtualizaTransportadoras.Params[17].AsString := dm3.CdsTransportadorasEMAIL.AsString;
-              dm3.FDAtualizaTransportadoras.Params[18].AsString := dm3.CdsTransportadorasURL.AsString;
-              dm3.FDAtualizaTransportadoras.Params[19].AsString := dm3.CdsTransportadorasCD_PAIS.AsString;
-              dm3.FDAtualizaTransportadoras.Params[20].AsString := dm3.CdsTransportadorasPAIS.AsString;
-              dm3.FDAtualizaTransportadoras.Params[21].AsDateTime := dm3.CdsTransportadorasDT_ALTERACAO.AsDateTime;
-              dm3.FDAtualizaTransportadoras.Params[22].AsString := dm3.CdsTransportadorasENVIADO.AsString;
-              Try
-                dm3.FDAtualizaTransportadoras.ExecFD(False);
-              Except
-                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Transportadoras - Execução da Procedure');
-              End;
+               GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Transportadoras - ' + FloattoStr(dm2.CdsTransportadoras.RecordCount));
 
-              dm3.CdsTransportadoras.Next;
+               dm2.CdsTransportadoras.First;
+               while not dm2.CdsTransportadoras.Eof do
+                begin
+                  dm2.FDsqlAtualizaTransportadoras.Params[0].AsFloat := dm2.CdsTransportadorasCD_TRANSPORTADORA.AsFloat;
+                  dm2.FDsqlAtualizaTransportadoras.Params[1].AsString := dm2.CdsTransportadorasNOME.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[2].AsString := dm2.CdsTransportadorasRAZAO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[3].AsString := dm2.CdsTransportadorasCNPJ.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[4].AsString := dm2.CdsTransportadorasINSCRICAO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[5].AsString := dm2.CdsTransportadorasENDERECO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[6].AsString := dm2.CdsTransportadorasNUMERO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[7].AsString := dm2.CdsTransportadorasCOMPLEMENTO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[8].AsString := dm2.CdsTransportadorasBAIRRO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[9].AsString := dm2.CdsTransportadorasCIDADE.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[10].AsString := dm2.CdsTransportadorasUF.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[11].AsString := dm2.CdsTransportadorasCEP.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[12].AsString := dm2.CdsTransportadorasCD_MUNICIPIO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[13].AsString := dm2.CdsTransportadorasFONE.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[14].AsString := dm2.CdsTransportadorasFAX.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[15].AsString := dm2.CdsTransportadorasCAIXA_POSTAL.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[16].AsString := dm2.CdsTransportadorasCONTATO.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[17].AsString := dm2.CdsTransportadorasEMAIL.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[18].AsString := dm2.CdsTransportadorasURL.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[19].AsString := dm2.CdsTransportadorasCD_PAIS.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[20].AsString := dm2.CdsTransportadorasPAIS.AsString;
+                  dm2.FDsqlAtualizaTransportadoras.Params[21].AsDateTime := dm2.CdsTransportadorasDT_ALTERACAO.AsDateTime;
+                  dm2.FDsqlAtualizaTransportadoras.Params[22].AsString := dm2.CdsTransportadorasENVIADO.AsString;
+                  Try
+                    dm2.FDsqlAtualizaTransportadoras.ExecSql(False);
+                  Except
+                    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Transportadoras - Execução da Procedure');
+                  End;
+                  dm2.CdsTransportadoras.Next;
+                end;
+
+               dm2.CdsTransportadoras.Close;
             end;
-
-           dm3.CdsTransportadoras.Close;
-        end;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Transportadoras');
-         dm3.CdsTransportadoras.Close;
+         dm2.CdsTransportadoras.Close;
          Exit;
        end;
    end;
@@ -4851,49 +5303,61 @@ end;
 
 procedure RecebendoCartoes;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
   //Busca na matriz os Cartoes
    Try
      dm3.CdsCartoes.Close;
      dm3.CdsCartoes.CreateDataSet;
-     DAdos := (dm3.HTTPRIO1 AS IDmProcessa).Processa(113, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm3.CdsCartoes.Data := Dados;
-     dm3.CdsCartoes.Open; // virtual
-     if dm3.CdsCartoes.RecordCount > 0 then
-        begin
-           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Cartoes - ' + FloattoStr(dm3.CdsCartoes.RecordCount));
+     //Processa(113, Filial, 'A');
 
-           dm3.CdsCartoes.First;
-           while not dm3.CdsCartoes.Eof do
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('cartoes')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
+        Exit;
+     end
+     else
+     begin
+     dm2.CdsCartoes.LoadFromJSON(LResponse.Content);
+     dm2.CdsCartoes.Open; // virtual
+     if dm2.CdsCartoes.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Cartoes - ' + FloattoStr(dm2.CdsCartoes.RecordCount));
+
+           dm2.CdsCartoes.First;
+           while not dm2.CdsCartoes.Eof do
             begin
-              dm3.FDAtualizaCartoes.Params[0].AsFloat := dm3.CdsCartoesCD_CARTAO.AsFloat;
-              dm3.FDAtualizaCartoes.Params[1].AsFloat := dm3.CdsCartoesCD_CONTA.AsFloat;
-              dm3.FDAtualizaCartoes.Params[2].AsString := dm3.CdsCartoesDESCRICAO.AsString;
-              dm3.FDAtualizaCartoes.Params[3].AsString := dm3.CdsCartoesTIPO_CARTAO.AsString;
-              dm3.FDAtualizaCartoes.Params[4].AsFloat := dm3.CdsCartoesTX_ADM.AsFloat;
-              dm3.FDAtualizaCartoes.Params[5].AsFloat := dm3.CdsCartoesTX_ADM_PARC.AsFloat;
-              dm3.FDAtualizaCartoes.Params[6].AsFloat := dm3.CdsCartoesPRAZO_PG.AsFloat;
-              dm3.FDAtualizaCartoes.Params[7].AsFloat := dm3.CdsCartoesIMAGEM.AsFloat;
-              dm3.FDAtualizaCartoes.Params[8].AsString := dm3.CdsCartoesUSATEF.AsString;
-              dm3.FDAtualizaCartoes.Params[9].AsString := dm3.CdsCartoesTRNCENTRE.AsString;
-              dm3.FDAtualizaCartoes.Params[10].AsString := dm3.CdsCartoesFIDELIZE.AsString;
-              dm3.FDAtualizaCartoes.Params[11].AsString := dm3.CdsCartoesHIPERCARD.AsString;
-              dm3.FDAtualizaCartoes.Params[12].AsString := dm3.CdsCartoesREDEVESPAGUE.AsString;
-              dm3.FDAtualizaCartoes.Params[13].AsString := dm3.CdsCartoesENVIADO.AsString;
+              dm2.FDAtualizaCartoes.Params[0].AsFloat := dm2.CdsCartoesCD_CARTAO.AsFloat;
+              dm2.FDAtualizaCartoes.Params[1].AsFloat := dm2.CdsCartoesCD_CONTA.AsFloat;
+              dm2.FDAtualizaCartoes.Params[2].AsString := dm2.CdsCartoesDESCRICAO.AsString;
+              dm2.FDAtualizaCartoes.Params[3].AsString := dm2.CdsCartoesTIPO_CARTAO.AsString;
+              dm2.FDAtualizaCartoes.Params[4].AsFloat := dm2.CdsCartoesTX_ADM.AsFloat;
+              dm2.FDAtualizaCartoes.Params[5].AsFloat := dm2.CdsCartoesTX_ADM_PARC.AsFloat;
+              dm2.FDAtualizaCartoes.Params[6].AsFloat := dm2.CdsCartoesPRAZO_PG.AsFloat;
+              dm2.FDAtualizaCartoes.Params[7].AsFloat := dm2.CdsCartoesIMAGEM.AsFloat;
+              dm2.FDAtualizaCartoes.Params[8].AsString := dm2.CdsCartoesUSATEF.AsString;
+              dm2.FDAtualizaCartoes.Params[9].AsString := dm2.CdsCartoesTRNCENTRE.AsString;
+              dm2.FDAtualizaCartoes.Params[10].AsString := dm2.CdsCartoesFIDELIZE.AsString;
+              dm2.FDAtualizaCartoes.Params[11].AsString := dm2.CdsCartoesHIPERCARD.AsString;
+              dm2.FDAtualizaCartoes.Params[12].AsString := dm2.CdsCartoesREDEVESPAGUE.AsString;
+              dm2.FDAtualizaCartoes.Params[13].AsString := dm2.CdsCartoesENVIADO.AsString;
               Try
-                dm3.FDAtualizaCartoes.ExecFD(False);
+                dm2.FDAtualizaCartoes.ExecSql(False);
               Except
                 GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Cartoes - Execução da Procedure');
               End;
 
-              dm3.CdsCartoes.Next;
+              dm2.CdsCartoes.Next;
             end;
 
-           dm3.CdsCartoes.Close;
+           dm2.CdsCartoes.Close;
         end;
+     end;
    Except
       on E:Exception do
        begin
@@ -4908,79 +5372,89 @@ end;
 
 procedure RecebendoFiliais;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
   //Busca na matriz as Filiais
    Try
-     dm3.CdsFiliais.Close;
-     dm3.CdsFiliais.CreateDataSet;
-     DAdos := (dm3.HTTPRIO1 AS IDmProcessa).Processa(115, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsFiliais.Close;
+     dm2.CdsFiliais.CreateDataSet;
+     //Processa(115, Filial, 'A');
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('filiais')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+      begin
         Exit;
-     dm3.CdsFiliais.Data := Dados;
-     dm3.CdsFiliais.Open; // virtual
-     if dm3.CdsFiliais.RecordCount > 0 then
-        begin
-           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Filiais - ' + FloattoStr(dm3.CdsFiliais.RecordCount));
-
-           dm3.CdsFiliais.First;
-           while not dm3.CdsFiliais.Eof do
+      end
+      else
+      begin
+         dm2.CdsFiliais.LoadFromJSON(LResponse.Content);
+         dm2.CdsFiliais.Open;
+         if dm2.CdsFiliais.RecordCount > 0 then
             begin
-              dm3.FDAtualizaFiliais.Params[0].AsFloat := dm3.CdsFiliaisCD_FILIAL.AsFloat;
-              dm3.FDAtualizaFiliais.Params[1].AsString := dm3.CdsFiliaisNOME.AsString;
-              dm3.FDAtualizaFiliais.Params[2].AsString := dm3.CdsFiliaisRAZAO.AsString;
-              dm3.FDAtualizaFiliais.Params[3].AsString := dm3.CdsFiliaisCNPJ.AsString;
-              dm3.FDAtualizaFiliais.Params[4].AsString := dm3.CdsFiliaisINSCRICAO.AsString;
-              dm3.FDAtualizaFiliais.Params[5].AsString := dm3.CdsFiliaisRUA.AsString;
-              dm3.FDAtualizaFiliais.Params[6].AsString := dm3.CdsFiliaisNUMERO.AsString;
-              dm3.FDAtualizaFiliais.Params[7].AsString := dm3.CdsFiliaisCOMPLEMENTO.AsString;
-              dm3.FDAtualizaFiliais.Params[8].AsString := dm3.CdsFiliaisBAIRRO.AsString;
-              dm3.FDAtualizaFiliais.Params[9].AsString := dm3.CdsFiliaisCIDADE.AsString;
-              dm3.FDAtualizaFiliais.Params[10].AsString := dm3.CdsFiliaisUF.AsString;
-              dm3.FDAtualizaFiliais.Params[11].AsString := dm3.CdsFiliaisCEP.AsString;
-              dm3.FDAtualizaFiliais.Params[12].AsString := dm3.CdsFiliaisFONE.AsString;
-              dm3.FDAtualizaFiliais.Params[13].AsString := dm3.CdsFiliaisFONE_1.AsString;
-              dm3.FDAtualizaFiliais.Params[14].AsString := dm3.CdsFiliaisFAX.AsString;
-              dm3.FDAtualizaFiliais.Params[15].AsString := dm3.CdsFiliaisCONTATO.AsString;
-              dm3.FDAtualizaFiliais.Params[16].AsFloat := dm3.CdsFiliaisCD_DISTRIBUIDOR.AsFloat;
-              dm3.FDAtualizaFiliais.Params[17].AsFloat := dm3.CdsFiliaisCD_CLIENTE.AsFloat;
-              dm3.FDAtualizaFiliais.Params[18].AsString := dm3.CdsFiliaisENDERECOWEB.AsString;
-              dm3.FDAtualizaFiliais.Params[19].AsString := dm3.CdsFiliaisEXPORTAR.AsString;
-              dm3.FDAtualizaFiliais.Params[20].AsFloat := dm3.CdsFiliaisMETROSQUADRADOS.AsFloat;
-              dm3.FDAtualizaFiliais.Params[21].AsFloat := dm3.CdsFiliaisNUMEROFUNCIONARIOS.AsFloat;
-              dm3.FDAtualizaFiliais.Params[22].AsFloat := dm3.CdsFiliaisNUMEROPDVS.AsFloat;
-              dm3.FDAtualizaFiliais.Params[23].AsString := dm3.CdsFiliaisSTATUS.AsString;
-              dm3.FDAtualizaFiliais.Params[24].AsString := dm3.CdsFiliaisCD_MUNICIPIO.AsString;
-              dm3.FDAtualizaFiliais.Params[25].AsString := dm3.CdsFiliaisIFOOD_CLIENT_ID.AsString;
-              dm3.FDAtualizaFiliais.Params[26].AsString := dm3.CdsFiliaisIFOOD_CLIENT_SECRET.AsString;
-              dm3.FDAtualizaFiliais.Params[27].AsString := dm3.CdsFiliaisIFOOD_ID_LOJA.AsString;
-              dm3.FDAtualizaFiliais.Params[28].AsString := dm3.CdsFiliaisIFOOD_PRECO_PRATICADO.AsString;
-              dm3.FDAtualizaFiliais.Params[29].AsInteger := dm3.CdsFiliaisIFOOD_QNTD_ENVIO.AsInteger;
-              dm3.FDAtualizaFiliais.Params[30].AsInteger := dm3.CdsFiliaisIFOOD_VENDEDOR.AsInteger;
-              dm3.FDAtualizaFiliais.Params[31].AsString := dm3.CdsFiliaisFARMACIASAPP_CLIENT_ID.AsString;
-              dm3.FDAtualizaFiliais.Params[32].AsString := dm3.CdsFiliaisFARMACIASAPP_CLIENT_SECRET.AsString;
-              dm3.FDAtualizaFiliais.Params[33].AsString := dm3.CdsFiliaisFARMACIASAPP_ID_LOJA.AsString;
-              dm3.FDAtualizaFiliais.Params[34].AsString := dm3.CdsFiliaisFARMACIASAPP_PRECO_PRATICADO.AsString;
-              dm3.FDAtualizaFiliais.Params[35].AsInteger := dm3.CdsFiliaisFARMACIASAPP_QNTD_ENVIO.AsInteger;
-              dm3.FDAtualizaFiliais.Params[36].AsInteger := dm3.CdsFiliaisFARMACIASAPP_VENDEDOR.AsInteger;
-              Try
-                dm3.FDAtualizaFiliais.ExecFD(False);
-              Except
-                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Filiais - Execução da Procedure');
-              End;
+               GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Filiais - ' + FloattoStr(dm2.CdsFiliais.RecordCount));
+               dm2.CdsFiliais.First;
+               while not dm2.CdsFiliais.Eof do
+                begin
+                  dm2.FDAtualizaFiliais.Params[0].AsFloat := dm2.CdsFiliaisCD_FILIAL.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[1].AsString := dm2.CdsFiliaisNOME.AsString;
+                  dm2.FDAtualizaFiliais.Params[2].AsString := dm2.CdsFiliaisRAZAO.AsString;
+                  dm2.FDAtualizaFiliais.Params[3].AsString := dm2.CdsFiliaisCNPJ.AsString;
+                  dm2.FDAtualizaFiliais.Params[4].AsString := dm2.CdsFiliaisINSCRICAO.AsString;
+                  dm2.FDAtualizaFiliais.Params[5].AsString := dm2.CdsFiliaisRUA.AsString;
+                  dm2.FDAtualizaFiliais.Params[6].AsString := dm2.CdsFiliaisNUMERO.AsString;
+                  dm2.FDAtualizaFiliais.Params[7].AsString := dm2.CdsFiliaisCOMPLEMENTO.AsString;
+                  dm2.FDAtualizaFiliais.Params[8].AsString := dm2.CdsFiliaisBAIRRO.AsString;
+                  dm2.FDAtualizaFiliais.Params[9].AsString := dm2.CdsFiliaisCIDADE.AsString;
+                  dm2.FDAtualizaFiliais.Params[10].AsString := dm2.CdsFiliaisUF.AsString;
+                  dm2.FDAtualizaFiliais.Params[11].AsString := dm2.CdsFiliaisCEP.AsString;
+                  dm2.FDAtualizaFiliais.Params[12].AsString := dm2.CdsFiliaisFONE.AsString;
+                  dm2.FDAtualizaFiliais.Params[13].AsString := dm2.CdsFiliaisFONE_1.AsString;
+                  dm2.FDAtualizaFiliais.Params[14].AsString := dm2.CdsFiliaisFAX.AsString;
+                  dm2.FDAtualizaFiliais.Params[15].AsString := dm2.CdsFiliaisCONTATO.AsString;
+                  dm2.FDAtualizaFiliais.Params[16].AsFloat := dm2.CdsFiliaisCD_DISTRIBUIDOR.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[17].AsFloat := dm2.CdsFiliaisCD_CLIENTE.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[18].AsString := dm2.CdsFiliaisENDERECOWEB.AsString;
+                  dm2.FDAtualizaFiliais.Params[19].AsString := dm2.CdsFiliaisEXPORTAR.AsString;
+                  dm2.FDAtualizaFiliais.Params[20].AsFloat := dm2.CdsFiliaisMETROSQUADRADOS.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[21].AsFloat := dm2.CdsFiliaisNUMEROFUNCIONARIOS.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[22].AsFloat := dm2.CdsFiliaisNUMEROPDVS.AsFloat;
+                  dm2.FDAtualizaFiliais.Params[23].AsString := dm2.CdsFiliaisSTATUS.AsString;
+                  dm2.FDAtualizaFiliais.Params[24].AsString := dm2.CdsFiliaisCD_MUNICIPIO.AsString;
+                  dm2.FDAtualizaFiliais.Params[25].AsString := dm2.CdsFiliaisIFOOD_CLIENT_ID.AsString;
+                  dm2.FDAtualizaFiliais.Params[26].AsString := dm2.CdsFiliaisIFOOD_CLIENT_SECRET.AsString;
+                  dm2.FDAtualizaFiliais.Params[27].AsString := dm2.CdsFiliaisIFOOD_ID_LOJA.AsString;
+                  dm2.FDAtualizaFiliais.Params[28].AsString := dm2.CdsFiliaisIFOOD_PRECO_PRATICADO.AsString;
+                  dm2.FDAtualizaFiliais.Params[29].AsInteger := dm2.CdsFiliaisIFOOD_QNTD_ENVIO.AsInteger;
+                  dm2.FDAtualizaFiliais.Params[30].AsInteger := dm2.CdsFiliaisIFOOD_VENDEDOR.AsInteger;
+                  dm2.FDAtualizaFiliais.Params[31].AsString := dm2.CdsFiliaisFARMACIASAPP_CLIENT_ID.AsString;
+                  dm2.FDAtualizaFiliais.Params[32].AsString := dm2.CdsFiliaisFARMACIASAPP_CLIENT_SECRET.AsString;
+                  dm2.FDAtualizaFiliais.Params[33].AsString := dm2.CdsFiliaisFARMACIASAPP_ID_LOJA.AsString;
+                  dm2.FDAtualizaFiliais.Params[34].AsString := dm2.CdsFiliaisFARMACIASAPP_PRECO_PRATICADO.AsString;
+                  dm2.FDAtualizaFiliais.Params[35].AsInteger := dm2.CdsFiliaisFARMACIASAPP_QNTD_ENVIO.AsInteger;
+                  dm2.FDAtualizaFiliais.Params[36].AsInteger := dm2.CdsFiliaisFARMACIASAPP_VENDEDOR.AsInteger;
+                  Try
+                    dm2.FDAtualizaFiliais.ExecSql(False);
+                  Except
+                    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Filiais - Execução da Procedure');
+                  End;
 
-              dm3.CdsFiliais.Next;
+                  dm2.CdsFiliais.Next;
+                end;
+
+               dm2.CdsFiliais.Close;
             end;
-
-           dm3.CdsFiliais.Close;
-        end;
+      end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Filiais');
-         dm3.CdsFiliais.Close;
+         dm2.CdsFiliais.Close;
          Exit;
        end;
    end;
@@ -4988,74 +5462,86 @@ end;
 
 procedure RecebendoBalancos;
 var i : integer;
-    Dados : Variant;
+ LResponse: IResponse;
 begin
   //Busca na matriz os Balancos
    Try
-     dm3.CdsBalancos.Close;
-     dm3.CdsBalancos.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(126, Filial, 'A');
-     if (Dados = null) then
+     dm2.CdsBalancos.Close;
+     dm2.CdsBalancos.CreateDataSet;
+     //Processa(126, Filial, 'A');
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )
+     .Resource('balancos')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm3.CdsBalancos.Data := Dados;
-     dm3.CdsBalancos.Open; // virtual
-     if dm3.CdsBalancos.RecordCount > 0 then
-        begin
-
-           dm3.CdsBalancos.First;
-           while not dm3.CdsBalancos.Eof do
+     end
+     else
+     begin
+         dm2.CdsBalancos.LoadFromJSON(LResponse.Content);
+         dm2.CdsBalancos.Open;
+         if dm2.CdsBalancos.RecordCount > 0 then
             begin
-              dm3.FDAtualizaBalancoLoja.Params[0].AsFloat := dm3.CdsBalancosID_BALANCO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[1].AsFloat := dm3.CdsBalancosID_MOTIVO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[2].AsDate := dm3.CdsBalancosDATA.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[3].AsTime := dm3.CdsBalancosHORA.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[4].AsDate := dm3.CdsBalancosDATA_ABERTURA.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[5].AsTime := dm3.CdsBalancosHORA_ABERTURA.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[6].AsDate := dm3.CdsBalancosDATA_CONTAGEM.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[7].AsTime := dm3.CdsBalancosHORA_CONTAGEM.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[8].AsDate := dm3.CdsBalancosDATA_CONCLUSAO.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[9].AsTime := dm3.CdsBalancosHORA_CONCLUSAO.AsDateTime;
-              dm3.FDAtualizaBalancoLoja.Params[10].AsFloat := dm3.CdsBalancosCD_FILIAL.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[11].AsFloat := dm3.CdsBalancosID_PRODUTO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[12].AsString := dm3.CdsBalancosCD_PRODUTO.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[13].AsString := dm3.CdsBalancosCODIGO_BARRAS_1.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[14].AsString := dm3.CdsBalancosCODIGO_BARRAS_2.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[15].AsString := dm3.CdsBalancosDESCRICAO.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[16].AsFloat := dm3.CdsBalancosCD_GRUPO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[17].AsString := dm3.CdsBalancosGRUPO.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[18].AsFloat := dm3.CdsBalancosCD_LABORATORIO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[19].AsString := dm3.CdsBalancosLABORATORIO.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[20].AsFloat := dm3.CdsBalancosCD_CLASSE.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[21].AsString := dm3.CdsBalancosCLASSE.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[22].AsFloat := dm3.CdsBalancosCUSTO_UNITARIO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[23].AsFloat := dm3.CdsBalancosPRECO_VENDA.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[24].AsFloat := dm3.CdsBalancosPRECO_VENDA_ANTERIOR.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[25].AsFloat := dm3.CdsBalancosESTOQUE.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[26].AsFloat := dm3.CdsBalancosESTOQUE_ANTERIOR.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[27].AsString := dm3.CdsBalancosSUBSTITUIESTOQUE.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[28].AsString := dm3.CdsBalancosSTATUS.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[29].AsString := dm3.CdsBalancosENVIADO.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[30].AsFloat := dm3.CdsBalancosCD_SUBGRUPO.AsFloat;
-              dm3.FDAtualizaBalancoLoja.Params[31].AsString := dm3.CdsBalancosUSUARIO_ABERTURA.AsString;
-              dm3.FDAtualizaBalancoLoja.Params[32].AsString := dm3.CdsBalancosUSUARIO_CONCLUSAO.AsString;
-              Try
-                dm3.FDAtualizaBalancoLoja.ExecFD(False);
-              Except
-                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Balanco Loja - Execução da Procedure');
-              End;
 
-              dm3.CdsBalancos.Next;
+               dm2.CdsBalancos.First;
+               while not dm2.CdsBalancos.Eof do
+                begin
+                  dm2.FDAtualizaBalancoLoja.Params[0].AsFloat := dm2.CdsBalancosID_BALANCO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[1].AsFloat := dm2.CdsBalancosID_MOTIVO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[2].AsDate := dm2.CdsBalancosDATA.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[3].AsTime := dm2.CdsBalancosHORA.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[4].AsDate := dm2.CdsBalancosDATA_ABERTURA.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[5].AsTime := dm2.CdsBalancosHORA_ABERTURA.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[6].AsDate := dm2.CdsBalancosDATA_CONTAGEM.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[7].AsTime := dm2.CdsBalancosHORA_CONTAGEM.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[8].AsDate := dm2.CdsBalancosDATA_CONCLUSAO.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[9].AsTime := dm2.CdsBalancosHORA_CONCLUSAO.AsDateTime;
+                  dm2.FDAtualizaBalancoLoja.Params[10].AsFloat := dm2.CdsBalancosCD_FILIAL.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[11].AsFloat := dm2.CdsBalancosID_PRODUTO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[12].AsString := dm2.CdsBalancosCD_PRODUTO.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[13].AsString := dm2.CdsBalancosCODIGO_BARRAS_1.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[14].AsString := dm2.CdsBalancosCODIGO_BARRAS_2.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[15].AsString := dm2.CdsBalancosDESCRICAO.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[16].AsFloat := dm2.CdsBalancosCD_GRUPO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[17].AsString := dm2.CdsBalancosGRUPO.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[18].AsFloat := dm2.CdsBalancosCD_LABORATORIO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[19].AsString := dm2.CdsBalancosLABORATORIO.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[20].AsFloat := dm2.CdsBalancosCD_CLASSE.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[21].AsString := dm2.CdsBalancosCLASSE.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[22].AsFloat := dm2.CdsBalancosCUSTO_UNITARIO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[23].AsFloat := dm2.CdsBalancosPRECO_VENDA.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[24].AsFloat := dm2.CdsBalancosPRECO_VENDA_ANTERIOR.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[25].AsFloat := dm2.CdsBalancosESTOQUE.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[26].AsFloat := dm2.CdsBalancosESTOQUE_ANTERIOR.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[27].AsString := dm2.CdsBalancosSUBSTITUIESTOQUE.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[28].AsString := dm2.CdsBalancosSTATUS.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[29].AsString := dm2.CdsBalancosENVIADO.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[30].AsFloat := dm2.CdsBalancosCD_SUBGRUPO.AsFloat;
+                  dm2.FDAtualizaBalancoLoja.Params[31].AsString := dm2.CdsBalancosUSUARIO_ABERTURA.AsString;
+                  dm2.FDAtualizaBalancoLoja.Params[32].AsString := dm2.CdsBalancosUSUARIO_CONCLUSAO.AsString;
+                  Try
+                    dm2.FDAtualizaBalancoLoja.ExecSql(False);
+                  Except
+                    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Balanco Loja - Execução da Procedure');
+                  End;
+
+                  dm2.CdsBalancos.Next;
+                end;
+
+               dm2.CdsBalancos.Close;
             end;
-
-           dm3.CdsBalancos.Close;
-        end;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Balancos');
-         dm3.CdsBalancos.Close;
+         dm2.CdsBalancos.Close;
          Exit;
        end;
    end;
@@ -5065,87 +5551,86 @@ end;
 
 procedure RecebendoUsuarios;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
      Try
        dm3.FDSql.sql.text := 'ALTER TRIGGER USUARIOS_BIU0 INACTIVE';
-
-       dm3.FDSql.ExecFD(True);
+       dm3.FDSql.ExecSql(True);
 
      Except
        on E:Exception do
         begin
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
         end;
      End;
 
-     dm32.CdsUsuarios.Close;
-     dm32.CdsUsuarios.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(142, Filial, 'A');
-     if (Dados = null) then
+     dm3.CdsUsuarios.Close;
+     dm3.CdsUsuarios.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )   //Processa(142, Filial, 'A');
+     .Resource('usuarios')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
         Try
           dm3.FDSql.sql.text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
-
-          dm3.FDSql.ExecFD(True);
-
+          dm3.FDSql.ExecSql(True);
         Except
           on E:Exception do
            begin
             GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
            end;
         End;
         Exit;
-      end;
-     dm32.CdsUsuarios.Data := Dados;
-     dm32.CdsUsuarios.Open; // virtual
-     dm32.CdsUsuarios.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Usuarios: '+ FloatToStr(dm32.CdsUsuarios.RecordCount));
-     while not dm32.CdsUsuarios.Eof do
+      end
+      else
       begin
-        dm32.QryUsuarios.Close;
-        dm32.QryUsuarios.Params[0].AsFloat := dm32.CdsUsuariosCD_USUARIO.AsFloat;
-        dm32.QryUsuarios.Open;
-        if dm32.QryUsuarios.RecordCount = 0 then
-           dm32.QryUsuarios.Append
-        else
-           dm32.QryUsuarios.Edit;
-         for i := 0 to dm32.QryUsuarios.FieldCount - 1 do
-            dm32.QryUsuarios.Fields[i].Value := dm32.CdsUsuarios.Fields[i].Value;
-         dm32.QryUsuarios.Post;
-
-         dm32.QryUsuarios.ApplyUpdates(0);
-
-         dm32.CdsUsuarios.Next;
-      end;
-     dm32.CdsUsuarios.Close;
-     dm32.QryUsuarios.Close;
-
-     Try
-       dm3.FDSql.sql.text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
-
-       dm3.FDSql.ExecFD(True);
-
-     Except
-       on E:Exception do
+       dm3.CdsUsuarios.LoadFromJSON(LResponse.Content);
+       dm3.CdsUsuarios.Open;
+       dm3.CdsUsuarios.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Usuarios: '+ FloatToStr(dm3.CdsUsuarios.RecordCount));
+       while not dm3.CdsUsuarios.Eof do
         begin
-         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+          dm3.QryUsuarios.Close;
+          dm3.QryUsuarios.Params[0].AsFloat := dm3.CdsUsuariosCD_USUARIO.AsFloat;
+          dm3.QryUsuarios.Open;
+          if dm3.QryUsuarios.RecordCount = 0 then
+             dm3.QryUsuarios.Append
+          else
+             dm3.QryUsuarios.Edit;
+           for i := 0 to dm3.QryUsuarios.FieldCount - 1 do
+              dm3.QryUsuarios.Fields[i].Value := dm3.CdsUsuarios.Fields[i].Value;
+           dm3.QryUsuarios.Post;
 
+           dm3.QryUsuarios.ApplyUpdates(0);
+
+           dm3.CdsUsuarios.Next;
         end;
-     End;
+       dm3.CdsUsuarios.Close;
+       dm3.QryUsuarios.Close;
+
+       Try
+         dm3.FDSql.sql.text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
+         dm3.FDSql.ExecsQL(True);
+       Except
+         on E:Exception do
+          begin
+           GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
+          end;
+       End;
+      end;
 
    Except
       on E:Exception do
        begin
 
-
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER USUARIOS_BIU0 ACTIVE';
-
-           dm3.FDSql.ExecFD(True);
+           dm3.FDSql.ExecsQL(True);
 
          Except
            on E:Exception do
@@ -5157,8 +5642,8 @@ begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Usuarios');
-         dm32.CdsUsuarios.Close;
-         dm32.QryUsuarios.Close;
+         dm3.CdsUsuarios.Close;
+         dm3.QryUsuarios.Close;
          Exit;
        end;
    end;
@@ -5166,45 +5651,55 @@ end;
 
 procedure RecebendoPermissoes;
 var i : integer;
-Dados : Variant;
+  LResponse: IResponse;
 begin
    Try
-     dm32.CdsPermissoes.Close;
-     dm32.CdsPermissoes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(143, Filial, 'A');
-     if (Dados = null) then
+     dm3.CdsPermissoes.Close;
+     dm3.CdsPermissoes.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(143, Filial, 'A');
+     .Resource('permissoes')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+
+     if LResponse.StatusCode <> 200 then
+     begin
         Exit;
-     dm32.CdsPermissoes.Data := Dados;
-     dm32.CdsPermissoes.Open; // virtual
-     dm32.CdsPermissoes.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Permissoes: '+ FloatToStr(dm32.CdsPermissoes.RecordCount));
-     while not dm32.CdsPermissoes.Eof do
-      begin
-        dm32.QryPermissoes.Close;
-        dm32.QryPermissoes.Params[0].AsFloat := dm32.CdsPermissoesCD_PERMISSAO.AsFloat;
-        dm32.QryPermissoes.Open;
-        if dm32.QryPermissoes.RecordCount = 0 then
-           dm32.QryPermissoes.Append
-        else
-           dm32.QryPermissoes.Edit;
-         for i := 0 to dm32.QryPermissoes.FieldCount - 1 do
-            dm32.QryPermissoes.Fields[i].Value := dm32.CdsPermissoes.Fields[i].Value;
-         dm32.QryPermissoes.Post;
+     end
+     else
+     begin
+       dm3.CdsPermissoes.LoadFromJSON(LResponse.Content);
+       dm3.CdsPermissoes.Open;
+       dm3.CdsPermissoes.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Permissoes: '+ FloatToStr(dm3.CdsPermissoes.RecordCount));
+       while not dm3.CdsPermissoes.Eof do
+        begin
+          dm3.QryPermissoes.Close;
+          dm3.QryPermissoes.Params[0].AsFloat := dm3.CdsPermissoesCD_PERMISSAO.AsFloat;
+          dm3.QryPermissoes.Open;
+          if dm3.QryPermissoes.RecordCount = 0 then
+             dm3.QryPermissoes.Append
+          else
+             dm3.QryPermissoes.Edit;
+           for i := 0 to dm3.QryPermissoes.FieldCount - 1 do
+              dm3.QryPermissoes.Fields[i].Value := dm3.CdsPermissoes.Fields[i].Value;
+           dm3.QryPermissoes.Post;
 
-         dm32.QryPermissoes.ApplyUpdates(0);
-
-         dm32.CdsPermissoes.Next;
-      end;
-     dm32.CdsPermissoes.Close;
-     dm32.QryPermissoes.Close;
+           dm3.QryPermissoes.ApplyUpdates(0);
+           dm3.CdsPermissoes.Next;
+        end;
+       dm3.CdsPermissoes.Close;
+       dm3.QryPermissoes.Close;
+     end;
    Except
       on E:Exception do
        begin
-
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Permissoes');
-         dm32.CdsPermissoes.Close;
-         dm32.QryPermissoes.Close;
+         dm3.CdsPermissoes.Close;
+         dm3.QryPermissoes.Close;
          Exit;
        end;
    end;
@@ -5212,46 +5707,57 @@ end;
 
 procedure RecebendoPermissoesModulos;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
-     dm32.CdsPermissoesModulos.Close;
-     dm32.CdsPermissoesModulos.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(144, Filial, 'A');
-     if (Dados = null) then
+     dm3.CdsPermissoesModulos.Close;
+     dm3.CdsPermissoesModulos.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(144, Filial, 'A');
+     .Resource('permissoesmodulos')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if lresponse.statuscode <> 200 then
+     begin
         Exit;
-     dm32.CdsPermissoesModulos.Data := Dados;
-     dm32.CdsPermissoesModulos.Open; // virtual
-     dm32.CdsPermissoesModulos.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Permissoes Modulos: '+ FloatToStr(dm32.CdsPermissoesModulos.RecordCount));
-     while not dm32.CdsPermissoesModulos.Eof do
-      begin
-        dm32.QryPermissoesModulos.Close;
-        dm32.QryPermissoesModulos.Params[0].AsFloat := dm32.CdsPermissoesModulosCD_PERMISSAO.AsFloat;
-        dm32.QryPermissoesModulos.Params[1].AsFloat := dm32.CdsPermissoesModulosCD_MODULO.AsFloat;
-        dm32.QryPermissoesModulos.Open;
-        if dm32.QryPermissoesModulos.RecordCount = 0 then
-           dm32.QryPermissoesModulos.Append
-        else
-           dm32.QryPermissoesModulos.Edit;
-         for i := 0 to dm32.QryPermissoesModulos.FieldCount - 1 do
-            dm32.QryPermissoesModulos.Fields[i].Value := dm32.CdsPermissoesModulos.Fields[i].Value;
-         dm32.QryPermissoesModulos.Post;
+     end
+     else
+     begin
+       dm3.CdsPermissoesModulos.LoadFromJSON(LResponse.Content);
+       dm3.CdsPermissoesModulos.Open;
+       dm3.CdsPermissoesModulos.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Permissoes Modulos: '+ FloatToStr(dm3.CdsPermissoesModulos.RecordCount));
+       while not dm3.CdsPermissoesModulos.Eof do
+        begin
+          dm3.QryPermissoesModulos.Close;
+          dm3.QryPermissoesModulos.Params[0].AsFloat := dm3.CdsPermissoesModulosCD_PERMISSAO.AsFloat;
+          dm3.QryPermissoesModulos.Params[1].AsFloat := dm3.CdsPermissoesModulosCD_MODULO.AsFloat;
+          dm3.QryPermissoesModulos.Open;
+          if dm3.QryPermissoesModulos.RecordCount = 0 then
+             dm3.QryPermissoesModulos.Append
+          else
+             dm3.QryPermissoesModulos.Edit;
+           for i := 0 to dm3.QryPermissoesModulos.FieldCount - 1 do
+              dm3.QryPermissoesModulos.Fields[i].Value := dm3.CdsPermissoesModulos.Fields[i].Value;
+           dm3.QryPermissoesModulos.Post;
 
-         dm32.QryPermissoesModulos.ApplyUpdates(0);
+           dm3.QryPermissoesModulos.ApplyUpdates(0);
 
-         dm32.CdsPermissoesModulos.Next;
-      end;
-     dm32.CdsPermissoesModulos.Close;
-     dm32.QryPermissoesModulos.Close;
+           dm3.CdsPermissoesModulos.Next;
+        end;
+       dm3.CdsPermissoesModulos.Close;
+       dm3.QryPermissoesModulos.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Permissoes Modulos');
-         dm32.CdsPermissoesModulos.Close;
-         dm32.QryPermissoesModulos.Close;
+         dm3.CdsPermissoesModulos.Close;
+         dm3.QryPermissoesModulos.Close;
          Exit;
        end;
    end;
@@ -5662,45 +6168,56 @@ end;
 
 procedure RecebendoEncartes;
 var i : integer;
-Dados : Variant;
+LResponse: IResponse;
 begin
    Try
-     dm32.CdsEncartes.Close;
-     dm32.CdsEncartes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(146, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm32.CdsEncartes.Data := Dados;
-     dm32.CdsEncartes.Open; // virtual
-     dm32.CdsEncartes.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encartes: '+ FloatToStr(dm32.CdsEncartes.RecordCount));
-     while not dm32.CdsEncartes.Eof do
+     dm3.CdsEncartes.Close;
+     dm3.CdsEncartes.CreateDataSet;
+
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )   //Processa(146, Filial, 'A');
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <>200 then
       begin
-        dm32.QryEncartes.Close;
-        dm32.QryEncartes.Params[0].AsFloat := dm32.CdsEncartesID_ENCARTE.AsFloat;
-        dm32.QryEncartes.Open;
-        if dm32.QryEncartes.RecordCount = 0 then
-           dm32.QryEncartes.Append
-        else
-           dm32.QryEncartes.Edit;
-         for i := 0 to dm32.QryEncartes.FieldCount - 1 do
-            dm32.QryEncartes.Fields[i].Value := dm32.CdsEncartes.Fields[i].Value;
-         dm32.QryEncartes.Post;
+        Exit;
+      end
+      else
+      begin
+       dm3.CdsEncartes.LoadFromJSON(LResponse.Content);
+       dm3.CdsEncartes.Open;
+       dm3.CdsEncartes.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encartes: '+ FloatToStr(dm3.CdsEncartes.RecordCount));
+       while not dm3.CdsEncartes.Eof do
+        begin
+          dm3.QryEncartes.Close;
+          dm3.QryEncartes.Params[0].AsFloat := dm3.CdsEncartesID_ENCARTE.AsFloat;
+          dm3.QryEncartes.Open;
+          if dm3.QryEncartes.RecordCount = 0 then
+             dm3.QryEncartes.Append
+          else
+             dm3.QryEncartes.Edit;
+           for i := 0 to dm3.QryEncartes.FieldCount - 1 do
+              dm3.QryEncartes.Fields[i].Value := dm3.CdsEncartes.Fields[i].Value;
+           dm3.QryEncartes.Post;
 
-         dm32.QryEncartes.ApplyUpdates(0);
+           dm3.QryEncartes.ApplyUpdates(0);
 
-         dm32.CdsEncartes.Next;
+           dm3.CdsEncartes.Next;
+        end;
+       dm3.CdsEncartes.Close;
+       dm3.QryEncartes.Close;
       end;
-     dm32.CdsEncartes.Close;
-     dm32.QryEncartes.Close;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Encartes');
-         dm32.CdsEncartes.Close;
-         dm32.QryEncartes.Close;
+         dm3.CdsEncartes.Close;
+         dm3.QryEncartes.Close;
          Exit;
        end;
    end;
@@ -5708,46 +6225,57 @@ end;
 
 procedure RecebendoItensEncartes;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
-     dm32.CdsItensEncartes.Close;
-     dm32.CdsItensEncartes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(147, Filial, 'A');
-     if (Dados = null) then
+     dm3.CdsItensEncartes.Close;
+     dm3.CdsItensEncartes.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(147, Filial, 'A');
+     .Resource('itensencarte')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
+     begin
         Exit;
-     dm32.CdsItensEncartes.Data := Dados;
-     dm32.CdsItensEncartes.Open; // virtual
-     dm32.CdsItensEncartes.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Itens Encartes: '+ FloatToStr(dm32.CdsItensEncartes.RecordCount));
-     while not dm32.CdsItensEncartes.Eof do
-      begin
-        dm32.QryItensEncartes.Close;
-        dm32.QryItensEncartes.Params[0].AsFloat := dm32.CdsItensEncartesID_ENCARTE.AsFloat;
-        dm32.QryItensEncartes.Params[1].AsFloat := dm32.CdsItensEncartesID_PRODUTO.AsFloat;
-        dm32.QryItensEncartes.Open;
-        if dm32.QryItensEncartes.RecordCount = 0 then
-           dm32.QryItensEncartes.Append
-        else
-           dm32.QryItensEncartes.Edit;
-         for i := 0 to dm32.QryItensEncartes.FieldCount - 1 do
-            dm32.QryItensEncartes.Fields[i].Value := dm32.CdsItensEncartes.Fields[i].Value;
-         dm32.QryItensEncartes.Post;
+     end
+     else
+     begin
+       dm3.CdsItensEncartes.LoadFromJson(LResponse.Content) ;
+       dm3.CdsItensEncartes.Open;
+       dm3.CdsItensEncartes.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Itens Encartes: '+ FloatToStr(dm3.CdsItensEncartes.RecordCount));
+       while not dm3.CdsItensEncartes.Eof do
+        begin
+          dm3.QryItensEncartes.Close;
+          dm3.QryItensEncartes.Params[0].AsFloat := dm3.CdsItensEncartesID_ENCARTE.AsFloat;
+          dm3.QryItensEncartes.Params[1].AsFloat := dm3.CdsItensEncartesID_PRODUTO.AsFloat;
+          dm3.QryItensEncartes.Open;
+          if dm3.QryItensEncartes.RecordCount = 0 then
+             dm3.QryItensEncartes.Append
+          else
+             dm3.QryItensEncartes.Edit;
+           for i := 0 to dm3.QryItensEncartes.FieldCount - 1 do
+              dm3.QryItensEncartes.Fields[i].Value := dm3.CdsItensEncartes.Fields[i].Value;
+           dm3.QryItensEncartes.Post;
 
-         dm32.QryItensEncartes.ApplyUpdates(0);
+           dm3.QryItensEncartes.ApplyUpdates(0);
 
-         dm32.CdsItensEncartes.Next;
-      end;
-     dm32.CdsItensEncartes.Close;
-     dm32.QryItensEncartes.Close;
+           dm3.CdsItensEncartes.Next;
+        end;
+       dm3.CdsItensEncartes.Close;
+       dm3.QryItensEncartes.Close;
+     end;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Itens Encartes');
-         dm32.CdsItensEncartes.Close;
-         dm32.QryItensEncartes.Close;
+         dm3.CdsItensEncartes.Close;
+         dm3.QryItensEncartes.Close;
          Exit;
        end;
    end;
@@ -5755,56 +6283,66 @@ end;
 
 procedure RecebendoRedes;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
+
    Try
 
      dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_CADASTRO_REDES INACTIVE';
-     dm3.FDSql.ExecFD(True);
-
+     dm3.FDSql.ExecSql(True);
 
 
      dm3.FDSql.sql.text := 'ALTER TRIGGER TG_INC_REDES INACTIVE';
-     dm3.FDSql.ExecFD(True);
+     dm3.FDSql.ExecSql(True);
 
+     dm3.CdsRedes.Close;
+     dm3.CdsRedes.CreateDataSet;
 
-     dm32.CdsRedes.Close;
-     dm32.CdsRedes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(133, Filial, 'A');
-     if (Dados = null) then
-        Exit;
-     dm32.CdsRedes.Data := Dados;
-     dm32.CdsRedes.Open; // virtual
-     dm32.CdsRedes.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Redes: '+ FloatToStr(dm32.CdsRedes.RecordCount));
-     while not dm32.CdsRedes.Eof do
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl )   ///Processa(133, Filial, 'A');
+     .Resource('precosfilial')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <> 200 then
       begin
-        dm32.QryRedes.Close;
-        dm32.QryRedes.Params[0].AsFloat := dm32.CdsRedesID_REDE.AsFloat;
-        dm32.QryRedes.Open;
-        if dm32.QryRedes.RecordCount = 0 then
-           dm32.QryRedes.Append
-        else
-           dm32.QryRedes.Edit;
-         for i := 0 to dm32.QryRedes.FieldCount - 1 do
-            dm32.QryRedes.Fields[i].Value := dm32.CdsRedes.Fields[i].Value;
-         dm32.QryRedes.Post;
+        Exit;
+      end
+      else
+      begin
 
-         dm32.QryRedes.ApplyUpdates(0);
+       dm3.CdsRedes.LoadFromJSON(LResponse.Content);
+       dm3.CdsRedes.Open;
+       dm3.CdsRedes.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Redes: '+ FloatToStr(dm3.CdsRedes.RecordCount));
+       while not dm3.CdsRedes.Eof do
+        begin
+          dm3.QryRedes.Close;
+          dm3.QryRedes.Params[0].AsFloat := dm3.CdsRedesID_REDE.AsFloat;
+          dm3.QryRedes.Open;
+          if dm3.QryRedes.RecordCount = 0 then
+             dm3.QryRedes.Append
+          else
+             dm3.QryRedes.Edit;
+           for i := 0 to dm3.QryRedes.FieldCount - 1 do
+              dm3.QryRedes.Fields[i].Value := dm3.CdsRedes.Fields[i].Value;
+           dm3.QryRedes.Post;
 
-         dm32.CdsRedes.Next;
+           dm3.QryRedes.ApplyUpdates(0);
+
+           dm3.CdsRedes.Next;
+        end;
+       dm3.CdsRedes.Close;
+       dm3.QryRedes.Close;
+
+
+       dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_CADASTRO_REDES ACTIVE';
+       dm3.FDSql.ExecSql(True);
+
+
+       dm3.FDSql.sql.text := 'ALTER TRIGGER TG_INC_REDES ACTIVE';
+       dm3.FDSql.ExecSql(True);
       end;
-     dm32.CdsRedes.Close;
-     dm32.QryRedes.Close;
-
-
-     dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_CADASTRO_REDES ACTIVE';
-     dm3.FDSql.ExecFD(True);
-
-
-
-     dm3.FDSql.sql.text := 'ALTER TRIGGER TG_INC_REDES ACTIVE';
-     dm3.FDSql.ExecFD(True);
 
    Except
       on E:Exception do
@@ -5815,16 +6353,14 @@ begin
 
 
          dm3.FDSql.sql.text := 'ALTER TRIGGER TG_AT_DT_CADASTRO_REDES ACTIVE';
-         dm3.FDSql.ExecFD(True);
-
+         dm3.FDSql.ExecSql(True);
 
 
          dm3.FDSql.sql.text := 'ALTER TRIGGER TG_INC_REDES ACTIVE';
-         dm3.FDSql.ExecFD(True);
+         dm3.FDSql.ExecSql(True);
 
-
-         dm32.CdsRedes.Close;
-         dm32.QryRedes.Close;
+         dm3.CdsRedes.Close;
+         dm3.QryRedes.Close;
          Exit;
        end;
    end;
@@ -5833,52 +6369,57 @@ end;
 
 procedure RecebendoConcorrentes;
 var i : integer;
-Dados : Variant;
+ LResponse: IResponse;
 begin
    Try
 
      dm3.FDSql.sql.text := 'ALTER TRIGGER CONCORRENTES_BIU0 INACTIVE';
-     dm3.FDSql.ExecFD(True);
+     dm3.FDSql.ExecSql(True);
 
+     dm3.CdsConcorrentes.Close;
+     dm3.CdsConcorrentes.CreateDataSet;
 
-     dm32.CdsConcorrentes.Close;
-     dm32.CdsConcorrentes.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(134, Filial, 'A');
-     if (Dados = null) then
+      LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(134, Filial, 'A');
+     .Resource('concorrentes')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode <> 200 then
       begin
-
         dm3.FDSql.sql.text := 'ALTER TRIGGER CONCORRENTES_BIU0 ACTIVE';
-        dm3.FDSql.ExecFD(True);
-
+        dm3.FDSql.ExecSql(True);
         Exit;
-      end;
-     dm32.CdsConcorrentes.Data := Dados;
-     dm32.CdsConcorrentes.Open; // virtual
-     dm32.CdsConcorrentes.First;
-     GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Concorrentes: '+ FloatToStr(dm32.CdsConcorrentes.RecordCount));
-     while not dm32.CdsConcorrentes.Eof do
+      end
+      else
       begin
-        dm32.QryConcorrentes.Close;
-        dm32.QryConcorrentes.Params[0].AsFloat := dm32.CdsConcorrentesID_CONCORRENTE.AsFloat;
-        dm32.QryConcorrentes.Open;
-        if dm32.QryConcorrentes.RecordCount = 0 then
-           dm32.QryConcorrentes.Append
-        else
-           dm32.QryConcorrentes.Edit;
-         for i := 0 to dm32.QryConcorrentes.FieldCount - 1 do
-            dm32.QryConcorrentes.Fields[i].Value := dm32.CdsConcorrentes.Fields[i].Value;
-         dm32.QryConcorrentes.Post;
+       dm3.CdsConcorrentes.LoadFromJSON(LResponse.Content);
+       dm3.CdsConcorrentes.Open;
+       dm3.CdsConcorrentes.First;
+       GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Concorrentes: '+ FloatToStr(dm3.CdsConcorrentes.RecordCount));
+       while not dm3.CdsConcorrentes.Eof do
+        begin
+          dm3.QryConcorrentes.Close;
+          dm3.QryConcorrentes.Params[0].AsFloat := dm3.CdsConcorrentesID_CONCORRENTE.AsFloat;
+          dm3.QryConcorrentes.Open;
+          if dm3.QryConcorrentes.RecordCount = 0 then
+             dm3.QryConcorrentes.Append
+          else
+             dm3.QryConcorrentes.Edit;
+           for i := 0 to dm3.QryConcorrentes.FieldCount - 1 do
+              dm3.QryConcorrentes.Fields[i].Value := dm3.CdsConcorrentes.Fields[i].Value;
+           dm3.QryConcorrentes.Post;
 
-         dm32.QryConcorrentes.ApplyUpdates(0);
+           dm3.QryConcorrentes.ApplyUpdates(0);
 
-         dm32.CdsConcorrentes.Next;
+           dm3.CdsConcorrentes.Next;
+        end;
+       dm3.CdsConcorrentes.Close;
+       dm3.QryConcorrentes.Close;
+
+       dm3.FDSql.sql.text := 'ALTER TRIGGER CONCORRENTES_BIU0 ACTIVE';
+       dm3.FDSql.ExecSql(True);
       end;
-     dm32.CdsConcorrentes.Close;
-     dm32.QryConcorrentes.Close;
-
-
-     dm3.FDSql.sql.text := 'ALTER TRIGGER CONCORRENTES_BIU0 ACTIVE';
-     dm3.FDSql.ExecFD(True);
 
    Except
       on E:Exception do
@@ -5889,11 +6430,10 @@ begin
 
 
          dm3.FDSql.sql.text := 'ALTER TRIGGER CONCORRENTES_BIU0 ACTIVE';
-         dm3.FDSql.ExecFD(True);
+         dm3.FDSql.ExecSql(True);
 
-
-         dm32.CdsConcorrentes.Close;
-         dm32.QryConcorrentes.Close;
+         dm3.CdsConcorrentes.Close;
+         dm3.QryConcorrentes.Close;
          Exit;
        end;
    end;
@@ -7582,16 +8122,15 @@ end;
 
 
 procedure RecebendoEncartesDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz as EnCartes deletados
    Try
      // Atualiza Encartes
      Try
        dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE INACTIVE';
-
-       dm3.FDSql.ExecFD(True);
-
+       dm3.FDSql.ExecSql(True);
      Except
        on E:Exception do
         begin
@@ -7600,15 +8139,20 @@ begin
         end;
      End;
 
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'ENCARTE');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'ENCARTE');
+     .Resource('encartesdeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
         Try
           dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE ACTIVE';
-
-          dm3.FDSql.ExecFD(True);
+          dm3.FDSql.ExecSql(True);
 
         Except
           on E:Exception do
@@ -7618,38 +8162,37 @@ begin
            end;
         End;
         Exit;
-      end;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
+      end
+      else
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encartes Deletados - ' + FloattoStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.Cds1.Close;
-            dm3.FDSql.sql.text := 'DELETE FROM ENCARTE WHERE ID_ENCARTE = ' + dm3.CdsDeletadosCAMPO1.AsString;
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encartes Deletados - ' + FloattoStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.Cds1.Close;
+              dm2.FDSql.sql.text := 'DELETE FROM ENCARTE WHERE ID_ENCARTE = ' + dm2.CdsDeletadosCAMPO1.AsString;
+              dm2.FDSql.ExecSql(True);
 
-            dm3.FDSql.ExecFD(True);
-
-
-            dm3.Cds1.Close;
-            dm3.CdsDeletados.Next;
-          end;
+              dm2.Cds1.Close;
+              dm2.CdsDeletados.Next;
+            end;
+        end;
+       dm2.CdsDeletados.Close;
       end;
-     dm3.CdsDeletados.Close;
    Except
       on E:Exception do
        begin
 
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
          GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Encartes Deletados');
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Try
            dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE ACTIVE';
-
-           dm3.FDSql.ExecFD(True);
-
+           dm3.FDSql.ExecSql(True);
          Except
            on E:Exception do
             begin
@@ -7662,9 +8205,7 @@ begin
    end;
   Try
     dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE ACTIVE';
-
-    dm3.FDSql.ExecFD(True);
-
+    dm3.FDSql.ExecSql(True);
   Except
     on E:Exception do
      begin
@@ -7676,33 +8217,35 @@ end;
 
 
 procedure RecebendoItensEncartesDeletados;
-var Dados : Variant;
+var
+ LResponse: IResponse;
 begin
   //busca na matriz as Encarte Itens deletados
    Try
     Try
       dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE_ITENS INACTIVE';
-
-      dm3.FDSql.ExecFD(True);
-
+      dm3.FDSql.ExecSql(True);
     Except
       on E:Exception do
        begin
         GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
        end;
     End;
      // Atualiza Encarte Itens
-     dm3.CdsDeletados.Close;
-     dm3.CdsDeletados.CreateDataSet;
-     Dados := (dm3.HTTPRIO1 AS IDmProcessa).Processa(108, Filial, 'ENCARTE_ITENS');
-     if (Dados = null) then
+     dm2.CdsDeletados.Close;
+     dm2.CdsDeletados.CreateDataSet;
+
+     LResponse := TRequest.New.BaseURL(dm.BaseUrl ) //Processa(108, Filial, 'ENCARTE_ITENS');
+     .Resource('itensencartedeletados')
+     .AcceptEncoding('gzip, deflate')
+     .Accept('application/json')
+     .Get;
+
+     if LResponse.StatusCode<>200 then
       begin
         Try
           dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE_ITENS ACTIVE';
-
-          dm3.FDSql.ExecFD(True);
-
+          dm3.FDSql.ExecSql(True);
         Except
           on E:Exception do
            begin
@@ -7711,27 +8254,30 @@ begin
            end;
         End;
         Exit;
-      end;
-     dm3.CdsDeletados.Data := Dados;
-     dm3.CdsDeletados.Open; // virtual
-     if dm3.CdsDeletados.RecordCount > 0 then
+      end
+      else
       begin
-         GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encarte Itens Deletados - ' + FloatToStr(dm3.CdsDeletados.RecordCount));
-         dm3.CdsDeletados.First;
+       dm2.CdsDeletados.LoadFromJSON(LResponse.Content);
+       dm2.CdsDeletados.Open;
+       if dm2.CdsDeletados.RecordCount > 0 then
+        begin
+           GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Recebendo Encarte Itens Deletados - ' + FloatToStr(dm2.CdsDeletados.RecordCount));
+           dm2.CdsDeletados.First;
+           while not dm2.CdsDeletados.Eof do
+            begin
+              dm2.FDSql.sql.text := 'DELETE FROM ENCARTE_ITENS WHERE ID_ENCARTE = ' + dm2.CdsDeletadosCAMPO1.AsString +
+                                  ' AND ID_PRODUTO = ' + dm2.CdsDeletadosCAMPO2.AsString;
+              Try
+                dm2.FDSql.ExecSql(True);
+              Except  on E:Exception do
+                GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Erro ocorrido no processo de Encarte Itens Deletados'+E.Message);
+              End;
+              dm2.CdsDeletados.Next;
+            end;
 
-         while not dm3.CdsDeletados.Eof do
-          begin
-            dm3.FDSql.sql.text := 'DELETE FROM ENCARTE_ITENS WHERE ID_ENCARTE = ' + dm3.CdsDeletadosCAMPO1.AsString +
-                                ' AND ID_PRODUTO = ' + dm3.CdsDeletadosCAMPO2.AsString;
-            Try
-              dm3.FDSql.ExecFD(True);
-            Except
-            End;
-            dm3.CdsDeletados.Next;
-          end;
-
+        end;
+       dm2.CdsDeletados.Close;
       end;
-     dm2.CdsDeletados.Close;
    Except
       on E:Exception do
        begin
@@ -7747,23 +8293,20 @@ begin
            on E:Exception do
             begin
              GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
             end;
          End;
-         dm3.CdsDeletados.Close;
+         dm2.CdsDeletados.Close;
          Exit;
        end;
    end;
+
   Try
     dm3.FDSql.sql.text := 'ALTER TRIGGER TG_EXC_ENCARTE_ITENS ACTIVE';
-
-    dm3.FDSql.ExecFD(True);
-
+    dm3.FDSql.ExecSql(True);
   Except
     on E:Exception do
      begin
       GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ' + E.Message);
-
      end;
   End;
 end;

@@ -601,6 +601,11 @@ type
     CdsProdutosBarrasCODIGO_BARRAS: TStringField;
     CdsProdutosBarrasQT_EMBALAGEM: TFloatField;
     CdsProdutosBarrasBARRA_ANTIGA: TStringField;
+    CdsFamiliasDESCRICAO: TStringField;
+    CdsFamiliasSTATUS: TStringField;
+    CdsFamiliasDT_ALTERACAO: TDateField;
+    CdsFamiliasALTERAPRECOFAMILIA: TStringField;
+    CdsFamiliasENVIADO: TStringField;
   private
     { Private declarations }
   public

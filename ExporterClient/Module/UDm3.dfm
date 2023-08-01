@@ -1212,7 +1212,7 @@ object DM3: TDM3
   object FDFamilias: TFDQuery
     Connection = DM.FDConn
     SQL.Strings = (
-      'SELECT ID_FAMILIA FROM FAMILIAS')
+      'SELECT * FROM FAMILIAS')
     Left = 314
     Top = 212
   end
@@ -1230,6 +1230,25 @@ object DM3: TDM3
     object CdsFamiliasID_FAMILIA: TFloatField
       FieldName = 'ID_FAMILIA'
       Required = True
+    end
+    object CdsFamiliasDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 100
+    end
+    object CdsFamiliasSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 1
+    end
+    object CdsFamiliasDT_ALTERACAO: TDateField
+      FieldName = 'DT_ALTERACAO'
+    end
+    object CdsFamiliasALTERAPRECOFAMILIA: TStringField
+      FieldName = 'ALTERAPRECOFAMILIA'
+      Size = 1
+    end
+    object CdsFamiliasENVIADO: TStringField
+      FieldName = 'ENVIADO'
+      Size = 1
     end
   end
   object FDCartoes: TFDQuery
