@@ -18,6 +18,7 @@ uses
   RESTRequest4D;
 
     Function StrTran( cString, cProcura, cTroca : string ): string;
+    procedure Processar;
           // Envio //
     function  EnviarContasReceber : Boolean;
     function  EnviarProdutosLotes : Boolean;
@@ -25,8 +26,8 @@ uses
     function  EnviandoEstoque : Boolean;
     function  EnviandoClientes: Boolean;
     function  EnviandoPosicaoEstoque : Boolean;
-    procedure EnvioLancamentos;
-    procedure EnvioLancamentosAPrazo;{Lancamentos a prazo}
+    procedure EnvioLancamentos;      {antigo envio de lotes angora lancamebtos}
+    procedure EnvioLancamentosAPrazo;{ antigo envio de lotes a prazao agora Lancamentos a prazo}
     procedure EnvioCaixa;
     procedure EnviandoOperadoresCaixa;
     procedure EnviandoCRM;
@@ -44,6 +45,7 @@ uses
     procedure EnviandoItensCompras;
     procedure EnviandoItensComprasLote;
     procedure EnviandoUsuarios;
+    procedure EnviandoComprasBoletos;
     procedure EnviandoVendasItensExcluidos;
      {  Sintegra  }
     procedure EnviandoSintegraNotas;
@@ -64,14 +66,13 @@ uses
     function  RecebendoCadastro : Boolean;
     function  RecebendoEstoques : Boolean;
     Function  RecebendoPrecos : Boolean;
-
-
-
        {consistencia}
     procedure ConsistenciaDados;
     procedure MontaSQL_Precos(Filial : String);
     procedure CriaCamposPrecos(sFilial : String);
     function  SetaEnviado9 : Boolean;
+
+
 
 
 var
@@ -86,7 +87,7 @@ var
   IAT, IPPT, ComprimidosCaixa, Controlado, Generico, Dt_Vencimento_Promocao,
   Observacao , Status: String;
 
-  NLancamentos, NCaixa, NTransfer, NItensTransfer, NContasReceber : Integer;
+  NLancamentos, NCaixa, NTransfer, NItensTransfer, NContasReceber ,Filial,
   NLancamentosLoja, NCaixaLoja, NTransferLoja, NItensTransferLoja, NContasReceberLoja : Integer;
 
 
@@ -103,7 +104,7 @@ const
 
 implementation
 
-uses UExporterClient, Udm, Funcoes, Controlle.Filial, Winapi.ActiveX;
+uses UExporterClient, Udm, Funcoes, Controlle.Filial, Winapi.ActiveX, UDm2;
 
 function EnviandoClientes: Boolean;
 var
@@ -482,7 +483,7 @@ var
   LResponse: IResponse;
   arrayLotes :TJSONArray;
 begin
-   //processamento e envio de lotes
+   //processamento e envio de lancamentos
 
   Try
 
@@ -904,6 +905,8 @@ begin
                         .Accept('application/json')
                          .get;
                         FreeAndNil(arraycaixa);
+
+
 
                   if LResponse.StatusCode=200 then
                     begin
@@ -4522,6 +4525,461 @@ begin
    end;
 
 end;
+
+procedure Processar;
+begin
+
+
+  try
+   //testar conexao com o banco antes de processar
+  except
+   // GravaLog('Sem conexão com o banco ' + Caminho + '\Farmax.fdb');
+
+    Application.Terminate;
+    Halt;
+    Exit;
+  end;
+
+ // DmExporterQuick.HTTPRIO1.URL := 'http://' + Servidor + '/ExporterServer/ExporterServer.exe/soap/IDmProcessa';
+  //DmExporterQuick.HTTPRIO1.URL := 'http://' + Servidor + '/Exporter/Exporter.exe/soap/IDmProcessa';
+
+  GravaLog(' ');
+  GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - ======== Iniciando novo processo de exportacao do ClientQuick ========');
+
+  Dm.CdsParametros.Open;
+
+
+
+  if Dm.CdsParametrosTIPO_LOJA.AsString = 'U' then
+   begin
+     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Loja cadastrada como loja única.');
+     Exit;
+   end;
+
+  Filial := Dm.CdsParametros.Fields[0].AsInteger;
+  if Filial = 0 then
+   begin
+     GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Loja cadastrada como Matriz - loja 0.');
+     Exit;
+   end;
+
+  //VerificaConexao('Inicial');
+
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Contas a Receber');
+    Dm.fdconn.Open;
+    while EnviarContasReceber do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Clientes');
+    Dm.fdconn.Open;
+    while EnviandoClientes do sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Transferencias');
+    Dm.fdconn.Open;
+    EnviandoTransfer;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Itens de Trensferencias');
+    Dm.fdconn.Open;
+    EnviandoTransfer1;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Transferencias');
+    Dm.fdconn.Open;
+    RecebendoTransfer;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Itens de Transferencias');
+    Dm.fdconn.Open;
+    RecebendoItensTransfer;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  Try
+    GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Iniciando Recebendo ProdutosPrecoQuantidadeDeletados... ');
+    Dm.fdconn.Open;
+    RecebendoProdutosQuantidadeDeletados;
+    Dm.fdconn.Close;
+  except
+  End;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Preço Quantidade');
+    Dm.fdconn.Open;
+    RecebendoProdutosQuantidade;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Farmacia Popular');
+    Dm.fdconn.Open;
+    RecebendoProdutosFP;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Fidelidade Deletados');
+    Dm.fdconn.Open;
+    RecebendoProdutosFidelidadeDeletados;
+    Dm.fdconn.Close;
+  except
+  end;
+
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Fidelidade');
+    Dm.fdconn.Open;
+    RecebendoProdutosFidelidade;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Lancamentos');
+    Dm.fdconn.Open;
+    EnvioLancamentos;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Lancamentos a Prazo');
+    Dm.fdconn.Open;
+    EnvioLancamentosAPrazo;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Caixa');
+    Dm.fdconn.Open;
+    EnvioCaixa;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Operadores de Caixa');
+    Dm.fdconn.Open;
+    EnviandoOperadoresCaixa;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de CRM');
+    Dm.fdconn.Open;
+    EnviandoCRM;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Entregas');
+    Dm.fdconn.Open;
+    EnviandoEntregas;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Cheques Recebidos');
+    Dm.fdconn.Open;
+    EnviandoChequesRecebidos;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Contas a Pagar');
+    Dm.fdconn.Open;
+    EnviandoContasPagar;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Compras');
+    Dm.fdconn.Open;
+    EnviandoCompras;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de ItensCompraLote');
+    Dm.fdconn.Open;
+    EnviandoItensComprasLote;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Compras Boletos');
+    Dm.fdconn.Open;
+    EnviandoComprasBoletos;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de ContasPagarCompras');
+    Dm.fdconn.Open;
+    EnviandoContasPagarCompras;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Usuarios');
+    Dm.fdconn.Open;
+    EnviandoUsuarios;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Caderno de Faltas');
+    Dm.fdconn.Open;
+    EnviandoCadernoFaltas;
+    Dm.fdconn.Close;
+  except
+  end;
+
+{  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Sintegra Notas');
+    Dm.fdconn.Open;
+    EnviandoSintegraNotas;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Sintegra Notas Itens');
+    Dm.fdconn.Open;
+    EnviandoSintegraNotasItens;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Sintegra Pedidos');
+    Dm.fdconn.Open;
+    EnviandoSintegraPedidos;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Sintegra 60R');
+    Dm.fdconn.Open;
+    EnviandoSintegraR60;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Sintegra 60R Itens');
+    Dm.fdconn.Open;
+    EnviandoSintegraR60I;
+    Dm.fdconn.Close;
+  except
+  end;}
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Deletados');
+    Dm.fdconn.Open;
+    RecebendoProdutosDeletados;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Incluidos');
+    Dm.fdconn.Open;
+    while BuscaMatrizProdutosIncluidos do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Cadastros');
+    Dm.fdconn.Open;
+    while RecebendoCadastro do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Estoques');
+    Dm.fdconn.Open;
+    while RecebendoEstoques do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Precos na Filial');
+    Dm.fdconn.Open;
+    EnviandoPrecosFilial;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Conferencia Nota');
+    Dm.fdconn.Open;
+    EnviandoConferenciaNota;
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Recebimento de Produtos Precos');
+    Dm.fdconn.Open;
+    while RecebendoPrecos do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Vendas Itens Excluidos');
+    Dm.fdconn.Open;
+    EnviandoVendasItensExcluidos;
+    Dm.fdconn.Close;
+  except
+  end;
+
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Produtos Lotes');
+    Dm.fdconn.Open;
+    while EnviarProdutosLotes do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Produtos Lotes ST');
+    Dm.fdconn.Open;
+    while EnviarProdutosLotesST do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Contas a Receber');
+    Dm.fdconn.Open;
+    while EnviarContasReceber do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Clientes');
+    Dm.fdconn.Open;
+    while EnviandoClientes do sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Posicao Estoque');
+    Dm.fdconn.Open;
+    while EnviandoPosicaoEstoque do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  try
+    GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - Iniciando Envio de Estoques');
+    Dm.fdconn.Open;
+    while EnviandoEstoque do Sleep(1);
+    Dm.fdconn.Close;
+  except
+  end;
+
+  //FML - 25.05.2023
+  Try
+    ConsistenciaDados;
+  except
+  End;
+  //FML - 25.05.2023
+
+  GravaLog(FormatDateTime('hh:mm:ss', Time) + ' - =======================================================');
+  Dm.fdconn.Close;
+  Application.ProcessMessages;
+
+end;
+
+procedure EnviandoComprasBoletos;
+var
+ LResponse: IResponse;
+ ArrayBoletosContaspagarCompras:TJSONArray;
+
+begin
+ //processamento e envio de Cepedido.dat
+
+    Dm2.CdsComprasBoletos.Close;
+    Dm2.CdsComprasBoletos.Open;
+    if Dm2.CdsComprasBoletos.RecordCount <> 0 then
+     begin
+
+       try
+          ArrayBoletosContaspagarCompras:=TJSONArray.Create;
+          ArrayBoletosContaspagarCompras:=Dm2.CdsComprasBoletos.ToJSONArray();
+
+          LResponse := TRequest.New.BaseURL(dm.BaseUrl )  //Processa(17, Filial, Dm2.CdsComprasBoletos.Data);
+          .Resource('ComprasBoletos')
+          .AddBody(ArrayBoletosContaspagarCompras.ToString)
+          .AcceptEncoding('gzip, deflate')
+          .Accept('application/json')
+          .Post;
+
+          if LResponse.StatusCode = 200 then
+           begin
+             GravaLog(FormatDateTime('hh:mm:ss',Time) + ' - Enviando Compras Boletos : ' + InttoStr(Dm2.CdsComprasBoletos.RecordCount));
+             Dm2.CdsComprasBoletos.Close;
+           end;
+       Except
+          on E:Exception do
+            begin
+
+              GravaLog(TimetoStr(Time) + ' - Falha de conexao no processo de  Compras Boletos - '+E.Message);
+              Dm2.CdsComprasBoletos.Close;
+              Exit;
+            end;
+
+       end;
+
+     end
+     else
+      Dm2.CdsComprasBoletos.Close;
+
+end;
+
 
 
 end.

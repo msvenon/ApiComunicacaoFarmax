@@ -40,6 +40,9 @@ uses
 procedure TServerPrincipal.FormCreate(Sender: TObject);
 begin
 
+   THorse.KeepConnectionAlive:=true;  //false aproveitar conexao fazedr tread sempre
+   THorse.MaxConnections:=200;
+   Thorse.Version;
    THorse.Use(Compression());
    THorse.Use(Jhonson());
 

@@ -19,10 +19,36 @@ uses
 
 type
   TFrmPrincipal = class(TForm)
-    Button1: TButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    CardPanel1: TCardPanel;
+    Card1: TCard;
+    Card2: TCard;
+    Image1: TImage;
+    PnConfig: TPanel;
+    SpeedButton4: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpbConfig: TSpeedButton;
+    EditDns: TEdit;
+    Label1: TLabel;
+    EditPort: TEdit;
+    Label2: TLabel;
+    EditTimeEnvio: TEdit;
+    Label3: TLabel;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
     Memo1: TMemo;
+    EditAtualPreco: TEdit;
+    Label4: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpbConfigClick(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,14 +88,32 @@ end;
 
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
- dm.cdsParametros.Close;
- dm.cdsParametros.open;
+// dm.cdsParametros.Close;
+// dm.cdsParametros.open;
+// dm.cdfilialparametro:=dm.cdsParametrosCD_FILIAL.Value;
+end;
 
- dm.cdfilialparametro:=dm.cdsParametrosCD_FILIAL.Value;
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+ CardPanel1.ActiveCard:=Card1;
 end;
 
 procedure TFrmPrincipal.processar;
 begin
 
 end;
+procedure TFrmPrincipal.SpbConfigClick(Sender: TObject);
+begin
+ PnConfig.Visible:=true;
+ CardPanel1.ActiveCard:=Card2;
+ SpbConfig.Visible:=false;
+end;
+
+procedure TFrmPrincipal.SpeedButton7Click(Sender: TObject);
+begin
+ PnConfig.Visible:=false;
+ CardPanel1.ActiveCard:=Card1;
+ SpbConfig.Visible:=true;
+end;
+
 end.

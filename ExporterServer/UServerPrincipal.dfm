@@ -2,8 +2,8 @@ object ServerPrincipal: TServerPrincipal
   Left = 0
   Top = 0
   Caption = 'ServerMonitoramento'
-  ClientHeight = 166
-  ClientWidth = 391
+  ClientHeight = 170
+  ClientWidth = 455
   Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
